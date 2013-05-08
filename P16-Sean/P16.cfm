@@ -77,7 +77,7 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>330&Omega; resistors</td>
-          	  <td align="center" class="image"><img src="P16files/10kresistor.png"></td>
+          	  <td align="center" class="image"><img src="P16files/330resreal.png"></td>
 		  <td align="center" class="image"><img src="P16files/330resBig.svg"></td>
 		</tr>
                
