@@ -35,10 +35,11 @@
 	  <td>
 	  <br>
 	  <span class="TB-BODY">
-	  In the last project we learned how to use a chipKIT board to control a servo motor.  In that project the servo was controlled by
-	  two "four port" push buttons.  One button rotated the servo shaft left, and the other rotated the servo shaft right.  This project
-	  will extend project 17 by replacing the two push buttons with a potentiometer dial.  The dial will then control the position
-	  of the servo shaft.
+	  In the last project we learned how to use a chipKIT board to control a servo motor. In that project the servo
+	  was controlled by two "four port" push buttons. One button rotated the servo shaft left, and the other rotated
+	  the servo shaft right. This project will extend project 17 by replacing the two push buttons with a potentiometer
+	  dial (using a voltage divider circuit just like project 16). The dial will be used to control the position of the
+	  servo shaft.
 	  <br><br>
 	  </span><br>
 	  
@@ -111,127 +112,51 @@
 	    </tbody>
     </table>
     
-    
+    <!--- Theory  --->
     <table class="TBLAYOUT">
       <tr>
       <td>
         <span class="TB-H1">Theory</span><br><br>
-	
-	
         <span class="TB-BODY">
-	Before setting up the circuit a brief description of the components used for this project will be given.</span><br><br>
-	
-	
-	<span class="TB-H2">Servo</span><br><br>
-	<span class="TB-BODY">
-	The servo used for this project will be a SG92R that has an angle range between 0 and 180 degrees and operates on voltages
-	between 4.8V to 6V.  If you are unfamiliar with servos and how they operate, you can reference project 17 for a complete description
-       (the setup for the servo portion of this project will be similar to project 17).</span><br><br>
-	
-	
-	
-      </td>
-      </tr>
-      <tr>
-      <td>
-	
-	<span class="TB-H2">Potentiometer dial:</span><br><br>
-	
-      </td>
-      </tr>
-    </table>
-    
-    
-    <table class="TBLAYOUT">
 
-      <tr>
-      <td align="center">
-	<img src="P18files/potent.svg">
-	<div class="TB-FIGURES">
-        Fig. 1 Potentiometer dial.
-        </div> 
-	
-	
-      </td>
-      <td width="30px">
-      </td>
-      <td align="center">
-      	<img src="P18files/diagram.svg">
-	<div class="TB-FIGURES">
-        Fig. 2 Potentiometer diagram.
-        </div> 
       
-      
-      
-      </td>
-      </tr>
-     </table>
-     
-     
-     <table class="TBLAYOUT">
-      <tr>
-      <td>
 	
-	<span class="TB-BODY">
-	In short, a potentiometer is simply a resistor that can change its resistance value according to the position of a mechanical dial.  Potentiometers
-	have three ports (see figure 1), and usually only two ports are ever used.  If you were to measure the resistance between port A and C
-	(in figure 1 or 2) with a multi-meter, you would read the full value of the resistor (if the potentiometer had a range between 10 &Omega;
-	and 10k &Omega; like the one used for this project, it would read 10 k&Omega;s of resistance). Now if you measured between ports A and B, you would
-	probably see a value less than the full value.  If you rotate the dial to the left all the way, you can see the resistance value fall to its minimum
-	value (10 &Omega;s in our case).  Likewise moving the dial all the way to the right, you should observe the maximum resistance value.
+	The theory portion of this project will be quite brief, as the goal of this project is to combine concepts learned in previous projects
+	to form a new application.  In project 16: Potentiometer Controlled LED Brightness we learned how to create a variable resistance voltage
+	divider circuit that utilized a potentiometer dial. That project focused on creating an analog signal that would range from 0V to 3.3V. The
+	signal was read by the chipKIT board and then outputted to a LED to control its brightness.
+	<br><br>
+	<cf_imagebox align="right" path="P18files/circuit_voltdiv.svg" width="310px" caption="Fig. 1 Variable Resistance Voltage Divider.">
+	The input signal used for that project is similar
+	to what we want to accomplish in the current project as well. In fact the same voltage divider circuit can be used. (For a refresher figure 1
+	shows the voltage divider circuit we will be using.  You can follow the link at the right if you wish to review project 16).
+	<br><br>
 	
+	The servo used for this project will be the same SG92R used in project 17: Servo Control with Servo Library and the configuration for
+	this project will be almost identical.  We will use the Servo library to control the output PWM signal to the servo just like we did in
+	project 17. (A link to project 17 is at the right for reference).
 	<br><br><br><br>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	  <span class="TB-H2">Voltage divider circuit:</span>
-	</td>
-	</tr>
 	
-      </table>
-      
-      <table class="class="TBLAYOUT">
-	<tr>
-	<td>
-	
-	<span class="TB-BODY">
-	Using this potentiometer we can construct a variable resistance voltage divider circuit.  The circuit is designed to produce a range of voltages from 0V to 3.3V
-	that relates to the position of the potentiometer dial.  The chipKIT board will read this voltage level and can correlate it to an angle.
-	<br><br>
-	Now looking at figure 3, Vout will be the point in the circuit that will connect to our chipKIT board.
-	<br><br>
-	The governing equation for this circuit is:
-	<br><br>
-	<img src="P18files/goveq.svg">
-	<br><br>
-	So you can see when: <br><br>
-	
-	Rp = 10&Omega; ,  Vout = 9.98mV <br><br>
-	
-	and <br><br>
-	
-	Rp = 10k&Omega;,  Vout = 3.3V <br><br>
 	</span>
-	
-	</td>
-	<td width="50px">
-	</td>
-	<td align="center">
-	
-	
-	  <img src="P18files/circuit_voltdiv.svg">
-	  <div class="TB-FIGURES">
-	  Fig. 3 Variable resistance voltage divider circuit.
-	  </div> 
-	  <br><br>
 
-      </td>
 	
+	
+	</td>
+	<td align="right" valign="top" width="240">
+            <cf_TextbookTabs Mode="top"  NextColor="red">
+	    <cf_TextbookTabs Mode="middle" Color="red" 	NextColor="blue" Title="Project 16: Potentiometer Controlled LED Brightness" TabURL="addlinkhere.cfm">
+	    <cf_TextbookTabs Mode="middle" Color="blue" NextColor="green" Title="Project 17:  Servo Control with Servo Library" TabURL="addlinkhere.cfm">
+	    
+	    
+         </td>
+	
+	
+	
+	
+	</td>
       </tr>
-      
     </table>
-      
+    <br><br>  
       
       
     <cf_Box Color="putty"> 
@@ -248,7 +173,7 @@
       
         <img src="P18files/Circuit_test_bb_new.svg">
 	<div class="TB-FIGURES">
-        Fig. 4 Circuit Diagram.
+        Fig. 2 Circuit Diagram.
         </div> 
       
 	</td>
@@ -257,15 +182,15 @@
 	<td>
 	    <span class="TB-BODY">
 	    <ol>
-	    <li> Place the potentiometer dial so that it spans the gap between rows in the breadboard (as per figure 4).  Note that potentiometers can come
-	    in various configurations, and some have all pins located on the same side (Figure 5 shows the alternate configurations).  It is only important to make
+	    <li> Place the potentiometer dial so that it spans the gap between rows in the breadboard (as per figure 2).  Note that potentiometers can come
+	    in various configurations, and some have all pins located on the same side (Figure 3 shows the alternate configurations).  It is only important to make
 	    sure that each pin occupies its own row.</li>   
 	    <li> Place two 10k&Omega; resistors so that one end of each resistor is connected to pin A of the potentiometer. (these resistors will be connected in
 	    parallel so their equivalent resistance is equal to 5k&Omega;,  this is done because a 5k&Omega; resistor is not a common size of resistor, as opposed
 	    to a 10k&Omega; which is).</li>
 	    <li> Using a wire, connect a wire from the 5V pin of the chipKIT board to a row in the breadboard. Then connect the other end of the two resistors to
 	    this same row. This row will now be designated the <b>5V row</b>. </li>
-	    <li> Using a wire connect the “power” line of the servo to the 5V row in the breadboard. (See figure 6 for a line break out of the servo, and figure 7 for the color code of the servo lines).
+	    <li> Using a wire connect the “power” line of the servo to the 5V row in the breadboard. (See figure 4 for a line break out of the servo, and figure 5 for the color code of the servo lines).
 	    Also note you could use a gender changer here to connect the servo to the breadboard, or just connect straight to the servo via a male to male cable.</li>
 	    <li> Using a wire, connect from the chipKIT GND pin the pin B of the potentiometer. The breadboard row that pin B of the potentiometer connects to
 	    will be designated as the <b>Ground row</b>.</li>
@@ -316,7 +241,7 @@
 	<tr>
 	<td>
 	<span class="TB-BODY">
-	The software sketch will be using the <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span> and <span class="TB-KEYWORD2">analogReference</span><span class="TB-BLACK">()</span> similar to project 16, Potentiometer controlled LED brightness.
+	The software sketch will be using the <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span> and <span class="TB-KEYWORD2">analogReference</span><span class="TB-BLACK">()</span> similar to project 16.
 	<br><br>
 	A quick review if you are unfamiliar. 
 	<br><br>
@@ -348,7 +273,7 @@
 	Line 32 of this sketch may need a quick explanation.<br>
 	degreeGlb = <code>(int)((float)degreeGlb * scaleFactorGlb);</code>
 	<br><br>
-	Since degreeGlb is an integer variable it has to be explicated type cast as a float in order to multiply it by the scale factor variable. Since the result of this multiplication will be a floating point number, it then has to be type cast again back to an int so it can be stored in degreeGlb. 
+	Since degreeGlb is an integer variable it has to be explicated type cast as a <code>float</code> in order to multiply it by the scale factor variable. Since the result of this multiplication will be a floating point number, it then has to be type cast again back to an <code>int</code> so it can be stored in degreeGlb. 
 	<br><br>
 	Once implemented, turning the potentiometer dial will correlate directly to rotating the servo.
 	</span>
