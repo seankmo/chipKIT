@@ -84,6 +84,8 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>LED</td>
+		  <td align="center" class="image"><img src="P16files/LEDreal.png"></td>
+		  <td align="center" class="image"><img src="P16files/LED_red.svg"></td>
 
 	  	</tr>
               
@@ -142,7 +144,7 @@
 	a value that was only half of the amount you measured previously. (Since the path length between points A and B is half the length of the path
 	between ports A and C).
 	<br><br>
-	You can see how you can change the potentiometer’s resistance by just moving the wiper to the desired position. For this project we will be
+	You can see now that you can change the potentiometer’s resistance by just moving the wiper to the desired position. For this project we will be
 	using a potentiometer with a range of values from 10 &Omega;s to 10k&Omega;s. 
 
 	
@@ -295,15 +297,15 @@
       <span class="TB-BODY">
       Before going through the software sketch, we will first discuss how chipKIT reads and writes analog signals.
       <br><br>
-      You are probably familiar with <code>analogWrite()</code> function from project 14 (if not, you can review the project for a description of PWM signaling).
-      When you call <code>analogWrite()</code> on a specific pin it will start to transmit a PWM signal on that pin. This function takes a value between 0 and 255,
+      You are probably familiar with <span class="TB-KEYWORD2">analogWrite</span><span class="TB-BLACK">()</span> function from project 14 (if not, you can review the project for a description of PWM signaling).
+      When you call <span class="TB-KEYWORD2">analogWrite</span><span class="TB-BLACK">()</span> on a specific pin it will start to transmit a PWM signal on that pin. This function takes a value between 0 and 255,
       where zero represents a duty cycle of 0% and 255 represents 100% (duty cycle is a percentage of the max output voltage). 
       <br><br>
       While this is not quite a true analog output, supplying an average voltage to a LED is good enough to change its brightness. Remember in project 6: trainable delay,
       when a button bounce occurred, it would cause the LED to toggle on/off rapidly. The LED in these instances would appear dim, because the average voltage supplied to it was much
       less 3.3V.
       <br><br>
-      The <code>analogRead()</code> function like it name suggests will convert a signal from one of the analog pins (all of the pins on the chipKIT board that are labeled
+      The <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span> function like it name suggests will convert a signal from one of the analog pins (all of the pins on the chipKIT board that are labeled
       with an “A” in front of them), to a numerical (digital) value. ChipKIT boards use 10 bit analog to digital converters (ADCs), so an analog value will be quantized
       to one of 1024 (2<sup>10</sup> = 1024) values. 
       <br><br>
@@ -311,9 +313,9 @@
       if you had an analog signal that could range from any value between 0V and 8V, and you only had 8 discrete levels.  An analog signal with a level of 6.2V would map
       to 6 (the closest discrete level).
       <br><br>
-      The <code>analogRead()</code> function will correlate the number 1024 to the max reference voltage (and likewise 0 for 0V).  The max reference voltage is set with the <code>analogReference()</code>
-      function. Most often you will specify <code>DEFAULT</code> as the parameter when calling this function, (this designates the max reference voltage as 3.3V ). It is important to note 3.3V
-      is the max voltage that can be applied to a chipKIT analog input. You can also use the <code>EXTERNAL</code> parameter, which specifies that the reference voltage is taken
+      The <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span> function will correlate the number 1024 to the max reference voltage (and likewise 0 for 0V).  The max reference voltage is set with the <span class="TB-KEYWORD2">analogReference</span><span class="TB-BLACK">()</span>
+      function. Most often you will specify <span class="TB-LITERAL1">DEFAULT</span> as the parameter when calling this function, (this designates the max reference voltage as 3.3V ). It is important to note 3.3V
+      is the max voltage that can be applied to a chipKIT analog input. You can also use the <span class="TB-LITERAL1">EXTERNAL</span> parameter, which specifies that the reference voltage is taken
       from a physical pin (in Max32 this is pin 44, but this will change from chipKIT board to chipKIT board, so reference the boards manual).
       <br><br>
       </span>
@@ -350,7 +352,9 @@
       <br><br>
       </span>
       
-      <pre class="brush: mpide;">
+      <div align="center">
+        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
+        <pre class="brush: mpide;">
       
       
 int valueGlb;
@@ -385,8 +389,9 @@ void loop()
       analogWrite(aLEDGlb, valueGlb);
                                          
 } 
-      
-      </pre>
+</pre>
+</cf_box>
+</div>
 
 
       </td>
@@ -449,5 +454,6 @@ void loop()
   </cf_Box>  
   </body>
 </html> 
+
 
 
