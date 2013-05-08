@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="103.99993"
+   x="0in"
+   version="1.2"
+   y="0in"
+   height="103.99993"
+   viewBox="0 0 83.19998 83.199852"
+   id="svg4276"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Wire_bb.svg"
+   inkscape:export-filename="C:\Users\tsteingrimsson\Documents\pngs\Wire_bb.png"
+   inkscape:export-xdpi="313"
+   inkscape:export-ydpi="313">
+  <metadata
+     id="metadata4337">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4335" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview4333"
+     showgrid="false"
+     inkscape:zoom="1.8251577"
+     inkscape:cx="52.000078"
+     inkscape:cy="41.738604"
+     inkscape:window-x="257"
+     inkscape:window-y="259"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4276"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <g
+     partID="27870"
+     id="g4327"
+     transform="translate(-1.9124199,-1.9124993)">
+    <line
+       y1="3.5124199"
+       x1="3.5124199"
+       y2="83.512398"
+       x2="83.512398"
+       id="line4329"
+       style="stroke:#1b5bb3;stroke-width:3.20000005;stroke-linecap:round" />
+    <line
+       y1="3.5124199"
+       x1="3.5124199"
+       y2="83.512398"
+       x2="83.512398"
+       id="line4331"
+       style="stroke:#418dd9;stroke-width:1.60000002;stroke-linecap:round" />
+  </g>
+</svg>

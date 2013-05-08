@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="140"
+   height="120"
+   id="svg11441"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="colorcode.svg">
+  <defs
+     id="defs11443" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="109.27951"
+     inkscape:cy="88.005601"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1391"
+     inkscape:window-height="670"
+     inkscape:window-x="250"
+     inkscape:window-y="250"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       orientation="1,0"
+       position="34.597725,903.32891"
+       id="guide11988" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="70.710678,933.38095"
+       id="guide12011" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata11446">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-932.36218)">
+    <g
+       id="g12022"
+       transform="matrix(0.75,0,0,0.75,-18.435284,920.47888)">
+      <rect
+         y="73.776901"
+         x="34.597725"
+         height="44.446712"
+         width="172.73608"
+         id="rect11449"
+         style="opacity:0.9;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         y="29.330193"
+         x="34.850254"
+         height="44.446712"
+         width="172.73608"
+         id="rect11449-1"
+         style="opacity:0.9;fill:#552200;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         y="117.97108"
+         x="34.597729"
+         height="44.446712"
+         width="172.73608"
+         id="rect11449-9"
+         style="opacity:0.9;fill:#da4d00;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text11984"
+         y="64.93808"
+         x="70.71067"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+           y="64.93808"
+           x="70.71067"
+           id="tspan11986"
+           sodipodi:role="line">Ground</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text11984-5"
+         y="107.34928"
+         x="70.710678"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+           y="107.34928"
+           x="70.710678"
+           id="tspan11986-5"
+           sodipodi:role="line">Power</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text11984-7"
+         y="151.29092"
+         x="70.710678"
+         style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+           y="151.29092"
+           x="70.710678"
+           id="tspan11986-4"
+           sodipodi:role="line">Control</tspan></text>
+    </g>
+  </g>
+</svg>

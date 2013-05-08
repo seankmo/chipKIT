@@ -1,0 +1,237 @@
+<meta name="author" content="Davis Cook">
+  
+<head>
+   <script type="text/javascript" src="../SH/scripts/shCore.js"></script>
+   <script type="text/javascript" src="../SH/scripts/shBrushmpide.js"></script>
+   <link type="text/css" rel="stylesheet" href="../SH/styles/shCoreDefault.css"/>
+   <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<cf_Box Color="White" NoMargins="1">
+
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td width="50%" align="center">
+	<span class="TB-PROJECTTITLE">
+	  Project 9:<br/>
+	  Debouncing via RC filter
+      </span>
+      </td>
+      <td width="15%" align="center">&nbsp;</td>
+    </tr>
+    <tr><td colspan="3" align="right"><hr/><br/><br/></td></tr>
+  </table>
+  
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td valign="top">
+      	<p>
+          <span class="TB-H1">Introduction</span> <br/><br/>
+          <span class="TB-BODY"> <!--this is a comment -->
+			In <a href="P07.cfm">Project 07</a>
+			we have seen how to debounce a button in a circuit with software. Other solutions to this problem also exist. 
+			In this project we will now examine how do debounce the button input using a capacitor and resistor to make an
+			RC filter.<font color="red">this is the first time you use RC,  so maybe state that it stands for Resistive Capacitive</font> The key component here is the capacitor <font color="red"> maybe add something like "a device designed to store electrical charge" </font> so it is important to understand how it works. <a href="P09files/P09What is a capacitor.cfm">More on capacitors here</a>.
+			The reason a capacitor works well for debouching is due to the fact it limits how fast the voltage can change over a period 
+			of time. <font color="red"> maybe explain that it does this by constantly charging and discharging</font>  Referring back to the <a href="P09files/P09What is a capacitor.cfm#WaterAnalogy">water analogy</a>, the elastic wall in the hydraulic capacitor can only stretch so 
+			fast. If the incoming water is moving too quickly the elastic will slow it down. Similarly the rapid voltage 
+			spikes caused by a bouncing button can be smoothed out using capacitor.
+			<font color="red"> maybe rephrase "the elastic will slow it down",  ( to something along the lines of, it can only respond as fast as the capacitor) </font> 
+			<br>
+			
+			
+			
+			
+			</font>    <br/>
+			</p>
+		</td>
+	</tr>
+  </table>
+  
+  
+  
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td valign="top">
+      	<p>		
+			<br/><br/><span class="TB-H1">Step1: Planing out the circuit design</span> <br/>	  
+			<table class="TBLAYOUT" style="width:100%;" cellpadding="0"><br/>
+				<span class="TB-BODY">
+				To debounce the button properly we cannot use a capacitor alone, a resistor must be used as well. The 
+				combination of a resistor and capacitor in this circuit is referred to as an RC filter. RC filters can 
+				be used to filter out different frequencies of electrical variation<font color="red"> I think you might loose people on this sentence (if there not familiar with signal filtering,  maybe relate it to something like an audio eq (nothing to in depth though)</font> but this is a bit beyond the scope 
+				of our project.  Instead we are going to be focusing on the charge, and discharge time of our RC circuit. 
+				Essentially what our circuit will be doing is limiting how fast the voltage can <font color="red"> change?? </font>. 
+				We can control the rate at which the voltage changes by choosing our R and C <font color="red"> maybe spell out resistance and capacitance the first time you use R and C in this context </font> values properly to get a 
+				good time constant. For this project we will use a 10K ohm resistor and a 10 &micro;F capacitor. 
+				<a href="P09files/P09ChoosingRC.cfm">Here</a> is an explanation of what a time constant is and how the R and C values were determined from it. 
+				</p>
+				 <font color="red"> if you made a diagram here of what a sequence of square pulses looked like influenced by an RC filter , it would really help here.
+				    maybe two cases,  one where the frequency is low and the square pulse has time to reach steady state and then decay to zero before the next pulse starts (like the o scope printout you have in the subsection.
+				    the next case would be that the frequency is so that, that when it charges it does not charge fully before the square pulse ends and it starts to decays and bleeds into the next pulse.  it is easy to see this way, that because of the constant rate of charge
+				    of the circuit (tau constant), that as you increase frequency of the input signal the individual pulses get blended.  ( maybe hook up the analog discovery,  it has a o-scope and signal generator built in, so you could simulate
+				    a constant sequence of square waves and get a on screen output of the input signal and output signal that results.)
+			</td>
+		</tr>
+	<tr><td colspan="2"><br/><br/></td></tr>
+  </table>
+  
+  
+  
+
+  
+<table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+ <tr>
+      <td valign="top">
+      	<p>		
+			<span class="TB-H1"> Step2:&nbsp; Building the circuit</span> <br/><br/>	  
+        <span class="TB-BODY">
+			Having now chosen our resistor and capacitor values we can finally begin putting the circuit together. 
+			To appreciate the effects of our debouncing circuit we will be adapting the circuit from <a href="P07.cfm">project 06</a>. In that 
+			project the noise caused by the button bounce occasionally caused the led to dimly glow instead of blink. The 
+			addition of our RC filter will remedy this problem. For project 09 we need will all the parts used in <a href="P06.cfm">project 06</a> as 
+			well as one additional 10 K ohm resistor and one 10 &micro;F capacitor. After the circuit from <a href="P06.cfm">project 06</a> has been built, modify it 
+			so it looks like Fig. 1. <font color="red"> the circuit you have seems a little odd, with the 10k resistor before the the button, it is acting like a voltage divider, reducing the input voltage
+			to the chipKIT to approximately 2.5V when the circuit reaches steady state (and it changes the transfer function a bit too),   maybe size the resistor before the button a little it smaller so that the resistor you use for the filter will have most of the voltage load at
+			steady state, and just use the 3.3V pin instead of the 5V pin
+			
+			<br><br>
+			note: the transfer function is  (1/CR2)/(s + (1/C)*(1/R1 + 1/R2))       [R2 is the resistor above the button, R1 is the resistor in parallel with the cap]
+			so Tau for this case is 1/(C*(R1 + R2)) not 1/(CR1) like you have been specifying in the circuit setup (at least when the button is asserted).
+			if you reduce R2 then it lessens this,  i am guessing you are doing this to limit current. 
+			
+			also maybe specify the steps for setting this up,  (nothing to in depth), just because it is a little different than project 6.  </span>
+		</span>
+	</p>
+	</td>
+	</tr>
+	<tr><td colspan="2"><br/><br/></td></tr>
+</table>		
+		
+		
+		
+		
+		
+<table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+	<tr>
+      <td width="100" align="center">
+	  	<a name="Fig"></a>
+      	<img src="P09files/RCfilter_bb.png" />	</div> <br/>
+        <div class="TB-FIGURES">Fig. 1. Trainable Delay Circuit with debouncing RC filter</div><br/>
+	<font color="red"> this picture is huge </font>
+      </td>
+	</tr>
+    <tr><td colspan="2"><br/><br/></td></tr>
+  </table>		
+		
+		
+		
+<table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+ <tr>
+      <td valign="top">
+      	<p>			
+		
+		<span class="TB-BODY">
+			Now that the circuit has been built, you can test the de-bouncing properties of the RC filter. Plug the USB cable into 
+			your chipKIT board and program it with code from <a href="P06.cfm">project 6</a>. Once your board is programmed the external LED should start 
+			blinking. Remove the capacitor form you circuit; it's okay to do this while the circuit has power<font color="red">  while in this case of this particular application, the chances of you getting shocked by doing this is minimal
+			but in general this is a really bad habit to get into, and not a great practice to condone </font>. With the capacitor gone 
+			pressing the button enough times should eventually cause a button bounce and make the LED dimly glow.  Tapping of flicking 
+			the button should guarantee something similar button bounce to occur. Once you are able to reproduce the bounce consistently try sticking the 
+			capacitor back in the circuit. Be sure you <b>put the capacitor back exactly how it is shown</b> in Fig. 1. with the white stripe terminal connected to ground. If you reconnect the capacitor with 
+			the wrong polarity it could damage your component. With the capacitor back in place you should not be able to get the button 
+			to bounce even if you flick or tap it. 
+			
+		</span>
+
+	</p>
+	</td>
+	</tr>
+	<tr><td colspan="2"><br/><br/></td></tr>
+</table>	
+
+<table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+	<tr>
+		<td valign="top">
+			<p>		
+				 <span class="TB-BODY">
+				To actually see exactly what our circuit is doing look at Fig. 2. It shows what the button signal looks 
+				like with the capacitor absent from the RC filter. In Fig 3. the same signal shown but at 100x zoom so you can clearly see 
+				the noise caused by a button bounce. Finally Fig. 4. depicts what the button signal looks like after the capacitor has been put back. <font color="red"> maybe give a better caption for fig 4, I'm guessing it is the rising edge , since fig 2 is the whole signal and fig 3 is the falling edge , it might need some explanation.</font>
+
+				</span>								
+			</p>   
+			</td>
+	</tr>
+	<tr><td colspan="2"><br/><br/></td></tr>
+</table>
+
+
+<table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+	<tr>
+      <td width="100" align="center">
+      	<img src="P09files/BSigNoCap.png" width = "480" />	</div> <br/>
+        <div class="TB-FIGURES">Fig. 2. Button signal no capacitor</div><br/>
+      </td>
+	</tr>
+	<tr>
+		<td valign="top" width="100" align="center">
+      	<img src="P09files/BSigNoCap100x.png" width = "480" /> <br/>
+        <div class="TB-FIGURES">Fig. 3. Button signal no capacitor 100x zoom</div><br/>
+      </td>
+	</tr>
+	<tr>
+		<td valign="top" width="100" align="center">
+      	<img src="P09files/BSigCap.png" width = "480"/> <br/>
+        <div class="TB-FIGURES">Fig. 4. Button signal with capacitor</div>
+      </td>
+	</tr>
+    <tr><td colspan="2"><br/><br/></td></tr>
+  </table>	
+<table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+	<tr>
+		<td valign="top">
+			<p>		
+				 <span class="TB-BODY">
+					As you can see the capacitor has dramatically limited the rate at which voltage can change, 
+					especially compared to the size of the bounce noise. In hindsight our large capacitor value 
+					is a bit of an overkill for its intended purpose. A smaller capacitor could be used to get rid of any 
+					bounce noise, but it would not filter out the noise produced by a tap or flick. Either way our 
+					circuit is working as intended, which is all that really matters.
+					
+					<font color="red"> the phrasing in this paragraph seems odd to me,  saying "in hindsight " to me is like saying,  here is what we made, and it didn't work quite as well as we wanted
+					
+					(we are writing this procedure, so if it doesn't work quite as well as we wanted, go back and modify it so that it does)  (basically imply this (the project) is exactly what we intended)
+					
+					instead maybe say, something to the extent of, while the value may seem large,  this value is chosen so that it can correct for noise produced by taps or flicks.
+					
+					also saying "Either way our circuit is working as intended, which is all that really matters" is kinda like the "in hindsight" phrase,  
+					</font>
+					
+					
+				</span>								
+			</p>   
+			</td>
+	</tr>
+	<tr><td colspan="2"><br/><br/></td></tr>
+</table>	
+
+<table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+	<tr>
+		<td valign="top">
+			<p>		
+				<span class="TB-H1">Summary<o:p></o:p></span>
+				 <span class="TB-BODY">
+					<br/><br/>How Capacitors work<br/>
+					Common types of capacitors and determining their values<br/>
+					RC time constant<br/> 
+
+				</span>								
+			</p>   
+			</td>
+	</tr>
+	<tr><td colspan="2"><br/><br/></td></tr>
+</table>
+
+
+
+</cf_Box>

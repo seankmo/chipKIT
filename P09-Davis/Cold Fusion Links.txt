@@ -1,0 +1,6 @@
+
+http://192.168.10.185/classroom/ChipKitDev/P09-Davis/P09.cfm
+
+http://192.168.10.185/classroom/ChipKitDev/P09-Davis/P09files/P09What is a capacitor.cfm
+
+http://192.168.10.185/classroom/ChipKitDev/P09-Davis/P09files/P09ChoosingRC.cfm

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="738.19476"
+   height="371.14487"
+   id="svg3005"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Function Definition.svg"
+   inkscape:export-filename="C:\Users\tsteingrimsson\Documents\Tutorial Pages\P02files\func_def.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3007" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="408.51455"
+     inkscape:cy="112.00319"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="870"
+     inkscape:window-height="768"
+     inkscape:window-x="175"
+     inkscape:window-y="175"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3010">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.643973,-260.87222)">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="210.07689"
+       y="423.59912"
+       id="text3013"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3015"
+         x="210.07689"
+         y="423.59912">int example_function(int input)</tspan><tspan
+         sodipodi:role="line"
+         x="210.07689"
+         y="473.59912"
+         id="tspan3017">{</tspan><tspan
+         sodipodi:role="line"
+         x="210.07689"
+         y="523.59912"
+         id="tspan3019">  input = input + 1;</tspan><tspan
+         sodipodi:role="line"
+         x="210.07689"
+         y="573.59912"
+         id="tspan3021">  return input;</tspan><tspan
+         sodipodi:role="line"
+         x="210.07689"
+         y="623.59912"
+         id="tspan3023">}</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 212.85714,446.64789 c -70.92244,-2.03805 -13.76697,70.3911 -27.14285,97.14286 -6.2603,12.52059 -26.13062,22.44081 -24.28572,24.28571 5.40282,5.40282 25.03648,-6.39209 27.14286,-4.28571 17.26953,17.26953 -26.37533,60 20,60"
+       id="path3029"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="15.714286"
+       y="549.505"
+       id="text3031"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3033"
+         x="15.714286"
+         y="549.505">Body of</tspan><tspan
+         sodipodi:role="line"
+         x="15.714286"
+         y="599.505"
+         id="tspan3035">Function</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="122.85714"
+       y="293.79074"
+       id="text3037"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3039"
+         x="122.85714"
+         y="293.79074">Return Type</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 134.28571,302.36218 c -2.70638,31.99742 44.83681,-0.87747 52.85715,7.14286 5.45225,5.45225 -1.23982,20.18876 2.85714,24.28571 2.75212,2.75213 16.11877,-21.42857 21.42857,-21.42857 46.43834,0 38.3714,24.48575 68.57143,-5.71428"
+       id="path3045"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 182.85714,339.50504 c 0.11777,17.87011 -7.0781,87.57588 21.42857,68.57143"
+       id="path3047"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 267.14286,396.6479 c 29.89408,-61.00935 69.99307,-2.85368 110,-22.85715 5.12733,-2.56366 16.34913,-21.42857 18.57143,-21.42857 3.33333,0 0,6.66667 0,10 0,6.5482 4.29377,14.30184 7.14285,20 2.00386,4.00771 25.23903,1.42857 30,1.42857 18.39768,0 121.42857,-10.17631 121.42857,4.28572"
+       id="path3049"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="367.71429"
+       y="295.50504"
+       id="text3051"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3053"
+         x="367.71429"
+         y="295.50504">Function</tspan><tspan
+         sodipodi:role="line"
+         x="367.71429"
+         y="345.50504"
+         id="tspan3055">Name</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="551.42859"
+       y="289.50504"
+       id="text3057"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3059"
+         x="551.42859"
+         y="289.50504">Input</tspan><tspan
+         sodipodi:role="line"
+         x="551.42859"
+         y="339.50504"
+         id="tspan3061">Parameters</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 549.71429,383.79075 c 8.18792,-40.23376 41.52673,1.37949 67.14285,-11.42857 2.31442,-1.1572 9.54747,-16.16681 11.42857,-14.28571 17.63095,17.63094 -1.1457,28.57143 37.14286,28.57143 14.30887,0 32.85714,-6.18501 32.85714,11.42857"
+       id="path3065"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

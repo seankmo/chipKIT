@@ -1,0 +1,7 @@
+http://192.168.10.185/classroom/ChipKitDev/P03-Davis/P03.cfm
+
+http://192.168.10.185/classroom/ChipKitDev/P03-Davis/P03files/P03Choosing%20Resistor.cfm
+
+http://192.168.10.185/classroom/ChipKitDev/P03-Davis/P03files/P03Electric%20Review.cfm
+
+http://192.168.10.185/classroom/ChipKitDev/P03-Davis/P03files/P03Programing_Variables.cfm

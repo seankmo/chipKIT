@@ -1,0 +1,333 @@
+<!-- Changed image file size from 48 to 18, spaces to
+2.5--></--!Removed>
+<html><head>
+<meta name="author" content="Amber Mear">
+<title>Introduction to MPIDE</title></head>
+
+<body><cf_Box Color="White" NoMargins="1">
+
+  
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td width="35%"
+   	  align="center"><a href="index.cfm"><img src="/img/E101-Logo-250.png"
+   	  /></a></td>
+      <td width="50%" align="center">
+	<span class="TB-PROJECTTITLE">
+	  Project 1:<br/> Introduction to MPIDE
+      </span>
+      </td>
+      <td width="15%" align="center">&nbsp;</td>
+    </tr>
+    <tr><td colspan="3" align="right"><hr/><br/><br/></td></tr>
+  </table>
+  
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td valign="top">
+      	<p>
+          <span class="TB-H1">Introduction</span> <br/><br/>
+          <span class="TB-BODY">
+            In this project, you will be introduced to MPIDE (the
+            Multi-Platform Integrated Development Environment) which
+            is software that can be used to program chipKIT boards.
+            Programs written for MPIDE are called
+            &ldquo;sketches&rdquo;.  (We will often use the
+            term <i>code</i> or <i>computer code</i> to refer to all
+            or part of a sketch.  Note that this
+            &ldquo;<i>code</i>&rdquo; has nothing to do with a secret
+            code even though some of it my initially appear somewhat
+            mysterious!) In order to demonstrate how to use MPIDE with
+            your chipKIT board, you will run one of the example
+            sketches that is provided within MPIDE.
+	    
+	    <br/> <br/>
+	    
+	    A brief discussion of the components used in this project
+            is provided below.  Links to slightly more detailed
+            descriptions of the various components are provided in the
+            subsections below.  <br/><br/><br/>
+          </span>
+      	</p>
+      </td>
+      <td width="320" align="center">
+      	<img src="opensketch.png" /> <br/><br/>
+        <div class="TB-FIGURES">Figure 1.  MPIDE sketch</div>
+      </td>
+    </tr>
+    <tr><td colspan="2"><br/><br/></td></tr>
+  </table>
+  
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td valign="top">
+      	<p>
+          <span class="TB-H1">Getting Started</span> <br/><br/>
+          <span class="TB-BODY">
+            To begin, have a USB A to micro B cable ready to connect
+            to your computer and your chipKIT board.  (You may use
+            either the the Uno32, uC32, or Max32 or chipKIT boards.)
+          </span>
+	</p>
+    <tr>
+      <td width="48%" align="center">
+	<img src="chipKIT-Uno32-revC-obl-1600.png" /></td>
+      <td width="4%">&nbsp;</td>
+      <td width="48%" align="center">
+	<img src="oblique_p_l.png"
+      </td>
+    </tr>
+    <tr><td colspan="3"><br/><br/></td></tr>
+  </table>
+  
+  <table class="TBLAYOUT"
+	 style="width:96%; margin-left:2%; margin-right:2%;"
+	 cellpadding="0">
+    <tr>
+      <td>
+      	<cf_Box Color="Putty">
+          <p>
+            <span class="TB-H2">Step 1: Download MPIDE</span>
+            <br/><br/>
+            <span class="TB-BODY">
+             MPIDE is free software that can be downloaded
+             from <a href="https://github.com/chipKIT32/chipKIT32-MAX/downloads">here</a>.
+	     <font color="red">JBS: We need either additional
+	       information or additional pages (one for each operating
+	       system?) to guide the reader through installation and
+	       start-up.</font>  To run the program, click to open and
+	       begin your download. After it has finished downloading,
+	       unzip the file. Double-click the file to open it.
+	       <br/><br/>
+              <div align="center">
+		<img src="openfolder.png" />
+	      </div> <br/>
+              <ol class="TB-BODY">
+
+		<p>
+		
+               	<li> Connect your cable to your computer and your
+               	board. The driver will automatically begin
+               	installing. <font color="red">JBS: What's a driver?  Does
+               	the reader need to know what this means?  If not, this
+               	should be stated differently.  If they should
+               	understand this, explain it.</font>  Once it has
+               	installed, small red and green lights should be
+               	illuminated on the board (technically these are
+               	&ldquo;light emitting diodes&rdquo; and in the
+               	reference material for the board are referred to as
+               	LED3, which is red, and LED4, which is green). Open
+               	the folders and click on the application to run
+               	it. <font color="red">JBS: I'm not sure which folders the
+               	user is supposed to open.  Are they supposed to open
+               	more than one?  Also, by "application" do we simply
+               	mean MPIDE?  Also, the following figure needs to be
+               	tied into the narrative, i.e., it needs to be
+               	explained.  When does it appear?</font>
+		<div align="center">
+		  <img src="openfile.png"/>
+		</div>
+		Fig. 1 is indicative of the window you should see
+after MPIDE has started.  <font color="red">JBS: We need to think about the
+use of numbered figures versus figures that simply appear at the
+"correct spot" in the narrative flow.  I generally like to have all
+figures numbered and to be provided with a caption.  We may discover
+that numbering every figure is overkill, but we should provide a
+caption for ever figure.  Norm can probably help with implementing
+this.
+</font> The central (white) portion of the window is where you enter
+computer code, i.e., enter your sketch.  MPIDE provides a default name
+for the sketch which is of the form:
+&ldquo;sketch_<i>dateletter</i>&rdquo; where <i>dateletter</i> is the
+date (with a three-letter representation of the month and the numeric
+value for the day) followed by a letter.  When you try to save your
+sketch, this is the name that will be associated with the saved file
+unless you indicate you want to name it something else.  (As an aside,
+if you open additional new windows on the same day, and stick with the
+default naming, the letter at the end of the file name changes.  You
+can open 26 new windows this way.  If you try for a 27th sketch,
+you're told to it may be time to take a break!  However, you should
+provide more descriptive names for your sketches and, by doing so, you
+can open any number of sketches in the same day.)
+</li>
+
+		<p>
+
+                <li>Because the purpose of this project is to introduce
+                you to MPIDE and demonstrate how to use it, rather
+                than teach you to write your own sketch, we will use
+                one of the example sketches that comes with MPIDE.
+
+		  <p>
+
+                Select the menu entry
+                <tt>File>Examples>1.Basics>Blink</tt>.  This will open
+a new window in which the code for the sketch appears.  In the
+"header" portion of the window the name of the file in which the code
+is stored will appear.  In this example the file name is "Blink" (on
+the computer this is stored as <tt>Blink.pde</tt>; the extension
+of <tt>.pde</tt> indicates this file is a sketch).
+		</li>
+
+		<div align="center">
+		  <img src="blinkexample.png" />
+		</div>
+
+		  <p>
+
+		    At this point we have a sketch, i.e., a set of
+		    computer instruction, loaded into MPIDE.  But,
+		    this information has not been transfered to the
+		    chipKIT board.  Keep in mind that MPIDE runs on
+		    your computer and allows us to transfer
+		    information from your computer to the chipKIT
+		    boards (and, as will see later, allows us to
+		    transfer information from the chipKIT boards back
+		    to your computer).  You can, in fact, start MPIDE
+		    without a chipKIT attached to your computer.  You
+		    might want to do this if you are writing a sketch
+		    but not yet ready to run it on a board.  The next
+		    steps describe what needs to be done to transfer
+		    the instructions in a sketch to a chipKIT board.
+
+
+               	<li>
+MPIDE can be use with a great variety of board but it needs to know
+the type of board it is supposed to &ldquo;talk&rdquo; to.
+To do this, as indicated below, select the menu <tt>Tools>Board</tt>
+and the type of your particular chipKIT board.
+
+<p>
+
+Next, go to <tt>Tools>Serial Port</tt> and select the proper serial
+port. <div align="center"><img src="boardselect.png"/></div> This is
+usually usually COM3 or higher. An easy way to learn which serial port
+is the correct one is to disconnect your chipKIT board. The correct
+option will have disappeared from the dropdown menu. Reconnect your
+board and select that serial
+port.<div align="center"><img src="2serialport2.png"/></div></li>
+              </ol>
+              
+            </span>
+          </p>
+        </cf_Box>
+      </td>
+    </tr>
+    <tr><td><br/><br/><br/></td></tr>
+  </table>
+  
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td>
+      	<p>
+          <span class="TB-H1">Step 2: Running the Sketch</span>
+          <br/><br>
+          <span class="TB-BODY">
+            We are now almost at the point where we can run the
+            sketch. Normally, before uploading the sketch, you would
+            &ldquo;verify&ldquo; the sketch to identify any bugs or errors in the
+            code.  This can be accomplished by in on of three way.  As
+            indicated in the figure below, you can click on the button
+            corresponding to Verify.  Alternatively, you can click on
+            the menu entry <tt>Sketch>Verify/Compile</tt> or you can
+            type <tt>Ctrl+R</tt> (i.e., hold down the control key and
+            then type the key R).
+
+	    <p>
+
+	      You are certainly welcome to verify this sketch, but
+	      since this was one of the provided example sketches,
+	      this isn't necessary.
+
+          </span>
+        </p>
+      </td>
+    </tr>
+    <tr><td colspan="3"><br/><br/></td></tr>
+  </table>
+  
+  <table class="TBLAYOUT" style="width:100%;" cellpadding="0">
+    <tr>
+      <td width="18%" align="center">
+	<img src="verifybutton.png" /></td>
+      <td width="2.5%">&nbsp;</td>
+      <td width="18%" align="center">
+	<img src="upload.png" /></td>
+      <td width="2.5%">&nbsp;</td>
+      <td width="18%" align="center">
+	<img src="newsketchbutton.png" /></td>
+      <td width="2.5%">&nbsp;</td>
+      <td width="18%" align="center">
+	<img src="openbutton.png" /></td>
+      <td width="2.5%">&nbsp;</td>
+      <td width="18%" align="center">
+	<img src="savebutton.png" /></td>
+    </tr>
+    <tr>
+      <td align="center"><br><span class="TB-FIGURES">(a) Verify the
+      sketch</span></td>
+      <td>&nbsp;</td>
+      <td align="center"><br><span class="TB-FIGURES">(b) Upload the
+      sketch</span></td>
+      <td>&nbsp;</td>
+      <td align="center"><br><span class="TB-FIGURES">(c) Start a new
+      sketch</span></td>
+      <td>&nbsp;</td>
+      <td align="center"><br><span class="TB-FIGURES">(d) Open a
+      pre-existing sketch</span></td>
+      <td>&nbsp;</td>
+      <td align="center"><br><span class="TB-FIGURES">(e) Save the
+      sketch</span></td>
+    </tr>
+    <tr><td colspan="3"
+	    align="center"><br/><br/><span class="TB-FIGURES">Figure
+	    2.  Tool options in MPIDE.</span></td></tr>
+    <tr>
+      <td colspan="3">
+        <p>
+          <span class="TB-BODY"> <br/> Whether or not a sketch as been
+	    verified, we are free to try to &ldquo;upload&rdquo; it to
+	    a board.  If there is a bug in the code that would have
+	    been caught in the verification stage, that will still be
+	    caught when we try to upload it.  To upload the sketch,
+	    you can click on the Upload button, as indicated above,
+	    click on the menu entry <tt>File>Upload to I/O Board</tt>
+	    (I/O stands for input/output), or type <tt>Ctrl+U</tt>.
+	    Once the upload process starts, two other light emitting
+	    diodes on the board, technically known as LED1 and LED2,
+	    should start to blink.<br/>
+
+<p>
+
+<font color="red">
+JBS: Although I think the following should be somewhere in our
+material, it does seem a little out of place here.  Perhaps we can
+move this to the next project.
+</font>
+
+Note: If you enter text into the sketch before saving, the header
+	    will display the following symbol:</br>
+	<tr>
+      	<td width="48%" align="center">
+	<img src="unsavedtextsymbol.png" /></td></tr>
+	  </span>
+        </p>
+      </td>
+    </tr>
+    <tr><td colspan="3"><br/><br/><br/></td></tr>
+  </table>
+  
+<font color="red">
+JBS: We need to describe what the sketch actually does.  What is the
+result of uploading this sketch?  What will the board do?  What will
+the reader see?
+
+<p>
+
+Also, need to explain what the other "tool bar" buttons do.  There
+shouldn't be a figure without a corresponding description in the text.
+
+</font>
+
+</cf_Box></body>
+</html>
