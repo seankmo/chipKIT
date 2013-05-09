@@ -102,10 +102,10 @@
 						It is possible to have a voltage drop across an LED of more than 2V.  However, if
 						the voltage drop exceeds the <i>maximum forward voltage</i> of approximately 3V,
 						the LED might be damaged.  When they are in a
-						<span class="TB-LITERAL1">HIGH</span> state, the output &ldquo;pins&rdquo; of the chipKIT boards have
-						a voltage level of 3.3V (and 0V when they are in a <span class="TB-LITERAL1">LOW</span> state).  If we
+						<code>HIGH</code> state, the output &ldquo;pins&rdquo; of the chipKIT boards have
+						a voltage level of 3.3V (and 0V when they are in a <code>LOW</code> state).  If we
 						attach an LED between one of the output pins and ground (0V), then set the output
-						pin to <span class="TB-LITERAL1">HIGH</span>, the voltage that appears across the LED will exceed its
+						pin to <code>HIGH</code>, the voltage that appears across the LED will exceed its
 						maximum forward voltage.  Because of the non-linear relationship between the
 						current and the voltage in an LED, small changes in voltage can result in large
 						changes in current.  This is discussed in greater depth
@@ -158,7 +158,11 @@
 						In Fig. 1, the red lines represent wires.  These wires may be represented as
 						either straight lines, curved lines, or a collection of straight-line segments.
 						Functionally, they are all the same.  From an electrical perspective, the only
-						important thing is the location of the end-points of the wire.  
+						important thing is the location of the end-points of the wire.  The wires that
+						appear in the breadboard diagrams can be different colors and the colors
+						themselves carry no inherent meaning.  However, it is typical to use black for
+						wires that are at a potential of 0V (ground), while red is often used for a wire
+						that is tied to a positive voltage source.
 
 						<br><br>
 
@@ -209,14 +213,14 @@
 						<div align="center">
 							<cf_imagebox align="center"
 							             path="P03files/Uno32%20Pins.svg"
-							             width="513px"
+							             width="410px"
 							             caption="Fig. 3. Uno32 pins.">
 								
 							<br><br>
 	    
 							<cf_imagebox align="center"
 							             path="P03files/Max32%20Pins.svg"
-							             width="513px"
+							             width="520px"
 							             caption="Fig. 4. Max32 pins.">
 						</div>
 
@@ -225,16 +229,33 @@
 						<i>5V pins</i> and <i>3.3V pins</i> always maintain their respective positive
 						voltage.  The <i>digital pins</i> can be set to one of two states.  This is done
 						by setting them, using the appropriate programming statements, to
-						either <span class="TB-LITERAL1">HIGH</span> or <span class="TB-LITERAL1">LOW</span>, as we discussed 
-						<a href="P02.cfm">here</a>.  When set to <span class="TB-LITERAL1">HIGH</span>, a digital pin
+						either <code>HIGH</code> or <code>LOW</code>, as we discussed 
+						<a href="P02.cfm">here</a>.  When set to <code>HIGH</code>, a digital pin
 						maintains a voltage of 3.3V.  Now we can begin building the circuit.
 
 						<br><br>
 
-						For this project use pin 3 as the positive terminal (always denoted in this series
-						of projects by a red wire) of the voltage source and ground pin for the negative
-						terminal (always denoted by a black wire). Attach the chipKIT board to the
-						breadboard, as shown in Fig. 5.
+						In this project, as shown in Fig. 5, a ground pin is connected to a rail.  This
+						rail is, in turn, connected to one end of a resistor.  The other end of the
+						resistor is connected to the cathode of the LED (the shorter &ldquo;leg&rdquo; of
+						the LED).
+
+						<br><br>
+
+						Pin 3 is connected to a separate rail and this rail is connected to the anode of
+						the LED (the longer &ldquo;leg&rdquo;).  
+
+						<br><br>
+
+						HERE HERE HERE
+
+						<br><br>
+
+						
+						we use pin 3 as the positive terminal
+						(always denoted in this series of projects by a red wire) of the voltage source
+						and ground pin for the negative terminal (always denoted by a black wire). Attach
+						the chipKIT board to the breadboard, as shown in Fig. 5.
 
 							<br><br>
 
@@ -264,9 +285,7 @@
 			<tr>
 				<td>
 					<span class="TB-H2">Old Code</span> <br/><br/>
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+					<pre class="brush: mpide;">
 	void setup()
 	{
 	pinMode(13,OUTPUT);       //setup pin 13 so it can be turned on or off
@@ -278,15 +297,11 @@
 					  digitalWrite(13,LOW);     //turn off pin
 					  delay(1000);              // time delay of of 1000 milliseconds (1 second) 
 					}
-</pre>
-</cf_box>
-</div>
+	</pre>
 	<br/><br/>
 	<span class="TB-H1">Updated Code</span> 
 	<br/><br/>
-	<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+	<pre class="brush: mpide;">
 					void setup()
 					{
 					  pinMode(3,OUTPUT);        //&lt;--Updated-- setup pin 3 so it can be turned on or off
@@ -298,9 +313,7 @@
 					  digitalWrite(3,LOW);      //&lt;--Updated-- turn off pin
 					  delay(1000);              // time delay of of 1000 milliseconds (1 second) 
 					}
-</pre>
-</cf_box>
-</div>
+	</pre>
 	<br/><br/>
 	<span class="TB-BODY"> In the previous example, updating the pin values was relatively
 	  straightforward. Even so, changing values by hand in the long run isn't very efficient.
@@ -313,9 +326,7 @@
 	</span>
 	<br/><br/>  				
 	<span class="TB-H1">Final Code</span> <br/><br/>
-	<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+	<pre class="brush: mpide;">
 						const int led_Pin = 3;                //&lt;--Updated-- define the constant integer variable led_Pin to be 3
 						 
 						void setup()
@@ -329,9 +340,7 @@
 						  digitalWrite(led_Pin,LOW);    //&lt;--Updated-- turn off pin
 						  delay(1000);                  // time delay of of 1000 milliseconds (1 second) 
 						}
-</pre>
-</cf_box>
-</div>
+	</pre>
 	<br/><br/> 
 	<span class="TB-BODY"> 
 	  Now, run this code in MPIDE and it should make your external LED circuit blink. 
@@ -361,4 +370,3 @@
 </cf_Box>
 </body>
 </html>
-
