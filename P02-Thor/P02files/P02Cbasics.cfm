@@ -27,9 +27,10 @@
          <span class="TB-H1">Introduction</span> <br/><br/>
          <span class="TB-BODY">
 				This is a brief overview of the basics of the C/C++ programming
-				languages. This will only cover the basics that project 2
-				requires knowledge of. More complex syntax and programming subjects
-				will be covered in later projects as they come up.<br/><br/>
+				languages in MPIDE. This only stratches the surface of those languages
+				and only covers what we will use in project 2. More complex syntax and 
+				programming subjects will be covered in later projects as they come up.
+				<br/><br/>
 			</span>
       </td>
     </tr>
@@ -43,17 +44,17 @@
 			<table><tr><td>
 		    A line of code is often called a statement. There are a fews 
 			things that can be done in a statement.
-			The first is to declare a variable, which is discussed below and will be covered in later projects.
-			The second is to call a function, which is also discussed below.
+			The first is to declare a variable, which will be discussed in the next project.
+			The second is to call a function, which is discussed below.
 			The last is to do some operation. The most common operations are
-			the arithmetic operations like addition, subtraction, etc... and they work
+			the arithmetic operations like addition, subtraction, etc... and they work mostly
 			like you would expect them to. Except for a few operations such as the assignment operator
 			which looks like the equal sign(=). This is important because in 
 			programming it is common to see a line like this: <code>x=x+1</code>
-			This is completely valid and important in programming, but in algebra
+			This is valid and essential to how loops work and other situations, but in algebra
 			this is a contradiction. In the programming context, <code>x=x+1</code> is really
-			<code>x_new=x_old+1</code>. It is very important to keep in mind that 
-			programming mathematics can be very different than algebraic mathematics.
+			<code>x_new=x_old+1</code>. It is very important to keep in mind that mathematics in
+			programming can be very different than mathematics.
 			<br></td>
 				<td align="center" width="320">
 				<img src="C_line_dec.svg" height="150"> <br><br>
@@ -62,7 +63,10 @@
 			</tr></table>
 			It is also entirely possible to have multiple operations occur on the 
 			same line. Although, care should be taken to ensure that the C order
-			of operations is followed to get the desired result. 
+			of operations is followed to get the desired result. The order of operations
+			for C can be found on the internet, but it is considered good practice to 
+			avoid lines of code that do a lot of operations in each line by breaking the 
+			equation up into multiple lines with sub-calculations. 
 			Every statement in C ends with a semicolon. This is a part of the
 			language and must be done or the program will give a lot of error messages
 			and fail to build.<br/><br/>
@@ -75,7 +79,7 @@
   <table class="TBLAYOUT">
    <tr>
 	  <td valign="top">
-		  <span class="TB-H1">Variables</span> <br><br>
+		  <span class="TB-H1">Data Types</span> <br><br>
 		  <span class="TB-BODY">
 			<span class="TB-H2">Integers</span><br/>
 			A variable is a reference to a location in the computer's 
@@ -216,7 +220,6 @@
 					</td>
 				</tr>
 			</table><br/>
-			<img src="fd_bits.svg" height="150"/>
 			<div class="TB-FIGURES">Figure 2. How bits are used in floating point numbers.</div><br/>
 			An important thing to know about how these data types work is
 			that the size of the number is inversely proportional (as one gets bigger,
@@ -224,6 +227,7 @@
 			often called "floating point error" and it is  when the 
 			number gets very large, the number to the right of the decimal point gets 
 			smaller and begins jumps in larger and larger amounts.<br/>
+			<table><tr><td>
 			<table border="1">
 				<tr>
 					<th>
@@ -259,28 +263,38 @@
 					</td>
 				</tr>
 			</table>
+			</td><td>
+			<img src="fd_bits.svg" width="450"/>
+			</td></tr></table>
 			<br/><br/>
 			<span class="TB-H2">Characters</span><br/>
 			Another data type is the char, or character data type. 
 			This data type is only a byte long, 8 bits, and is used
 			to represent a letter using ASCII, American Standard Code
 			for Information Interchange, encoding. For example, 'A' in 
-			ASCII is 0100 0001 in binary, or 65 in decimal.<br/><br/>
+			ASCII is 0100 0001 in binary, or 65 in decimal. There are 
+			other ways to encode letters in binary like UTF-8, but we
+			won't worry about that.
+			<br/><br/>
 			<span class="TB-H2">Byte</span><br/>
-			There is also a byte data type, which is like the char data type
+			There is also a byte data type, which is like the char
 			but is more generalized and not specific to characters.<br/><br/>
 			<span class="TB-H2">Array</span><br/>
-			C/C++ also has arrays of data types. Where you can have a number
-			of different integers in one variable. However, this will be discussed
-			in a later project when it is more applicable.<br/><br/>
+			C/C++ also has arrays of data types. Where you can have several
+			different integers contained in one variable. However, this will be discussed
+			in more detail in a later project when it is more applicable.
+			<br/><br/>
 			
 			<span class="TB-H2">Naming a Variable</span><br/>
 			For the most part, you can name a variable whatever you'd like. However,
-			there are some rules on what can be used in a name.
+			there are some rules on what can be used in a name. Tthe list below covers 
+			the most important rules. 
+			This will be covered in more detail in project 3.
 			<ol>
 				<li>Names can only contain letters, numbers, and underscores</li>
 				<li>Names can not start with a number</li>
 				<li>Capitalizaton is important</li>
+				<li>Names cannot be the same, even if they have different data types</li>
 			</ol>
 		  </span>
 		</p>
@@ -288,6 +302,55 @@
 	</tr>
 	</table>
   <br/>
+  <table class="TBLAYOUT" >
+    <tr>
+	  <td valign="top">
+		  <span class="TB-H1">Comments</span> <br><br>
+		  <span class="TB-BODY">
+			<table><tr><td>
+			Commenting code is for anyone who will be looking at the code later, so that the reader
+			will be able to see what was trying to be done with the code.
+			There are two ways in which you can comment your code.
+			The first way is called inline comments, they are started with "//". These are comments that consist of a single line.
+			They look like this:
+
+
+<pre class="brush: mpide;gutter: false;">
+// This is an example of a single line comment
+</pre>
+			</td>
+			<!--<td align="center" >
+			<img src="comments.svg" height="50"> <br><br>
+			<div class="TB-FIGURES">Figure 5. Types of Comments.</div>
+			</td>-->
+			</tr></table>
+
+			The other way to comment code is by using multi-line or block comments, they start with "/*" and end with "*/". 
+			They allow for better formatting of the comments and are often used at the top of the code to 
+			say who programmed it and what the project is doing, or above a function to describe 
+			what it needs for input and what it will output. Here is an example of a block comment:
+
+
+<pre class="brush: mpide;">
+/*
+This is a block comment.
+It can have multiple lines
+without needing "//" to start
+every line.
+*/
+</pre>
+			<br/>
+			This becomes even more important as the size of a project expands
+			and its complexity increases. You can save your self a lot of 
+			headaches if you add comments explaining what you are doing when
+			it might not be obvious at first glance. Experience is the only way
+			to truly know how you should comment something or not. Everyone has
+			their style, so just use what works for you.
+		  </span>
+	  </td>
+	</tr>
+   </table>
+	<br/><br/>
   <table class="TBLAYOUT">
     <tr>
 	  <td valign="top">
@@ -303,9 +366,9 @@
 			There are a number of built-in functions in MPIDE for the chipKIT 
 			boards, and they are (mostly) interchangable with the same Arduino
 			function. You will be introduced to them throughout the tutorials
-			as they come up, or you can view them in the reference manual, which
-			can be found in MPIDE-&gt;Help-&gt;Reference, which will open a local copy 
-			of the reference manual in your default web browser.
+			as they come up, or you can view them in your local reference manual, which
+			can be found in MPIDE-&gt;Help-&gt;Reference, which will open the
+			reference manual in your default web browser.
 			</td>
 			<td align="center">
       	<img src="func_def.svg" height="200"> <br/>
@@ -316,27 +379,32 @@
 			A function definition has four main parts. The first and foremost
 			is the name of the function. There are some rules regarding
 			what can be used and what cannot, just look at the variable naming
-			rules considering that they are the same as the function name rules.
+			rules (above) considering that they follow the same rules.
 			<br/><br/>
 			The next part of a function is the input parameters (or arguments). This allows a
 			programmer to pass data into the function. What the function does
 			with that data depends on what the function was programmed to do.
 			These inputs are variables and when defining them, they need to 
-			have a data type and a name. <br/> 
+			have a data type and a name. It should be noted that variables used in the
+			function is local to only the function. If there is a variable named 
+			<code>foo</code> inside the function. Trying to use <code>foo</code> outside 
+			of the function will cause a build error, unless <code>foo</code> is defined there as well.
+			<br/> 
 			The third part of a function is its return type. The return type
 			is just the data type that the function returns when it is finished.
 			If the function is not supposed to return anything, then the data
 			type that the function &ldquo;returns&rdquo; is void. This topic will be 
 			covered more in-depth in later projects.<br/>
-			The final and most important part of a function is the code that it executes(runs) when the function is called.
+			The final and most important part of a function is the code that it executes(runs) when 
+			the function is called.
 			This is the body of the function. Without this the function won't do anything. The body
 			of the function is shown by curly braces; '{' and '}'. The left curly brace '{' starts the
 			body of the function, and the right curly brace '}' ends the body of the function. So anything
-			that is inbetween these two curly braces will be executed when the function is called.
+			that is inbetween these two curly braces will be executed when the function is called. Also,
+			as stated above, any variables inside the body of the function exists only inside that function.
 
-<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+
+<pre class="brush: mpide;">
 // input an integer into the function
 // and return an integer when done
 int foo(int bar)
@@ -355,8 +423,6 @@ void do_nothing()
   // void function.
 }
 </pre>
-</cf_box>
-</div>
 			
 		<br>
 	  </td>
@@ -371,13 +437,12 @@ void do_nothing()
 			<table><tr><td>
 		    Calling a function is much easier than defining a function.
 			Just write the function name with parentheses at the end,
-			and any inputs that are required by the function; those inputs go into the 
+			and include any inputs that are required by that function; those inputs go into the 
 			parentheses in the same order as the function definition has listed. 
 			Example:
 
-<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+
+<pre class="brush: mpide;">
 void foo(int bar, float baz)
 {
   // do stuff with bar and baz
@@ -386,8 +451,6 @@ void foo(int bar, float baz)
 // inside some other function
 foo(5,1.3); // calls foo with bar=5 and baz=1.3
 </pre>
-</cf_box>
-</div>
 			</td>
 			<td align="center">
 			<img src="func_elems.svg" height="100"> <br/>
@@ -396,67 +459,13 @@ foo(5,1.3); // calls foo with bar=5 and baz=1.3
 			</tr></table>
 			If there are no inputs, then the parentheses should be empty.
 			If the function is one that returns a value, you can set a variable to 
-			that returned value. Also, since this is a call, and not a 
-			definition, the line that is calling the function should end with a semicolon. 
+			that returned value, or even nest function calls so that the result of one function
+			is directly inputted to the next function. 
+			Also, since this is a call, and not a definition, the line that is 
+			calling the function should end with a semicolon. 
 		  </span>
 	  </td>
 	</tr>
   </table>
-  <br/><br/>
-  <table class="TBLAYOUT" >
-    <tr>
-	  <td valign="top">
-		  <span class="TB-H1">Comments</span> <br><br>
-		  <span class="TB-BODY">
-			<table><tr><td>
-			Commenting code is for anyone who will be looking at the code later, so that the reader
-			will be able to see what was trying to be done with the code.
-			There are two ways in which you can comment your code.
-			The first way is called inline comments, they are started with "//". These are comments that consist of a single line.
-			They look like this:
-
-
-<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
-// This is an example of a single line comment
-</pre>
-</cf_box>
-</div>
-			</td>
-			<td align="center" >
-			<img src="comments.svg" height="50"> <br><br>
-			<div class="TB-FIGURES">Figure 5. Types of Comments.</div>
-			</td>
-			</tr></table>
-
-			The other way to comment code is by using multi-line or block comments, they start with "/*" and end with "*/". 
-			They allow for better formatting of the comments and are often used at the top of the code to 
-			say who programmed it and what the project is doing, or above a function to describe 
-			what it needs for input and what it will output. Here is an example of a block comment:
-
-<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
-/*
-This is a block comment.
-It can have multiple lines
-without needing "//" to start
-every line.
-*/
-</pre>
-</cf_box>
-</div>
-			<br/>
-			This becomes even more important as the size of a project expands
-			and its complexity increases. You can save your self a lot of 
-			headaches if you add comments explaining what you are doing when
-			it might not be obvious at first glance. Experience is the only way
-			to truly know when you should comment something or not. Everyone has
-			their style, so just use what works for you.
-		  </span>
-	  </td>
-	</tr>
-   </table>
 	</cf_box>
 </body></html>

@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="701.54535"
-   height="161.54117"
+   width="701.18829"
+   height="169.95911"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -27,11 +27,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="260.26396"
-     inkscape:cy="5.2341938"
+     inkscape:zoom="1.979899"
+     inkscape:cx="86.292782"
+     inkscape:cy="11.449429"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3615"
      showgrid="false"
      inkscape:window-width="693"
      inkscape:window-height="605"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,7 +58,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-12.885036,-7.5268021)">
+     transform="translate(-13.242144,-7.5268021)">
     <g
        id="g3615">
       <g
@@ -1087,69 +1087,75 @@
       <text
          sodipodi:linespacing="125%"
          id="text3591"
-         y="75.039597"
-         x="19.697977"
+         y="39.179176"
+         x="12.626909"
          style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           y="75.039597"
-           x="19.697977"
+           y="39.179176"
+           x="12.626909"
            id="tspan3593"
-           sodipodi:role="line">sign bit</tspan></text>
+           sodipodi:role="line"
+           style="font-size:20px">sign bit</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3595"
-         y="74.807358"
-         x="101.87184"
+         y="82.888573"
+         x="50.859135"
          style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           y="74.807358"
-           x="101.87184"
+           y="82.888573"
+           x="50.859135"
            id="tspan3597"
-           sodipodi:role="line">exponent (8 bits)</tspan></text>
+           sodipodi:role="line"
+           style="font-size:20px">exponent (8 bits)</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3599"
-         y="75.54467"
-         x="459.61942"
+         y="82.615738"
+         x="393.45444"
          style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           y="75.54467"
-           x="459.61942"
+           y="82.615738"
+           x="393.45444"
            id="tspan3601"
-           sodipodi:role="line">fraction (23 bits)</tspan></text>
+           sodipodi:role="line"
+           style="font-size:20px">fraction (23 bits)</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3603"
-         y="165.42793"
-         x="12.577419"
+         y="130.57767"
+         x="13.082496"
          style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           y="165.42793"
-           x="12.577419"
+           y="130.57767"
+           x="13.082496"
            id="tspan3605"
-           sodipodi:role="line">sign bit</tspan></text>
+           sodipodi:role="line"
+           style="font-size:20px">sign bit</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3607"
-         y="166.96349"
-         x="78.286819"
+         y="173.52946"
+         x="43.436558"
          style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           y="166.96349"
-           x="78.286819"
+           y="173.52946"
+           x="43.436558"
            id="tspan3609"
-           sodipodi:role="line">exponent (11 bits)</tspan></text>
+           sodipodi:role="line"
+           style="font-size:20px">exponent (11 bits)</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3611"
-         y="166.71094"
-         x="467.44809"
+         y="173.27693"
+         x="390.67648"
          style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          xml:space="preserve"><tspan
-           y="166.71094"
-           x="467.44809"
+           y="173.27693"
+           x="390.67648"
            id="tspan3613"
-           sodipodi:role="line">fraction (52 bits)</tspan></text>
+           sodipodi:role="line"
+           style="font-size:20px">fraction (52 bits)</tspan></text>
     </g>
   </g>
 </svg>
