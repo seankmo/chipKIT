@@ -93,37 +93,31 @@
 	  <tr>
           <td class="qty">1</td>
           <td>LED</td>
-          <td align="center" class="image"><img src="P06files/LEDreal.png"></td>
+          <td align="center" class="image"><img src="P06files/LED_red.svg"></td>
 	  </tr>
                
 	  <tr>
           <td class="qty">1</td>
           <td>Two Port Button</td>
-          <td align="center" class="image"><img src="P06files/btnph.svg"></td>
-	  </tr>
-	
-	  <tr>
-          <td class="qty">1</td>
-          <td>Breadboard</td>
-          <td align="center" class="image"><img src="P06files/btnph.svg"></td>
+          <td align="center" class="image"><img src="P06files/PushButton.svg"></td>
 	  </tr>
 	
 	  <tr>
           <td class="qty">1</td>
           <td>330 &Omega; Resistor</td>
-          <td align="center" class="image"><img src="P06files/btnph.svg"></td>
+          <td align="center" class="image"><img src="P06files/resistor_330.svg"></td>
 	  </tr>
 
 	  <tr>
           <td class="qty">1</td>
           <td>10 k&Omega; Resistor</td>
-          <td align="center" class="image"><img src="P06files/btnph.svg"></td>
+          <td align="center" class="image"><img src="P06files/resistor_10Ka.svg"></td>
 	  </tr>	  
 	
 	  <tr>
           <td class="qty">5</td>
           <td>Connecting Wires</td>
-          <td align="center" class="image"><img src="P06files/btnph.svg"></td>
+          <td align="center" class="image"><img src="P06files/FritzWire.svg"></td>
 	  </tr>	
 
 

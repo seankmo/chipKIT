@@ -1,6 +1,5 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 676.99078 347.21811">
-<defs></defs>
 <metadata>
 <rdf:RDF>
 <cc:Work rdf:about="">
@@ -1266,10 +1265,10 @@
 <path d="m107.461,22.699v-0.481h2.574v-0.372h-0.395c-0.427,0-0.41,0-0.446-0.013-0.009-0.003-0.023-0.009-0.03-0.014-0.019-0.011-0.058-0.05-0.068-0.068-0.011-0.019-0.021-0.051-0.024-0.076-0.006-0.041,0.006-0.089,0.029-0.125,0.014-0.021,0.044-0.05,0.063-0.062,0.019-0.011,0.046-0.021,0.069-0.024,0.013-0.002,0.146-0.002,0.522-0.002,0.568,0.001,0.512-0.001,0.555,0.02,0.039,0.019,0.067,0.047,0.087,0.087,0.006,0.012,0.013,0.028,0.015,0.037,0.005,0.015,0.005,0.051,0.005,0.8v0.784l-0.006,0.019c-0.024,0.086-0.098,0.142-0.185,0.142s-0.158-0.054-0.185-0.14l-0.006-0.018-0.001-0.297v-0.297h-2.192l-0.001,0.297-0.001,0.297-0.005,0.018c-0.018,0.056-0.056,0.101-0.105,0.124s-0.109,0.022-0.158,0c-0.058-0.026-0.1-0.081-0.11-0.144,0-0.006-0.001-0.228-0.001-0.492z"/>
 <path d="m107.461,19.551c0-0.632-0.001-0.609,0.012-0.658,0.039-0.155,0.169-0.268,0.33-0.287,0.017-0.002,0.331-0.002,1.152-0.002l1.129,0.001,0.024,0.005c0.066,0.015,0.122,0.042,0.169,0.08,0.078,0.064,0.126,0.153,0.138,0.255,0.002,0.016,0.003,0.188,0.002,0.618v0.595l-0.006,0.024c-0.021,0.093-0.065,0.166-0.134,0.223-0.043,0.035-0.095,0.061-0.148,0.075-0.049,0.012,0.018,0.012-1.189,0.012-1.208,0-1.141,0-1.189-0.012-0.153-0.04-0.267-0.168-0.287-0.326-0.002-0.008-0.003-0.279-0.003-0.603zm0.383-0.564v1.123h2.192v-1.123h-2.192z"/>
 </g>
-<line x1="96.279999" y1="131.80099" stroke="#FFF" stroke-miterlimit="10" x2="260.065" y2="131.80099" fill="none"/>
-<line x1="260.065" y1="131.80099" stroke="#FFF" stroke-miterlimit="10" x2="260.065" y2="26.514999" fill="none"/>
-<line x1="260.065" y1="26.514999" stroke="#FFF" stroke-miterlimit="10" x2="193.731" y2="26.514999" fill="none"/>
-<line x1="72.314003" y1="37.384998" stroke="#FFF" stroke-miterlimit="10" x2="185.815" y2="37.384998" fill="none"/>
+<line y2="131.80099" x2="260.065" stroke="#FFF" stroke-miterlimit="10" y1="131.80099" x1="96.279999" fill="none"/>
+<line y2="26.514999" x2="260.065" stroke="#FFF" stroke-miterlimit="10" y1="131.80099" x1="260.065" fill="none"/>
+<line y2="26.514999" x2="193.731" stroke="#FFF" stroke-miterlimit="10" y1="26.514999" x1="260.065" fill="none"/>
+<line y2="37.384998" x2="185.815" stroke="#FFF" stroke-miterlimit="10" y1="37.384998" x1="72.314003" fill="none"/>
 <polygon points="157.429,110.445,165.005,110.445,161.24,103.921" fill="#00703c"/>
 <path d="m149.636,111.32c7.443-12.784,7.443-12.784,7.443-12.784h-8.405c-0.702,0-1.272,0.655-1.272,1.401v9.982c0,0.788,0.57,1.4,1.272,1.4h0.962z" fill="#00703c"/>
 <path d="m243.159,98.536h-77.893c7.443,12.784,7.443,12.784,7.443,12.784h70.448c0.698,0,1.269-0.612,1.269-1.4v-9.982c0.001-0.747-0.57-1.402-1.267-1.402z" fill="#00703c"/>
@@ -1312,22 +1311,22 @@
 <path d="m117.879,108.409c0.725,1.159,0.725,1.159,0.725,1.159,0.208,0.349,0.418,0.695,0.612,1.031h0.027c0.195-0.387,0.377-0.722,0.586-1.057,0.653-1.134,0.653-1.134,0.653-1.134h2.507c-2.45,3.284-2.45,3.284-2.45,3.284,2.477,3.607,2.477,3.607,2.477,3.607h-2.617c-0.75-1.236-0.75-1.236-0.75-1.236-0.21-0.336-0.391-0.695-0.572-1.043h-0.042c-0.181,0.36-0.389,0.707-0.569,1.043-0.697,1.236-0.697,1.236-0.697,1.236h-2.547c2.534-3.504,2.534-3.504,2.534-3.504-2.465-3.389-2.465-3.389-2.465-3.389l2.588,0.003z" fill="#595a5c"/>
 <path d="m123.365,113.202c0.418,0.206,1.351,0.567,2.297,0.567,1.212,0,1.81-0.543,1.81-1.211,0-0.916-0.975-1.328-1.99-1.328h-0.946v-1.532h0.918c0.78,0,1.754-0.283,1.754-1.056,0-0.555-0.474-0.953-1.461-0.953-0.809,0-1.657,0.321-2.061,0.541-0.474-1.547-0.474-1.547-0.474-1.547,0.599-0.348,1.769-0.695,3.063-0.695,2.103,0,3.271,1.031,3.271,2.293,0,0.966-0.598,1.738-1.81,2.126v0.026c1.184,0.192,2.144,1.029,2.144,2.241,0,1.599-1.531,2.783-4.051,2.783-1.281,0-2.353-0.31-2.937-0.631l0.473-1.624z" fill="#595a5c"/>
 <path d="M130.66,115.301v-1.301c1.253-1.057,1.253-1.057,1.253-1.057,2.186-1.805,3.229-2.822,3.243-3.892,0-0.747-0.474-1.34-1.615-1.34-0.849,0-1.587,0.388-2.116,0.748-0.654-1.521-0.654-1.521-0.654-1.521,0.738-0.528,1.907-0.955,3.23-0.955,2.256,0,3.466,1.211,3.466,2.861,0,1.56-1.184,2.782-2.631,3.955-0.905,0.709-0.905,0.709-0.905,0.709v0.025h3.745v1.765l-7.016,0.003z" fill="#595a5c"/>
-<line stroke-width="0.5" x1="103.297" y1="48.091999" stroke="#FFF" stroke-miterlimit="10" x2="114.918" y2="48.091999" fill="none"/>
-<line stroke-width="0.5" x1="164.114" y1="21.347" stroke="#FFF" stroke-miterlimit="10" x2="164.114" y2="18.612" fill="none"/>
-<line stroke-width="0.5" x1="150.263" y1="21.665001" stroke="#FFF" stroke-miterlimit="10" x2="150.263" y2="19.052999" fill="none"/>
-<line stroke-width="0.5" x1="143.063" y1="22.047001" stroke="#FFF" stroke-miterlimit="10" x2="143.063" y2="19.297001" fill="none"/>
-<line stroke-width="0.5" x1="118.68" y1="21.659" stroke="#FFF" stroke-miterlimit="10" x2="118.68" y2="18.909" fill="none"/>
-<line stroke-width="0.5" x1="111.748" y1="23.014" stroke="#FFF" stroke-miterlimit="10" x2="111.748" y2="18.214001" fill="none"/>
+<line y2="48.091999" stroke-width="0.5" x2="114.918" stroke="#FFF" stroke-miterlimit="10" y1="48.091999" x1="103.297" fill="none"/>
+<line y2="18.612" stroke-width="0.5" x2="164.114" stroke="#FFF" stroke-miterlimit="10" y1="21.347" x1="164.114" fill="none"/>
+<line y2="19.052999" stroke-width="0.5" x2="150.263" stroke="#FFF" stroke-miterlimit="10" y1="21.665001" x1="150.263" fill="none"/>
+<line y2="19.297001" stroke-width="0.5" x2="143.063" stroke="#FFF" stroke-miterlimit="10" y1="22.047001" x1="143.063" fill="none"/>
+<line y2="18.909" stroke-width="0.5" x2="118.68" stroke="#FFF" stroke-miterlimit="10" y1="21.659" x1="118.68" fill="none"/>
+<line y2="18.214001" stroke-width="0.5" x2="111.748" stroke="#FFF" stroke-miterlimit="10" y1="23.014" x1="111.748" fill="none"/>
 </g>
-<path stroke-linejoin="miter" d="m163.15774,38.314679c-2.24645,0.689242-3.11343,1.95942-3.01474,3.430377l0.0726,3.522205c-0.35267,2.306463-1.59961,3.817449-4.30647,4.029799h-15.14395c-1.82851,0.193676-4.96398-0.276146-5.1437,6.117143,0.13343,5.363124,0.60796,5.695984,5.23624,5.546983l191.07398,0.636183c2.11086,0.09359,3.37853-0.796553,3.92362-2.529707l0.0765-17.113225c0.33099-2.734481-1.37685-4.054616-3.33323-4.007081l-169.40702,0.373498" stroke="#ffd42a" stroke-linecap="round" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.5" fill="none"/>
+<path stroke-linejoin="miter" d="m163.15774,38.314679c-2.24645,0.689242-3.11343,1.95942-3.01474,3.430377l0.0726,3.522205c-0.35267,2.306463-1.59961,3.817449-4.30647,4.029799h-15.14395c-1.82851,0.193676-4.96398-0.276146-5.1437,6.117143,0.13343,5.363124,0.60796,5.695984,5.23624,5.546983l191.07398,0.636183c2.11086,0.09359,3.37853-0.796553,3.92362-2.529707l0.0765-17.113225c0.33099-2.734481-1.37685-4.054616-3.33323-4.007081l-169.40702,0.373498" stroke="#ffd42a" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.5" fill="none"/>
 <path stroke-linejoin="miter" d="m158.26019,43.116484a4.53749,4.53749,0,0,1,-9.07498,0,4.53749,4.53749,0,1,1,9.07498,0z" fill-opacity="0" stroke="#ffd42a" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.5"/>
 <g stroke="#ffd42a" transform="translate(15.97546,4.1219907)" fill="#ffd42a">
 <path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="1px" d="M73.459507,12.25,73.09375,13.164392,130.82238,35.7194,131.18814,34.805008,73.459507,12.25z"/>
 <path d="m128.75195,34.391076-2.59078,1.134847,7.24781,0.685067-5.79188-4.41069,1.13485,2.590776z" fill-rule="evenodd"/>
 </g>
-<g fill="#ffd42a" transform="translate(26.424348,4.5404389)" stroke="#ffd42a">
-<path style="direction:ltr;enable-background:accumulate;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;text-transform:none;text-align:start;" stroke-width="1px" d="m150.5546,11.40625-0.3671,0.917739,54.20775,20.220838,0.33651-0.917739l-54.17716-20.220838z"/>
-<path fill-rule="evenodd" d="m201.98236,31.146047-2.57328,1.173982,7.25736,0.575138-5.85806-4.322399,1.17398,2.573279z"/>
+<g stroke="#ffd42a" transform="translate(26.424348,4.5404389)" fill="#ffd42a">
+<path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="1px" d="m150.5546,11.40625-0.3671,0.917739,54.20775,20.220838,0.33651-0.917739l-54.17716-20.220838z"/>
+<path d="m201.98236,31.146047-2.57328,1.173982,7.25736,0.575138-5.85806-4.322399,1.17398,2.573279z" fill-rule="evenodd"/>
 </g>
 <g stroke="#ffd42a" transform="translate(15.97546,4.1219907)" fill="#ffd42a">
 <path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="1px" d="M421.50955,11.8125,420.75,12.450525,450.82833,48.14955,451.58788,47.511525,421.50955,11.8125z"/>
@@ -1347,15 +1346,15 @@
 <path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="1px" d="m201.12994,284.75458-0.76242,0.60993,21.71381,27.41674,0.76242-0.60994-21.71381-27.41673z"/>
 <path d="m202.67981,287.49822,2.80954,0.32632-5.91356-4.24615,2.7777,6.72937,0.32632-2.80954z" fill-rule="evenodd"/>
 </g>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="15.687396" x="-0.5395596" font-weight="normal" line-height="125%" fill="#000000"><tspan y="15.687396" x="-0.5395596"><tspan font-size="18px" y="15.687396" x="-0.5395596" font-weight="normal">Ground pin</tspan></tspan></text>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="15.467669" x="144.52525" font-weight="normal" line-height="125%" fill="#000000"><tspan y="15.467669" x="144.52525"><tspan font-size="18px" y="15.467669" x="144.52525" font-weight="normal">Digital pins</tspan></tspan></text>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="15.467669" x="279.32687" font-weight="normal" line-height="125%" fill="#000000"><tspan y="15.467669" x="279.32687"><tspan font-size="18px" y="15.467669" x="279.32687" font-weight="normal">Digital pin and its corresponding number</tspan></tspan></text>
-<text style="word-spacing:0px;letter-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="308.50977" x="258.54581" font-weight="normal" line-height="125%" fill="#000000"><tspan y="308.50977" x="258.54581"><tspan y="308.50977" x="258.54581" font-size="18px" font-weight="normal">Ground pins</tspan></tspan></text>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="324.30725" x="241.88815" font-weight="normal" line-height="125%" fill="#000000"><tspan y="324.30725" x="241.88815"><tspan font-size="18px" y="324.30725" x="241.88815" font-weight="normal">5V source pin</tspan></tspan></text>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="343.64096" x="226.05641" font-weight="normal" line-height="125%" fill="#000000"><tspan y="343.64096" x="226.05641"><tspan font-size="18px" y="343.64096" x="226.05641" font-weight="normal">3.3V source pin</tspan></tspan></text>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="280.9505" x="544.6474" font-weight="normal" line-height="125%" fill="#000000"><tspan y="280.9505" x="544.6474"><tspan font-size="18px" y="280.9505" x="544.6474" font-weight="normal">Ground pins</tspan></tspan></text>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="167.07822" x="544.21674" font-weight="normal" line-height="125%" fill="#000000"><tspan y="167.07822" x="544.21674"><tspan font-size="18px" y="167.07822" x="544.21674" font-weight="normal">Digital pins</tspan></tspan></text>
-<text style="letter-spacing:0px;word-spacing:0px;" font-family="Arial" xml:space="preserve" font-size="18px" font-style="normal" font-stretch="normal" font-variant="normal" y="69.636589" x="544.85834" font-weight="normal" line-height="125%" fill="#000000"><tspan y="69.636589" x="544.85834"><tspan font-size="18px" y="69.636589" x="544.85834" font-weight="normal">5 V source pins</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="15.687396" x="-0.5395596" font-family="Arial" font-style="normal" fill="#000000"><tspan y="15.687396" x="-0.5395596"><tspan y="15.687396" x="-0.5395596" font-size="18px" font-weight="normal">Ground pin</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="15.467669" x="144.52525" font-family="Arial" font-style="normal" fill="#000000"><tspan y="15.467669" x="144.52525"><tspan y="15.467669" x="144.52525" font-size="18px" font-weight="normal">Digital pins</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="15.467669" x="279.32687" font-family="Arial" font-style="normal" fill="#000000"><tspan y="15.467669" x="279.32687"><tspan y="15.467669" x="279.32687" font-size="18px" font-weight="normal">Digital pin and its corresponding number</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="308.50977" x="258.54581" font-family="Arial" font-style="normal" fill="#000000"><tspan y="308.50977" x="258.54581"><tspan y="308.50977" x="258.54581" font-size="18px" font-weight="normal">Ground pins</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="324.30725" x="241.88815" font-family="Arial" font-style="normal" fill="#000000"><tspan y="324.30725" x="241.88815"><tspan y="324.30725" x="241.88815" font-size="18px" font-weight="normal">5V source pin</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="343.64096" x="226.05641" font-family="Arial" font-style="normal" fill="#000000"><tspan y="343.64096" x="226.05641"><tspan y="343.64096" x="226.05641" font-size="18px" font-weight="normal">3.3V source pin</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="280.9505" x="544.6474" font-family="Arial" font-style="normal" fill="#000000"><tspan y="280.9505" x="544.6474"><tspan y="280.9505" x="544.6474" font-size="18px" font-weight="normal">Ground pins</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="167.07822" x="544.21674" font-family="Arial" font-style="normal" fill="#000000"><tspan y="167.07822" x="544.21674"><tspan y="167.07822" x="544.21674" font-size="18px" font-weight="normal">Digital pins</tspan></tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18px" line-height="125%" font-stretch="normal" font-variant="normal" y="69.636589" x="544.85834" font-family="Arial" font-style="normal" fill="#000000"><tspan y="69.636589" x="544.85834"><tspan y="69.636589" x="544.85834" font-size="18px" font-weight="normal">5 V source pins</tspan></tspan></text>
 <path stroke-linejoin="miter" d="m478.36278,143.66313a15.225667,97.997932,0,1,1,-30.45133,0,15.225667,97.997932,0,1,1,30.45133,0z" transform="matrix(0.8389486,0,0,1.0117011,103.29854,0.77999743)" stroke="#ffd42a" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.62816147" fill="none"/>
 <path stroke-linejoin="miter" d="m499.9419,244.82169a12.919407,5.0894632,0,1,1,-25.83882,0,12.919407,5.0894632,0,1,1,25.83882,0z" transform="matrix(0.83102641,0,0,0.89799011,87.992599,31.738828)" stroke="#ffd42a" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.73639318" fill="none"/>
 <path stroke-linejoin="miter" d="m499.9419,244.82169a12.919407,5.0894632,0,1,1,-25.83882,0,12.919407,5.0894632,0,1,1,25.83882,0z" transform="matrix(0.83102641,0,0,0.89799011,87.671871,-178.642)" stroke="#ffd42a" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.73639318" fill="none"/>
@@ -1364,32 +1363,32 @@
 <path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="0.92617857px" d="m509.00719,255.90974-0.4052,0.83935,32.56097,15.60032,0.4052-0.83935-32.56097-15.60032z"/>
 <path stroke-width="0.40000000000000002pt" d="m509.7758,256.74837,2.66792-0.93925-7.17688-1.22159,5.44821,4.82877-0.93925-2.66793z" fill-rule="evenodd"/>
 </g>
-<g fill="#ffd42a" stroke="#ffd42a" transform="translate(-0.41844823,18.411722)">
-<path style="direction:ltr;enable-background:accumulate;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;text-transform:none;text-align:start;" stroke-width="0.94029158px" d="m510.87152,140.0639-0.0293,0.94029,32.96897,0.0588,0-0.9403-32.93959-0.0588z"/>
-<path fill-rule="evenodd" stroke-width="0.4pt" d="m512.7346,140.61135,2.00257-1.99743-7.00257,1.99099,6.99742,2.00901-1.99742-2.00257z"/>
+<g stroke="#ffd42a" transform="translate(-0.41844823,18.411722)" fill="#ffd42a">
+<path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="0.94029158px" d="m510.87152,140.0639-0.0293,0.94029,32.96897,0.0588,0-0.9403-32.93959-0.0588z"/>
+<path stroke-width="0.4pt" d="m512.7346,140.61135,2.00257-1.99743-7.00257,1.99099,6.99742,2.00901-1.99742-2.00257z" fill-rule="evenodd"/>
 </g>
 <g stroke="#ffd42a" fill="#ffd42a">
 <path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="0.94522017px" d="m204.22822,291.12997-0.79753,0.50215,23.95542,37.39527,0.79753-0.53169-23.95542-37.36573z"/>
 <path stroke-width="0.40000000000000002pt" d="m204.54561,292.53697,2.7631,0.60441-5.46145-4.81379,2.09395,6.97248,0.6044-2.7631z" fill-rule="evenodd"/>
 </g>
 <g stroke="#ffd42a" fill="#ffd42a">
-<path style="baseline-shift:baseline;block-progression:tb;color:#000000;direction:ltr;text-indent:0;text-align:start;enable-background:accumulate;text-transform:none;" d="m356.65625,18.90625-60.40625,24.75,0.375,0.9375,60.40625-24.75z" stroke-width="1px"/>
-<path d="m297.51939,43.604392,1.09525-2.60776-5.72403,4.498385,7.23653-0.795367-2.60775-1.095258z" fill-rule="evenodd" stroke-width="0.40000000000000002pt"/>
+<path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="1px" d="m356.65625,18.90625-60.40625,24.75,0.375,0.9375,60.40625-24.75z"/>
+<path stroke-width="0.40000000000000002pt" d="m297.51939,43.604392,1.09525-2.60776-5.72403,4.498385,7.23653-0.795367-2.60775-1.095258z" fill-rule="evenodd"/>
 </g>
 <g stroke="#ffd42a" fill="#ffd42a">
-<path style="baseline-shift:baseline;block-progression:tb;color:#000000;direction:ltr;text-indent:0;text-align:start;enable-background:accumulate;text-transform:none;" d="M356.34375,19.0625,296.6875,55.25l0.5,0.84375,59.6875-36.15625z" stroke-width="1px"/>
-<path d="m297.23732,55.471222,0.674-2.746948-4.95019,5.338133,7.02313-1.917185-2.74694-0.674z" fill-rule="evenodd" stroke-width="0.40000000000000002pt"/>
+<path style="direction:ltr;enable-background:accumulate;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;text-transform:none;text-align:start;" stroke-width="1px" d="m356.34375,19.0625-56.93634,42.045775,0.5,0.84375l56.96759-42.014525z"/>
+<path fill-rule="evenodd" stroke-width="0.4pt" d="m299.12034,61.95717,0.674-2.746948-4.95019,5.338133,7.02313-1.917185-2.74694-0.674z"/>
 </g>
 <g stroke="#ffd42a" fill="#ffd42a">
-<path style="baseline-shift:baseline;block-progression:tb;color:#000000;direction:ltr;text-indent:0;text-align:start;enable-background:accumulate;text-transform:none;" d="M279.90625,15.375,249,82.03125l0.90625,0.4375,30.90625-66.6875z" stroke-width="1px"/>
-<path d="m249.87892,81.253458-0.97179-2.65624-1.13376,7.191285,4.76179-5.50684-2.65624,0.971795z" fill-rule="evenodd" stroke-width="0.40000000000000002pt"/>
+<path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="1px" d="M279.90625,15.375,249,82.03125l0.90625,0.4375,30.90625-66.6875z"/>
+<path stroke-width="0.40000000000000002pt" d="m249.87892,81.253458-0.97179-2.65624-1.13376,7.191285,4.76179-5.50684-2.65624,0.971795z" fill-rule="evenodd"/>
 </g>
 <g stroke="#ffd42a" fill="#ffd42a">
-<path style="baseline-shift:baseline;block-progression:tb;color:#000000;direction:ltr;text-indent:0;text-align:start;enable-background:accumulate;text-transform:none;" d="M279.5,15.5625,246,54.25l0.75,0.65625,33.5-38.6875z" stroke-width="1px"/>
-<path d="m247.24872,53.448828-0.19778-2.821504-3.08187,6.595607,6.10116-3.971881-2.82151,0.197778z" fill-rule="evenodd" stroke-width="0.40000000000000002pt"/>
+<path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="1px" d="M279.5,15.5625,246,54.25l0.75,0.65625,33.5-38.6875z"/>
+<path stroke-width="0.40000000000000002pt" d="m247.24872,53.448828-0.19778-2.821504-3.08187,6.595607,6.10116-3.971881-2.82151,0.197778z" fill-rule="evenodd"/>
 </g>
-<g fill="#ffd42a" transform="translate(-0.52404963,-209.85691)" stroke="#ffd42a">
-<path style="direction:ltr;enable-background:accumulate;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;text-transform:none;text-align:start;" stroke-width="0.92617857px" d="m509.00719,255.90974-0.4052,0.83935,32.56097,15.60032,0.4052-0.83935-32.56097-15.60032z"/>
-<path d="m509.7758,256.74837,2.66792-0.93925-7.17688-1.22159,5.44821,4.82877-0.93925-2.66793z" fill-rule="evenodd" stroke-width="0.4pt"/>
+<g stroke="#ffd42a" transform="translate(-0.52404963,-209.85691)" fill="#ffd42a">
+<path style="direction:ltr;baseline-shift:baseline;block-progression:tb;text-indent:0;color:#000000;enable-background:accumulate;text-transform:none;text-align:start;" stroke-width="0.92617857px" d="m509.00719,255.90974-0.4052,0.83935,32.56097,15.60032,0.4052-0.83935-32.56097-15.60032z"/>
+<path stroke-width="0.4pt" d="m509.7758,256.74837,2.66792-0.93925-7.17688-1.22159,5.44821,4.82877-0.93925-2.66793z" fill-rule="evenodd"/>
 </g>
 </svg>

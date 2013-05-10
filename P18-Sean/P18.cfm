@@ -60,9 +60,8 @@
             <thead>
               <tr>
 		  <th scope="col" width="10%">&nbsp;</th>
-                  <th scope="col" width="50%">&nbsp;</th>
-                  <th scope="col" width="20%">&nbsp;</th>
-		  <th scope="col" width="20%">&nbsp;</th>
+                  <th scope="col" width="60%">&nbsp;</th>
+                  <th scope="col" width="30%">&nbsp;</th>
               </tr>
             </thead>
             <tbody>
@@ -70,7 +69,6 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Potentiometer dial (resistance range from 10&Omega; to 10k&Omega;</td>
-          	  <td align="center" class="image"><img src="P18files/potmt.png"></td>
 		  <td align="center" class="image"><img src="P18files/potentiometer_trimmerbig.svg">  </td>
 		</tr>
 		
@@ -78,28 +76,24 @@
 		<tr>
 		  <td class="qty">2</td>
 		  <td>10k&Omega; resistors</td>
-          	  <td align="center" class="image"><img src="P18files/10kresistor.png"></td>
 		  <td align="center" class="image"><img src="P18files/resistor_10Ka.svg"></td>
 		</tr>
                
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Tower Pro SG92R servo</td>
-          	  <td align="center" class="image"><img src="P18files/sg92r_servo_small.png"></td>
 		  <td align="center" class="image"><img src="P18files/servo.svg"></td>
 	  	</tr>
                
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Six pin Header and Gender Changer (optional)</td>
-          	  <td align="center" class="image"><img src="P18files/Tile_1x6header_110.png"></td>
 		  <td align="center" class="image"></td>
 		</tr>
 		
 		<tr>
 		  <td class="qty">6</td>
 		  <td>Connecting wires</td>
-          	  <td align="center" class="image"><img src="P18files/wire.gif"></td>
 		  <td align="center" class="image"><img src="P18files/FritzWire.svg"></td>
 		</tr>
 	    

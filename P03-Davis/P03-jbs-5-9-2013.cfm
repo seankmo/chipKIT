@@ -30,19 +30,18 @@
 				<span class="TB-H1">Introduction</span>
 				<br/><br/>
 				<span class="TB-BODY">
-					<cf_TB-TabBox>
-						<cf_TB-Tab color="red" path="P03files/P03Electric Review.cfm" title="Fundamental
-					of Electricity">
-					</cf_TB-TabBox>
-
-
 					In the <a href="P02.cfm">Blinking the Internal LED project</a>, we programmed the
 					chipKIT microcontroller to control an on-board LED. Now we will build our own
 					external LED circuit and control it with the microcontroller. To do so, we must
 					understand the properties of the circuit and its components.  If you are unfamiliar
-					with the fundamentals of electricity and simple electrical components, a review of
-					these topics is available via the tab on the right.
+					with the fundamentals of electricity and simple electrical
+					components, a review of these topics is
+					available via the tab on the right.
 
+					<cf_TB-TabBox>
+						<cf_TB-Tab color="red" path="P03files/P03Electric Review.cfm" title="Fundamental
+					of Electricity & Electrical Components">
+					</cf_TB-TabBox>
 
 				</span>
 				<br/><br/>
@@ -106,10 +105,10 @@
 						It is possible to have a voltage drop across an LED of more than 2V.  However, if
 						the voltage drop exceeds the <i>maximum forward voltage</i> of approximately 3V,
 						the LED might be damaged.  When they are in a
-						<span class="TB-LITERAL1">HIGH</span> state, the output &ldquo;pins&rdquo; of the chipKIT boards have
-						a voltage level of 3.3V (and 0V when they are in a <span class="TB-LITERAL1">LOW</span> state).  If we
+						<code>HIGH</code> state, the output &ldquo;pins&rdquo; of the chipKIT boards have
+						a voltage level of 3.3V (and 0V when they are in a <code>LOW</code> state).  If we
 						attach an LED between one of the output pins and ground (0V), then set the output
-						pin to <span class="TB-LITERAL1">HIGH</span>, the voltage that appears across the LED will exceed its
+						pin to <code>HIGH</code>, the voltage that appears across the LED will exceed its
 						maximum forward voltage.  Because of the non-linear relationship between the
 						current and the voltage in an LED, small changes in voltage can result in large
 						changes in current.  This is discussed in greater depth
@@ -261,8 +260,8 @@
 						The digital pins be configured either to read input or write output.  When a pin
 						is configured for output, the pin can be set to one of two states.  The pin's
 						state is set, using the appropriate programming statements, to
-						either <span class="TB-LITERAL1">HIGH</span> or <span class="TB-LITERAL1">LOW</span>, as we
-						discussed <a href="P02.cfm">here</a>.  When set to <span class="TB-LITERAL1">HIGH</span>, a digital
+						either <code>HIGH</code> or <code>LOW</code>, as we
+						discussed <a href="P02.cfm">here</a>.  When set to <code>HIGH</code>, a digital
 						pin maintains a voltage of 3.3V.  Now we can begin building the circuit!
 
 						<br><br>
@@ -302,8 +301,8 @@
 						
 						Because pin 3 is attached to the anode of the LED (and because the other end of the LED
 						attached is attached to ground through the current-limiting resistor), when pin 3
-						is <span class="TB-LITERAL1">HIGH</span>, the LED will be illuminated.  Conversely, when pin 3
-						is <span class="TB-LITERAL1">LOW</span>, the LED will be off.  Now, before writing the sketch to
+						is <code>HIGH</code>, the LED will be illuminated.  Conversely, when pin 3
+						is <code>LOW</code>, the LED will be off.  Now, before writing the sketch to
 						control the LED, make sure you have created the circuit as shown in Fig. 5.
 
 						<br><br>
@@ -362,19 +361,17 @@
 						a variable name when we declare a variable.  Optionally, we can set the value of
 						the variable when it is declared.  We do this by assigning (using the equal sign)
 						a value to the variable.  Pin numbers are integer values and thus a variable that
-						represents a pin should have a type of <span class="TB-KEYWORD2">int</span>.  If the value of a
+						represents a pin should have a type of <code>int</code>.  If the value of a
 						variable will not change throughout a sketch, it is a good practice to also
 						provide what is known as a <i>type specifier</i> that indicates the variable is
-						actually a constant.  This type specifier is <span class="TB-BLACK">const</span>. 
+						actually a constant.  This type specifier is <code>const</code>. 
 						
 						<br><br>
 
 						Putting everything together, the new sketch that blinks the external LED is as
 						follows:
 
-						<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+						<pre class="brush: mpide;">
 const int ledPin = 3;  // Define the constant integer variable ledPin to be 3.
 						 
 void setup()
@@ -390,9 +387,7 @@ void loop()
   digitalWrite(ledPin, LOW);  // Turn off the LED.
   delay(1000);                // LED remains off for 1 second.
 }
-</pre>
-</cf_box>
-</div>
+						</pre>
 
 
 						After writing this sketch, uploaded it to the chipKIT board the external LED
@@ -444,4 +439,3 @@ void loop()
 	</cf_Box>
 	</body>
 </html>
-

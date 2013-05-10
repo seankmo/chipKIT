@@ -76,7 +76,7 @@
 		<tr>
 		  <td class="qty">2</td>
 		  <td>Four-port buttons</td>
-          	  <td align="center" class="image"><img src="P17files/button.jpg">
+          	  <td align="center" class="image">
 		  <img src="P17files/PushButton.svg">  </td>
 		</tr>
 		
@@ -84,28 +84,27 @@
 		<tr>
 		  <td class="qty">2</td>
 		  <td>10k&Omega; resistors</td>
-          	  <td align="center" class="image"><img src="P17files/10kresistor.png">
+          	  <td align="center" class="image">
 		  <img src="P17files/resistor_10Ka.svg"></td>
 		</tr>
                
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Tower Pro SG92R servo</td>
-          	  <td align="center" class="image"><img src="P17files/sg92r_servo_small.png"><img src="P17files/servo.svg"></td>
+          	  <td align="center" class="image"><img src="P17files/servo.svg"></td>
 	  	</tr>
-               
-		<tr>
-		  <td class="qty">1</td>
-		  <td>Six pin Header and Gender Changer (optional)</td>
-          	  <td align="center" class="image"><img src="P17files/Tile_1x6header_110.png"></td>
-		</tr>
 		
 		<tr>
 		  <td class="qty">9</td>
 		  <td>Connecting wires</td>
-          	  <td align="center" class="image"><img src="P17files/wire.gif"><img src="P17files/FritzWire.svg"></td>
+          	  <td align="center" class="image"><img src="P17files/FritzWire.svg"></td>
 		</tr>
 	    
+	    	<tr>
+		  <td class="qty">1</td>
+		  <td>Six pin Header and Gender Changer (optional)</td>
+          	  <td align="center" class="image"><img src="P17files/Tile_1x6header_110.png"></td>
+		</tr>
 	    
 	    </table>
             </div>

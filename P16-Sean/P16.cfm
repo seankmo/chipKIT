@@ -59,9 +59,9 @@
             <thead>
               <tr>
 		  <th scope="col" width="10%">&nbsp;</th>
-                  <th scope="col" width="50%">&nbsp;</th>
-                  <th scope="col" width="20%">&nbsp;</th>
-		  <th scope="col" width="20%">&nbsp;</th>
+                  <th scope="col" width="60%">&nbsp;</th>
+                  <th scope="col" width="30%">&nbsp;</th>
+		  
               </tr>
             </thead>
             <tbody>
@@ -69,7 +69,6 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Potentiometer dial (resistance range from 10&Omega; to 10k&Omega;</td>
-          	  <td align="center" class="image"><img src="P16files/potmt.png"></td>
 		  <td align="center" class="image"><img src="P16files/potentiometer_trimmerbig.svg">  </td>
 		</tr>
 		
@@ -77,14 +76,12 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>330&Omega; resistors</td>
-          	  <td align="center" class="image"><img src="P16files/330resreal.png"></td>
 		  <td align="center" class="image"><img src="P16files/330resBig.svg"></td>
 		</tr>
                
 		<tr>
 		  <td class="qty">1</td>
 		  <td>LED</td>
-		  <td align="center" class="image"><img src="P16files/LEDreal.png"></td>
 		  <td align="center" class="image"><img src="P16files/LED_red.svg"></td>
 
 	  	</tr>
@@ -93,7 +90,6 @@
 		<tr>
 		  <td class="qty">6</td>
 		  <td>Connecting wires</td>
-          	  <td align="center" class="image"><img src="P16files/wire.gif"></td>
 		  <td align="center" class="image"><img src="P16files/FritzWire.svg"></td>
 		</tr>
 	    
