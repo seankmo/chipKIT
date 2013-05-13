@@ -25,11 +25,11 @@
 			<span class="TB-H1">
 				Introduction</span><br/><br/>
 			<span class="TB-BODY">
-				<!-- REWRITE -->
 				This project will cover PWM (Pulse Width Modulation) 
-				and how to use it to make an LED &ldquo;breathe.&rdquo;
-				That is, make the LED slowly get brighter and then dimmer
-				in a sinusoidal fashion. 
+				and how to use it to make an LED &ldquo;breathe&rdquo;
+				by making the LED slowly get brighter until it as bright 
+				as it can be and then slowly get dimmer until it is off,
+				repeating the process while it is on.
 			<br/><br/></span>
 		</td>
 	</tr>
@@ -73,6 +73,11 @@
 		<td>
 			<span class="TB-H1">What is PWM?</span><br/><br/>
 			<span class="TB-BODY">
+				<cf_imagebox align="right"
+								 path="P14files/PWM.svg"
+								 width="300"
+								 caption="Figure 1. PWM Structure.">
+								
 				PWM is an abbreviation of Pulse Width Modulation, which is a method of
 				converting digital signals to analog signals. Due to how digital signals 
 				are by definition either on or off, it is not possible to set a pin to a 
@@ -82,38 +87,31 @@
 				to create a constant voltage, it switches between <code>HIGH</code> and 
 				<code>LOW</code> very quickly at varying times to create an average voltage 
 				that is inbetween <code>HIGH</code> and <code>LOW</code>.
-				<br/>
-			</span>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<table>
-				<tr>
-					<td>
-						<span class="TB-BODY">
-							The reason why PWM is called Pulse Width Modulation is because
-							it modulates the pulse width, or more simply, it changes how 
-							long the signal is <code>HIGH</code> compared to when it is 
-							<code>LOW</code>. When working with PWM, there is a term that 
-							is often used to measure the PWM. That term is the duty cycle, 
-							which is the ratio of how long the signal is <code>HIGH</code> 
-							to how long the period of its cycle is. This directly relates to 
-							the average voltage that the signal would produce.
-						</span>
-					</td>
-					<td>
-						<img src="P14files/PWM.svg" height="150"/>
-						<div class="TB-FIGURES">Figure 1. PWM Structure</div>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<span class="TB-BODY">
-				<!-- INSERT EQUATIONS AND STUFF -->
+				<br/><br/>
+								
+				The reason why PWM is called Pulse Width Modulation is because
+				it modulates the pulse width, or more simply, it changes how 
+				long the signal is <code>HIGH</code> compared to when it is 
+				<code>LOW</code>. When working with PWM, there is a term that 
+				is often used to measure the PWM. That term is the duty cycle, 
+				which is the ratio of how long the signal is <code>HIGH</code> 
+				to how long the period of its cycle is. This directly relates to 
+				the average voltage that the signal would produce. 
+				<br/><br/>
+				
+				<cf_imagebox align="left"
+								path="P14files/dc.svg"
+								width="280"
+								caption="Figure 2. General Duty Cycle Equation">
+								
+				The duty cycle is defined as the time of the pulse (signal is <code>HIGH</code>) 
+				divided by the period of the pulse (time from one rising edge to the next). Figure
+				2 is the general equation to find the duty cycle. For more information on how the
+				chipKIT board hardware implements PWM, follow the green tab below.
+				<div align="right">
+				<cf_TextbookTabs Mode="top" NextColor="Green">
+				<cf_TextbookTabs Mode="bottom" Color="Green" Title="Hardware Pulse Width Modulation" TabURL="P14files/PWM.cfm">
+				</div>
 			</span>
 		</td>
 	</tr>
@@ -123,31 +121,26 @@
 			<span class="TB-H1">
 				Step 1: Setting Up the Circuit
 			</span><br/><br/>
-			<table>
-				<tr>
-					<td>
-						<span class="TB-BODY">
-							The circuit is very simple. It is basically the same as Project 3, only
-							the pin is pin 6 and not pin 3.
-							Everything is in series, from the PWM pin to a 
-							resistor, through the LED, and finally into ground.
-						<ol>
-							<li>Use a wire to connect pin 6 to the breadboard.</li>
-							<li>Use the 10 k&#8486; resistor to connect the wire
-								to another row on the breadboard.</li>
-							<li>Place the LED across the gap with the anode (longer end of leads on the LED)
-								on the same row as the end of the resistor.</li>
-							<li>Use the second wire to connect the cathode of the LED (shorter end of LED)
-								to one of the ground pins on the chipKIT board.</li>
-						</ol>
-						</span>
-					</td>
-					<td>
-						<img src="P14files/P14_bb.svg" height="200"/>
-						<div class="TB-FIGURES">Figure 2. Circuit Diagram.</div>
-					</td>
-				</tr>
-			</table>
+				<span class="TB-BODY">
+					<cf_imagebox align="right"
+								path="P14files/P14_bb.svg"
+								width="280"
+								caption="Figure 3. Circuit Diagram.">
+								
+					The circuit is very simple. It is basically the same as Project 3, only
+					the pin is pin 6 and not pin 3.
+					Everything is in series, from the PWM pin to a 
+					resistor, through the LED, and finally into ground.
+				<ol>
+					<li>Use a wire to connect pin 6 to the breadboard.</li>
+					<li>Use the 10 k&#8486; resistor to connect the wire
+						to another row on the breadboard.</li>
+					<li>Place the LED across the gap with the anode (longer end of leads on the LED)
+						on the same row as the end of the resistor.</li>
+					<li>Use the second wire to connect the cathode of the LED (shorter end of LED)
+						to one of the ground pins on the chipKIT board.</li>
+				</ol>
+				</span>
 			</cf_box>
 		</td>
 	</tr>
@@ -159,6 +152,11 @@
 				PWM in MPIDE
 			</span><br/><br/>
 			<span class="TB-BODY"> <!-- REWRITE -->
+				<cf_imagebox align="right"
+								path="P14files/mpidedc.svg"
+								width="400"
+								caption="Figure 4. analogWrite() Duty Cycle Equation.">
+				
 				The <code>analogWrite()</code> function has two inputs. The first input is the pin on which
 				<code>analogWrite()</code> will start PWM. The second input is a value that is used to 
 				determine the duty cycle of the PWM. The second input determines the duty cycle by dividing
@@ -170,10 +168,6 @@
 				click the tab to the right.
 				<br/><br/>
 			</span>
-		</td>
-		<td>
-			<cf_TextbookTabs Mode="top" NextColor="Green">
-			<cf_TextbookTabs Mode="bottom" Color="Green" Title="Hardware Pulse Width Modulation" TabURL="P14files/PWM.cfm">
 		</td>
 	</tr>
 </table>

@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="510.85512"
-     inkscape:cy="62.450837"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="844.02721"
+     inkscape:cy="559.46502"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -197,5 +197,44 @@
          id="tspan3789"
          x="3842.135"
          y="-2237.3098">OCx</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 40.406102,443.43849 0,74.75129 74.751288,0"
+       id="path3006"
+       inkscape:connector-curvature="0"
+       transform="translate(3844.4553,-3389.6096)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3955.6483,-2874.7518 0,7.1429 3.9285,-3.9286 z"
+       id="path3008"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3881.6093,-2942.6647 7.1429,0 -3.9287,-3.9286 z"
+       id="path3008-1"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="2877.7993"
+       y="3880.5498"
+       id="text3028"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3030"
+         x="2877.7993"
+         y="3880.5498">value</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="3893.0266"
+       y="-2851.6379"
+       id="text3032"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3034"
+         x="3893.0266"
+         y="-2851.6379">time</tspan></text>
   </g>
 </svg>

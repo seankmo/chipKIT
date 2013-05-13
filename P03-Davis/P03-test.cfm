@@ -14,7 +14,7 @@
 		<tr>
 			<td align="center">
 				<span class="TB-PROJECTTITLE">
-					Project 3:<br/>
+					Project 3:<br>
 					Blink External LED
 				</span>
 				<hr>
@@ -28,33 +28,30 @@
 		<tr>
 			<td>
 				<span class="TB-H1">Introduction</span>
-				<br/><br/>
+				<br><br>
 				<span class="TB-BODY">
 					<cf_TB-TabBox>
-						<cf_TB-Tab color="red" path="P03files/P03Electric Review.cfm" title="Fundamental
+						<cf_TB-Tab color="red" path="P03files/P03Electric Review.cfm" title="Fundamentals
 					of Electricity">
 					</cf_TB-TabBox>
-
 
 					In the <a href="P02.cfm">Blinking the Internal LED project</a>, we programmed the
 					chipKIT microcontroller to control an on-board LED. Now we will build our own
 					external LED circuit and control it with the microcontroller. To do so, we must
 					understand the properties of the circuit and its components.  If you are unfamiliar
 					with the fundamentals of electricity and simple electrical components, a review of
-					these topics is available via the tab on the right.
-
+					these topics is available by clicking the box on the right.
 
 				</span>
-				<br/><br/>
+				<br><br>
 			</td>
 		</tr>
 	</table>
 		
-		
 	<table class="TBLAYOUT">
 		<tr>
 			<td valign="top">
-				<span class="TB-H2">Inventory:</span>
+				<span class="TB-H2">Inventory</span>
 				<br><br>
 				<div align="center">
 					<table id="CT3">
@@ -69,12 +66,16 @@
 							<tr>
 								<td class="qty">1</td>
 								<td>LED</td>
-								<td align="center" class="image"><img src="../Parts/LED_red.svg"></td>
+								<td align="center" class="image">
+									<img src="../Parts/LED_red.svg">
+								</td>
 							</tr>
 							<tr>
 								<td class="qty">1</td>
-								<td>220 &Omega;</td>
-								<td align="center" class="image"><img width="150" src="../Parts/resistor_220.svg"></td>
+								<td>220 &Omega; resistor</td>
+								<td align="center" class="image">
+									<img width="150" src="../Parts/resistor_220.svg">
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -83,23 +84,28 @@
 			</td>
 		</tr>
 	</table>			
-	
 
-	<table ID="ST1-putt">
+	<table class="TBLAYOUT">
 		<tr>
 			<td>		
 				<cf_box color="putty">
 					<span class="TB-H2">Step 1: Designing the Circuit</span> 
 					<br><br>
 					<span class="TB-BODY">
-						The circuit we are building is relatively simple and is comparable to a circuit
-						with a battery, a light switch, and a light bulb.  The chipKIT board will act as
-						both the power source and the switch.  When an LED is illuminated, typically
-						there is (and should be) a voltage drop across its terminals of approximately 2V.
-						The orientation we use when we place an LED in a circuit is important.  The LED
-						will illuminate when the voltage drop is from the <a href="P03files/P03Electric
-						Review.cfm#AnodeCathode">anode</a> to the
-						<a href="P03files/P03Electric Review.cfm#AnodeCathode">cathode</a>.
+						The circuit we are building is relatively simple and
+						is comparable to a circuit with a battery, a light
+						switch, and a light bulb.  The chipKIT board will
+						act as both the switch and the power source
+						(effectively the battery), while an LED will serve
+						as the &ldquo;light bulb.&rdquo; When an LED is
+						illuminated, typically there is (and should be) a
+						voltage drop across its terminals of approximately
+						2V.  The orientation we use when we place an LED in
+						a circuit is important.  The LED will illuminate
+						when the voltage drop is from
+						the <a href="P03files/P03Electric%20Review.cfm#AnodeCathode">anode</a>
+						to the
+						<a href="P03files/P03Electric%20Review.cfm#AnodeCathode">cathode</a>.
 						
 						<br><br>
 						
@@ -113,19 +119,24 @@
 						maximum forward voltage.  Because of the non-linear relationship between the
 						current and the voltage in an LED, small changes in voltage can result in large
 						changes in current.  This is discussed in greater depth
-						<a href="P03files/P03Electric Review.cfm">here</a>.  Thus voltages that exceed the
+						<a href="P03files/P03Electric%20Review.cfm">Fundamentals of Electricity</a> page
+						mentioned in the Introduction.  Thus voltages that exceed the
 						maximum forward voltage cause too much current to flow, damaging the LED and
 						possibly damaging the chipKIT board.
 
 						<br><br>
 
-						To prevent any damage, we need to add a <i>current-limiting resistor</i> to our
-						circuit.  This resistor should be connected <i>in series</i> with the LED, meaning
-						that any current that flows through the resistor must also flow through the LED.
-						A resistance of 220 &Omega; will ensure that the maximum forward voltage of the
-						LED is not exceeded.  A discussion regarding <a href="P03files/P03Choosing
-						Resistor.cfm">how to determine the size of the current-limiting resistor is
-						available here</a>.
+						To prevent any damage, we need to add
+						a <i>current-limiting resistor</i> to our circuit.
+						This resistor should be connected <i>in series</i>
+						with the LED, meaning that any current that flows
+						through the resistor must also flow through the LED.
+						A resistance of 220 &Omega; will ensure that the
+						maximum forward voltage of the LED is not exceeded.
+						A discussion
+						regarding <a href="P03files/P03Choosing%20Resistor.cfm">how
+						to determine the size of the current-limiting
+						resistor is available here</a>.
 					</span>
 
 					</cf_box>
@@ -142,19 +153,19 @@
 					<br><br>
 					<span class="TB-BODY">
 						Having chosen our current-limiting resistor, we are almost ready to begin building
-						the circuit.  Before we place wires between the breadboard and the chipKIT
-						board, it is important to understand the internal connections within the
-						breadboard.  Figure 1 shows a breadboard where various holes are highlighted with
-						different colors.  If two holes share the same highlighted color, they are
-						electrically connected (not all connections are highlighted).  This particular
-						breadboard has two <i>rails</i> at the top and bottom.  These horizontal lines of
-						holes span the length of the breadboard and are electrically connected.  The holes
-						in the top-most rail are highlighted in orange and the holes in bottom-most one
-						are highlighted in green.  In the central area of the board are vertical lines of
-						five holes that are electrically connected.  These lines of five holes are known
-						as nodes.  There are two groups of nodes, one of which is above the <i>valley</i>
-						and the other of which is below.  This valley forms an electrical barrier between
-						the nodes.
+						the circuit.  We will use a <i>breadboard</i> to facilitate the construction of
+						the circuit.  So, before we connect the components together, it is important to
+						understand the internal connections within the breadboard.  Figure 1 shows a
+						breadboard where various holes are highlighted with different colors.  If two
+						holes share the same highlighted color, they are electrically connected (not all
+						connections are highlighted).  This particular breadboard has two <i>rails</i> at
+						the top and bottom.  These horizontal lines of holes span the length of the
+						breadboard and are electrically connected.  The holes in the top-most rail are
+						highlighted in orange and the holes in bottom-most one are highlighted in green.
+						In the central area of the board are vertical lines of five holes that are
+						electrically connected.  These lines of five holes are known as nodes.  There are
+						two groups of nodes, one of which is above the <i>valley</i> and the other of
+						which is below.  This valley forms an electrical barrier between the nodes.
 
 						<br><br>
 
@@ -228,10 +239,10 @@
 						to the pins (instead, as shown in Figs. 3 and 4, the &ldquo;upper&rdquo; and
 						&ldquo;lower&rdquo; labels correspond to the &ldquo;upper&rdquo; and
 						&ldquo;lower&rdquo; pins).  In Fig. 3, arrows are used to identify pin 33 and its
-						label as well as pin 3 and its label.  In Fig. 4, arrows identify pin 77 and its
-						label as well as pint 3 and its label.  In contrast to the pins at the top of the
-						board, for the digital pins along the side of the Max32, each label is adjacent to
-						its corresponding pin.
+						label, as well as pin 3 and its label.  In Fig. 4, arrows identify pin 77 and its
+						label, as well as pin 3 and its label.  In contrast to the pins at the top of the
+						board, for the digital pins along the right side of the Max32, each label is
+						adjacent to its corresponding pin (see Fig. 4).
 
 						<br><br> 
 
@@ -249,7 +260,6 @@
 							             caption="Fig. 4. Digital and source pins on a Max32.">
 						</div>
 
-
 						<br>
 	    
 						Figures 3 and 4 also identify ground pins and source pins.  <i>Ground pins</i> are
@@ -261,9 +271,10 @@
 						The digital pins be configured either to read input or write output.  When a pin
 						is configured for output, the pin can be set to one of two states.  The pin's
 						state is set, using the appropriate programming statements, to
-						either <span class="TB-LITERAL1">HIGH</span> or <span class="TB-LITERAL1">LOW</span>, as we
-						discussed <a href="P02.cfm">here</a>.  When set to <span class="TB-LITERAL1">HIGH</span>, a digital
-						pin maintains a voltage of 3.3V.  Now we can begin building the circuit!
+						either <span class="TB-LITERAL1">HIGH</span> or <span class="TB-LITERAL1">LOW</span>, as we discussed in
+						the <a href="P02.cfm">Blinking the Internal LED project</a>.  When set
+						to <span class="TB-LITERAL1">HIGH</span>, a digital pin maintains a voltage of 3.3V.  Now we can begin
+						building the circuit!
 
 						<br><br>
 						
@@ -277,31 +288,39 @@
 				<td>
 					<cf_box color="putty">
 					<span class="TB-H2"> Step 2: Building the Circuit</span> 
-					<br/><br/>
+					<br><br>
 					<span class="TB-BODY">
 
-						Grab a breadboard, an LED, and a 220 &Omega; resistor. Any breadboard is fine.  In
-						this project, as shown in Fig. 5, a ground pin is connected to a rail.  This rail
-						is, in turn, connected to one end of a resistor.  When we say two things are
-						connected, we mean they are electrically connected.  Thus, if two components are
-						directly plugged into the same node or if a wire is plugged into two different
-						areas of the board, then these things are said to be &ldquo;connected.&rdquo; The
-						other end of the resistor is connected to the cathode of the LED (the shorter
-						&ldquo;leg&rdquo; of the LED).
+						Grab a breadboard, an LED, and a 220 &Omega; resistor. Any breadboard is fine and
+						it doesn't matter what color the LED is.  In this project, as shown in Fig. 5, a
+						ground pin is connected to a rail.  This rail is, in turn, connected to one end of
+						a resistor.  When we say two things are connected, we mean they are electrically
+						connected.  Thus, if two components are directly plugged into the same node or if
+						a wire is plugged into two different areas of the board, then these things are
+						said to be &ldquo;connected.&rdquo; The other end of the resistor is connected to
+						the cathode of the LED (the shorter &ldquo;leg&rdquo; of the LED).
 
 						<br><br>
 
-						Pin 3 is connected to a separate rail and this rail is connected to the anode of
-						the LED (the longer &ldquo;leg&rdquo;).  Instead of connecting the chipKIT pins to
-						the rails and then connecting the rails to the nodes of the breadboard, for this
-						simple circuit it is certainly possible to connect the chipKIT pins directly to
-						the resistor and LED.  However, when circuits become more complicated, using the
-						rails can help reduce the clutter of the wires.
+						Pin 3 is connected directly to the anode of the LED (the longer
+						&ldquo;leg&rdquo;).  Note that we elected to connect the ground pin to a rail and
+						then the rail to a component, whereas we connected pin 3 directly to a component.
+						For this simple circuit, there isn't a compelling reason to use the rail&mdash;we
+						could have connected one end of the current-limiting resistor directly to ground.
+						However, when circuits become more complicated, you will typically find that many
+						components need to be connected to ground and thus using a rail for ground can
+						help reduce the clutter of the wires.  On the other hand, it is unlikely that
+						several components will need to be connected to a single pin.  That is the reason
+						we attached pin 3 directly to its &ldquo;final&rdquo; destination in the circuit
+						of Fig. 5.  (If multiple things need to be connected to pin 3, we could either
+						attach pin 3 to a rail or establish the additional connections using the remaining
+						holes in the node to which pin 3 is attached.  Note that, in Fig. 5, there are
+						currently three unused holes in the node attached to pin 3.)
 
 						<br><br>
 						
-						Because pin 3 is attached to the anode of the LED (and because the other end of the LED
-						attached is attached to ground through the current-limiting resistor), when pin 3
+						Because pin 3 is attached to the anode of the LED (and because the other end of
+						the LED is attached to ground through the current-limiting resistor), when pin 3
 						is <span class="TB-LITERAL1">HIGH</span>, the LED will be illuminated.  Conversely, when pin 3
 						is <span class="TB-LITERAL1">LOW</span>, the LED will be off.  Now, before writing the sketch to
 						control the LED, make sure you have created the circuit as shown in Fig. 5.
@@ -322,37 +341,46 @@
 						<br><br>
 
 						Now that we have the circuit properly wired, it is time to program the chipKIT
-						board.  Open MPIDE.  You can start with a new sketch or you can start from the sketch
-						from <a href="P02.cfm">Project 2</a>.   If you start with the sketch from
-						Project 2, the only change you need to make to have the sketch work with the current
-						circuit is to replace pin 13 with pin 3, i.e., replace all occurrences of 13 with
-						3.  Having made that change, you can upload the sketch to the board and now the
-						external LED should blink with a two-second interval.
+						board.  Open MPIDE.  You can start with a new sketch or you can start from the
+						sketch using in the <a href="P02.cfm">Blinking the Internal LED project</a>.  If
+						you start with that previous sketch, the only change you need to make is to
+						replace pin 13 with pin 3, i.e., replace all occurrences of 13 with 3.  Having
+						made that change, you can upload the sketch to the board and now the external LED
+						should blink with a two-second interval.
 
 						<br><br>
 
-						However, there is one other change we want to make in sketch.  Numbers by
-						themselves can be rather meaningless.  If you see the number 3 or 13, those
-						values, by themselves, can be rather mysterious.  You may be aware that they
-						correspond to a pin number. But what is significant about that pin?  Is it being
-						used for reading or writing?  What attached to that pin?  Is it an LED or a motor
-						or a sensor or something else?
+						<i>However</i>, there is one other change we want to make in the sketch.  Numbers,
+						by themselves, can be rather meaningless.  If you see the number 3 or 13 and are
+						provided no other information, those numbers carry no intrinsic meaning.  You
+						might think that at least a number intrinsically conveys a measure of quantity,
+						but perhaps the number was meant to be used as an identifier&mdash;such as a pin
+						identifier&mdash;rather than a measure of quantity.  Nevertheless, for the sake of
+						argument, let's assume you are at least aware that these numbers correspond to pin
+						numbers.  Then you are left to wonder what is significant about one pin as opposed
+						to another?  Is the pin being used for reading or writing?  What is attached to
+						that pin?  Is the pin connected an LED or a motor or a sensor or something else?
 
 						<br><br>
 
 						To make the code more <i>readable</i>, and hence, more maintainable, we can use
-						variables instead of numbers in our sketches.  Because we are free to choose
-						variable names, we can use names that help document the code.  Furthermore, if we
-						use variables in our code, rather than a number, if we ever need to change the
-						value of the variable (such as changing it from 13 to 3), we would only need to
-						change the code in the one place where the value of the variable is set.  Contrast
-						this to using numbers: when using numeric values, to change a particular value we
-						have to find and change each occurrances of the number (while also ensuring the
-						number we've found represents what we think it does&mdash;for example, in a larger
-						program, 13 might be a pin number or it could represent some other quantity like
-						the number of turns one has in a game).  Suffice it to say there are a host of
-						reasons why it is better to use variables instead of numerical values within our
-						sketches.  
+						<i>variables</i> instead of numbers in our sketches.  Because we are free to
+						choose variable names, we can use names that help document the code, i.e., with
+						the user of variables the code itself can provide greater information about what
+						the code does.
+
+						<br><br>
+
+						Furthermore, if we use variables in our code, rather than a number, if we ever
+						need to change the value of the variable (such as changing it from 13 to 3), we
+						would only need to change the code in the one place where the value of the
+						variable is set.  Contrast this to using numbers: when using numeric values, to
+						change a particular value we have to find and change each occurrences of the
+						number (while also ensuring the number we've found represents what we think it
+						does&mdash;for example, in a larger program, 13 might be a pin number or it could
+						represent some other quantity like the number of turns one has in a game).
+						Suffice it to say there are a host of reasons why it is better to use variables
+						instead of numerical values within our sketches.
 
 						<br><br>
 
@@ -375,7 +403,9 @@
 						<div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;">
-const int ledPin = 3;  // Define the constant integer variable ledPin to be 3.
+// Define the constant integer variable ledPin to be 3.
+// This global variable is defined in all functions.
+const int ledPin = 3;
 						 
 void setup()
 {
@@ -394,10 +424,9 @@ void loop()
 </cf_box>
 </div>
 
-
-						After writing this sketch, uploaded it to the chipKIT board the external LED
+						After writing this sketch, uploaded it to the chipKIT board.  The external LED
 						should blink.  If you wanted to go back to blinking the internal LED, all you
-						would have to do id change 3 to 13 in line 1!
+						have to do is change 3 to 13 in line 3 (and reload the sketch to the board).
 
 					</span>  
 					</cf_box>
@@ -408,8 +437,8 @@ void loop()
 		<table class="TBLAYOUT">
 			<tr>
 				<td>
-					<br/><br/>
-					<span class="TB-H1">Core Concepts:</span><br/><br/>
+					<br><br>
+					<span class="TB-H1">Core Concepts:</span><br><br>
 					<table id="CT3">
 						<thead>
 							<tr>
@@ -419,20 +448,13 @@ void loop()
 						</thead>
 						<tbody>
 							<tr>
-								<td>Core Concepts:</td>
+								<td>Core Concepts</td>
 								<td>
 									<ul>	  
-										<li>Node voltages and relative voltage drops</li>
-										<li>Current<br/></li>
-										<li>Resistance and current-limiting resistors<br/></li>
-										<li>IV relationships of diodes and resistors<br/></li>
-										<li>Ohm's Law<br/></li>
-										<li>Component polarity <br/></li>
-										<li>How to use a breadboard<br/></li>
-										<li>Uno32 and Max32 pins<br/></li>
-										<li>Basics of how to model and analyze a circuit with a schematic<br/></li>
-										<li>Using and naming variables in MPIDE<br/></li>
-										<li>Variable scope<br/></li>
+										<li>Resistance and current-limiting resistors<br></li>
+										<li>How to use a breadboard<br></li>
+										<li>Uno32 and Max32 pins<br></li>
+										<li>Using variables<br></li>
 									</ul>
 								</td>
 							</tr>

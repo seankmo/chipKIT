@@ -1,14 +1,14 @@
 <html>
 	<head>
-		<title>Button Controlled LEDs</title>
+      <title>Button Controlled LEDs</title>
 		<script type="text/javascript" src="/templates/SH/scripts/shCore.js"></script>
-		<script type="text/javascript" src="/templates/SH/scripts/shBrushmpide.js"></script>
-		<link type="text/css" rel="stylesheet" href="/templates/SH/styles/shCoreDefault.css"/>
-		<script type="text/javascript">SyntaxHighlighter.all();</script>
+      <script type="text/javascript" src="/templates/SH/scripts/shBrushmpide.js"></script>
+      <link type="text/css" rel="stylesheet" href="/templates/SH/styles/shCoreDefault.css"/>
+      <script type="text/javascript">SyntaxHighlighter.all();</script>
 	</head>
 	
 	<body>
-	<cf_box color="White">
+	<cf_Box Color="White">
     
 	<table class="TBLAYOUT">
 		<tr>
@@ -20,24 +20,24 @@
 			</td>
 		</tr>
 	</table>
-	
-	<br><br>
-	
+   
+   <br><br>
+    
 	<table class="TBLAYOUT">
-		<tr>
-			<td>
-				<span class="TB-H1">
-					Introduction
-				</span>
-				<br><br>
-				
-				<span class="TB-BODY">
+   	<tr>
+      	<td>
+            <span class="TB-H1">
+	            Introduction
+            </span>
+            <br><br>
+
+            <span class="TB-BODY">
 					<cf_imagebox align="right"
 					             path="P04files/Overall_cir_3_20_2013.png"
 					             width="300px"
 					             caption="Fig. 1. Button controlled LED circuit.">
 
-					This project demonstrates how to use buttons to turn on and off light emitting diodes
+	            This project demonstrates how to use buttons to turn on and off light emitting diodes
 	            (LEDs). You are probably already familiar with traditional light switches that
 	            directly control whether or not electrical energy is delivered to a light bulb. In
 	            this project, three buttons are used to control three LEDs, but the buttons
@@ -47,55 +47,59 @@
 	            (i.e., we can determine a button's &ldquo;state&rdquo;). Each LED is then illuminated
 	            in accordance with the state of the corresponding button.
 
-				</span>
-				<br><br>
-			</td>
-		</tr>
+	    </span>
+	    <br><br>
+	</td>
+	</tr>
 	</table>
     
+	<!--  Parts List -----------------------------   --->
 	<table class="TBLAYOUT">
 		<tr>
 			<td valign="top">
 				<span class="TB-H2">Inventory</span>
 				<br><br>
 				<div align="center">
-				<table id="CT3">
-					<thead>
-						<tr>
-							<th width="10%">Qty.</th>
-							<th width="60%">Description</th>
-							<th width="30%">&nbsp;</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="qty"> 3 </td>
-							<td> Two-port buttons</td>
-							<td align="center" class="image">
-								<img width="75px" src="../Parts/PushButton.svg">
-							</td>
-						</tr>
-						<tr>
-							<td class="qty"> 3 </td>
-							<td> LEDs</td>
-							<td align="center" class="image">
-								<img width="25px" src="../Parts/LED_red.svg">
-							</td>
-						</tr>
-						<tr>
-							<td class="qty"> 3 </td>
-							<td> 220 &Omega; resistors</td>
-							<td align="center" class="image">
-								<img width="125" src="../Parts/resistor_220.svg"></td>
-							</td>
-						</tr>
-						<tr>
-							<td class="qty"> 3 </td>
-							<td> 10 k&Omega; resistors</td>
-							<td align="center" class="image">
-								<img width="100" src="../Parts/resistor_10k.svg"></td>
-						</tr>
-				</table>
+					<table id="CT3">
+						<thead>
+							<tr>
+								<th width="10%">Qty.</th>
+								<th width="60%">Description</th>
+								<th width="30%">&nbsp;</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="qty"> 3 </td>
+								<td> Two-port buttons</td>
+								<td align="center" class="image">
+									<img src="Parts/PushButton.svg">
+								</td>
+							</tr>
+							<tr>
+								<td class="qty"> 3 </td>
+								<td> LEDs</td>
+								<td align="center" class="image">
+									<img src="Parts/LED_red.svg">
+								</td>
+							</tr>
+							<tr>
+								<td class="qty"> 3 </td>
+								<td> 220 &Omega; resistors</td>
+								<td>
+								<td align="center" class="image">
+									<img width="150" src="Parts/resistor_220.svg"></td>
+								</td>
+							</tr>
+							<tr>
+								<td class="qty"> 3 </td>
+								<td> 10 k&Omega; resistors</td>
+								<td align="center" class="image">
+									<img width="150" src="Parts/resistor_10k.svg"></td>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 				<br><br>
 			</td>
@@ -110,34 +114,30 @@
 					<br><br>
 					<span class="TB-BODY">
 
+						<div align="center">
+						<cf_imagebox align="center"
+						             path="P04files/Just_LEDs_3_20_2013.png"
+						             width="500px"
+						             caption="Fig. 2. LED configuration.">
+						</div>
+
 						<ol>
 							<li>
 								Place the three LEDs in the breadboard as shown in Fig. 2, keeping in mind
 								that the anode is the longer of the two &ldquo;legs&rdquo; and the cathode
-								is the shorter.  (The cathodes in Fig. 2 are to the left and anodes are to
-								the right.)
-
-								<div align="center">
-								<cf_imagebox align="center"
-								             path="P04files/Just_LEDs_3_20_2013.png"
-								             width="500px"
-								             caption="Fig. 2. LED configuration.">
-								</div>
-							</li>
+								is the shorter.</li>
 							<li>
 								Using three jumper wires, connect the anode of one LED to pin 8, the anode
 								of another to pin 11, and the anode of the final LED to pin 12.</li>
 							<li>
-								Connect the chipKIT ground pin (labeled &ldquo;GND&rdquo;) to a rail at the
-								bottom of the breadboard.  Rails are often referred to as <i>bus strips</i>.
-								There are multiple GND pins and they are all equivalent.  In Fig. 2, the
-								jumper wire is connected to the GND pin closest to the 5V pin.
+								Connect the chipKIT ground pin (labeled &ldquo;GND&rdquo;) to a bus strip at
+								the bottom of the breadboard.  There are multiple GND pins and they are all
+								equivalent.  In Fig. 2, the jumper wire is connected to the GND pin closest
+								to the 5V pin.
 								<ul>
 									<li>
-										Reviewing the breadboard basics that were covered in
-										the <a href="P03.cfm">Blink External LED project</a>, in Fig. 2, the
-										breadboard rails/bus strips are the two bottom-most and two top-most
-										horizontal rows.  All the holes along a row are electrically
+										In Fig. 2, the breadboard bus strips are the two bottom-most and two
+										top-most horizontal rows.  All the holes along a row are electrically
 										connected.  The bus strips are usually separated from the main section
 										of the board and are sometimes marked in red and blue.
 									</li>
@@ -153,29 +153,28 @@
 								</ul>   
 							</li>
 							<li>
-								Now, attach one end of a 220 &Omega; resistor to the cathode of each of the
+								Now, attach one end of a 330 &Omega; resistor to the cathode of each of the
 								LEDs. The other end of each resistor should be placed so that it connects to
 								the ground bus strip. This can be done by placing the other end of the
 								resistor directly into the bus strip.  Alternatively, as shown in Fig. 2,
 								you can insert the other end of the resistor into a different column (or
-								node) and then use a wire to connect from that column to the ground bus
-								strip.
+								node) and then use a short wire to connect from that column to the ground
+								bus strip.
 
 								<br><br>
 
-								When there is a <i>single</i> path for charge to flow through two components
-								(i.e., any charge that flows through one component must also flow through
-								the other), then we say the components
-								are <a href="P04_KVL_KCL.html#SER"><i>in series</i></a>.  Each of the three
-								LEDs in this circuit has a resistor in series with it.  These series
-								resistors are used to limit the current that passes through their particular
-								branches of the circuit and thus, as described in greater detail
-								in <a href="P03.cfm">Blink External LED project</a>, these are known as
-								current-limiting resistors. LEDs are non-linear devices and can potentially
-								pass large amounts of current when their threshold voltage is exceeded. The
-								current-limiting resistors keep the current at a safe level. This helps to
-								protect the LEDs and chipKIT board from the potential damage of drawing too
-								much current. 
+								When there is a single path for charge to flow through two components (i.e.,
+								any charge that flows through one component must also flow through the
+								other), then we say the components are <a href="P04_KVL_KCL.html#SER"><i>in
+								series</i></a>.  Each of the three LEDs in this circuit has a resistor in
+								series with it. Series resistors are used to limit the current that passes
+								through their particular branches of the circuit. LEDs are non-linear
+								devices and can potentially pass large amounts of current when their
+								threshold voltage is exceeded. The series resistor keeps the current at a
+								safe level. This helps to protect the LEDs and chipKIT board from the
+								potential damage of drawing too much current.  Connecting external LEDs and
+								series resistors are discussed in more depth
+								in the <a href="P03.cfm">Blink External LED project</a>.
 							</li>
 						</ol>
 					</span>
@@ -196,7 +195,7 @@
 				<span class="TB-BODY">
 					<cf_imagebox align="right"
 					             path="P04files/button.jpg"
-					             width="190px"
+					             width="218px"
 					             caption="Fig. 3. Two-port button.">
 						
 					Before connecting the buttons to the circuit, it is appropriate to consider a bit of
@@ -214,6 +213,11 @@
 					
 					<br><br>
 					
+					<cf_imagebox align="right"
+					             path="P04files/two-port-button-schematic.png"
+					             width="215px"
+					             caption="Fig. 4. Two-port button schematic symbol.">
+					  
 					The terminals on the same side of the button are <i>not</i> connected together unless
 					the button is pressed.  However, the terminals on the left and right sides that are
 					directly across from each other are always electrically connected, regardless of
@@ -224,31 +228,11 @@
 					Fig. 5.
 
 					<br><br>
-					
-					<div align="center">
-				      <table class="TBLAYOUT">
-					      <tr>
-						      <td align="center" style="width: 225px;">
-							      <img style="width: 180px; align: center;"
-							           src="P04files/two-port-button-schematic.png">
-							      <br><br>
-							      <div class="TB-FIGURES">
-								      Fig. 4. Two-port button schematic symbol.
-							      </div>
-						      </td>
-						      <td align="center" style="width: 225px;">
-							      <img style="width: 50px; align: center;"
-							           src="P04files/button-simple-schematic.png">
-							      <br><br>
-							      <div class="TB-FIGURES">
-								      Fig. 5. Simplified button schematic.
-							      </div>
-						      </td>
-					      </tr>
-				      </table>
-					</div>
 
-					<br>
+					<cf_imagebox align="right"
+					             path="P04files/button-simple-schematic.png"
+					             width="215px"
+					             caption="Fig. 5. Simplified button schematic.">
 
 					In summary, when the button is pressed, a small piece of conductive material makes a
 					physical connection between the &ldquo;top&rdquo; and &ldquo;bottom&rdquo;
@@ -258,7 +242,6 @@
 					<br><br>
 					
 				</span>
-
 				<span class="TB-H1">
 					Pull-Down and Pull-Up Resistors
 				</span>
@@ -292,7 +275,7 @@
 			      0V.  This is because there is nothing to supply a voltage at this point; there is
 			      nothing to establish a flow of current through the resistor.
 
-			      <br><br>
+			      <br>
 
 			      <div align="center">
 				      <table class="TBLAYOUT">
@@ -350,16 +333,12 @@
 				      </div>
 			      </div> <!-- center -->
 
-			      <br>
-
 			      Figure 7 shows what happens when the button is pressed, i.e., the circuit is closed,
 			      and the probe remains in the same location as shown in Fig. 6(c). There is now a
 			      direct path from the 3.3V power supply to the probe.  We see that when the button is
 			      open, the resistor serves to pull the voltage down to 0V at this probe location
 			      (Fig. 6(c)), but if the button is closed, the probe is attached to the 3.3V supply
 			      (Fig. 7).
-
-			      <br><br>
 
 			      <div align="center">
 					<cf_imagebox align="center"
@@ -408,13 +387,17 @@
 						      <td style="width: 50px">&nbsp;</td>
 						      <td>
 							      <div class="TB-FIGURES">
-								      (a)
+								      <span style="font-style:
+								                   italic;"> (a)
+								      </span>
 							      </div>
 						      </td>
 						      <td style="width: 70px">&nbsp;</td>
 						      <td>
 							      <div class="TB-FIGURES">
-								      (b)
+								      <span style="font-style:
+								                   italic;"> (b)
+								      </span>
 							      </div>
 						      </td>
 					      </tr>
@@ -439,9 +422,6 @@
 
 			      More information about analyzing circuits, specifically using Kirchhoff&#8217;s
 			      voltage law, is <a href="P04_KVL_KCL.html#KVL"> available here.</a>
-
-			      <br><br>
-
 			  </span>
 			</td>
 		</tr>
@@ -454,6 +434,7 @@
 				<span class="TB-H2">Step 2: Setting up the Buttons</span>
 				<br><br>
 				<span class="TB-BODY">
+
 
 					<ol>
 						<li>Connect the chipKIT 3.3V pin to the bus strip above the ground bus strip that
@@ -472,7 +453,7 @@
 							orientation of the button, so that the one pair of legs is inserted to one side
 							of the &ldquo;valley&rdquo; and the other pair is inserted on the other
 							side. Most breadboards have a gap or valley that separates columns in the main
-							section of the board (with the board placed as shown in Fig. 9).&nbsp; Even if
+							secton of the board (with the board placed as shown in Fig. 9).&nbsp; Even if
 							your breadboard does not have the aforementioned valley, the circuit will still
 							be functional provided that you retain this button orientation.
 						</li>
@@ -492,16 +473,16 @@
 						<li>When a button is pressed, it supplies 3.3V to the corresponding digital I/O
 							pin.  The chipKIT Max32 and Uno32 boards are designed to recognize a range of
 							voltages&mdash;from a minimum of 2.4V to a maximum of 5.5V&mdash;as a
-							<span class="TB-LITERAL1">HIGH</span> input for the digital I/O pins.  That is, when the software
-							function <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> is called, it returns <span class="TB-LITERAL1">HIGH</span> if
+							<code>HIGH</code> input for the digital I/O pins.  That is, when the software
+							function <code>digitalRead()</code> is called, it returns <code>HIGH</code> if
 							the voltage on the pin being read is within this range.
-							The <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> function will be discussed later in this
+							The <code>digitalRead()</code> function will be discussed later in this
 							project.
+							<br><br>
 						</li>
 					</ol>
 				</span>
 				</cf_box>
-				<br><br>
 			</td>
 		</tr>
 	</table>
@@ -514,7 +495,7 @@
 				<span class="TB-BODY">
 					At this point, you should now have all the buttons and LEDs in the breadboard as
 					shown in Fig. 10.  The next step is to write the sketch that controls the
-					circuit.  Because this sketch uses <span class="TB-KEYWORD1">if</span> statements and comparison
+					circuit.  Because this sketch uses <code>if</code> statements and comparison
 					operators, we'll first introduce those programming constructors.
 
 					<br><br>
@@ -526,7 +507,6 @@
 					             caption="Fig. 10: Circuit showing all the buttons and LEDs.">
 					</div>
 
-					<br>
 				</span>
 			</td>
 		</tr>
@@ -537,51 +517,43 @@
 		<tr>
 			<td>
 				<span class="TB-H1">
-					<span class="TB-KEYWORD1">if</span> and Comparison Statements
+					<code>if</code> and Comparison Statements
 				</span>
 				<br><br>
 				<span class="TB-BODY">
 			    
-					The sketch for this project uses <span class="TB-KEYWORD1">if</span> statements and
-					the <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> function.  The <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> function
+					The sketch for this project uses <code>if</code> statements and
+					the <code>digitalRead()</code> function.  The <code>digitalRead()</code> function
 					takes a single parameter, which is the pin that is &ldquo;read.&rdquo; The function
-					reads the electrical state of the pin, and returns either <span class="TB-LITERAL1">HIGH</span>
-					or <span class="TB-LITERAL1">LOW</span>, accordingly.  As an example, assume we want to store the current
-					state of pin 8 in the variable <span class="TB-BLACK">val</span>.  We would then use the following
+					reads the electrical state of the pin, and returns either <code>HIGH</code>
+					or <code>LOW</code>, accordingly.  As an example, assume we want to store the current
+					state of pin 8 in the variable <code>val</code>.  We would then use the following
 					statement:
 			    
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide; gutter: false">
+					<pre class="brush: mpide; gutter: false">
 val = digitalRead(8);
-</pre>
-</cf_box>
-</div>
+					</pre>
 
 					If pin 8 is at a &ldquo;high&rdquo; voltage when the function is
-					called, <span class="TB-BLACK">val</span> is set to <span class="TB-LITERAL1">HIGH</span>.  Otherwise,
-					<span class="TB-BLACK">val</span> is set to <span class="TB-LITERAL1">LOW</span>.
+					called, <code>val</code> is set to <code>HIGH</code>.  Otherwise,
+					<code>val</code> is set to <code>LOW</code>.
 
 					<br><br>
 
-					An <span class="TB-KEYWORD1">if</span> statement performs a test of a given &ldquo;logical
+					An <code>if</code> statement performs a test of a given &ldquo;logical
 					expression.&rdquo; If this expression is &ldquo;true,&rdquo; then the code that
-					follows the <span class="TB-KEYWORD1">if</span> statement is executed.  However, if the logical
+					follows the <code>if</code> statement is executed.  However, if the logical
 					expression is <em>not</em> true (in other words, it is false), then the code
-					following the <span class="TB-KEYWORD1">if</span> statement is not executed.  If we want
-					an <span class="TB-KEYWORD1">if</span> statement to control the execution of multiple lines of code this
+					following the <code>if</code> statement is not executed.  If we want
+					an <code>if</code> statement to control the execution of multiple lines of code this
 					code must be enclosed in braces.  The following is a &ldquo;template&rdquo; for
-					an <span class="TB-KEYWORD1">if</span> statement:
+					an <code>if</code> statement:
 
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+					<pre class="brush: mpide;">
 if (logical_expression) {
    // Code only executed if logical_expression is true.
 }
-</pre>
-</cf_box>
-</div>
+					</pre>
 
 					The details of what constitutes a logical expression are considered below.
 
@@ -591,64 +563,56 @@ if (logical_expression) {
 					
 					<br><br>
 					
-					We can also associate an <span class="TB-KEYWORD1">else</span> clause with an <span class="TB-KEYWORD1">if</span> statement.
-					When present, the code associated with the <span class="TB-KEYWORD1">else</span> clause will not be
+					We can also associate an <code>else</code> clause with an <code>if</code> statement.
+					When present, the code associated with the <code>else</code> clause will not be
 					executed if the logical expression is true, but will be executed if it is false.
 
 
-					A template for an <span class="TB-KEYWORD1">if</span> statement, that includes an <span class="TB-KEYWORD1">else</span> clause,
+					A template for an <code>if</code> statement, that includes an <code>else</code> clause,
 					is as follows:
 
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+					<pre class="brush: mpide;">
 if (logical_expression) {
    ... task1 ...
 }
 else {
    ... task2
 }
-</pre>
-</cf_box>
-</div>
+					</pre>
 
-					Within the &ldquo;<span class="TB-KEYWORD1">if</span>&rdquo; statement you can see that there is a
+					Within the &ldquo;<code>if</code>&rdquo; statement you can see that there is a
 					logical expression.  This logical expression can take the form of a comparison and
-					here we will restrict ourselves to comparison expression.  A comparison expression
+					here we will restrict ourselves to comparision expression.  A comparison expression
 					is much like a mathematical equation except that it evaluates only to true or false.
 					Like mathematical expressions, which have their own set of operators
-					(i.e., <code>+</code> , <span class="TB-Arithmetic">-</span>, <span class="TB-Arithmetic">/</span> and <code>*</code>) ,
+					(i.e., <code>+</code> , <code>-</code>, <code>/</code> and <code>*</code>) ,
 					comparison expressions have their own set as well.  For example a relational
-					operators could be, &ldquo;<span class="TB-BLACK">==</span>&rdquo; or
+					operators could be, &ldquo;<code>==</code>&rdquo; or
 					&ldquo;<inequality>!=</inequality>&rdquo;, which have the meaning of &ldquo;equal
 					to&rdquo; and &ldquo;not equal to,&rdquo; respectively.  Comparison expressions are
 					formed much like math equations using these operators.  An example of a comparison
-					expression assuming <span class="TB-BLACK">x</span> is an int type variable, could be:
-
-					<br><br>
-
-
+					expression assuming x is an int type variable, could be:
 					<ol>
 						<li>
-							<span class="TB-BLACK">x == 0</span>
+							<code>x == 0</code>
 						</li>
 						<li>
-							<span class="TB-BLACK">x != 0</span>
+							<code>x != 0</code>
 						</li>
 					</ol>
 
-					The first expression would evaluate to true when the variable <span class="TB-BLACK">x</span> equals
-					0, and false for any other value.  The second expression evaluate to false
-					if <span class="TB-BLACK">x</span> equals 0, and true for any other value. There are many more
-					operators than just &ldquo;equal&rdquo; and &ldquo;not equal&rdquo;. The following
-					table shows a few of these relational operators.
+					In expression 1, this would evaluate to true whenever the variable x would equal 0,
+					and false for any other value.  Expression 2 would then evaluate as false if x was
+					equal 0, and true for any other value. There are many more operators than just
+					&ldquo;equal&rdquo; and &ldquo;not equal&rdquo;. The following table shows a few of
+					these relational operators.
 
 					<table style="text-align: left; width: 100%;"
 					       border="1" cellpadding="0" cellspacing="0" bgcolor="white">
 						<tbody>
 							<tr>
 								<td>Equal</td>
-								<td>&nbsp; <span class="TB-BLACK">==</span></td>
+								<td>&nbsp; <code>==</code></td>
 							</tr>
 							<tr>
 								<td>Not Equal</td>
@@ -656,27 +620,27 @@ else {
 							</tr>
 							<tr>
 								<td>Greater than</td>
-								<td>&nbsp; <span class="TB-BLACK">&gt;</span></td>
+								<td>&nbsp; <code>&gt;</code></td>
 							</tr>
 							<tr>
 								<td>Less than</td>
-								<td>&nbsp; <span class="TB-BLACK">&lt;</span></td>
+								<td>&nbsp; <code>&lt;</code></td>
 							</tr>
 							<tr>
 								<td>Greater than or equal</td>
-								<td>&nbsp; <span class="TB-BLACK">&gt;=</span></td>
+								<td>&nbsp; <code>&gt;=</code></td>
 							</tr>
 							<tr>
 								<td>Less than or equal</td>
-								<td>&nbsp; <span class="TB-BLACK">&lt;=</span></td>
+								<td>&nbsp; <code>&lt;=</code></td>
 							</tr>
 							<tr>
 								<td>
 									Logical AND:<br>this operator is used to combined multiple comparison
-									expressions into one expression.  (i.e., if expression A is true and
+									expressions into one expression.  (ie if expression A is true and
 									expression B is true then the overall expression is also true.)
 								</td>
-								<td>&nbsp; <span class="TB-BLACK">&amp;&amp;</span></td>
+								<td>&nbsp; <code>&amp;&amp;</code></td>
 							</tr>
 							<tr>
 								<td>Logical OR:<br>Like logical &ldquo;AND&rdquo;, this operator is used to
@@ -687,76 +651,92 @@ else {
 						</tbody>
 					</table>
 
-					An example of an &ldquo;<span class="TB-KEYWORD1">if</span>&rdquo; statement used in
+					An example of an &ldquo;<code>if</code>&rdquo; statement used in
 					the project code:
 
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
-if (digitalRead(btnA) == HIGH) {
-  digitalWrite(ledA, HIGH);
+					<pre class="brush: mpide;">
+if (digitalRead(BtnA) == HIGH) {
+  digitalWrite(LedA, HIGH);
 }
 else {
-  digitalWrite(ledA, LOW);
+  digitalWrite(LedA, LOW);
 }
-</pre>
-</cf_box>
-</div>
+					</pre>
 
-					Once the <span class="TB-KEYWORD1">if</span> statement is executed, the <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span>
+					Once the <code>if</code> statement is executed, the <code>digitalRead()</code>
 					function will execute and then return a value. That returned value is then compared
-					to the constant value <span class="TB-LITERAL1">HIGH</span>.
+					to the constant value <code>HIGH</code>.
 
 					<br><br>
 
-					Stated more plainly, the syntax reads, &ldquo;If Button A is pressed, turn on ledA,
-					else turn off ledA.&rdquo;
-
-					<br><br>
-
-					Multiple expressions can be used along with the logical
-					&ldquo;<span style="font-weight: bold;">AND</span>&rdquo; and logical
-					&ldquo;<span style="font-weight: bold;">OR</span>&rdquo; statements.  For example:
-
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
-if ((digitalRead(btnA) == true) &amp;&amp; (digitalRead(btnB) == true)){
-  digitalWrite(ledC, LOW);
+			    Stated more plainly, the syntax reads, &ldquo;If
+			    Button A is pressed, turn on LedA, else
+			    turn off LedA.&rdquo;
+			    <br>
+			    Multiple expressions can be used along with
+			    the logical &ldquo;<span style="font-weight:
+			    bold;">AND</span>&rdquo; and logical
+			    &ldquo;<span style="font-weight:
+			    bold;">OR</span>&rdquo; statements.
+			    <br> For
+			    example:
+			  </span>
+			  <br>
+			</td>
+		      </tr>
+		      <tr>
+			<td>
+			  <div align="center">
+    <pre class="brush: mpide;">
+if ((digitalRead(BtnA) == true) &amp;&amp; (digitalRead(BtnB) == true)){
+  digitalWrite(LedC, LOW);
 }
 </pre>
-</cf_box>
 </div>
+			  <span class="TB-BODY">
+			    We could also say this simply as:
+			    &ldquo;If the Read value of ButtonA and
+			    ButtonB are
+			    true, <code>digitalWrite()</code> LedC to
+			    <code>HIGH</code>.&rdquo;
 
-					We could also say this simply as: &ldquo;If the value read for button A and button B
-					are true, use <span class="TB-KEYWORD2">digitalWrite</span><span class="TB-BLACK">()</span> to set LED C to <span class="TB-LITERAL1">HIGH</span>.&rdquo;
+			    <br><br> 
 
-					<br><br> 
-
-					For an explanation of functions, the project <a href="P02.cf">Blinking the Internal
-					LED</a> provides an overview of syntax and program structure.
-
-				</span>
+			    For an explanation of
+			    functions, <font color="#000080"> Project
+			    2</font> provides an overview of syntax
+			    and program structure.
+			  </span>
 			</td>
-		</tr>
-	</table>
-		
-	<table class="TBLAYOUT">
-		<tr>
-			<td>
-				<cf_box color="putty">
-					<span class="TB-H2"> 
-						Step 3: Writing the Sketch
-					</span>
-					<br><br>
-					<span class="TB-BODY">
-
-						The following is the source code for this project and an explanation is provided
-						in the comments.
-
-						<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+		      </tr>
+		    </tbody>
+		  </table>
+    
+		  <br><br>
+		  
+		  <table class="TBLAYOUT" style="width: 85%;" cellpadding="0">
+		    <tbody>
+		      <tr>
+			<td colspan="2">
+			  <span class="TB-H2">
+			    Software Set up:
+			  </span>
+			  <hr hr="" align="left" color="#2c2c2c" size="2" width="50%">
+			  <br>
+			</td>
+		      </tr>
+		      <tr>
+			<td colspan="2">
+			  <span class="TB-BODY">The following is the
+			    source code for this project and an
+			    explanation is provided in the
+			    comments.
+			    <br><br>
+			  </span>
+			  
+			  <!-- CODE ----------------------------------------------->
+			  <div align="center">
+			    <pre class="brush: mpide;">
 /***************************************************************
  * The first step will be setting up constants to associate names with
  * the various digital I/O ports used for this project.  each pin on
@@ -832,66 +812,108 @@ void loop()
   
 }
 </pre>
-</cf_box>
 </div>
-
-						Once the sketch is uploaded to the chipKIT board, the circuit will be fully
-						functional.  The circuit can be easily tested by pressing button A to turn on LED
-						A, button B to turn on LED B, and button C to LED C.
-
-					</span>  
-				</cf_box>
+			  <br><br>
 			</td>
-		</tr>
-	</table>
-
-
-	<table class="TBLAYOUT">
-		<tr>
-			<td>
-				<br><br>
-				<span class="TB-H1">Core Concepts:</span>
-				<br>
-				<table id="CT3">
-					<thead>
-						<tr>
-							<th scope="col" width="20%">&nbsp;</th>
-							<th scope="col" width="80%">&nbsp;</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Core Concepts:</td>
-							<td>
-								<ul>
-									<li>Button operations.</li>
-									<li><span class="TB-KEYWORD1">if</span> statements.</li>
-									<li>Relational operators.</li>
-									<li>Reading digital input.</li>
-									<li>Series connection.</li>
-									<li>Pull-up and pull-down resistors.</li>
-									<li>Current limiting resistors.</li>
-									<li>Open and short circuits.</li>
-									<li>Series resistor configuration.</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<td width="20%">Functions Introduced:</td>
-							<td width="80%">
-								<ul>
-									<li><span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">(pin)</span></li>
-								</ul>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<br>
+		      </tr>
+		      <tr>
+			<td colspan="2"><br>
+			    <span class="TB-H1">
+			      Implementation and Summary
+			    </span>
+			    
+			    <!-- Summary table --------------------------------------->
+			    <span class="TB-BODY">
+			      <hr hr="" color="#2c2c2c" size="15">
+			    </span>
+			  <span class="TB-BODY">
+			    Once the sketch is uploaded to the chipKIT
+			    board, the circuit will be fully
+			    functional.  The circuit can be easily
+			    tested by pressing button A to turn on LED
+			    A, button B to turn on LED B, and button C
+			    to LED C.
+			    
+			    <br><br> 
+			    
+			    In summary, the following new concepts and
+			    software functions were introduced:
+			    
+			    <br><br>
+			    
+			    <table style="text-align: left; width: 100%;"
+				   border="1" cellpadding="2" cellspacing="2">
+			      <tbody>
+				<tr>
+				  <td>Core Concepts:</td>
+				  <td>
+				    <table style="text-align: left; width: 100%;"
+					   border="1" cellpadding="2" cellspacing="2">
+				      <tbody>
+					<tr>
+					  <td style="text-align: left; vertical-align: top;">
+					    Button operations</td>
+					</tr>
+					<tr>
+					  <td>&ldquo;If&rdquo; statements</td>
+					</tr>
+					<tr>
+					  <td>Relational operators</td>
+					</tr>
+					<tr>
+					  <td>Reading Digital Input</td>
+					</tr>
+					<tr>
+					  <td>Series Connection</td>
+					</tr>
+					<tr>
+					  <td>Pull-Up/Down resistors</td>
+					</tr>
+					<tr>
+					  <td>Current limiting resistors</td>
+					</tr>
+					<tr>
+					  <td>Opens/Shorts</td>
+					</tr>
+					<tr>
+					  <td>Kirchhoff&#8217;s voltage/current law</td>
+					</tr>
+					<tr>
+					  <td>Series resistor configuration</td>
+					</tr>
+					<tr>
+					  <td>Bus Strips</td>
+					</tr>
+				      </tbody>
+				    </table>
+				  </td>
+				</tr>
+				
+				<tr>
+				  <td>Functions introduced:</td>
+				  <td>
+				    <table style="text-align: left; width: 100%;"
+					   border="1" cellpadding="2" cellspacing="2">
+				      <tbody>
+					<tr>
+					  <td><code>digitalRead()</code></td>
+					</tr>
+				      </tbody>
+				    </table>
+				  </td>
+				</tr>
+			      </tbody>
+			    </table>
+			  </span>
+			  <br><br>
 			</td>
-		</tr>
-	</table>
-	
-	</cf_box>
-	</body>
-</html>
-
+		      </tr>
+		    </tbody>
+		  </table>
+		</cf_box>
+	      </td>
+	    </tr>
+      </tbody>
+    </table>	
+  </body>
+</html> 

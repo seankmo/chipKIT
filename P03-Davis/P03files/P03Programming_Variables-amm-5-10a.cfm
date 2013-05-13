@@ -96,11 +96,11 @@
 		</td>
 		<td  valign="top">
 			<img style="width: 504px; height: 361px;" src="local_variable_1.png"><br>
-			<div class="TB-FIGURES">Fig. 2 (a) The local variable cannot be used inside <span class="TB-KEYWORD3">loop</span><span class="TB-BLACK">()</span> because it's defined in a different scope.</div>
+			<div class="TB-FIGURES">Fig. 2 (a) The local variable cannot be used inside <code>loop()</code> because it's defined in a different scope.</div>
 		</td>
 		<td>
 			<img src="local_variable_2.png"><br>
-			<div class="TB-FIGURES">(b) Cannot be used in <span class="TB-KEYWORD3">setup</span><span class="TB-BLACK">()</span> because it's defined in a different scope.</div>
+			<div class="TB-FIGURES">(b) Cannot be used in <code>setup()</code> because it's defined in a different scope.</div>
 		</td>
 	</tr>
 
@@ -160,13 +160,9 @@
 				 The qualifier const stands for constant and is placed in front of a variables type to make it unchangeable.<br> 
 				 Ex.<br> 
 				 <br>
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide; gutter: false;">
+					<pre class="brush: mpide; gutter: false;">
 const int my_variable = 56;
-</pre>
-</cf_box>
-</div>  
+					</pre>  
 			 </span>
 		 </td>
 	 </tr>
@@ -175,4 +171,3 @@ const int my_variable = 56;
  <cf_Box>
 </body>
 </html>
-

@@ -48,6 +48,7 @@
 		</tr>
 	</table>
 		
+		
 	<table class="TBLAYOUT">
 		<tr>
 			<td valign="top">
@@ -66,16 +67,12 @@
 							<tr>
 								<td class="qty">1</td>
 								<td>LED</td>
-								<td align="center" class="image">
-									<img src="../Parts/LED_red.svg">
-								</td>
+								<td align="center" class="image"><img src="../Parts/LED_red.svg"></td>
 							</tr>
 							<tr>
 								<td class="qty">1</td>
-								<td>220 &Omega; resistor</td>
-								<td align="center" class="image">
-									<img width="150" src="../Parts/resistor_220.svg">
-								</td>
+								<td>220 &Omega;</td>
+								<td align="center" class="image"><img width="150" src="../Parts/resistor_220.svg"></td>
 							</tr>
 						</tbody>
 					</table>
@@ -84,8 +81,9 @@
 			</td>
 		</tr>
 	</table>			
+	
 
-	<table class="TBLAYOUT">
+	<table ID="ST1-putt">
 		<tr>
 			<td>		
 				<cf_box color="putty">
@@ -260,6 +258,7 @@
 							             caption="Fig. 4. Digital and source pins on a Max32.">
 						</div>
 
+
 						<br>
 	    
 						Figures 3 and 4 also identify ground pins and source pins.  <i>Ground pins</i> are
@@ -419,6 +418,7 @@ void loop()
   delay(1000);                // LED remains off for 1 second.
 }
 						</pre>
+
 
 						After writing this sketch, uploaded it to the chipKIT board.  The external LED
 						should blink.  If you wanted to go back to blinking the internal LED, all you

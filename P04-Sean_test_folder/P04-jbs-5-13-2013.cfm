@@ -63,7 +63,8 @@
 					<thead>
 						<tr>
 							<th width="10%">Qty.</th>
-							<th width="60%">Description</th>
+							<th width="30%">Description</th>
+							<th width="30%">&nbsp;</th>
 							<th width="30%">&nbsp;</th>
 						</tr>
 					</thead>
@@ -72,7 +73,10 @@
 							<td class="qty"> 3 </td>
 							<td> Two-port buttons</td>
 							<td align="center" class="image">
-								<img width="75px" src="../Parts/PushButton.svg">
+								<img width="55px" src="P04files/button.jpg">
+							</td>
+							<td align="center" class="image">
+								<img width="55px" src="../Parts/PushButton.svg">
 							</td>
 						</tr>
 						<tr>
@@ -86,7 +90,7 @@
 							<td class="qty"> 3 </td>
 							<td> 220 &Omega; resistors</td>
 							<td align="center" class="image">
-								<img width="125" src="../Parts/resistor_220.svg"></td>
+								<img width="100" src="../Parts/resistor_220.svg"></td>
 							</td>
 						</tr>
 						<tr>
@@ -196,7 +200,7 @@
 				<span class="TB-BODY">
 					<cf_imagebox align="right"
 					             path="P04files/button.jpg"
-					             width="190px"
+					             width="170px"
 					             caption="Fig. 3. Two-port button.">
 						
 					Before connecting the buttons to the circuit, it is appropriate to consider a bit of
@@ -492,10 +496,10 @@
 						<li>When a button is pressed, it supplies 3.3V to the corresponding digital I/O
 							pin.  The chipKIT Max32 and Uno32 boards are designed to recognize a range of
 							voltages&mdash;from a minimum of 2.4V to a maximum of 5.5V&mdash;as a
-							<span class="TB-LITERAL1">HIGH</span> input for the digital I/O pins.  That is, when the software
-							function <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> is called, it returns <span class="TB-LITERAL1">HIGH</span> if
+							<code>HIGH</code> input for the digital I/O pins.  That is, when the software
+							function <code>digitalRead()</code> is called, it returns <code>HIGH</code> if
 							the voltage on the pin being read is within this range.
-							The <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> function will be discussed later in this
+							The <code>digitalRead()</code> function will be discussed later in this
 							project.
 						</li>
 					</ol>
@@ -514,7 +518,7 @@
 				<span class="TB-BODY">
 					At this point, you should now have all the buttons and LEDs in the breadboard as
 					shown in Fig. 10.  The next step is to write the sketch that controls the
-					circuit.  Because this sketch uses <span class="TB-KEYWORD1">if</span> statements and comparison
+					circuit.  Because this sketch uses <code>if</code> statements and comparison
 					operators, we'll first introduce those programming constructors.
 
 					<br><br>
@@ -537,51 +541,43 @@
 		<tr>
 			<td>
 				<span class="TB-H1">
-					<span class="TB-KEYWORD1">if</span> and Comparison Statements
+					<code>if</code> and Comparison Statements
 				</span>
 				<br><br>
 				<span class="TB-BODY">
 			    
-					The sketch for this project uses <span class="TB-KEYWORD1">if</span> statements and
-					the <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> function.  The <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span> function
+					The sketch for this project uses <code>if</code> statements and
+					the <code>digitalRead()</code> function.  The <code>digitalRead()</code> function
 					takes a single parameter, which is the pin that is &ldquo;read.&rdquo; The function
-					reads the electrical state of the pin, and returns either <span class="TB-LITERAL1">HIGH</span>
-					or <span class="TB-LITERAL1">LOW</span>, accordingly.  As an example, assume we want to store the current
-					state of pin 8 in the variable <span class="TB-BLACK">val</span>.  We would then use the following
+					reads the electrical state of the pin, and returns either <code>HIGH</code>
+					or <code>LOW</code>, accordingly.  As an example, assume we want to store the current
+					state of pin 8 in the variable <code>val</code>.  We would then use the following
 					statement:
 			    
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide; gutter: false">
+					<pre class="brush: mpide; gutter: false">
 val = digitalRead(8);
-</pre>
-</cf_box>
-</div>
+					</pre>
 
 					If pin 8 is at a &ldquo;high&rdquo; voltage when the function is
-					called, <span class="TB-BLACK">val</span> is set to <span class="TB-LITERAL1">HIGH</span>.  Otherwise,
-					<span class="TB-BLACK">val</span> is set to <span class="TB-LITERAL1">LOW</span>.
+					called, <code>val</code> is set to <code>HIGH</code>.  Otherwise,
+					<code>val</code> is set to <code>LOW</code>.
 
 					<br><br>
 
-					An <span class="TB-KEYWORD1">if</span> statement performs a test of a given &ldquo;logical
+					An <code>if</code> statement performs a test of a given &ldquo;logical
 					expression.&rdquo; If this expression is &ldquo;true,&rdquo; then the code that
-					follows the <span class="TB-KEYWORD1">if</span> statement is executed.  However, if the logical
+					follows the <code>if</code> statement is executed.  However, if the logical
 					expression is <em>not</em> true (in other words, it is false), then the code
-					following the <span class="TB-KEYWORD1">if</span> statement is not executed.  If we want
-					an <span class="TB-KEYWORD1">if</span> statement to control the execution of multiple lines of code this
+					following the <code>if</code> statement is not executed.  If we want
+					an <code>if</code> statement to control the execution of multiple lines of code this
 					code must be enclosed in braces.  The following is a &ldquo;template&rdquo; for
-					an <span class="TB-KEYWORD1">if</span> statement:
+					an <code>if</code> statement:
 
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+					<pre class="brush: mpide;">
 if (logical_expression) {
    // Code only executed if logical_expression is true.
 }
-</pre>
-</cf_box>
-</div>
+					</pre>
 
 					The details of what constitutes a logical expression are considered below.
 
@@ -591,55 +587,51 @@ if (logical_expression) {
 					
 					<br><br>
 					
-					We can also associate an <span class="TB-KEYWORD1">else</span> clause with an <span class="TB-KEYWORD1">if</span> statement.
-					When present, the code associated with the <span class="TB-KEYWORD1">else</span> clause will not be
+					We can also associate an <code>else</code> clause with an <code>if</code> statement.
+					When present, the code associated with the <code>else</code> clause will not be
 					executed if the logical expression is true, but will be executed if it is false.
 
 
-					A template for an <span class="TB-KEYWORD1">if</span> statement, that includes an <span class="TB-KEYWORD1">else</span> clause,
+					A template for an <code>if</code> statement, that includes an <code>else</code> clause,
 					is as follows:
 
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+					<pre class="brush: mpide;">
 if (logical_expression) {
    ... task1 ...
 }
 else {
    ... task2
 }
-</pre>
-</cf_box>
-</div>
+					</pre>
 
-					Within the &ldquo;<span class="TB-KEYWORD1">if</span>&rdquo; statement you can see that there is a
+					Within the &ldquo;<code>if</code>&rdquo; statement you can see that there is a
 					logical expression.  This logical expression can take the form of a comparison and
 					here we will restrict ourselves to comparison expression.  A comparison expression
 					is much like a mathematical equation except that it evaluates only to true or false.
 					Like mathematical expressions, which have their own set of operators
-					(i.e., <code>+</code> , <span class="TB-Arithmetic">-</span>, <span class="TB-Arithmetic">/</span> and <code>*</code>) ,
+					(i.e., <code>+</code> , <code>-</code>, <code>/</code> and <code>*</code>) ,
 					comparison expressions have their own set as well.  For example a relational
-					operators could be, &ldquo;<span class="TB-BLACK">==</span>&rdquo; or
+					operators could be, &ldquo;<code>==</code>&rdquo; or
 					&ldquo;<inequality>!=</inequality>&rdquo;, which have the meaning of &ldquo;equal
 					to&rdquo; and &ldquo;not equal to,&rdquo; respectively.  Comparison expressions are
 					formed much like math equations using these operators.  An example of a comparison
-					expression assuming <span class="TB-BLACK">x</span> is an int type variable, could be:
+					expression assuming <code>x</code> is an int type variable, could be:
 
 					<br><br>
 
 
 					<ol>
 						<li>
-							<span class="TB-BLACK">x == 0</span>
+							<code>x == 0</code>
 						</li>
 						<li>
-							<span class="TB-BLACK">x != 0</span>
+							<code>x != 0</code>
 						</li>
 					</ol>
 
-					The first expression would evaluate to true when the variable <span class="TB-BLACK">x</span> equals
+					The first expression would evaluate to true when the variable <code>x</code> equals
 					0, and false for any other value.  The second expression evaluate to false
-					if <span class="TB-BLACK">x</span> equals 0, and true for any other value. There are many more
+					if <code>x</code> equals 0, and true for any other value. There are many more
 					operators than just &ldquo;equal&rdquo; and &ldquo;not equal&rdquo;. The following
 					table shows a few of these relational operators.
 
@@ -648,7 +640,7 @@ else {
 						<tbody>
 							<tr>
 								<td>Equal</td>
-								<td>&nbsp; <span class="TB-BLACK">==</span></td>
+								<td>&nbsp; <code>==</code></td>
 							</tr>
 							<tr>
 								<td>Not Equal</td>
@@ -656,19 +648,19 @@ else {
 							</tr>
 							<tr>
 								<td>Greater than</td>
-								<td>&nbsp; <span class="TB-BLACK">&gt;</span></td>
+								<td>&nbsp; <code>&gt;</code></td>
 							</tr>
 							<tr>
 								<td>Less than</td>
-								<td>&nbsp; <span class="TB-BLACK">&lt;</span></td>
+								<td>&nbsp; <code>&lt;</code></td>
 							</tr>
 							<tr>
 								<td>Greater than or equal</td>
-								<td>&nbsp; <span class="TB-BLACK">&gt;=</span></td>
+								<td>&nbsp; <code>&gt;=</code></td>
 							</tr>
 							<tr>
 								<td>Less than or equal</td>
-								<td>&nbsp; <span class="TB-BLACK">&lt;=</span></td>
+								<td>&nbsp; <code>&lt;=</code></td>
 							</tr>
 							<tr>
 								<td>
@@ -676,7 +668,7 @@ else {
 									expressions into one expression.  (i.e., if expression A is true and
 									expression B is true then the overall expression is also true.)
 								</td>
-								<td>&nbsp; <span class="TB-BLACK">&amp;&amp;</span></td>
+								<td>&nbsp; <code>&amp;&amp;</code></td>
 							</tr>
 							<tr>
 								<td>Logical OR:<br>Like logical &ldquo;AND&rdquo;, this operator is used to
@@ -687,25 +679,21 @@ else {
 						</tbody>
 					</table>
 
-					An example of an &ldquo;<span class="TB-KEYWORD1">if</span>&rdquo; statement used in
+					An example of an &ldquo;<code>if</code>&rdquo; statement used in
 					the project code:
 
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+					<pre class="brush: mpide;">
 if (digitalRead(btnA) == HIGH) {
   digitalWrite(ledA, HIGH);
 }
 else {
   digitalWrite(ledA, LOW);
 }
-</pre>
-</cf_box>
-</div>
+					</pre>
 
-					Once the <span class="TB-KEYWORD1">if</span> statement is executed, the <span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">()</span>
+					Once the <code>if</code> statement is executed, the <code>digitalRead()</code>
 					function will execute and then return a value. That returned value is then compared
-					to the constant value <span class="TB-LITERAL1">HIGH</span>.
+					to the constant value <code>HIGH</code>.
 
 					<br><br>
 
@@ -718,18 +706,14 @@ else {
 					&ldquo;<span style="font-weight: bold;">AND</span>&rdquo; and logical
 					&ldquo;<span style="font-weight: bold;">OR</span>&rdquo; statements.  For example:
 
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+					<pre class="brush: mpide;">
 if ((digitalRead(btnA) == true) &amp;&amp; (digitalRead(btnB) == true)){
   digitalWrite(ledC, LOW);
 }
-</pre>
-</cf_box>
-</div>
+					</pre>
 
 					We could also say this simply as: &ldquo;If the value read for button A and button B
-					are true, use <span class="TB-KEYWORD2">digitalWrite</span><span class="TB-BLACK">()</span> to set LED C to <span class="TB-LITERAL1">HIGH</span>.&rdquo;
+					are true, use <code>digitalWrite()</code> to set LED C to <code>HIGH</code>.&rdquo;
 
 					<br><br> 
 
@@ -754,9 +738,7 @@ if ((digitalRead(btnA) == true) &amp;&amp; (digitalRead(btnB) == true)){
 						The following is the source code for this project and an explanation is provided
 						in the comments.
 
-						<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+						<pre class="brush: mpide;">
 /***************************************************************
  * The first step will be setting up constants to associate names with
  * the various digital I/O ports used for this project.  each pin on
@@ -831,9 +813,7 @@ void loop()
   }
   
 }
-</pre>
-</cf_box>
-</div>
+						</pre>
 
 						Once the sketch is uploaded to the chipKIT board, the circuit will be fully
 						functional.  The circuit can be easily tested by pressing button A to turn on LED
@@ -865,7 +845,7 @@ void loop()
 							<td>
 								<ul>
 									<li>Button operations.</li>
-									<li><span class="TB-KEYWORD1">if</span> statements.</li>
+									<li><code>if</code> statements.</li>
 									<li>Relational operators.</li>
 									<li>Reading digital input.</li>
 									<li>Series connection.</li>
@@ -880,7 +860,7 @@ void loop()
 							<td width="20%">Functions Introduced:</td>
 							<td width="80%">
 								<ul>
-									<li><span class="TB-KEYWORD2">digitalRead</span><span class="TB-BLACK">(pin)</span></li>
+									<li><code>digitalRead(pin)</code></li>
 								</ul>
 							</td>
 						</tr>
@@ -894,4 +874,3 @@ void loop()
 	</cf_box>
 	</body>
 </html>
-

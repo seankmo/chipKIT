@@ -14,20 +14,20 @@
 				<tr>
 					<td align="center">
 						<span class="TB-PROJECTTITLE">
-							Project 1:<br/>
+							Project 1:<br>
 							Introduction to MPIDE
 						</span><br><hr>
 					</td>
 				</tr>
 			</table>
 
-			<br><br>
+			<br>
 			
 			<table class="TBLAYOUT">
 				<tr>
 					<td>
 						<span class="TB-H1">Introduction</span>
-						<br/><br/>
+						<br><br>
 						<span class="TB-BODY">
 
 							MPIDE (Multi-Platform Integrated Development Environment) is software that can
@@ -50,7 +50,7 @@
 					<td>
 						<span class="TB-H1">Getting Started</span>
 						
-						<br/><br/>
+						<br><br>
 						
 						<span class="TB-BODY">
 							To begin, make sure you have a USB A to mini B cable (see
@@ -64,16 +64,16 @@
 					</td>
 					<td width="4%">&nbsp;</td>
 					<td width="31%" align="center">
-						<img width="150" src="cable-usb-a-mini-b.jpg"><br/>
+						<img width="150" src="cable-usb-a-mini-b.jpg"><br>
 						<span class="TB-FIGURES">Fig. 1. USB A to mini B cable.</span>
-						<br/><br/>
+						<br><br>
 					</td>
 				</tr>
 				<tr>
 					<td width="78%" align="center" colspan="3">
-						<img src="chipKIT-Uno32-revC-obl-1600.png"><br/>
+						<img src="chipKIT-Uno32-revC-obl-1600.png"><br>
 						<span class="TB-FIGURES">Fig. 2. A chipKIT Uno32 board.</span>
-						<br/><br/>
+						<br><br>
 					</td>
 				</tr>
 			</table>
@@ -100,18 +100,18 @@
 								files...&rdquo; After this, a folder will be created with the same name as
 								the zip file, but without the
 								&ldquo;<span class="TB-BLACK">.zip</span>&rdquo; extension.  This folder
-								contains all the files associated with MPIDE.  <br/><br/>
+								contains all the files associated with MPIDE.  <br><br>
 								
 								<div align="center">
 									<img src="githubdownload.png" />
 									<div class="TB-FIGURES">Fig. 3. MPIDE download option on GitHub.
 									</div>
 								</div>
-								<br/>
+								<br>
 							</span>
 			
 							<span class="TB-H2">Step 2: Running the Sketch</span>
-							<br/><br/>
+							<br><br>
 							<span class="TB-BODY">
 								<ol>
 									<li>
@@ -131,7 +131,7 @@
 										Fig. 4, among various other things, the
 										file <span class="TB-BLACK">mpide.exe</span>.
 			  
-										<br/><br/>
+										<br><br>
 										<div align="center">
 											<img src="mpidelibrary.png"/>
 											<div class="TB-FIGURES">Fig. 4. Contents of the
@@ -139,31 +139,31 @@
 												file.
 											</div>
 										</div>
-										<br/>
+										<br>
 			
 										Double-click on <tt>mpide.exe</tt> to start MPIDE.  Figure 5 shows the
 										window you will see after starting MPIDE.  Click on Run.
 			  
-										<br/><br/>
+										<br><br>
 										<div align="center">
 											<img src="openfile.png"/>
 											<div class="TB-FIGURES">Fig. 5. This window will pop
 												up when you click on MPIDE. Click Run.</div>
 										</div>
-										<br/>
+										<br>
 			  
 										Figure 6 shows an example of the type of window that should now
 										appear.  The central, white portion of the window is where you enter
-										computer code, i.e., enter your sketch.  <br/><br/>
+										computer code, i.e., enter your sketch.  <br><br>
 			  
 										<div align="center">
-											<img src="opensketch.png" /><br/>
+											<img src="opensketch.png" /><br>
 											<div class="TB-FIGURES">Fig. 6. After starting MPIDE,
 												you should see a window like this.
 											</div>
 										</div>
 			
-										<br/> 
+										<br> 
 			
 										MPIDE provides a default name for the sketch
 										which is of the form:
@@ -177,7 +177,7 @@
 										changes. You can open 26 new windows this way. If you try for a 27th
 										sketch, you're told it may be time to take a break!  However, you
 										should provide more descriptive names for your sketches. By doing so,
-										you can open any number of sketches in the same day!)  <br/><br/>
+										you can open any number of sketches in the same day!)  <br><br>
 									</li>
 		      
 									<li>
@@ -199,7 +199,7 @@
 											<img src="blinkexample.png" />
 											<div class="TB-FIGURES">
 												Fig. 7. The <span class="TB-BLACK">Blink</span>
-												example sketch.  <br/><br/>
+												example sketch.  <br><br>
 											</div>
 										</div>
 			  
@@ -214,7 +214,7 @@
 										ready to run it on a board.  The next steps describe what needs to be
 										done to transfer the instructions in a sketch to a chipKIT board.
 
-										<br/><br/>
+										<br><br>
 			
 									</li>
 		      
@@ -223,13 +223,13 @@
 										You can use MPIDE with a wide variety of boards, but MPIDE needs to
 										know the type of board it is &ldquo;talking&rdquo; to. To do this,
 										select the menu <span class="TB-BLACK">Tools>Board</span> and choose
-										your chipKIT board (as shown in Fig. 8). <br/><br/>
+										your chipKIT board (as shown in Fig. 8). <br><br>
 
 										<div align="center">
 											<img width="625" src="boardselect.png"/>
 											<div class="TB-FIGURES">Fig. 8. Selecting your chipKIT
 												board.
-												<br/><br/>
+												<br><br>
 											</div>
 										</div> 
 			  
@@ -238,7 +238,7 @@
 										higher. An easy way to learn which serial port is the correct one is
 										to disconnect your chipKIT board. The correct option will have
 										disappeared from the dropdown menu. Reconnect your board and select
-										that serial port.  <br/><br/>
+										that serial port.  <br><br>
 			
 										<div align="center">
 											<img src="2serialport2.png"/>
@@ -250,7 +250,7 @@
 								</ol>
 							</span>
 
-							<span class="TB-H2">Step 3: Running the Sketch</span> <br/><br/>
+							<span class="TB-H2">Step 3: Running the Sketch</span> <br><br>
 							<span class="TB-BODY">
 								Now you are almost ready to run the sketch. Normally, before uploading the
 								sketch, you would &ldquo;verify&rdquo; the sketch to identify any bugs or
@@ -263,7 +263,7 @@
 								example sketches, this isn't necessary. Figure 10(b) through 10(e) shows
 								some of the other tools available in MPIDE.
 		      
-								<br/><br/>
+								<br><br>
 		      
 								<div align="center">
 									<table class="TBLAYOUT" cellpadding="0">
@@ -289,7 +289,7 @@
 										</tr>
 									</table>
 								</div>
-								<br/><br/>
+								<br><br>
 								<div align="center">		      
 									<table class="TBLAYOUT" cellpadding="0">
 										<tr>
@@ -308,7 +308,7 @@
 										</tr>
 										<tr>
 											<td align="center" colspan="3">
-												<span class="TB-FIGURES"><br/>Fig. 10.
+												<span class="TB-FIGURES"><br>Fig. 10.
 													Tool options in MPIDE.</span>
 											</td>
 										</tr>
@@ -316,7 +316,7 @@
 								</div>
 							</span>
 
-							<br/><br/>
+							<br><br>
 
 							<span class="TB-BODY">
 								Whether or not a sketch has been verified, you can &ldquo;upload&rdquo; it
@@ -326,7 +326,7 @@
 								Fig. 10(b).  You can also click on the menu entry <code>File>Upload to I/O
 								Board</code> (I/O stands for input/output), or type <code>Ctrl+U</code>.
 
-								<br/><br/> 
+								<br><br> 
 		      
 								Once the sketch starts to download, LED1 and LED2
 								will flicker momentarily.  This will be followed by

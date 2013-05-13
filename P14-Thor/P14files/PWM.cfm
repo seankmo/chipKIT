@@ -49,8 +49,8 @@
 					<div class="TB-FIGURES">Fig 1. How TMR, PR, and OCxR Effect OCx</div>
 				</span><br/><br/>
 				
-				<span class="TB-H2">Calculations For PWM</span><br/>
-				<span class="TB-H3">Duty Cycle</span>
+				<span class="TB-H2">Calculations For PWM</span><br/><br/>
+				<span class="TB-H3">Duty Cycle</span><br/><br/>
 				<span class="TB-BODY">
 					<table><tr><td>
 						Many aspects of pulse width modulation are governed by a few equations. The simplest of which is
@@ -86,7 +86,7 @@
 						<div class="TB-FIGURES">Figure 3b. Frequency of PWM in Terms of Frequency of Peripheral Bus.</div>
 					</td></tr></table>
 				</span>
-				<span class="TB-H3">Resolution of PWM</span><br/>
+				<span class="TB-H3">Resolution of PWM</span><br/><br/><br/>
 				<span class="TB-BODY">
 				<table><tr><td>
 					The resolution of pulse width modulation is the number of individual steps between always <code>LOW</code>
