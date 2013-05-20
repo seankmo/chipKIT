@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="662.71429"
+   height="317.20425"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="PWM.svg"
+   inkscape:export-filename="C:\Users\tsteingrimsson\Documents\Tutorial Pages\P14files\pwm.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="301.03319"
+     inkscape:cy="124.28444"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="643"
+     inkscape:window-height="630"
+     inkscape:window-x="662"
+     inkscape:window-y="247"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40.071429,-7.0552483)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 372,174.36251 -180,0 0,-74.28572 -151.428571,0 0,71.42858"
+       id="path2991"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 702.28571,174.36219 -180,0 0,-74.28572 -151.42857,0 0,71.42858"
+       id="path2991-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 42.857143,206.6479 c 7.580171,83.23615 109.929767,-22.92738 152.857147,20 13.85914,13.85914 22.19943,28.02688 28.57142,47.14285 1.91556,5.74667 1.73833,12.04808 4.28572,17.14286 0.42592,0.85184 0,3.80952 0,2.85714 0,-9.79587 -0.68153,-22.58189 2.85714,-31.42857 17.02247,-42.55617 35.95096,-37.3415 80,-30 6.52207,1.08701 34.99267,10.72162 41.42857,4.28572 11.32552,-11.32553 6.78942,-26.08255 11.42857,-40"
+       id="path3011"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="168.57143"
+       y="323.79074"
+       id="text3013"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3015"
+         x="168.57143"
+         y="323.79074">Period</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="262.85715"
+       y="140.93361"
+       id="text3017"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3019"
+         x="262.85715"
+         y="140.93361">off</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="90"
+       y="156.6479"
+       id="text3021"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3023"
+         x="90"
+         y="156.6479">on</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5371303px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 41.911418,94.360769 c 3.68309,-49.424051 53.41317,13.613841 74.270922,-11.875619 6.73394,-8.229294 10.78636,-16.64183 13.88241,-27.99253 0.93074,-3.412263 0.84463,-7.153927 2.08236,-10.179111 0.20695,-0.505806 0,-2.262021 0,-1.696515 0,5.816601 -0.33114,13.408703 1.38824,18.661694 8.27096,25.269046 17.46802,22.172674 38.87076,17.813431 3.16897,-0.645446 17.0024,-6.366295 20.1295,-2.544779 5.50289,6.724884 3.29887,15.487323 5.55296,23.75124"
+       id="path3011-1"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="74.285706"
+       y="35.688061"
+       id="text3019"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3021"
+         x="74.285706"
+         y="35.688061">Pulse</tspan></text>
+  </g>
+</svg>

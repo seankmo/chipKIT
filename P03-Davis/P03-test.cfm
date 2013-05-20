@@ -1,3 +1,7 @@
+<!-- Based on \ChipKitDev\P03-Davis\P03-jbs-5-14-2013.cfm 
+     Posted by John, 5/14/2013.
+-->
+
 <html>
 	<head>
 		<meta name="author" content="Davis Cook">
@@ -31,8 +35,10 @@
 				<br><br>
 				<span class="TB-BODY">
 					<cf_TB-TabBox>
-						<cf_TB-Tab color="red" path="P03files/P03Electric Review.cfm" title="Fundamentals
-					of Electricity">
+						<cf_TB-Tab
+							 color="red"
+							 path="P03files/P03Electric Review.cfm"
+							 title="Fundamentals	of Electricity">
 					</cf_TB-TabBox>
 
 					In the <a href="P02.cfm">Blinking the Internal LED project</a>, we programmed the
@@ -67,14 +73,14 @@
 								<td class="qty">1</td>
 								<td>LED</td>
 								<td align="center" class="image">
-									<img src="../Parts/LED_red.svg">
+									<img width="25px" src="../Parts/LED_red.svg">
 								</td>
 							</tr>
 							<tr>
 								<td class="qty">1</td>
 								<td>220 &Omega; resistor</td>
 								<td align="center" class="image">
-									<img width="150" src="../Parts/resistor_220.svg">
+									<img width="100" src="../Parts/resistor_220.svg">
 								</td>
 							</tr>
 						</tbody>
@@ -126,17 +132,13 @@
 
 						<br><br>
 
-						To prevent any damage, we need to add
-						a <i>current-limiting resistor</i> to our circuit.
-						This resistor should be connected <i>in series</i>
-						with the LED, meaning that any current that flows
-						through the resistor must also flow through the LED.
-						A resistance of 220 &Omega; will ensure that the
-						maximum forward voltage of the LED is not exceeded.
-						A discussion
-						regarding <a href="P03files/P03Choosing%20Resistor.cfm">how
-						to determine the size of the current-limiting
-						resistor is available here</a>.
+						To prevent any damage, we need to add a <i>current-limiting resistor</i> to our
+						circuit.  This resistor should be connected <i>in series</i> with the LED, meaning
+						that any current that flows through the resistor must also flow through the LED.
+						A resistance of 220 &Omega; will ensure that the maximum forward voltage of the
+						LED is not exceeded.  A discussion
+						regarding <a href="P03files/P03Choosing%20Resistor.cfm">how to determine the size
+						of the current-limiting resistor is available here</a>.
 					</span>
 
 					</cf_box>
@@ -159,13 +161,14 @@
 						breadboard where various holes are highlighted with different colors.  If two
 						holes share the same highlighted color, they are electrically connected (not all
 						connections are highlighted).  This particular breadboard has two <i>rails</i> at
-						the top and bottom.  These horizontal lines of holes span the length of the
-						breadboard and are electrically connected.  The holes in the top-most rail are
-						highlighted in orange and the holes in bottom-most one are highlighted in green.
-						In the central area of the board are vertical lines of five holes that are
-						electrically connected.  These lines of five holes are known as nodes.  There are
-						two groups of nodes, one of which is above the <i>valley</i> and the other of
-						which is below.  This valley forms an electrical barrier between the nodes.
+						the top and bottom.  A rail is sometimes called a <i>bus strip</i> or simply a
+						<i>bus</i>.  These horizontal lines of holes span the length of the breadboard and
+						are electrically connected.  The holes in the top-most rail are highlighted in
+						orange and the holes in bottom-most one are highlighted in green.  In the central
+						area of the board are vertical lines of five holes that are electrically
+						connected.  These lines of five holes are known as nodes.  There are two groups of
+						nodes, one of which is above the <i>valley</i> and the other of which is below.
+						This valley forms an electrical barrier between the nodes.
 
 						<br><br>
 
@@ -298,7 +301,9 @@
 						connected.  Thus, if two components are directly plugged into the same node or if
 						a wire is plugged into two different areas of the board, then these things are
 						said to be &ldquo;connected.&rdquo; The other end of the resistor is connected to
-						the cathode of the LED (the shorter &ldquo;leg&rdquo; of the LED).
+						the cathode of the LED (the shorter &ldquo;leg&rdquo; of the LED).  The
+						orientation of the resistor doesn't affect its operation, so it doesn't matter
+						which end you connect to the cathode and which end you connect to ground.
 
 						<br><br>
 
@@ -384,16 +389,23 @@
 
 						<br><br>
 
-						The use of variables is further
-						explained <a href="P03files/P03Programing_Variables.cfm">here</a>.  The import
-						things about creating a variable are that we must provide a &ldquo;type&rdquo; and
-						a variable name when we declare a variable.  Optionally, we can set the value of
-						the variable when it is declared.  We do this by assigning (using the equal sign)
-						a value to the variable.  Pin numbers are integer values and thus a variable that
-						represents a pin should have a type of <span class="TB-KEYWORD2">int</span>.  If the value of a
-						variable will not change throughout a sketch, it is a good practice to also
-						provide what is known as a <i>type specifier</i> that indicates the variable is
-						actually a constant.  This type specifier is <span class="TB-BLACK">const</span>. 
+						<cf_TB-TabBox>
+							<cf_TB-Tab
+								 color="orange"
+								 path="P03files/P03Programing_Variables.cfm"
+								 title="Using Variables">
+						</cf_TB-TabBox>
+
+
+						The use of variables is further explained by following the tab to the right.  The
+						import things about creating a variable are that we must provide a
+						&ldquo;type&rdquo; and a variable name when we declare a variable.  Optionally, we
+						can set the value of the variable when it is declared.  We do this by assigning
+						(using the equal sign) a value to the variable.  Pin numbers are integer values
+						and thus a variable that represents a pin should have a type of <span class="TB-KEYWORD2">int</span>.
+						If the value of a variable will not change throughout a sketch, it is a good
+						practice to also provide what is known as a <i>type specifier</i> that indicates
+						the variable is actually a constant.  This type specifier is <span class="TB-BLACK">const</span>.
 						
 						<br><br>
 
@@ -438,7 +450,8 @@ void loop()
 			<tr>
 				<td>
 					<br><br>
-					<span class="TB-H1">Core Concepts:</span><br><br>
+					<span class="TB-H1">Core Concepts</span>
+					<br>
 					<table id="CT3">
 						<thead>
 							<tr>
@@ -448,7 +461,7 @@ void loop()
 						</thead>
 						<tbody>
 							<tr>
-								<td>Core Concepts</td>
+								<td>Core Concepts:</td>
 								<td>
 									<ul>	  
 										<li>Resistance and current-limiting resistors<br></li>

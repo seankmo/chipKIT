@@ -53,17 +53,17 @@
 				<tr>
 					<td class="qty">1</td>
 					<td>Resistor<br/>(10 k&#8486;)</td>
-					<td class="image" align="center"><img src="P14files/R.svg" width="100"/></td>
+					<td class="image" align="center"><img src="Files/R.svg" width="100"/></td>
 				</tr>
 				<tr>
 					<td class="qty">1</td>
 					<td>LED</td>
-					<td class="image" align="center"><img src="P14files/LED.svg" height="100"/></td>
+					<td class="image" align="center"><img src="Files/LED.svg" height="100"/></td>
 				</tr>
 				<tr>
 					<td class="qty">2</td>
 					<td>Wires</td>
-					<td class="image" align="center"><img src="P14files/Wire.svg" height="100"/></td>
+					<td class="image" align="center"><img src="Files/Wire.svg" height="100"/></td>
 				</tr>
 			</tbody>
 			</table>
@@ -74,7 +74,7 @@
 			<span class="TB-H1">What is PWM?</span><br/><br/>
 			<span class="TB-BODY">
 				<cf_imagebox align="right"
-								 path="P14files/PWM.svg"
+								 path="Files/PWM.svg"
 								 width="300"
 								 caption="Figure 1. PWM Structure.">
 								
@@ -100,7 +100,7 @@
 				<br/><br/>
 				
 				<cf_imagebox align="left"
-								path="P14files/dc.svg"
+								path="Files/dc.svg"
 								width="280"
 								caption="Figure 2. General Duty Cycle Equation">
 								
@@ -110,7 +110,7 @@
 				chipKIT board hardware implements PWM, follow the green tab below.
 				<div align="right">
 				<cf_TextbookTabs Mode="top" NextColor="Green">
-				<cf_TextbookTabs Mode="bottom" Color="Green" Title="Hardware Pulse Width Modulation" TabURL="P14files/PWM.cfm">
+				<cf_TextbookTabs Mode="bottom" Color="Green" Title="Hardware Pulse Width Modulation" TabURL="Files/PWM.cfm">
 				</div>
 			</span>
 		</td>
@@ -123,7 +123,7 @@
 			</span><br/><br/>
 				<span class="TB-BODY">
 					<cf_imagebox align="right"
-								path="P14files/P14_bb.svg"
+								path="Files/P14_bb.svg"
 								width="280"
 								caption="Figure 3. Circuit Diagram.">
 								
@@ -153,7 +153,7 @@
 			</span><br/><br/>
 			<span class="TB-BODY"> <!-- REWRITE -->
 				<cf_imagebox align="right"
-								path="P14files/mpidedc.svg"
+								path="Files/mpidedc.svg"
 								width="400"
 								caption="Figure 4. analogWrite() Duty Cycle Equation.">
 				
@@ -180,7 +180,6 @@
 			<span class="TB-BODY">
 				<!--	STRUCTURE: 
 						Talk about the software design
-						Show project code
 				-->
 				We only need three variables: the value to set the <code>analogWrite()</code> function, 
 				the constant value for the pin, and how to increment. The constant value 

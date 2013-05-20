@@ -33,8 +33,8 @@
 				
 				<span class="TB-BODY">
 					<cf_imagebox align="right"
-					             path="P04files/Overall_cir_3_20_2013.png"
-					             width="300px"
+					             path="P04files/Overall_cir_no_label_5_13.svg"
+					             width="320px"
 					             caption="Fig. 1. Button controlled LED circuit.">
 
 					This project demonstrates how to use buttons to turn on and off light emitting diodes
@@ -65,7 +65,9 @@
 							<th width="10%">Qty.</th>
 							<th width="30%">Description</th>
 							<th width="30%">&nbsp;</th>
-							<th width="30%">&nbsp;</th>
+							<th width="30%">
+								<div align="center">Breadboard<br>Image</div>
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -73,15 +75,16 @@
 							<td class="qty"> 3 </td>
 							<td> Two-port buttons</td>
 							<td align="center" class="image">
-								<img width="55px" src="P04files/button.jpg">
+								<img width="95px" src="P04files/button.jpg">
 							</td>
-							<td align="center" class="image">
+							<td align="center" style="background: white;">
 								<img width="55px" src="../Parts/PushButton.svg">
 							</td>
 						</tr>
 						<tr>
 							<td class="qty"> 3 </td>
 							<td> LEDs</td>
+							<td align="center">&nbsp;</td>
 							<td align="center" class="image">
 								<img width="25px" src="../Parts/LED_red.svg">
 							</td>
@@ -89,6 +92,7 @@
 						<tr>
 							<td class="qty"> 3 </td>
 							<td> 220 &Omega; resistors</td>
+							<td align="center">&nbsp;</td>
 							<td align="center" class="image">
 								<img width="100" src="../Parts/resistor_220.svg"></td>
 							</td>
@@ -96,6 +100,7 @@
 						<tr>
 							<td class="qty"> 3 </td>
 							<td> 10 k&Omega; resistors</td>
+							<td align="center">&nbsp;</td>
 							<td align="center" class="image">
 								<img width="100" src="../Parts/resistor_10k.svg"></td>
 						</tr>
@@ -123,7 +128,7 @@
 
 								<div align="center">
 								<cf_imagebox align="center"
-								             path="P04files/Just_LEDs_3_20_2013.png"
+								             path="P04files/Just_LED.svg"
 								             width="500px"
 								             caption="Fig. 2. LED configuration.">
 								</div>
@@ -158,12 +163,12 @@
 							</li>
 							<li>
 								Now, attach one end of a 220 &Omega; resistor to the cathode of each of the
-								LEDs. The other end of each resistor should be placed so that it connects to
-								the ground bus strip. This can be done by placing the other end of the
-								resistor directly into the bus strip.  Alternatively, as shown in Fig. 2,
-								you can insert the other end of the resistor into a different column (or
-								node) and then use a wire to connect from that column to the ground bus
-								strip.
+								LEDs. (Resistors behave the same way regardless of their orientation.)  The
+								other end of each resistor should be placed so that it connects to the
+								ground bus strip. This can be done by placing the other end of the resistor
+								directly into the bus strip.  Alternatively, as shown in Fig. 2, you can
+								insert the other end of the resistor into a different column (or node) and
+								then use a wire to connect from that column to the ground bus strip.
 
 								<br><br>
 
@@ -222,10 +227,12 @@
 					the button is pressed.  However, the terminals on the left and right sides that are
 					directly across from each other are always electrically connected, regardless of
 					whether or not the button is pressed.  This internal layout of the button is depicted
-					in Fig. 4.  (So, in fact, when the button is pressed, all the terminals are
-					electrically connected.)  For the purpose of our analysis, the pair of terminals that
-					are always connected can be thought of as just a single connection, as shown in
-					Fig. 5.
+					in <i>schematic</i> representation shown Fig. 4.  (A schematic representation
+					provides a simplified or symbolic diagram for a device or circuit.)  Note that when the
+					button is pressed all the terminals are electrically connected.  For the purpose of
+					our analysis, the pair of terminals that are always connected (regardless of whether
+					or not the button is pressed) can be thought of as just a single connection, as shown
+					in Fig. 5.
 
 					<br><br>
 					
@@ -233,7 +240,7 @@
 				      <table class="TBLAYOUT">
 					      <tr>
 						      <td align="center" style="width: 225px;">
-							      <img style="width: 180px; align: center;"
+							      <img style="width: 170px; align: center;"
 							           src="P04files/two-port-button-schematic.png">
 							      <br><br>
 							      <div class="TB-FIGURES">
@@ -257,29 +264,33 @@
 					In summary, when the button is pressed, a small piece of conductive material makes a
 					physical connection between the &ldquo;top&rdquo; and &ldquo;bottom&rdquo;
 					terminals. This connection is what allows current to flow between the terminals of
-					the device.
+					the device.  When the button is not pressed, no current can flow.  
 
 					<br><br>
 					
 				</span>
 
 				<span class="TB-H1">
-					Pull-Down and Pull-Up Resistors
+					Pull-Down Resistors
 				</span>
 				<br><br>
 				<span class="TB-BODY">
-					Before we begin looking at our specific button circuits, we must
-					understand how to interpret what we're seeing.  Figure 6 shows a button
-			      circuit with a <i>pull-down resistor</i> when the button is open (so
-			      no current can flow).  A circuit that provides no path for current to
-			      flow is known as an <a href="P04_KVL_KCL.html#Open"><i>open</i></a>
-			      circuit.  When two points in a circuit are connected, with no
-			      resistance between them, these points are said to be <i>shorted</i>
-			      together.  We sometimes simply say that there is a
-			      <a href="P04_KVL_KCL.html#Short">short</a> circuit between these two points.  We will
-			      assume that the buttons in this project must be pressed to create a path for current
-			      to flow.  In other words, we need to press the button to &ldquo;close&rdquo; the
-			      circuit.
+					Before we begin looking at our specific button circuits, we must understand how to
+					interpret what we'll see.  Figure 6 shows a button circuit with a <i>pull-down
+					resistor</i> when the button is open (so no current can flow).  The schematic symbol
+					for a resistor is the jagged collection of lines labeled &ldquo;R&rdquo; which is
+					drawn below the button.
+
+			      <br><br>
+
+					A circuit that provides no path for current to flow is known as
+			      an <a href="P04_KVL_KCL.html#Open"><i>open</i></a> circuit.  When two points in a
+			      circuit are connected, with no resistance between them, these points are said to
+			      be <i>shorted</i> together.  We sometimes simply say that there is a
+			      <a href="P04_KVL_KCL.html#Short">short</a> circuit between these two points.  The
+			      buttons in this project must be pressed to create a path for current to flow.  In
+			      other words, we need to press the button to &ldquo;close&rdquo; the circuit.  Thus,
+			      these types of buttons are sometimes referred to as &ldquo;push-to-close&rdquo; buttons.
 
 			      <br><br>
 
@@ -359,9 +370,9 @@
 			      Figure 7 shows what happens when the button is pressed, i.e., the circuit is closed,
 			      and the probe remains in the same location as shown in Fig. 6(c). There is now a
 			      direct path from the 3.3V power supply to the probe.  We see that when the button is
-			      open, the resistor serves to pull the voltage down to 0V at this probe location
-			      (Fig. 6(c)), but if the button is closed, the probe is attached to the 3.3V supply
-			      (Fig. 7).
+			      open (Fig. 6(c)), the resistor serves to pull the voltage down to 0V at this probe
+			      location, but if the button is closed (Fig. 7), the probe is attached to the 3.3V
+			      supply.
 
 			      <br><br>
 
@@ -375,16 +386,24 @@
 
 			      <br>
 
+				</span>
+
+				<span class="TB-H1">
+					Pull-Up Resistors
+				</span>
+				<br><br>
+				<span class="TB-BODY">
+
 			      Now let's consider a circuit where we switch the location of the button and the
 			      resistor so that the resistor is directly tied to the 3.3V supply and the button is
 			      directly connected to ground, as shown in Fig. 8.  In this figure, the voltmeter is
-			      still measuring the voltage between the button and the resistor.  In (a), the button
-			      is open, and no current can flow to ground, and yet the voltmeter measures 3.3V.
-			      This is because if there is any difference in potential across the resistor, charge
-			      flows through the resistor.  However, once on the other side, there is no place for
-			      the charge to go.  Hence, the charge quickly builds on the other side of the resistor
-			      to the level where there is no difference in potential across the resistor.  Thus,
-			      current flow stops.
+			      still measuring the voltage between ground and the point that is between the button
+			      and the resistor.  In Fig. 8(a), the button is open, and no current can flow to
+			      ground, and yet the voltmeter measures 3.3V.  This is because if there is any
+			      difference in potential across the resistor, charge flows through the resistor.
+			      However, once on the other side, there is no place for the charge to go.  Hence, the
+			      charge quickly builds on the other side of the resistor to the level where there is
+			      no difference in potential across the resistor.  Thus, current flow stops.
 
 			      <br><br>
 
@@ -459,6 +478,11 @@
 				<br><br>
 				<span class="TB-BODY">
 
+					With that background out of the way, we are now ready to build the button portion of
+					the circuit.
+
+			      <br><br>
+
 					<ol>
 						<li>Connect the chipKIT 3.3V pin to the bus strip above the ground bus strip that
 							was set up in Step 1.  For the sake of simplicity, the LEDs are not shown in
@@ -466,19 +490,19 @@
 
 							<div align="center">
 							<cf_imagebox align="center"
-							             path="P04files/Justbuttons_3_20_2013.png"
-							             width="700px"
+							             path="P04files/Just_buttons.svg"
+							             width="500px"
 							             caption="Fig. 9. Button configuration.">
 							</div>
-
+							<br>
 						</li>
 						<li> Place three buttons into the breadboard as shown in Fig. 9. Note the
-							orientation of the button, so that the one pair of legs is inserted to one side
-							of the &ldquo;valley&rdquo; and the other pair is inserted on the other
-							side. Most breadboards have a gap or valley that separates columns in the main
-							section of the board (with the board placed as shown in Fig. 9).&nbsp; Even if
-							your breadboard does not have the aforementioned valley, the circuit will still
-							be functional provided that you retain this button orientation.
+							orientation of the button: one pair of legs is inserted to one side of the
+							&ldquo;valley&rdquo; and the other pair is inserted on the other side. Most
+							breadboards have a gap or valley that separates columns in the main section of
+							the board (with the board placed as shown in Fig. 9).  Even if your breadboard
+							does not have the aforementioned valley, the circuit will still be functional
+							provided that you retain this button orientation.
 						</li>
 						<li> Using three wires, connect the right side of each button to the
 							3.3V bus strip.
@@ -491,7 +515,7 @@
 						</li>
 						<li>Connect the other end of each resistor to the ground bus strip (you can use a
 							wire to connect from the resistor to the bus strip, as shown in Fig. 9, or you
-							can directly connect the end of the resistor to the bus strip).<br>
+							can directly connect the end of the resistor to the bus strip).
 						</li>
 						<li>When a button is pressed, it supplies 3.3V to the corresponding digital I/O
 							pin.  The chipKIT Max32 and Uno32 boards are designed to recognize a range of
@@ -525,8 +549,8 @@
 					
 					<div align="center">
 					<cf_imagebox align="center"
-					             path="P04files/Overall_cir_3_20_2013.png"
-					             width="700px"
+					             path="P04files/Overall_cir_5_13.svg"
+					             width="650px"
 					             caption="Fig. 10: Circuit showing all the buttons and LEDs.">
 					</div>
 
@@ -541,7 +565,7 @@
 		<tr>
 			<td>
 				<span class="TB-H1">
-					<code>if</code> and Comparison Statements
+					<code>digitalRead()</code> Function
 				</span>
 				<br><br>
 				<span class="TB-BODY">
@@ -551,19 +575,39 @@
 					takes a single parameter, which is the pin that is &ldquo;read.&rdquo; The function
 					reads the electrical state of the pin, and returns either <code>HIGH</code>
 					or <code>LOW</code>, accordingly.  As an example, assume we want to store the current
-					state of pin 8 in the variable <code>val</code>.  We would then use the following
-					statement:
+					state of pin 8 in the integer variable <code>val</code>.  We could accomplish this
+					using the following statements:
 			    
-					<pre class="brush: mpide; gutter: false">
-val = digitalRead(8);
+					<pre class="brush: mpide;">
+int val;              // Declare the integer variable val.
+val = digitalRead(8); // Assign pin 8's state to val.
 					</pre>
 
 					If pin 8 is at a &ldquo;high&rdquo; voltage when the function is
 					called, <code>val</code> is set to <code>HIGH</code>.  Otherwise,
-					<code>val</code> is set to <code>LOW</code>.
+					<code>val</code> is set to <code>LOW</code>.  We can also set the value of the
+					variable <code>val</code> when we declare it as shown in the following statement:
 
-					<br><br>
+					<pre class="brush: mpide; gutter: false;">
+int val = digitalRead(8); // Assign pin 8's state to integer val.
+					</pre>
 
+					<br>
+
+				</span>
+			</td>
+		</tr>
+	</table>
+
+
+	<table class="TBLAYOUT">
+		<tr>
+			<td>
+				<span class="TB-H1">
+					<code>if</code> and Comparison Statements
+				</span>
+				<br><br>
+				<span class="TB-BODY">
 					An <code>if</code> statement performs a test of a given &ldquo;logical
 					expression.&rdquo; If this expression is &ldquo;true,&rdquo; then the code that
 					follows the <code>if</code> statement is executed.  However, if the logical
@@ -583,104 +627,139 @@ if (logical_expression) {
 
 					<br><br>
 					
-					HERE HERE HERE
-					
-					<br><br>
-					
 					We can also associate an <code>else</code> clause with an <code>if</code> statement.
 					When present, the code associated with the <code>else</code> clause will not be
-					executed if the logical expression is true, but will be executed if it is false.
-
-
-					A template for an <code>if</code> statement, that includes an <code>else</code> clause,
+					executed if the logical expression is true, but will be executed if it is false.  A
+					template for an <code>if</code> statement that includes an <code>else</code> clause
 					is as follows:
 
 					<pre class="brush: mpide;">
 if (logical_expression) {
-   ... task1 ...
+   // Code only executed if logical_expression is true.
 }
 else {
-   ... task2
+   // Code only executed if logical_expression is false.
 }
 					</pre>
 
-					Within the &ldquo;<code>if</code>&rdquo; statement you can see that there is a
-					logical expression.  This logical expression can take the form of a comparison and
-					here we will restrict ourselves to comparison expression.  A comparison expression
-					is much like a mathematical equation except that it evaluates only to true or false.
-					Like mathematical expressions, which have their own set of operators
-					(i.e., <code>+</code> , <code>-</code>, <code>/</code> and <code>*</code>) ,
-					comparison expressions have their own set as well.  For example a relational
-					operators could be, &ldquo;<code>==</code>&rdquo; or
-					&ldquo;<inequality>!=</inequality>&rdquo;, which have the meaning of &ldquo;equal
-					to&rdquo; and &ldquo;not equal to,&rdquo; respectively.  Comparison expressions are
-					formed much like math equations using these operators.  An example of a comparison
-					expression assuming <code>x</code> is an int type variable, could be:
+					The logical expression that controls the actions of the <code>if</code> statement can
+					take the form of a comparison expression.  A comparison is accomplished using
+					a <i>comparison operator</i>, which is often called a <i>relational operator</i>.
+					Examples of relational operators include <code>&lt;</code> (less
+					than), <code>&gt;</code> (greater than), <code>&gt;=</code> (greater than or equal
+					to), &ldquo;<code>==</code>&rdquo; (equal to), and
+					<code>!=</code> (not equal to).  <i><b>A common programming error is to write a
+					single equal sign instead of two equal signs when trying to compare two
+					values.</b></i>  Keep in mind that a single equal sign is the <i>assignment
+					operator</i> (that assigns the value on the right of the equal sign to the thing on
+					the left of the equal sign).  Assuming <code>x</code> is an integer variable, the
+					following are examples of comparison expressions:
 
 					<br><br>
 
 
 					<ol>
 						<li>
-							<code>x == 0</code>
+							<code>x == 0 // Is x equal to zero? </code>
 						</li>
 						<li>
-							<code>x != 0</code>
+							<code>x != 0 // Is x not equal to zero? </code>
 						</li>
+						<li>
+							<code>x <= 5 // Is x less than or equal to five. </code>
+						</li> 
 					</ol>
 
-					The first expression would evaluate to true when the variable <code>x</code> equals
-					0, and false for any other value.  The second expression evaluate to false
-					if <code>x</code> equals 0, and true for any other value. There are many more
-					operators than just &ldquo;equal&rdquo; and &ldquo;not equal&rdquo;. The following
-					table shows a few of these relational operators.
+					The first expression evaluates to true when the variable <code>x</code> equals zero,
+					and false for any other value.  The second expression evaluate to false
+					if <code>x</code> equals zero, and true for any other value.  The third expression
+					evaluates to true if <code>x</code> is less than or equal to five.  The
+					following table lists the relational operators:
 
-					<table style="text-align: left; width: 100%;"
-					       border="1" cellpadding="0" cellspacing="0" bgcolor="white">
+					<table id="CT3">
+						<thead>
+							<tr>
+								<th width="15%">Symbol</th>
+								<th width="30%">Description</th>
+								<th width="55%">Example</th>
+							</tr>
+						</thead>
 						<tbody>
 							<tr>
-								<td>Equal</td>
-								<td>&nbsp; <code>==</code></td>
-							</tr>
-							<tr>
-								<td>Not Equal</td>
-								<td>&nbsp; <inequality>!=</inequality></td>
-							</tr>
-							<tr>
-								<td>Greater than</td>
-								<td>&nbsp; <code>&gt;</code></td>
-							</tr>
-							<tr>
-								<td>Less than</td>
-								<td>&nbsp; <code>&lt;</code></td>
-							</tr>
-							<tr>
-								<td>Greater than or equal</td>
-								<td>&nbsp; <code>&gt;=</code></td>
-							</tr>
-							<tr>
-								<td>Less than or equal</td>
-								<td>&nbsp; <code>&lt;=</code></td>
+								<td>
+									<code>&lt;</code>
+								</td>
+								<td>Less Than</td>
+								<td>
+									<code>7 &lt; x</code> <br>
+									True if 7 is strictly less <code>x</code>. <br>
+									Said another way, true if <code>x</code> is strictly greater than 7. <br>
+									False is 7 is greater than of equal to <code>x</code>.
+								</td>
 							</tr>
 							<tr>
 								<td>
-									Logical AND:<br>this operator is used to combined multiple comparison
-									expressions into one expression.  (i.e., if expression A is true and
-									expression B is true then the overall expression is also true.)
+									<code>&lt;=</code>
 								</td>
-								<td>&nbsp; <code>&amp;&amp;</code></td>
+								<td>Less Than or Equal To</td>
+								<td>
+									<code>x &lt;= 0</code> <br>
+									True if <code>x</code> is less than or equal to zero. <br>
+									False if <code>x</code> is greater than zero.
+								</td>
 							</tr>
 							<tr>
-								<td>Logical OR:<br>Like logical &ldquo;AND&rdquo;, this operator is used to
-									combined multiple expressions.  An example would be, if expression A is
-									true or expression B is true then the overall expression is true.</td>
-								<td>&nbsp; ||</td>
+								<td>
+									<code>==</code>
+								</td>
+								<td>Equal To</td>
+								<td>
+									<code>7 == x</code> <br>
+									True if <code>x</code> equals 7. <br>
+									False if <code>x</code> is not equal to 7.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code>!=</code>
+								</td>
+								<td>Not Equal To</td>
+								<td>
+									<code>x != 123</code> <br>
+									True if <code>x</code> is <i>not</i> equal to 123. <br>
+									False if <code>x</code> is equal to 123.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code>&gt;=</code>
+								</td>
+								<td>Greater Than or Equal To</td>
+								<td>
+									<code>7 &gt;= x</code> <br>
+									True if 7 is greater than or equal to <code>x</code>. <br>
+									False if 7 is strictly less than <code>x</code>.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<code>&gt;</code>
+								</td>
+								<td>Greater Than</td>
+								<td>
+									<code>x &gt; 97</code> <br>
+									True if <code>x</code> is strictly greater than 97. <br>
+									False is <code>x</code> is less than or equal to 97.
+								</td>
 							</tr>
 						</tbody>
 					</table>
 
-					An example of an &ldquo;<code>if</code>&rdquo; statement used in
-					the project code:
+
+					Keep in mind that these type of comparisons can be used as the &ldquo;logical
+					expression&rdquo; that controls the behavior of an <code>if</code> statement.  With
+					that in mind, example of an <code>if</code> statement that we'll use to control the
+					LEDs is:
 
 					<pre class="brush: mpide;">
 if (digitalRead(btnA) == HIGH) {
@@ -691,14 +770,17 @@ else {
 }
 					</pre>
 
-					Once the <code>if</code> statement is executed, the <code>digitalRead()</code>
-					function will execute and then return a value. That returned value is then compared
-					to the constant value <code>HIGH</code>.
-
-					<br><br>
-
-					Stated more plainly, the syntax reads, &ldquo;If Button A is pressed, turn on ledA,
-					else turn off ledA.&rdquo;
+					The first thing that happens when this <code>if</code> statement is executed, is the
+					logical expression in the parentheses in line 1 is evaluted.  This logical expression
+					has, on the left side of the comparison operator, the <code>digitalRead()</code>
+					function.  This function is executed, where the assumption if that the
+					parameter <code>btnA</code> corresponds to the pin attached to button A.  The value
+					this function returns is compared to the constant value <code>HIGH</code>.  If the
+					value read is <code>HIGH</code>, line 2 is executed.  If the value is
+					not <code>HIGH</code> (i.e., if it is <code>LOW</code>), then line 5 is executed.
+					The assumption is that <code>ledA</code> correspond to the pin to which LED A is
+					connected.  Stated more plainly, the syntax reads, &ldquo;If button A is pressed,
+					turn on LED A, else turn off LED A.&rdquo;
 
 					<br><br>
 
@@ -719,6 +801,8 @@ if ((digitalRead(btnA) == true) &amp;&amp; (digitalRead(btnB) == true)){
 
 					For an explanation of functions, the project <a href="P02.cf">Blinking the Internal
 					LED</a> provides an overview of syntax and program structure.
+
+					<br><br> 
 
 				</span>
 			</td>
@@ -830,7 +914,7 @@ void loop()
 		<tr>
 			<td>
 				<br><br>
-				<span class="TB-H1">Core Concepts:</span>
+				<span class="TB-H1">Core Concepts</span>
 				<br>
 				<table id="CT3">
 					<thead>

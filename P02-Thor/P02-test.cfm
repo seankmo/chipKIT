@@ -1,3 +1,7 @@
+<!-- Based on \ChipKitDev\P02-Thor\P02-jbs-5-14-2013.cfm 
+     Posted by John, 5/14/2013.
+-->
+
 <html>
 	<head>
  		<title>Blinking the Internal LED</title>
@@ -232,7 +236,7 @@ pinMode(13, OUTPUT);
 </cf_box>
 </div>
 
-				Within MPIDE, similar to <span class="TB-LITERAL1">HIGH</span> and <span class="TB-LITERAL1">LOW</span>, <span class="TB-LITERAL1">OUTPUT</span>
+				Within MPIDE, like <span class="TB-LITERAL1">HIGH</span> and <span class="TB-LITERAL1">LOW</span>, <span class="TB-LITERAL1">OUTPUT</span>
 				and <span class="TB-LITERAL1">INPUT</span> are also constants.  Hidden from us is the fact that they have
 				numeric values that cannot be changed while the program is running.  Instead of using
 				these named constants, we could use the underlying numeric values directly in our
@@ -376,7 +380,8 @@ void loop()
 		<tr>
 			<td>
 				<br><br>
-				<span class="TB-H1">Core Concepts</span><br><br>
+				<span class="TB-H1">Core Concepts</span>
+				<br>
 				<table id="CT3">
 					<thead>
 						<tr>
