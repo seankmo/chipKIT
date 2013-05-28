@@ -17,7 +17,7 @@
    viewBox="0 0 147.99987 155.99943"
    id="svg32834"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="circuit_diagramnew.svg">
+   sodipodi:docname="newvoltdiv.svg">
   <metadata
      id="metadata32950">
     <rdf:RDF>
@@ -26,6 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,8 +53,8 @@
      inkscape:zoom="2.1853036"
      inkscape:cx="222.63789"
      inkscape:cy="92.775267"
-     inkscape:window-x="27"
-     inkscape:window-y="262"
+     inkscape:window-x="66"
+     inkscape:window-y="208"
      inkscape:window-maximized="0"
      inkscape:current-layer="g8048" />
   <g

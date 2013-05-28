@@ -35,10 +35,12 @@
 	  <td>
 	  <br>
 	  <span class="TB-BODY">
-	  In project 14 Breathing LED with Pulse Width Modulation you built a circuit that was able to control
-	  the brightness of an LED by using a PWM signal. For this project we will modify and extend that circuit
-	  so that we can manually control the brightness of the LED to whatever we want.  To accomplish this we
-	  will be using a potentiometer dial, where the position of the dial will directly correlate to the brightness of the LED.
+	  In the project “Breathing LED with Pulse Width Modulation” you built a circuit that was able to change
+	  the brightness and of an LED simply by using a PWM signal. For that project the chipKIT board controlled the
+	  LED without any form of input from the user. This project will build upon the previous project, now introducing
+	  an element of user input by allowing manual control over the brightness of the LED.  To accomplish this we will
+	  introduce a new component called a potentiometer. With this component we can create a voltage divider circuit that
+	  through the chipKIT board can control the brightness of our LED.
 	  <br><br>
 	  </span><br>
 	  
@@ -69,20 +71,24 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Potentiometer dial (resistance range from 10&Omega; to 10k&Omega;</td>
-		  <td align="center" class="image"><img src="P16files/potentiometer_trimmerbig.svg">  </td>
+		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/potentiometer_trimmerbig.svg" width="100px">
+		  </td>
 		</tr>
 		
 		
 		<tr>
 		  <td class="qty">1</td>
-		  <td>330&Omega; resistors</td>
-		  <td align="center" class="image"><img src="P16files/330resBig.svg"></td>
+		  <td>220&Omega; resistors</td>
+		  
+		  <td align="center" class="image">
+		  <cf_imagebox align="center" path="P16files/resistor_220.svg" width="100px">
+		  </td>
 		</tr>
                
 		<tr>
 		  <td class="qty">1</td>
 		  <td>LED</td>
-		  <td align="center" class="image"><img src="P16files/LED_red.svg"></td>
+		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/LED_red.svg" width="40px"></td>
 
 	  	</tr>
               
@@ -90,7 +96,7 @@
 		<tr>
 		  <td class="qty">6</td>
 		  <td>Connecting wires</td>
-		  <td align="center" class="image"><img src="P16files/FritzWire.svg"></td>
+		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/FritzWire.svg" width="100px"></td>
 		</tr>
 	    
 	    
@@ -120,90 +126,127 @@
       </tr>
     </table>
     
+	<table class="TBLAYOUT">
+        <tr>
+        <td>
+        <span class="TB-BODY">
+		      <br>
+		      
+    		      Before we can start controlling our LED, we need a way to tell the chipKIT
+		      board the desired level of brightness.  In order to do this, we need to construct a voltage divider circuit.
+		      Such a circuit will output an analog signal (a signal that will vary in voltage level, as opposed to a
+		      digital signal that simply turns on or off) to the chipKIT board’s analog input pin. This signal will
+		      vary from 0V to 3.3V and the chipKIT board will interpret the signal as a proportion of the desired
+		      brightness level.  I.e. a 3.3V signal would represent 100% brightness, where a 1.65V signal would
+		      represent 50%, and 0V represent 0%.
+  
+        </td>
+        </tr>
+        
+      
+      
      <table class="TBLAYOUT">
       <tr>
-      <td>
-		      <br><br>
-		      <span class="TB-BODY">
-		      Before we can start controlling the LED for this project, we need a way to tell the chipKIT
-		      board the desired level of brightness.  In order to do this, a voltage divider circuit is required.
-		      Such a circuit will output an analog voltage signal to the chipKIT board that can vary from 0V to 3.3V.
-		      The chipKIT board interprets this signal as a proportion of the desired brightness level.  I.e. a 3.3V
-		      signal would represent 100% brightness (likewise a 1.65V signal would represent 50%, and 0V represent 0%).
+      <td valign="top">
+      <span class="TB-BODY">		      
+		      
+		      <br>
+		      To construct this voltage divider circuit we will need a component called a potentiometer.
+		      A potentiometer can be simply thought of as a resistor that changes its resistance value
+		      according to the position of a mechanical dial or screw, (which in turn moves an internal
+		      component called a “wiper”).
+		      Potentiometers are used in all sorts of consumer electronics;
+		      volume knobs on stereos, or light dimmer switches you find in your home, are all common
+		      everyday applications. Potentiometers are often used in electrical circuits that need precise
+		      resistance values that cannot be constructed from normal resistors. (Figure 1 shows two different
+		      types of common potentiometers).
 		      
 		      <br><br>
+
+		      A potentiometer will always have three pins, where two are connected to opposite ends of a
+		      resistive material.(Figure 2 illustrates how the pins are connected, in this illustration
+		      the two pins connected to the opposite ends of the resistive material are “A” and “C”).
+		      The resistance value between both pins is the full value of the potentiometer, which for our
+		      project is 10k&Omega; (you probably could have deduced this, as by inspection current travels
+		      through the entire length of the resistive material).
+		      
+		      <br><br>
+		      
+		      The third pin of the potentiometer (“B” in figure 2), is connected to the “wiper” element.
+		      This element makes contact with the resistive material, but at any point along the material
+		      (the mechanical dial is what moves the “wiper” along the resistive material).  If you were
+		      to use a multimeter to measure resistance between points “B” and “C”, you would see a value
+		      that could range anywhere from the full value of the potentiometer to very close to zero
+		      (about 10 Ohms or so) all according to the position of the wiper.
+		      
+		      This happens because as you move the wiper, you ether increase or decrease the length of the path between pins
+		      “B” and “C” (and similarly from pins “A” to “B”).  Increasing the length of the path between
+		      the pins means current has to travel through more resistive material, and thus a higher
+		      overall resistance (likewise decreasing the path, decreases resistance).
+		      
+		      
+		      
+		      </span>
+		      </td>
+		      <!-- spacer  --->
+		      <td width="25px">
+		      </td>
+		      <td>
 		      
 		      <cf_imagebox align="right" path="P16files/potexmp.svg" width="400px" caption="Fig. 1 potentiometers">
 		      
+		      <cf_imagebox align="right" path="P16files/diagrama.svg" width="350px" caption="Fig. 2 potentiometers">
 		      
 		      
-		      To construct this voltage divider circuit we will need a component called a potentiometer.  A potentiometer
-		      can be simply thought of as a resistor that changes its resistance value according to the position of a
-		      mechanical dial or screw, (which in turn moves an internal component called a “wiper”). Potentiometers are
-		      used in all sorts of consumer electronics, volume knobs on stereos, or light dimmer switches you find in your
-		      home, are common everyday applications. Potentiometers are often used in electrical circuits that need precise
-		      resistance values that cannot be constructed from normal resistors. (Figure 1 shows various common types of
-		      potentiometers).
+	</td></tr>
+	</table>
+	<br><br>
+	<table class="TBLAYOUT">
+	  <tr><td>
+		   
 		      
+		      
+		      <cf_imagebox align="left" path="P16files/circuit_diagramnew.svg" width="300px" caption="Fig. 3 Voltage Divider Circuit">
+		      </td>
+		      <td width="25px">
+		      
+		      <td>
+		      <cf_imagebox align="left" path="P16files/voltdivb.svg" width="300px" caption="Fig. 4 Voltage Divider Circuit">
 		      <br><br>
 		      
 		      
+		      </td></tr>
+		      </table>
+		      <table class="TBLAYOUT">
 		      
-		      A potentiometer will always have three pins, where two are connected to opposite ends of a resistive material.
-		      (Figure 2 illustrates how the pins are connected, in this illustration the two pins connected to opposite
-		      ends of the resistive material are “A” and “C”).  The resistance between both pins is the full value of the
-		      potentiometer (you probably could have deduced this, as by inspection current travels through the entire length
-		      of the resistive material).
-		      
+		      <tr><td>
+		      <span class="TB-BODY"> 
+		      Figure 3 shows a schematic diagram of the voltage divider we will be using for this circuit.
+		      In the past, if you ever constructed a voltage divider you probably just used two fixed resistors,
+		      (were the output of the circuit was measured at the point between the two resistors).  This
+		      circuit here may not look similar but functions identically. 
+	
 		      <br><br>
-		      <cf_imagebox align="left" path="P16files/diagrama.svg" width="300px" caption="Fig. 2 potentiometers">
-		      <br><br>
-		      
-		      The third pin of the potentiometer (“B” in figure 2), is connected to the “wiper” element.  This element
-		      makes contact with the resistive material, but at any point along the material (the mechanical dial is what
-		      moves the “wiper” along the resistive material).  If you were to use a multimeter to measure resistance between
-		      points “B” and “C”, you would see a value that could range anywhere from the full value of the potentiometer
-		      to very close to zero (about 10 Ohms or so) all according to the position of the wiper.  This happens because,
-		      as you move the wiper, you ether increase or decrease the length of the path between pins “B” and “C” (and
-		      similarly from pins “A” to “B”).  Increasing the length of the path between the pins means current has to travel
-		      through more resistive material, and thus a higher overall resistance (likewise decreasing the path,
-		      decreases resistance).
-		      
 
-		      <br><br><br><br>
-		      <cf_imagebox align="right" path="P16files/circuit_diagramnew.svg" width="300px" caption="Fig. 3 Voltage Divider Circuit">
-		      <br><br>
+		      Figure 4 helps to illustrate the functionality of the voltage divider. In this figure the wiper element
+		      is set directly in the middle of the resistive material.   Recall Ohm’s law were Voltage = Current &lowast; Resistance.
+		      If you hold current constant, than voltage (i.e. the voltage drop across a resistor), becomes a product of
+		      varying resistance.  In our voltage divider circuit current is always constant. Current travels from the 3.3V
+		      source through the entire length of resistive material regardless of the position of the wiper, and then directly
+		      to ground (very little if any current splits off through Vout, so it can be functionally ignored). So now when
+		      we move the wiper, we change the resistance between points “B” and “C”. This in turn changes the voltage drop
+		      between the two points proportionally, and thus the output of our voltage divider circuit.
 		      
-		      Figure 3 shows the voltage divider we will be using for this circuit.  It might not intuitively look like a voltage
-		      divider you are familiar with from other projects but it functions identically. We will take a little bit of time to
-		      explain how the circuit functions.  Vout for this circuit will be the line connected to the analog input of our chipKIT
-		      board. This line will transmit the signal that will vary in voltage from 0V to 3.3V, and will determine the brightness
-		      of the LED.  In figure 3 the pin labels are equivalent to those in figure 2.
-	
-		      <br><br>
-		      Figure 4a shows a different way of thinking about this circuit.  Imagine when the potentiometer is dialed all
-		      the way to the left (the wiper is very close to the start of the resistive material). Since the path between the 3.3V
-		      source and the Vout (pins “A” and “B”) is very short, there is very little resistance, and thus a very minimal voltage
-		      drop between these two points. Since the potentiometer is the only component between source and ground, the voltage drop
-		      across the rest of the potentiometer has to equal the voltage source minus the voltage drop from pins “A” to “B”.
-		      
-		      		      <br><br>
-		      <cf_imagebox align="left" path="P16files/voltdiva.svg" width="300px" caption="Fig. 4a Voltage Divider Circuit">
-		      <cf_imagebox align="right" path="P16files/voltdivb.svg" width="300px" caption="Fig. 4b Voltage Divider Circuit">
-		      <br><br>
-	
-		      
-	
-	
-	
-	</span>
+		     
+		
+		
+		
+		</span>
 	</td>
 	</tr>
-	
-	
-	
       
     </table>
+    <br><br><br>
       
       
     <cf_Box Color="putty">   
@@ -216,11 +259,7 @@
       </tr>
       <tr>
       <td align="center">
-	
-    	  <img src="P16files/Circuit_diagram.svg">
-	  <div class="TB-FIGURES">
-	  Fig. 4 Circuit diagram.
-	  </div> 
+	  <cf_imagebox align="center" path="P16files/overallcirc.svg" width="600px" caption="Fig. 5 Overall Circuit.">
 	  <br><br>
     
       </td>
@@ -231,21 +270,21 @@
       <tr>
       <td>
       	    <span class="TB-BODY">
-	    <ol>
-	    <li> Place the potentiometer dial so that it spans the gap between rows in the breadboard (as per figure 4).  Note that potentiometers can come
-	    in various configurations, and some have all pins located on the same side (Figure 5 shows the alternate configurations).  It is only important to make
-	    sure that each pin occupies its own row.</li>   
-	    <li> Place two 10k&Omega; resistors so that one end of each resistor is connected to pin A of the potentiometer. (these resistors will be connected in
-	    parallel so their equivalent resistance is equal to 5k&Omega;,  this is done because a 5k&Omega; resistor is not a common size of resistor, as opposed
-	    to a 10k&Omega; which is).</li>
-	    <li> Using a wire, connect a wire from the 5V pin of the chipKIT board to a row in the breadboard. Then connect the other end of the two resistors to
-	    this same row. This row will now be designated the <b>5V row</b>. </li>
-	    <li> Using a wire, connect from the chipKIT GND pin the pin B of the potentiometer. The breadboard row that pin B of the potentiometer connects to
-	    will be designated as the <b>Ground row</b>.</li>
-	    <li>Place a 330 &Omega; resistor so that one end is connected to the Ground row.</li>
-	    <li>Place a LED into the breadboard. Connect the cathode (short end) of the LED is connected to the end of the 330 &Omega; resistor not connected to the Ground row.</li>
-	    <li>Using a wire, connect the anode (long end) of the LED to pin 7 of the chipKIT board.</li>
-      
+		
+		<ol>
+		<li> Place the potentiometer so that it spans the gap between columns in the breadboard (as per figure 5).
+		It is important to note that potentiometers can come in various configurations; some have all pins located on
+		the same side (Figure 6 shows an example). Ether configuration works fine, just make sure that each pin occupies its own column.</li>
+		
+		<li> Now with a wire, connect from pin “A” of the potentiometer to the 3.3V pin of the chipKIT board. (The potentiometer pins are
+		labeled identically to our explanation in the theory section). </li>
+		
+		<li> Connect from pin “C” of the potentiometer to the GND pin of the chipKIT board. The column that pin “C” occupies will from now on be called the <b>Ground column</b>. </li>
+		<li> Place a 220 &Omega; resistor into the breadboard so that one end of the resistor is connected to the ground column.</li>
+		<li>Connect the cathode (short end) of a LED to the end of the 220 &Omega; resistor not connected to the ground column. Then with a
+		wire connect the anode (long end) of the LED to chipKIT pin 7.</li>
+		<li>Finally with a wire connect pin “B” of the potentiometer to the A0 pin of the chipKIT board.</li>
+	 
 	    </ol>
 	    </span>
       </td>
@@ -255,7 +294,7 @@
 	
 	<img src="P16files/potentiometer_alt_examp.svg">
 	<div class="TB-FIGURES">
-        Fig. 5 Alternate potentiometer pin configuration.
+        Fig. 6 Alternate potentiometer pin configuration.
         </div> 
       
       
@@ -269,75 +308,101 @@
     <br><br>
     
     <table class="TBLAYOUT">
-      <tr>
-      <td>
+	    <tr>
+	    <td>
       
-      <span class="TB-H2">Software</span><br><br>
-      </td>
-      </tr>
-      <tr>
-      <td>
-      <span class="TB-BODY">
-      Before going through the software sketch, we will first discuss how chipKIT reads and writes analog signals.
-      <br><br>
-      You are probably familiar with <span class="TB-KEYWORD2">analogWrite</span><span class="TB-BLACK">()</span> function from project 14 (if not, you can review the project for a description of PWM signaling).
-      When you call <span class="TB-KEYWORD2">analogWrite</span><span class="TB-BLACK">()</span> on a specific pin it will start to transmit a PWM signal on that pin. This function takes a value between 0 and 255,
-      where zero represents a duty cycle of 0% and 255 represents 100% (duty cycle is a percentage of the max output voltage). 
-      <br><br>
-      While this is not quite a true analog output, supplying an average voltage to a LED is good enough to change its brightness. Remember in project 6: trainable delay,
-      when a button bounce occurred, it would cause the LED to toggle on/off rapidly. The LED in these instances would appear dim, because the average voltage supplied to it was much
-      less 3.3V.
-      <br><br>
-      The <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span> function like it name suggests will convert a signal from one of the analog pins (all of the pins on the chipKIT board that are labeled
-      with an “A” in front of them), to a numerical (digital) value. ChipKIT boards use 10 bit analog to digital converters (ADCs), so an analog value will be quantized
-      to one of 1024 (2<sup>10</sup> = 1024) values. 
-      <br><br>
-      When a continuous value signal (like an analog signal) is “quantized” it only means that its value is restricted to a discrete number of levels.  For example,
-      if you had an analog signal that could range from any value between 0V and 8V, and you only had 8 discrete levels.  An analog signal with a level of 6.2V would map
-      to 6 (the closest discrete level).
-      <br><br>
-      The <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span> function will correlate the number 1024 to the max reference voltage (and likewise 0 for 0V).  The max reference voltage is set with the <span class="TB-KEYWORD2">analogReference</span><span class="TB-BLACK">()</span>
-      function. Most often you will specify <span class="TB-LITERAL1">DEFAULT</span> as the parameter when calling this function, (this designates the max reference voltage as 3.3V ). It is important to note 3.3V
-      is the max voltage that can be applied to a chipKIT analog input. You can also use the <span class="TB-LITERAL1">EXTERNAL</span> parameter, which specifies that the reference voltage is taken
-      from a physical pin (in Max32 this is pin 44, but this will change from chipKIT board to chipKIT board, so reference the boards manual).
-      <br><br>
-      </span>
+	    <span class="TB-H2">Software</span><br><br>
+	    </td>
+	    </tr>
+	    
+	    <tr><td>
+	    <span class="TB-BODY">
       
-      </td>
-      </tr>
+		Before going through the software sketch, it is important to first discuss how chipKIT will read analog signals. 
+      
+		<br><br>
+      
+		You are probably familiar with <code>analogWrite()</code> function from the “Changing Color of Tricolor LED”, or “Breathing LED”
+		projects.  The function simply transmits a PWM signal, where the input parameters specify the output pin,
+		and duty cycle of the signal. 
+  
+		<br><br>
+    
+		You may though, not be familiar with the <code>analogRead()</code> function. Like it name suggests, this function will convert a
+		signal received on one of the analog pins (analog pins on chipKITs board are preceded with an “A” to distinguish them
+		from digital pins) to a numerical value. 
+	
+	        <br><br>
+     
+		ChipKIT boards use 10 bit analog to digital converters (ADCs), so analog values will be quantized to one of 1024
+		(2<sup>10</sup> = 1024) values.  When a continuous value signal (like an analog signal) is “quantized” it only means that its
+		value is restricted to a discrete number of levels. For example, if you had an analog signal that could range from
+		any value between 0V and 8V, and you only had 8 discrete levels. An analog signal with a level of 6.2V would
+		map to 6 (the closest discrete level). 
+
+	        <br><br>
+     
+		The <code>analogRead()</code> function assigns the number 1024 to the max reference voltage (and likewise 0 for 0V). The
+		max reference voltage is a value set with the <code>analogReference()</code> function. Most often you will specify <code>DEFAULT</code>
+		as the parameter when calling this function, on chipKIT boards this designates the max reference voltage as 3.3V. 
+     
+		Sometimes it may be usefull to use the <code>EXTERNAL</code> parameter for analogReference(). This specifies the reference voltage
+		to be taken from a physical pin rather than an internal reference (in Max32 this is pin 44, but this will change from
+		chipKIT board to chipKIT board, the exact pin can be found in your boards reference manual).
+
+		<br><br>
+
+
+		</span>
+      
+	  </td>
+	  </tr>
     </table>
     
     <cf_Box Color = "putty">
     
     <table class="TBLAYOUT">
-      <tr>
-      <td>
-      <span class="TB-H1">Step 2 setting up the software:</span><br><br>
-      </td>
-      </tr>
+	  <tr>
+	  <td>
+	  <span class="TB-H1">Step 2 setting up the software:</span><br><br>
+	  </td>
+	  </tr>
       
-      <tr>
-      <td>
-      <span class="TB-BODY">
-      The software sketch for this project is very straight forward. 
-      <br><br>
-      The setup portion of the sketch simply sets the ADC reference value to DEFAULT (which is 3.3V), and sets the pin mode of the LED to an output. Note that you do not need to set the mode of analog input pins (unless you are going alternatively use them as a digital pin).
-      <br><br>
-      The main loop of the program will simply read from the analog pin, scale that value so it is within 0 to 255, and then write back to the LED pin.
-      <br><br>
-      The scaling function may need some explanation if you are unfamiliar with explicitly type-casting a variable.
-      <br><br>      
-      <code>valueGlb = (int)((float)valueGlb * scaleFactorGlb);</code>
-      <br><br>
-      Since valueGlb is an integer variable it has to be explicitly type-cast as a float in order to multiply it by the scale factor variable. Since the result of this multiplication will be a floating point number, it then has to be type cast again back to an int so it can be stored in valueGlb. 
-      <br><br>
-      Once implemented turning the dial on the potentiometer will set the brightness on the LED.
-      <br><br>
-      </span>
+	 <tr>
+	 <td>
+	 <span class="TB-BODY">
+	     Once all of the functions in this sketch are understood, the actual length of the sketch is quite minimal. 
       
-      <div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+	    <br><br>
+	    The setup portion of the sketch simply sets the ADC reference value to <code>DEFAULT</code> (which is 3.3V), and sets the
+	    pin mode of the LED to an output. Note that you don’t have to call pin mode for analog input pins (unless you are going
+	    alternatively use them as a digital pins). 
+
+	    <br><br>
+	    The main loop of the program will simply read from the analog pin, scale that value so it is within 0 to 255, and then write back to the LED pin. 
+
+	    <br><br>
+	    The scaling function may need some explanation if you are unfamiliar with explicitly type-casting a variable. 
+  
+	    <br><br>
+	   <pre class="brush: mpide; gutter: false;"> valueGlb = (int)((float)valueGlb * scaleFactorGlb); </pre>
+
+	    <br><br>
+	    Since valueGlb is an integer variable it has to be explicitly type-cast as a float in order to multiply it by the scale factor variable (which is a <code>float</code> variable).
+	    Since the result of this multiplication will be a floating point number, it then has to be type cast again back to an <code>int</code> so it can be stored in valueGlb. 
+
+
+	    <br><br>
+	    Once implemented turning the dial on the potentiometer will set the brightness on the LED.
+
+
+	   <br><br>
+	   </span>
+      
+  <div align="center">
+       
+   <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
+      <pre class="brush: mpide;">
       
       
 int valueGlb;
@@ -381,6 +446,9 @@ void loop()
       </tr>
     </table>
     </cf_Box>
+
+
+
 
 
     <table class="TBLAYOUT">

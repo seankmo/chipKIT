@@ -1,0 +1,4 @@
+swtich statments
+--PWM
+--Tricolor LEDs
+random();
