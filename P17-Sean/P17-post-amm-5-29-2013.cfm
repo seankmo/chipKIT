@@ -80,18 +80,7 @@
 		  		<td>Tower Pro SG92R servo</td>
           	  	<td align="center" class="image"><img src="P17files/servo.svg"></td>
 	  		  </tr>
-		
-			  <tr><!--Not sure this row is necessary. Check with John.-->
-		  		<td class="qty">9</td>
-		  		<td>Connecting wires</td>
-          	  	<td align="center" class="image"><img src="P17files/FritzWire.svg"></td>
-			  </tr>
-	    
-	    	  <tr>
-		  		<td class="qty">1</td>
-		  		<td>Six pin Header and Gender Changer (optional)</td>
-          	  	<td align="center" class="image"><img src="P17files/Tile_1x6header_110.png"></td>
-			  </tr>	
+
 	    	</table>
 
             </div>
@@ -183,7 +172,7 @@
 	  				<li>Using a wire, connect one of the left button’s &ldquo;A&rdquo; terminals to the 3.3V bus strip. Repeat this step for the right button.</li>
 	  				<li>Using a wire, connect one of the right button’s &ldquo;B&rdquo; terminals to the chipKIT's pin 6.</li>
 	  				<li>Using a wire, connect one of the left button’s &ldquo;B&rdquo; terminals to the chipKIT's pin 7. </li>
-	  				<li>Connect the servo’s control line to chipKIT pin 9.  The servo connector is a female connector, so just use a male to male wire to connect from the chipKIT board to the servo connector. (You can use a cable gender changer<!--maybe explain what this is-->, if it's more convenient.)</li>  
+	  				<li>Connect the servo’s control line to chipKIT pin 9.  The servo connector is a female connector, so just use a male to male wire to connect from the chipKIT board to the servo connector. (You can use a cable gender changer to plug straight into the breadboard if it's more convenient. A gender changer is just a male to male, or female to female adapter for connecting cables with that have incompatible connectors)</li>  
 	  				<li>Connect the servo's power line to the 5V bus strip, and then connect the ground line of the servo to the ground bus strip. As with the servo's control line, the power and ground connectors are female connectors, so use a male to male wire to connect from the chipKIT board to the servo connector.</li>
 	  			</ol>
 	    		</span>
@@ -288,7 +277,7 @@
 
 	 			<br><br>
 
-				Now, implement the following project code. The variable &ldquo;degreeGlb&rdquo; will represent the position of the servo at any given time. The sketch will check whether you have pressed the left button and decreases the degreeGlb variable by the value of the &ldquo;mySpeedGlb&rdquo; <!-- you should explain what this variable does.-->constant. (Likewise, if the right button is pressed the “degreeGlb” variable is incremented in the same fashion.) After the sketch finishes checking for button input, it will move the servo according to the degree value.
+				Now, implement the following project code. The variable &ldquo;degreeGlb&rdquo; will represent the position of the servo at any given time. The sketch will check whether you have pressed the left button and decreases the degreeGlb variable by the value of the &ldquo;mySpeedGlb&rdquo; constant. (Likewise, if the right button is pressed the “degreeGlb” variable is incremented in the same fashion.) The &ldquo;mySpeedGlb&ldquo; constant is simply the rate of speed at which the servo rotates. You can try increasing or decreasing this value to change the rotation speed of your servo. After the sketch finishes checking for button input, it will move the servo according to the degree value.
 
 	    		<br><br>
 	    

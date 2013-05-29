@@ -36,13 +36,12 @@
 	  <br>
 	  <span class="TB-BODY">
 	  In the project “Breathing LED with Pulse Width Modulation” you built a circuit that was able to change
-	  the brightness of an LED simply by using a PWM signal. For that project the chipKIT board controlled the
+	  the brightness and of an LED simply by using a PWM signal. For that project the chipKIT board controlled the
 	  LED without any form of input from the user. This project will build upon the previous project, now introducing
 	  an element of user input by allowing manual control over the brightness of the LED.  To accomplish this we will
 	  introduce a new component called a potentiometer. With this component we can create a voltage divider circuit that
-	  can indirectly control the brightness of our LED. Our chipKIT board will act as meditator between the
-	  voltage divider, and the LED. Basically reading the value of the voltage divider, and then outputting a PWM signal
-	  for the desired level of brightness.
+	  <!--Removed: through the chipKIT board--> <!-- This line breaks the flow of the sentence. I would remove it. Mabey add a sentence or two clarifying the LED brightness will not be directly controlled by the pot, but instead the pots value will be read and used to scale the PWM value that controls the brightness -->
+	  can control the brightness of our LED.
 	  <br><br>
 	  </span><br>
 	  
@@ -73,14 +72,18 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Potentiometer dial (resistance range from 10&Omega; to 10k&Omega;)</td>
-		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/potentiometer_trimmerbig.svg" width="100px"></td>
+		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/potentiometer_trimmerbig.svg" width="100px">
+		  </td>
 		</tr>
 		
 		
 		<tr>
 		  <td class="qty">1</td>
 		  <td>220&Omega; resistors</td>
-		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/resistor_220.svg" width="100px"></td>
+		  
+		  <td align="center" class="image">
+		  <cf_imagebox align="center" path="P16files/resistor_220.svg" width="100px">
+		  </td>
 		</tr>
                
 		<tr>
@@ -89,17 +92,22 @@
 		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/LED_red.svg" width="40px"></td>
 
 	  	</tr>
+              
+		
+		<tr>
+		  <td class="qty">6</td>
+		  <td>Connecting wires</td><!-- Do we need to list connecting wires in the inventory? It is inconsistent with our old projects, but an easy fix if we want to start doing it. You might want to ask John about it.-->
+		  <td align="center" class="image"><cf_imagebox align="center" path="P16files/FritzWire.svg" width="100px"></td>
+		</tr>
 	    
-	   
-            
-
-	    </tbody>
+	    
 	    </table>
-	    </div>
-	    
-    </td></tr>    
+            </div>
+	    <br><br>
+	    </td>
+	    </tr>
+	    </tbody>
     </table>
-    
     
     
     <table class="TBLAYOUT">
@@ -127,7 +135,8 @@
 		      
     		      Before we can start controlling our LED, we need a way to tell the chipKIT
 		      board the desired level of brightness.  In order to do this, we need to construct a voltage divider circuit.
-		      Such a circuit will output a voltage that will
+		      Such a circuit will output a voltage <!-- Removed: (a signal that will vary in voltage level, as opposed to a
+		      digital signal that simply turns on or off) to the chipKIT board’s analog input pin. This signal--> that will
 		      vary from 0V to 3.3V. The chipKIT board will read the voltage with an analog input pin and scale the
 		      brightness level appropriately.  I.e. a 3.3V signal would represent 100% brightness, a 1.65V signal would
 		      represent 50%, and 0V signal represent 0% brightness.
@@ -146,26 +155,36 @@
 		      To construct this voltage divider circuit we will need a component called a potentiometer.
 		      A potentiometer can be simply thought of as a resistor that changes its resistance value
 		      according to the position of a mechanical dial or screw.
+				<!--Removed:, (which in turn moves an internal component called a “wiper”).--> <!--I think you should introduce the "wiper" at the same time you introduce the third pin.-->
 		      Potentiometers are used in all sorts of consumer electronics;
 		      volume knobs on stereos, or light dimmer switches you find in your home, are some common
-		      applications. They are also handy in situations where precise resistance values cannot be constructed from normal resistors. (Figure 1 shows two different
+		      applications. <!--Removed: Potentiometers are often used in electrical circuits that need precise 
+		      resistance-->They are also handy in situations where precise resistance values cannot be constructed from normal resistors. (Figure 1 shows two different
 		      types of common potentiometers).
 		      
 		      <br><br>
 
 		      A potentiometer will always have three pins, where two are connected to opposite ends of a
 		      resistive material, Fig. 2. illustrates how the pins are connected.
-		      From Fig. 2. it is easy to see pins "A" and "C" are separated by the greatest length of resistive material.
-		      This means the resistance measured across both will always be the maximum value of the potentiometer.
-		      In our project the max resistance is 10k&Omega;.
+			  
+			 <!--Removed: , in this illustration the two pins connected to the opposite ends of the resistive material are “A” and “C” 
+	
+		      The resistance value between both pins is the full value of the potentiometer, which for our
+		      project is 10k&Omega; -->
+			  From Fig. 2. it is easy to see pins "A" and "C" are separated by the greatest length of resistive material. This means the resistance measured across both will always be the maximum value of the potentiometer.
+			  In our project the max resistance is 10k&Omega;.
+			  
+			  <!--Removed: (you probably could have deduced this, as by inspection current travels through the entire length of the resistive material).-->
 		      
 		      <br><br>
 		      
 
 		      The third pin of the potentiometer (“B” in figure 2), is connected to the “wiper” element.
 		      This element makes contact with the resistive material and can be repositioned by rotating the mechanical dial. 
-		      If you were to measure the resistance between points “B” and “C”, you would see a value
-		      that could range anywhere from 10k&Omega; to about 10 Ohms.
+			  <!-- Removed: , but at any point along the material(the mechanical dial is what moves the “wiper” along the resistive material).-->   If you were
+		      to measure the resistance between points “B” and “C”, you would see a value
+		      that could range anywhere from 10k&Omega; to about 10 Ohms.  <!--Removed: the full value of the potentiometer to very close to zero
+		      (about 10 Ohms or so) all according to the position of the wiper.-->
 		      
 		      This happens because as you move the wiper, you ether increase or decrease the length of the current path between pins
 		      “B” and “C” (and similarly from pins “A” to “B”).  Increasing the length of the path between
@@ -193,8 +212,8 @@
 	  <tr>
 		<td>
 		<span class="TB-BODY"> 
-			
-		      Figure 3 shows a schematic diagram of the voltage divider we will be using for this circuit.
+			<!-- It made more sense to me to move this paragraph up here -->
+			Figure 3 shows a schematic diagram of the voltage divider we will be using for this circuit.
 		      In the past, if you ever constructed a voltage divider you probably just used two fixed resistors,
 		      (were the output of the circuit was measured at the point between the two resistors).  This
 		      circuit here may not look similar but functions identically.
@@ -220,15 +239,20 @@
 		      
 		      <tr><td>
 		      <span class="TB-BODY"> 
-		    
+		     <!-- Moved: Figure 3 shows a schematic diagram of the voltage divider we will be using for this circuit.
+		      In the past, if you ever constructed a voltage divider you probably just used two fixed resistors,
+		      (were the output of the circuit was measured at the point between the two resistors).  This
+		      circuit here may not look similar but functions identically. -->
+	
 		      Figure 4 helps to illustrate the functionality of the voltage divider. In this figure the wiper element
 		      is set directly in the middle of the resistive material. Recall Ohm’s law were Voltage = Current &lowast; Resistance.
 		      If you hold current constant, than voltage (i.e. the voltage drop across a resistor), becomes a product of
-		      varying resistance. In our voltage divider circuit current is always constant. Current travels from pins "A" to "C" regardless of the position of the wiper.
-		      Very little if any current splits off through pin "B", so we can ignore it. This means when
-		      we move the wiper, we only change the resistance value in the circuit divider. Ultimately this changes the voltage drop between
-		      pins “A” and “B” as well as “B” and “C”.  
-		      Thus we can vary the output of our voltage divider circuit.
+		      varying resistance. In our voltage divider circuit current is always constant. Current travels from <!--the 3.3V
+		      source through the entire length of resistive material--> pins "A" to "C" regardless of the position of the wiper. <!--, and then directly
+		      to ground (-->Very little if any current splits off through pin "B", so we can ignore it. This means when
+		      we move the wiper, we only change the resistance value in the circuit divider. <!-- Removed: This in turn changes the voltage drop
+		      between the two points proportionally, and --> Ultimately this changes the voltage drop between pins “A” and “B” as well as “B” and “C”.  
+			  Thus we can vary the output of our voltage divider circuit.
 		      
 		     
 		
@@ -330,7 +354,7 @@
 		ChipKIT boards use 10 bit analog to digital converters (ADCs), so analog values will be approximated to one of 1024
 		values (2<sup>10</sup> = 1024).
 		
-		This type of approximation is known as signal "quantization". 
+		This type of approximation is known as signal "quantization". <!-- Added -->
 		
 		When a continuous signal (like an analog signal) is “quantized” it only means that its
 		value is restricted to a discrete number of levels. For example, if you had an analog signal that could range from
@@ -341,7 +365,7 @@
      
 		The <code>analogRead()</code> function assigns the number 1024 to the max reference voltage (and likewise 0 for 0V). The
 		max reference voltage is a value set with the <code>analogReference()</code> function. Most often you will specify <code>DEFAULT</code>
-		as the parameter when calling this function, on chipKIT boards this designates the max reference voltage as 3.3V. 
+		as the parameter when calling this function, on chipKIT boards this designates the max reference voltage as 3.3V . 
      
 		<br><br>
      
@@ -370,7 +394,7 @@
 	 <tr>
 	 <td>
 	 <span class="TB-BODY">
-	    After understanding all functions in this sketch, you will find that it is very simple and straight forward.
+	    Once all of the functions in this sketch are understood, the actual length of the sketch is quite minimal.<!--Rephrase this so it is not in passive voice-->
 		 
       
 	    <br><br>

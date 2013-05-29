@@ -145,11 +145,11 @@
 
 	 			<br><br>
 
-	 			A PWM signal will always transmit for set amount of time called a period (this period is around 30 to 50 ms for servos).  At the start of this period, the state of the signal is always <code>HIGH</code>. At a point in time within the period (this point is chosen by the sender of the signal), the signal is then asserted <code>LOW</code>. Information is conveyed to the receiver by comparing the percentage of time the signal is asserted <code>HIGH</code> in the period over the total length of time of the period (this percentage is called the &ldquo;duty cycle&rdquo;).  Given a PWM signal with a period of 50 ms, if the signal is asserted <code>HIGH</code> for 25 ms, then it would have a duty cycle of 50%.
+	 			A PWM signal will always transmit for set amount of time called a period (this period is around 30 to 50 ms for servos).  At the start of this period, the state of the signal is always <span class="TB-LITERAL1">HIGH</span>. At a point in time within the period (this point is chosen by the sender of the signal), the signal is then asserted <span class="TB-LITERAL1">LOW</span>. Information is conveyed to the receiver by comparing the percentage of time the signal is asserted <span class="TB-LITERAL1">HIGH</span> in the period over the total length of time of the period (this percentage is called the &ldquo;duty cycle&rdquo;).  Given a PWM signal with a period of 50 ms, if the signal is asserted <span class="TB-LITERAL1">HIGH</span> for 25 ms, then it would have a duty cycle of 50%.
 
 	 			<br><br>
 
-	 			In terms of our project, when the servo receives a PWM signal that is asserted <code>HIGH</code> for 1000 &mu;s, the servo interprets this as an angle of 0 degrees (i.e., it positions the motor shaft at angle 0).  Additionally, asserting <code>HIGH</code> for 2000 &mu;s corresponds to 180 degrees.  So, an angle between 0 and 180 degrees can be chosen by varying the asserted <code>HIGH</code> time of the PWM signal between 1000 &mu;s and 2000 &mu;s.
+	 			In terms of our project, when the servo receives a PWM signal that is asserted <span class="TB-LITERAL1">HIGH</span> for 1000 &mu;s, the servo interprets this as an angle of 0 degrees (i.e., it positions the motor shaft at angle 0).  Additionally, asserting <span class="TB-LITERAL1">HIGH</span> for 2000 &mu;s corresponds to 180 degrees.  So, an angle between 0 and 180 degrees can be chosen by varying the asserted <span class="TB-LITERAL1">HIGH</span> time of the PWM signal between 1000 &mu;s and 2000 &mu;s.
 
 	 			<br><br>
 
@@ -207,7 +207,7 @@
 
 				<br><br>
 
-				Now, consider functions like <code>digitalRead</code>() and <code>digitalWrite</code>(). We use these functions all the time, and yet we never have to write the function definition and body code for them. Since these functions are so commonly used, their function code exists within a repository called a library. MPIDE looks through these libraries, in addition to looking at your program code for a function's code. By placing the function code there, it allows us to reuse code. It doesn’t make sense to rewrite a function every time you start new program sketch. So, if the function acts identical to code you have already written, it is more practical to reuse it from sketch to sketch. 
+				Now, consider functions like <span class="TB-KEYWORD2">digitalRead</span>() and <span class="TB-KEYWORD2">digitalWrite</span>(). We use these functions all the time, and yet we never have to write the function definition and body code for them. Since these functions are so commonly used, their function code exists within a repository called a library. MPIDE looks through these libraries, in addition to looking at your program code for a function's code. By placing the function code there, it allows us to reuse code. It doesn’t make sense to rewrite a function every time you start new program sketch. So, if the function acts identical to code you have already written, it is more practical to reuse it from sketch to sketch. 
 
 				<br><br>
 
@@ -219,7 +219,7 @@
 
 				<br><br>
 
-				A library is imported by simply going to MPIDE toolbar menu and selecting <code>Sketch->Import Library</code>. Then, select the menu you want from the drop down menu. This will allow you to use any function within the library in your program sketch.
+				A library is imported by simply going to MPIDE toolbar menu and selecting <span class="TB-BLACK">Sketch->Import Library</span>. Then, select the menu you want from the drop down menu. This will allow you to use any function within the library in your program sketch.
 				</span>
 			</td>
     	</tr>
@@ -236,19 +236,19 @@
         		</cf_TB-TabBox2>
 	    	    <span class="TB-BODY">  
 	
-	  			Now that we know what a library is, we can describe how the servo library will help us control our device. (You can follow the link at the right if you need to review classes and methods.) The first step in controlling a servo is instantiating a <code>Servo</code> class object:
+	  			Now that we know what a library is, we can describe how the servo library will help us control our device. (You can follow the link at the right if you need to review classes and methods.) The first step in controlling a servo is instantiating a <span class="TB-BLACK">Servo</span> class object:
 
 	  			<br><br>
 
-	  			<code>Servo myServoObject;</code>
+	  			<span class="TB-BLACK">Servo myServoObject;</span>
 
 	  			<br><br>
 	 
-	  			Once you have created your <code>Servo</code> class object, you need to use the &ldquo;attach&rdquo; method to tell the chipKIT board which pin the servo object will output to (this pin provides the PWM signal that will be fed to the servo’s control line):
+	  			Once you have created your <span class="TB-BLACK">Servo</span> class object, you need to use the &ldquo;attach&rdquo; method to tell the chipKIT board which pin the servo object will output to (this pin provides the PWM signal that will be fed to the servo’s control line):
 
 	  			<br><br>
 
-	  			<code>myServoObject.attach</code>(9);
+	  			<span class="TB-BLACK">myServoObject.attach</span>(9);
 
 	  			<br><br>
 
@@ -256,7 +256,7 @@
 	  
 	  			<br><br>
 
-	  			<code>MyServoObject.write</code>(90);
+	  			<span class="TB-BLACK">MyServoObject.write</span>(90);
 
 	  			<br><br>
 
@@ -264,7 +264,7 @@
 
 	  			<br><br>
 
-	  			<code>int position = MyServoObject.read</code>();
+	  			<span class="TB-BLACK">int position = MyServoObject.read</span>();
 
 	  			</span>
 	  		</td>
@@ -280,11 +280,11 @@
 	  			<span class="TB-H2">Step 2: Software code</span><br><br>
         		<cf_imagebox align="right" path="P17files/screenshot1.png" width="279px" caption="Fig. 4. Importing the servo library.">
 	  			<span class="TB-BODY"> 
-				Import the servo library into MPIDE by selecting <a><code>Sketch->Import Library->Servo</code></a>, as shown in Fig. 4. 
+				Import the servo library into MPIDE by selecting <a><span class="TB-BLACK">Sketch->Import Library->Servo</span></a>, as shown in Fig. 4. 
 
 	 			<br><br>
 
-	  			You can verify that the library was imported by checking to whether <code>#include &lt;Servo.h&gt;</code> is at the very top of your sketch (see the first line of the program code below).
+	  			You can verify that the library was imported by checking to whether <span class="TB-BLACK">#include &lt;Servo.h&gt;</span> is at the very top of your sketch (see the first line of the program code below).
 
 	 			<br><br>
 
@@ -292,7 +292,9 @@
 
 	    		<br><br>
 	    
-	           	<pre class="brush: mpide;"> 
+	           	<div align="center">
+        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
+        <pre class="brush: mpide;"> 
 
 #include &lt;Servo.h&gt; 
 
@@ -336,7 +338,7 @@ void loop()
  
  
  // If the position is outside the range of 0 or 180, then set it to the max/min bound.
- if(degreeGlb < 0){
+ if(degreeGlb &lt; 0){
  degreeGlb = 0;
  }
  if(degreeGlb > 180){
@@ -348,7 +350,9 @@ void loop()
    // Waits for the servo to move.
    delay(10);                            
 } 
-				</pre>
+</pre>
+</cf_box>
+</div>
 	  			<br>
 	  			</span>
 	  			</cf_box>  
@@ -406,3 +410,4 @@ void loop()
   </cf_box>  
   </body>
 </html> 
+
