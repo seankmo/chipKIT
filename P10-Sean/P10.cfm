@@ -167,8 +167,8 @@
 	The kind of opamps we will be discussing for this tutorial will be integrated circuits (IC) and are considered the “voltage” type.
 	A voltage amp is the most common type of amp and simply designates that the voltage level at the amp’s output is controlled by the voltage
 	level at its input. (This is like our microphone example, where a small voltage level at the input of the amp produced a large scaled version
-	of the signal at the amps output). This is opposed to a say a power amp, which is a “current” type which performs the same task except
-	this time amplifying current instead of voltage.
+	of the signal at the amps output). This is opposed to a say a power amp, which is a “current” type. This type of amp performs the same task except
+	amplifying current instead of voltage.
       
       
       
