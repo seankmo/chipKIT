@@ -69,7 +69,7 @@
 				<!-- in the building the circuit section, your LED is slightly tinted,  maybe do the same thing with this LED. The white portion blends into the
 				background so it would make it stand out.  (just a minor suggestion) -->
 				
-                		<td align="center" class="image"><img style="width: 120px; height: 120px;" src="../Parts/LED_Tricolor.svg"></td>
+                		<td align="center" class="image"><img style="width: 120px; height: 120px;" src="../Parts/LED_Tricolor_BlueTint.svg"></td>
 		            </tr>
 		            <tr>
  		        <td class="qty">3</td>

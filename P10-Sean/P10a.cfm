@@ -36,16 +36,11 @@
 	  <br>
 	  <span class="TB-BODY">
 
-	  For this project we will be discussing a more sophisticated way of hardware debouncing a pushbutton input.  This method will utilize a
-	  component called an operational amp to create a circuit that acts as a comparator. A comparator is a circuit that will assert if the input
-	  signal is above an upper threshold, and de-assert if the signal falls below a second lower threshold.  This will filter out the small fluctuations
-	  in the input signal, effectively debouncing our circuit.  
-      
-	  <br><br>
-	  
-	  A secondary objective of this project is to provide you with an introduction to operational amps (or opamps for short).  Opamps have innumerably
-	  applications in electronics that exceed just being used for comparators, and button debounce circuits. Hopefully by the end of this tutorial you
-	  will start to see how opamps can be useful in various applications.
+	  For this project we will be building two circuits that are designed to
+	  filter an input to our chipKIT board, all using operational amps (or op amps for short).
+	  This particular project is designed more to introduce you to the theory and usage of Op amps
+	  and provide a basic introduction to signal processing. It is less focused on any one application,
+	  and more to provide a basic understanding of the underlining theory.
 
 	  <br><br>
 	  </span><br>
@@ -127,18 +122,14 @@
       <td>
       <span class="TB-BODY">
       
-      Before we can start setting up a circuit, we have to discuss how opamps work in detail. Opamps are probably the most complicated component we have
-      come across so far, so it is prudent to take time to understand how the component works.
       
-      <br><br>
-      
-      Like its namesake an opamps is a class of amp that is designed to perform a mathematical operation on a signal.  Many times when
-      designing electrical circuits, the input we receive to the circuit has to be processed first before we can do anything useful with
-      the signal (likewise sometimes we have to process output signals as well).  For example, microphones like most sensors produce signals
-      that have incredibly low voltages (in the micro to millivolt range). Before the signal can be used, it has to be amplified to a level
-      recognizable by other components in the circuit (like our chipKIT board).  This is commonly done with opamps, where the amp scales the
-      input signal (basically multiplying the signal by a constant value) to a point where it is usable.  Opamps can be configured to perform
-      multiple tasks.
+      Like its namesake an opamps is a class of amp that is designed to perform a mathematical operation on a signal.
+      Many times when designing electrical circuits, the input we receive to the circuit has to be processed first
+      before we can do anything useful with the signal (likewise sometimes we have to process output signals as well).
+      For example, microphones like most sensors produce signals that have incredibly low voltages (in the micro to millivolt range).
+      Before the signal can be used, it has to be amplified to a level recognizable by other components in the circuit.
+      This is commonly done with opamps, where the amp scales the input signal (basically multiplying the signal by a constant value)
+      to a point where it is usable.  Opamps are often configured to perform many other tasks than just scaling.
       
       
       
@@ -179,7 +170,8 @@
 	<br>
 	
 	The kind of opamps we will be discussing for this tutorial will be integrated circuits (IC) and are considered the “voltage” type.
-	A voltage amp is the most common type of amp and simply designates that the voltage level at the amp’s output is controlled by the voltage level at its input. 
+	A voltage amp is the most common type of amp and simply designates that the voltage level at the amp’s output is controlled by the voltage
+	level at its input. 
 	
 	
       </td>
@@ -282,7 +274,7 @@
 
 	This is like our microphone example, where a small voltage level at the input of the amp produced a large scaled version
 	of the signal at the amps output. This is opposed to a say a power amp that you would find in a high end stereo system,
-	which is a “current” type of amp. This type performs the same task except this time amplifying current instead of voltage.
+	which is a “current” type of amp, and performs the same task except this time amplifying current instead of voltage.
       
 	
 	
@@ -410,12 +402,12 @@
       </span>
       </td><td valign="top">
 
-         		<!---  <cf_TB-TabBox2>
+      
+    			<cf_TB-TabBox2>
            			<cf_TB-Tab2 color="##006666" path="http://www.google.com" title="Open Loop Gain">
 				<cf_TB-Tab2 color="##008844" path="http://www.google.com" title="Negative Voltage">
 				<cf_TB-Tab2 color="##CC5522" path="http://www.google.com" title="Saturation">
-        		</cf_TB-TabBox2>  --->
- 
+        		</cf_TB-TabBox2>
 			
 			
 			

@@ -1,6 +1,6 @@
 <html>
 	<meta name="author" content="Davis Cook">
-	<meta name="Edits Version" content = "Original" > 
+	<meta name="Edits Version" content = "Seans Edits" > 
 	<head>
 		<title>Controlling a tricolor LED using PWM </title>
 		<script type="text/javascript" src="../SH/scripts/shCore.js"></script>
@@ -20,8 +20,21 @@
 		<tr>
 			<td>
 				<span class="TB-H1">Introduction</span><br><br>
-				<span class="TB-BODY"> 
-				In the <a href="P14.cfm">previous project</a> the brightness of an LED was controlled via Pulse with modulation (PWM). In this project we will use PWM to control the color of a Tricolor LED. If you are not familiar with PWM it is recommended you review <a href="P14.cfm">Breathing LED with PWM</a>. Project 15 will be very similar to the previous project except the LED being used will change color. Generally LEDs are manufactured to emit one color of light. These colors can range from any color in the rainbow to infrared or even ultraviolet. The LEDs color is determined by the material it is made from and the voltage that is applied to it. Depending on the combination of the material and voltage, different wave lengths of light are emitted. We perceive these different wavelengths of light as colors. The Tricolor LED we will use can only generate red, green and blue wave lengths of light. This is because the Tricolor LED is actually consists of a red, green and blue led all in one bulb. By changing the intensities of each LED inside the bulb, we can generate the illusion of different colors. The same principle also applies when mixing paint. Mixing red and green paint results in what looks like yellow paint even though there is no naturally yellow pigment in the mixture. This phenomenon occurs because our brains simply perceive this combination of red and green pigment the same way we perceive naturally yellow pigment.  Similarly, our brains perceive the combination of red and green wave lengths of light, the same way the actual wave length of yellow is perceived. 
+				<span class="TB-BODY">
+				
+				In the <a href="P14.cfm">previous project</a> the brightness of an LED was controlled via Pulse with modulation (PWM).
+				In this project we will use PWM to control the color of a Tricolor LED. If you are not familiar with PWM it
+				is recommended you review <a href="P14.cfm">Breathing LED with PWM</a>. Project 15 will be very similar to the
+				previous project except the LED being used will change color. Generally LEDs are manufactured to emit one color of
+				light. These colors can range from any color in the rainbow to infrared or even ultraviolet. The LEDs color is determined
+				by the material it is made from and the voltage that is applied to it. Depending on the combination of the material and voltage,
+				different wave lengths of light are emitted. We perceive these different wavelengths of light as colors. The Tricolor LED we will
+				use can only generate red, green and blue wave lengths of light. This is because the Tricolor LED is actually consists of a red,
+				green and blue led all in one bulb. By changing the intensities of each LED inside the bulb, we can generate the illusion of different
+				colors. The same principle also applies when mixing paint. Mixing red and green paint results in what looks like yellow paint even
+				though there is no naturally yellow pigment in the mixture. This phenomenon occurs because our brains simply perceive this combination
+				of red and green pigment the same way we perceive naturally yellow pigment.  Similarly, our brains perceive the combination of red and
+				green wave lengths of light, the same way the actual wave length of yellow is perceived. 
 				</span>
 			</td>
 		</tr>
@@ -48,7 +61,8 @@
 		            <tr>
  		        <td class="qty">1</td>
  		        <td>Tricolor LED</td>
-                		<td align="center" class="image"><img style="width: 120px; height: 120px;" src="../Parts/LED_Tricolor.svg"></td>
+							
+                		<td align="center" class="image"><img style="width: 120px; height: 120px;" src="../Parts/LED_Tricolor_BlueTint.svg"></td>
 		            </tr>
 		            <tr>
  		        <td class="qty">3</td>
@@ -67,21 +81,25 @@
 	<table class="TBLAYOUT" id="ST1-putty">
 		<tr>
 			<td>
-				<span class="TB-H1">Step 1: Building the circuit</span><br><br>
+				<span class="TB-H1">Hardware Setup:</span><br><br>
 				<span class="TB-BODY"> 
-				Before 	we begin putting the circuit together the structure of the Tricolor LED must be discussed. Since Tricolor LEDs are essentially a red, green and blue LED it would make sense to assume it will have  3 anodes and 3 cathodes for a total of 6 legs. Realistically this isn't very practical so the red green and blue LEDs inside the bulb all share a common cathode to save room. This means our Tricolor LED will only have four legs as shown in Fig. 1.          
+				Before 	we begin putting the circuit together the structure of the Tricolor LED must be discussed.
+				Since Tricolor LEDs are essentially a red, green and blue LED it would make sense to assume it will have
+				3 anodes and 3 cathodes for a total of 6 legs. Realistically this isn't very practical so the red green and blue
+				LEDs inside the bulb all share a common cathode to save room. This means our Tricolor LED will only have four legs as shown in Fig. 1.          
 				</span>
 			</td>
 		</tr>
 	</table>
 	<table class="TBLAYOUT">
 		<tr>
-			<td align="center">
+			<td align="center">			
 				<a name="Fig"></a>
 				<img src="P15files/Tricolor_LED.svg" width ="350" /><br/><br/>
 				<div class="TB-FIGURES">Fig. 1. Tricolor LED connection convention</div><br/>
 				<span class="TB-BODY"> 
-					The longest leg is the common cathode and should always be connected to ground. Follow the steps below to construct the circuit. Note that the wire colors correspond to the LED color they will be controlling. 
+					The longest leg is the common cathode and should always be connected to ground. Follow the
+					steps below to construct the circuit. Note that the wire colors correspond to the LED color they will be controlling. 
 				</span>
 			</td>
 		</tr>
@@ -89,7 +107,7 @@
 	<table class="TBLAYOUT">
 		<tr>
 			<td  align="center">
-				<br><br><span class="TB-BODY">Circuit assembly steps</span><br>
+				<br><br><span class="TB-BODY">Circuit Assembly Steps</span><br>
 				<ol align="left">
 				<br/>
 				  <span class="TB-BODY">
@@ -110,42 +128,53 @@
 	<table class="TBLAYOUT">
 		<tr>
 			<td>
-				<span class="TB-H1">Step 2: Writing basic color control code</span><br><br>
-				<span class="TB-BODY"> 
-					With the circuit built we will now write some simple code to control the color of the LED. Remember the value range for a PWM pin is 0 to 255. In the code below the PWM pins that control red and blue are set to 200 using the <span class="TB-BLACK">setColorBrightness</span><span class="TB-BLACK">()</span> function. This will make the tricolor LED purple. 
+										
+				<span class="TB-H1">Color Control Basics:</span><br><br>
+				<span class="TB-BODY">
+							
+					With the circuit built we will now write some simple code to control the color of the LED. Remember the
+					value range for a PWM pin is 0 to 255. In the code below the PWM pins that control red and blue are set to
+					200 using the <span class="TB-BLACK">setColorBrightness</span><span class="TB-BLACK">()</span> function.
+					This will make the tricolor LED purple.
+					
 					<br><br>
 					<div align="center">
 					<cf_box style="width:95%">
 					<div align="center">
+        <div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;">
+						int pinRed = 6, pinGreen = 5, pinBlue = 3;
+						
 						void setup()
 						{
-						  pinMode(3,OUTPUT);
-						  pinMode(5,OUTPUT);
-						  pinMode(6,OUTPUT);
-						  analogWrite(3, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
-						  analogWrite(5,0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
-						  analogWrite(6,0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
+						  pinMode(pinBlue, OUTPUT);
+						  pinMode(pinGreen, OUTPUT);
+						  pinMode(pinRed, OUTPUT);
+						  
+						  analogWrite(pinBlue, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
+						  analogWrite(pinGreen, 0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
+						  analogWrite(pinRed, 0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
 						 
 						 //Make LED purple 
 						 setColorBrightness('r',200);//Sets Red to 200 
 						 setColorBrightness('b',200);//Sets Blue to 200
 						}
 
-						void setColorBrightness(char color, int brightness){
+						void setColorBrightness(char color, int brightness)
+						{
 							  //if else tree used to select the correct color control pin
 							  if(color == 'r')
 							  {
-								analogWrite(6, brightness);//Write to pwm pin 6  (red control) 
+								analogWrite(pinRed, brightness);//Write to pwm pin 6  (red control) 
 							  }
 							  else if(color == 'g')
 							  {
-								analogWrite(5, brightness);//Write to pwm pin 5  (green control)
+								analogWrite(pinGreen, brightness);//Write to pwm pin 5  (green control)
 							  }
 							  else if(color == 'b')
 							  {
-								analogWrite(3, brightness);//Write to pwm pin 3  (blue control)
+								analogWrite(pinBlue, brightness);//Write to pwm pin 3  (blue control)
 							  }
 							
 							return;
@@ -153,12 +182,22 @@
 						
 						void loop(){}//loop() is not used
 </pre>
+</div>
 </cf_box>
 </div>
 					</cf_box>
 					</div>
 					<br>
-					The function to <span class="TB-BLACK">setColorBrightness</span><span class="TB-BLACK">()</span> may seem unnecessary, since the color can be changed directly with <span class="TB-KEYWORD2">analogWrite</span><span class="TB-BLACK">()</span>. While this is true, bear in mind that it is easy to mix up what pin number corresponds to the color we want to change. Using the <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> tree inside of the <span class="TB-BLACK">setColorBrightness</span><span class="TB-BLACK">()</span> function  allows us to modify color values using intuitive color abbreviations, 'r', 'g' and 'b'. Furthermore the <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> tree provides a good point of comparison for introduction of <span class="TB-KEYWORD1">switch</span> statements, which will be covered in the next section.
+					The function to <span class="TB-BLACK">setColorBrightness</span><span class="TB-BLACK">()</span> may seem unnecessary,
+					since the color can be changed directly with <span class="TB-KEYWORD2">analogWrite</span><span class="TB-BLACK">()</span>.
+					While this is true, bear in mind that it is easy to mix up what pin number corresponds to the color we want to change.
+					Using the <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> tree inside of the
+					<span class="TB-BLACK">setColorBrightness</span><span class="TB-BLACK">()</span> function  allows us to modify color
+					values using intuitive color abbreviations, 'r', 'g' and 'b'. Furthermore the
+					<span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> tree provides a good point of comparison
+					for introduction of <span class="TB-KEYWORD1">switch</span> statements, which will be covered in the next section.
+					
+					
 				</span>
 			</td>
 		</tr>
@@ -172,42 +211,69 @@
 			<td>
 				<span class="TB-H1">Switch Statements</span><br><br>
 					<span class="TB-BODY">
-						<span class="TB-BLACK">Switch</span> statements control the flow of a program and are very similar to <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> trees.  They compare a variable to a constant <span class="TB-KEYWORD1">case</span> value. If the variable matches the <span class="TB-KEYWORD1">case</span> value, the code contained within the particular <span class="TB-KEYWORD1">case</span> is executed. Otherwise the <span class="TB-KEYWORD1">case</span> is skipped. In the event none of the cases match the default <span class="TB-KEYWORD1">case</span> will be executed. The default <span class="TB-KEYWORD1">case</span> is optional and not needed for the <span class="TB-KEYWORD1">switch</span> statement to function properly. The following is an example of a <span class="TB-KEYWORD1">switch</span> statement.
+						<span class="TB-KEYWORD1">switch</span> statements control the flow of a program and are very similar to
+						<span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> trees.  They compare a variable to a
+						constant <span class="TB-KEYWORD1">case</span> value. If the variable matches the <span class="TB-KEYWORD1">case</span>
+						value, the code contained within the particular <span class="TB-KEYWORD1">case</span> is executed. Otherwise
+						the <span class="TB-KEYWORD1">case</span> is skipped. In the event none of the cases match the default <span class="TB-KEYWORD1">case</span>
+						will be executed. The default <span class="TB-KEYWORD1">case</span> is optional and not needed for the
+						<span class="TB-KEYWORD1">switch</span> statement to function properly. The following is an example of a <span class="TB-KEYWORD1">switch</span> statement.
 					</span>
 					<br><br>
 							<div align="center">
 							<cf_box style="width:95%">
 							<div align="center">
+
+        <div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;">
 								  switch (variable) 
 								  {
 									case 1:   
 									  //do something when variable equals the integer 1
+									  
 									  break;//break skips all remaining cases 
 									case -1:
 									  //do something when variable equals the integer -1
+									  
 									  break;  
 									case 'a':
 									  //do something when variable equals the character a
+									  
 									  break;
 									default: 
 									  // if nothing else matches, do the default
+									  
 									  // default is optional
 									  break;
 								  }
 </pre>
+
+</div>
 </cf_box>
 </div>
 							</cf_box>
 							</div>
 							<br>
 				<span class="TB-BODY">
-					In the example the <span class="TB-KEYWORD1">case</span> values were int and char types. A <span class="TB-KEYWORD1">case</span> value can be any constant value which can be interpreted as an integer value. This includes the boolean constants HIGH, LOW, INPUT OUTPUT, true, and false. Some data types that cannot be used as a <span class="TB-KEYWORD1">case</span> values are doubles, floats, strings and arrays. On top of being careful with the <span class="TB-KEYWORD1">case</span>'s data type, it is also important to be attentive about including <span class="TB-KEYWORD1">break</span> lines at the end of every <span class="TB-KEYWORD1">case</span>. If you forget to add a <span class="TB-KEYWORD1">break</span> in a specific <span class="TB-KEYWORD1">case</span>, the <span class="TB-KEYWORD1">switch</span> statement will execute that <span class="TB-KEYWORD1">case</span> and all cases below it until it sees a <span class="TB-KEYWORD1">break</span> line. 
+					In the example the <span class="TB-KEYWORD1">case</span> values were int and char types. A
+					<span class="TB-KEYWORD1">case</span> value can be any constant value which can be interpreted as an integer value.
+					This includes the boolean constants <span class="TB-LITERAL1">HIGH</span>, <span class="TB-LITERAL1">LOW</span>, <span class="TB-LITERAL1">INPUT</span>, <span class="TB-LITERAL1">OUTPUT</span>, <span class="TB-KEYWORD1">true</span>, and <span class="TB-KEYWORD1">false</span>. Some data types that cannot be used as a
+					<span class="TB-KEYWORD1">case</span> values are doubles, floats, strings and arrays. On top of being careful with the
+					<span class="TB-KEYWORD1">case</span>'s data type, it is also important to be attentive about including <span class="TB-KEYWORD1">break</span>
+					lines at the end of every <span class="TB-KEYWORD1">case</span>. If you forget to add a <span class="TB-KEYWORD1">break</span>
+					in a specific <span class="TB-KEYWORD1">case</span>, the <span class="TB-KEYWORD1">switch</span> statement will execute
+					that <span class="TB-KEYWORD1">case</span> and all cases below it until it sees a <span class="TB-KEYWORD1">break</span> line. 
 				</span>
 				<br><br>
 				<span class="TB-BODY">
-					So far <span class="TB-KEYWORD1">switch</span> statements and <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> trees appear to do the same thing. While this is true, there are distinct advantages and disadvantages when using <span class="TB-KEYWORD1">switch</span> statements. We know that <span class="TB-KEYWORD1">switch</span> statements have limited use because they cannot compare dynamic variables and are restricted to specific data types. On the other hand <span class="TB-KEYWORD1">switch</span> statements compare only one <span class="TB-KEYWORD1">case</span> making them very efficient. Figures 3 and 4 illustrate the differences in efficiency between <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> trees and <span class="TB-KEYWORD1">switch</span> statements. 
+					So far <span class="TB-KEYWORD1">switch</span> statements and <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span>
+					trees appear to do the same thing. While this is true, there are distinct advantages and disadvantages when using <span class="TB-KEYWORD1">
+					switch</span> statements. We know that <span class="TB-KEYWORD1">switch</span> statements have limited use because they cannot compare
+					dynamic variables and are restricted to specific data types. On the other hand <span class="TB-KEYWORD1">switch</span> statements
+					compare only one <span class="TB-KEYWORD1">case</span> making them very efficient. Figures 3 and 4 illustrate the differences in efficiency
+					between <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> trees and <span class="TB-KEYWORD1">switch</span> statements.
+															
 				</span>
 
 			</td>
@@ -233,7 +299,13 @@
 		<tr>
 			<td>
 				<span class="TB-BODY"> 
-					The <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> tree must evaluate every if statement before and after the targeted <span class="TB-KEYWORD1">case</span>. The <span class="TB-KEYWORD1">switch</span> statement, on the other hand, jumps directly to the targeted <span class="TB-KEYWORD1">case</span> and then exits once it is finished. This  saves a lots of time in situations with a large number of cases. Furthermore, the efficiency of the <span class="TB-KEYWORD1">switch</span> statement is multiplied inside of the loop since only one <span class="TB-KEYWORD1">case</span> is compared ever iteration. This will come in handy when writing the code for a basic color sweep in step 3.         
+					The <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> tree must evaluate every if statement
+					before and the targeted <span class="TB-KEYWORD1">case</span>. The <span class="TB-KEYWORD1">switch</span> statement,
+					on the other hand, jumps directly to the targeted <span class="TB-KEYWORD1">case</span> and then exits once it is finished.
+					This saves a lots of time in situations with a large number of cases. Furthermore, the
+					efficiency of the <span class="TB-KEYWORD1">switch</span> statement is multiplied inside of the loop
+					since only one <span class="TB-KEYWORD1">case</span> is compared every <!--- every not ever ---> iteration. This will come in handy
+					when writing the code for a basic color sweep.         
 				</span>
 			</td>
 		</tr>
@@ -245,35 +317,42 @@
 	<table class="TBLAYOUT" >
 		<tr>
 			<td>
-				<span class="TB-H1">Step 3: Basic color sweeps</span><br><br>
+				<span class="TB-H1">Color Sweeps:</span><br><br>
 				<span class="TB-BODY"> 
-					With an understanding of how a <span class="TB-KEYWORD1">switch</span> statement works we can begin coding the Chipkit to sweep through a combination of colors. This is will be similar to the code used for creating a breathing LED except the principal will used to fade in and out the RGB LEDs.         
+					With an understanding of how a <span class="TB-KEYWORD1">switch</span> statement works we can begin coding writing a sketch to sweep through a combination of colors. This is will be similar to the code used for creating a breathing LED except the principal will be used to fade in and out the individual colors of the tricolor LED.
+  
 				</span>
 					<br><br>
+										
 					<div align="center">
 					<cf_box style="width:95%">
 					<div align="center">
+        <div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;">
+						int pinRed = 6, pinGreen = 5, pinBlue = 3;
+						
 						void setup()
 						{
-						  pinMode(3,OUTPUT);
-						  pinMode(5,OUTPUT);
-						  pinMode(6,OUTPUT);
-						  analogWrite(3, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
-						  analogWrite(5,0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
-						  analogWrite(6,0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
+						  pinMode(pinBlue, OUTPUT);
+						  pinMode(pinGreen, OUTPUT);
+						  pinMode(pinRed, OUTPUT);
+						  
+						  analogWrite(pinBlue, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
+						  analogWrite(pinGreen, 0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
+						  analogWrite(pinRed, 0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
 						}
 
-						void changeColorBrightness(char color, boolean fadeIn, int fadeTime){
+						void changeColorBrightness(char color, boolean fadeIn, int fadeTime)
+						{
 							int brightness, incrementValue, limit;
+							
 							if(fadeIn)//Note: this if statement is shorthand for if(fadeIn == 1)
 							{
 							  //Setup variables so the the LED brightness will fade in from 0 to 255
 							  incrementValue = 1;//Set incrementValue to add 1 to the brightness
 							  brightness = 0;//Ensure the LED starts completely off (minimum brightness)
 							  limit = 255;//Set the brightness limit to 255 (maximum brightness)
-
 							}
 							else
 							{
@@ -283,22 +362,24 @@
 							  limit = 0;//Set the brightness limit to 0 (minimum brightness)
 							}
 							
-							while(brightness != limit)
+							while(brightness != limit) //Loop until brightness has faded in or out completely 
 							{
-							  //Loop until brightness has faded in or out completely 
+							  
 							  brightness += incrementValue;
+
 							  switch(color)
 							  {
 								case 'r':
-								  analogWrite(6, brightness);//Write to pwm pin 6  (red control) 
+								  analogWrite(pinRed, brightness);//Write to pwm pin 6  (red control) 
 								  break;
 								case 'g':     
-								  analogWrite(5, brightness);//Write to pwm pin 5  (green control)
+								  analogWrite(pinGreen, brightness);//Write to pwm pin 5  (green control)
 								  break;
 								case 'b':
-								  analogWrite(3, brightness);//Write to pwm pin 3  (blue control)
+								  analogWrite(pinBlue, brightness);//Write to pwm pin 3  (blue control)
 								  break;
 							  }
+							  
 							  //Wait for a specified number of miliseconds to control how fast the LED fades in or out
 							  delay(fadeTime);
 							}
@@ -314,14 +395,29 @@
 						  changeColorBrightness('b',0, 10);//Fade out blue 
 						  changeColorBrightness('g',0, 10);//Fade out green
 						}
-</pre>
-</cf_box>
-</div>
+		</pre>
+		</div>
+		</cf_box>
+		</div>
 					</cf_box>
 					</div>
 					<br>
-					<span class="TB-BODY"> 
-						Just like in step 2 we will use a single function, <span class="TB-BLACK">changeColorBrightness</span><span class="TB-BLACK">()</span>, to control which color is being modified. The main difference in this step is we have replaced the <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> tree with a <span class="TB-KEYWORD1">switch</span> statement and put it inside of a while loop.  The while loop increments or decrements the brightness of a color until it reaches the limit of the PWM pin. Each iteration of the loop is delayed so we have time to watch the color fade. The code given above should make the LED fade from red, to purple, to blue, to aqua blue, and finally to green. This sweep pattern is determined by the order in which the red, green, and blue LEDs are faded in and out. You can try rearranging the order to get different color combinations. In the next section we will explore how to randomly select a color combination.    
+					<span class="TB-BODY">
+
+						Similar to our Basic Color Control code we will use a single function, <span class="TB-BLACK">changeColorBrightness</span><span class="TB-BLACK">()</span>,
+						to control which color is being modified. The main difference here is we have replaced the <span class="TB-KEYWORD1">if</span>
+						<span class="TB-KEYWORD1">else</span> tree with a <span class="TB-KEYWORD1">switch</span> statement and put it inside of a while loop.
+						
+						<br><br>
+						
+						The while loop increments or decrements the brightness of a color until it reaches the limit of the PWM pin. Each iteration of the loop
+						is delayed so we have time to watch the color fade. The code given above should make the LED fade from red, to purple, to blue,
+						to aqua blue, and finally to green. 
+						
+						<br><br>
+						The sweep sequence is determined by the order in which the red, green, and blue LEDs are faded in and out. You can try rearranging the order to get different color combinations.
+						<br><br>
+						In the next section we will explore how to randomly select a color combination.    
 					</span>
 			</td>
 		</tr>
@@ -331,19 +427,28 @@
 	<table class="TBLAYOUT">
 		<tr>
 			<td>
-				<span class="TB-H1">Generating a Random Number</span><br><br>
-				<span class="TB-BODY"> 
-					In order to select a random color combination a random number must be generated. This can be done using the <span class="TB-KEYWORD2">random</span><span class="TB-BLACK">()</span> function. The <span class="TB-KEYWORD2">random</span><span class="TB-BLACK">()</span> function can  be used one of two ways. The first is entering a max value as the only argument. This will return a random integer from 0 to the max minus one. The second way is entering a max and min value as the arguments. This will return a random integer from min to max minus one. For example
+				<span class="TB-H1">Random Number Generation</span><br><br>
+				<span class="TB-BODY">
+				
+					In order to select a random color combination a random number must be generated. This can be done using the <span class="TB-KEYWORD2">random</span>
+					<span class="TB-BLACK">()</span> function. The <span class="TB-KEYWORD2">random</span><span class="TB-BLACK">()</span> function can  be used one
+					of two ways. The first way is entering a max value as the only argument. This will return a random integer from 0 to the max minus one. The second way
+					is entering a max and min value as the arguments. This will return a random integer from min to max minus one.
+					<br><br>
+					For example: 
+				
 				</span>
 				<br><br>
 				<div align="center">
 				<cf_box style="width:95%">
 				<div align="center">
+        <div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;">
 				random(11);//returns a random integer from 0 to 10 
 				random(5,16);//returns a random integer from  5  to 15
 </pre>
+</div>
 </cf_box>
 </div>
 				</cf_box>
@@ -358,9 +463,12 @@
 	<table class="TBLAYOUT" >
 		<tr>
 			<td>
-				<span class="TB-H1">Step 4: Random colors</span><br><br>
-				<span class="TB-BODY"> 
-					Now that we know how to generate a random number we can write the code to generate a random color combination. To begin we will consider all the color combinations we want to implement. All of these combinations are listed below.          
+				<span class="TB-H1">Random Colors:</span><br><br>
+				<span class="TB-BODY">
+				
+					Now that we know how to generate a random number we can write the code to generate a random color combination. To begin we will consider
+					all the color combinations we want to implement. All of these combinations are listed below.
+					
 				</span>
 				<br><br>
 				<span class="TB-BODY"> List of color combinations</span>
@@ -376,29 +484,42 @@
 					<li>Red, Green and Blue</li>
 				  </span>
 				</ol>
-				<span class="TB-BODY"> 
-					Considering there are seven combinations we want to randomly select one each time. This can be achieved by selecting each combination with a <span class="TB-KEYWORD1">switch</span> statement using the <span class="TB-KEYWORD2">random</span><span class="TB-BLACK">()</span> function to select the <span class="TB-KEYWORD1">case</span>. Inside of each <span class="TB-KEYWORD1">case</span> we want to set the colors to a random brightness.  This will ensure there is a chance for every possible color to be generated. The code for such an algorithm is shown inside of the function <span class="TB-BLACK">randomLEDColorCombo</span><span class="TB-BLACK">()</span>. 
+				<span class="TB-BODY">
+				
+					Considering there are seven combinations we want to randomly select one each time. This can be achieved by selecting each
+					combination with a <span class="TB-KEYWORD1">switch</span> statement using the <span class="TB-KEYWORD2">random</span>
+					<span class="TB-BLACK">()</span> function to select the <span class="TB-KEYWORD1">case</span>. Inside of each <span class="TB-KEYWORD1">case</span>
+					we want to set the colors to a random brightness.  This will ensure there is a chance for every possible color to be generated. The code for
+					such an algorithm is shown inside of the function <span class="TB-BLACK">randomLEDColorCombo</span><span class="TB-BLACK">()</span>.
+					
 				</span>
 					<br><br>
 					<div align="center">
 					<cf_box style="width:95%">
 					<div align="center">
+        <div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;">
+						int pinRed = 6, pinGreen = 5, pinBlue = 3;
+						 
 						void setup()
 						{
-						  pinMode(5,OUTPUT);
-						  pinMode(6,OUTPUT);
-						  analogWrite(3, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
-						  analogWrite(5,0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
-						  analogWrite(6,0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
+						  pinMode(pinBlue, OUTPUT);
+						  pinMode(pinGreen, OUTPUT);
+						  pinMode(pinRed, OUTPUT);
+						   
+						  analogWrite(pinBlue, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
+						  analogWrite(pinGreen, 0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
+						  analogWrite(pinRed, 0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
 						}
 
 						void randomLEDColorCombo()
 						{
 						  int colorCombo = random(7);//Generate a random value from 0 to 6 that corresponds to a color combination
 						  int red = 0, green = 0, blue = 0;
-						  switch(colorCombo){
+						  
+						  switch(colorCombo)
+						  {
 							case 0://Combination: Red
 							   red = random(256);//Generate random number from 0 to 255
 							   break; 
@@ -426,9 +547,11 @@
 							  blue = random(256);//Generate random number from 0 to 255
 							  break; 
 						  }
-						  analogWrite(6,red);//Write random red value to pwm pin 6  (red control) 
-						  analogWrite(5,green);//Write random green value to pwm pin 5  (green control)
-						  analogWrite(3, blue);//Write random blue value to pwm pin 3  (blue control)
+						  
+						  analogWrite(pinRed, red);//Write random red value to pwm pin 6  (red control) 
+						  analogWrite(pinGreen, green);//Write random green value to pwm pin 5  (green control)
+						  analogWrite(pinBlue, blue);//Write random blue value to pwm pin 3  (blue control)
+						  
 						}
 						 
 						void loop()
@@ -437,13 +560,20 @@
 						  delay(500);//Wait for 500 milliseconds between each random color
 						}
 </pre>
+</div>
 </cf_box>
 </div>
 					</cf_box>
 					</div>
 					<br>
-					<span class="TB-BODY"> 
-						Uploading this code to your chipKit should make the tricolor LED randomly jump to new colors. The time between each jump is determined by the delay inside of the <span class="TB-KEYWORD3">loop</span><span class="TB-BLACK">()</span> function. You may notice some of the colors appear very dim. This is because inside of each <span class="TB-KEYWORD1">case</span>, random(256) has returned a value near 0. You can try experimenting with different min values for the random function to prevent dim colors. You can also specifically tweak the min values in cases 3 through 6. Currently these cases have the possibility of generating a single primary color like red, assuming the other colors in the <span class="TB-KEYWORD1">case</span> are randomly assigned a value near zero. 
+					<span class="TB-BODY">
+											
+						Uploading the sketch to your chipKIT should make the tricolor LED randomly jump to new colors. The time between each jump is
+						determined by the delay inside of the <span class="TB-KEYWORD3">loop</span><span class="TB-BLACK">()</span> function. You may
+						notice some of the colors appear very dim. This is because inside of each <span class="TB-KEYWORD1">case</span>, random(256) has
+						returned a value near 0. You can try experimenting with different min values for the random function to prevent dim colors. You
+						can also specifically tweak the min values in cases 3 through 6. Currently these cases have the possibility of generating a single
+						primary color like red, assuming the other colors in the <span class="TB-KEYWORD1">case</span> are randomly assigned a value near zero. 
 					</span>
 			</td>
 		</tr>
@@ -452,12 +582,16 @@
 	<table class="TBLAYOUT" >
 		<tr>
 			<td>
-				<span class="TB-H1">Step 5: Random color sweeps</span><br><br>
-				<span class="TB-BODY"> 
-					Now that we know how to generate random color combinations and implement color sweeps we can combine the two concepts. In this step we will write some code to randomly select a color sweep pattern. Here the order of the pattern will matter. This means there will be 6 different color patterns all of which are listed below.     
+				<span class="TB-H1">Random Color Sweeps:</span><br><br>
+				<span class="TB-BODY">
+				
+					Now that we know how to generate random color combinations and implement color sweeps we can combine the two concepts. In this section we
+					will write some code to randomly select a color sweep sequence. Here the order of the sequence will matter. This means there will be 6 different
+					color sequences all of which are listed below.
+					
 				</span>
 				<br><br>
-				<span class="TB-BODY"> List of color combinations</span>
+				<span class="TB-BODY"> List of color sequences </span>
 				<ol align="left">
 				<br/>
 				  <span class="TB-BODY">
@@ -469,35 +603,49 @@
 					<li>Blue, Green,  Red</li>
 				  </span>
 				</ol>
-				<span class="TB-BODY"> 
-					Each  pattern will be implemented as a <span class="TB-KEYWORD1">switch</span> statement <span class="TB-KEYWORD1">case</span>. Just as in step 4 the <span class="TB-KEYWORD1">case</span> will be selected by using the <span class="TB-KEYWORD2">random</span><span class="TB-BLACK">()</span> function.  Inside of each <span class="TB-KEYWORD1">case</span> we will use the <span class="TB-BLACK">changeColorBrightness</span><span class="TB-BLACK">()</span> function we wrote in step 3 to fade the colors in or out. The code needed to implement this is shown below inside of the <span class="TB-BLACK">randomColorSweep</span><span class="TB-BLACK">()</span> function. 
+				<span class="TB-BODY">
+				
+					Each  sequence will be implemented as a <span class="TB-KEYWORD1">switch</span> statement <span class="TB-KEYWORD1">case</span>. 
+					The <span class="TB-KEYWORD1">case</span> will be selected by using the <span class="TB-KEYWORD2">random</span><span class="TB-BLACK">()</span>
+					function.  Inside of each <span class="TB-KEYWORD1">case</span> we will use the <span class="TB-BLACK">changeColorBrightness</span>
+					<span class="TB-BLACK">()</span> function we wrote in the color sweeps section to fade the colors in or out. The code needed to implement this is shown below
+					inside of the <span class="TB-BLACK">randomColorSweep</span><span class="TB-BLACK">()</span> function.
+					
 				</span>
 					<br><br>
 					<div align="center">
-					<cf_box style="width:95%">
+					
+
+					<cf_box style="width:95%"> 
+
 					<div align="center">
+        <div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;">
-						 boolean brightnessDirection = 1;//If set to 1 the color brightness will increase 
+						int pinRed = 6, pinGreen = 5, pinBlue = 3;
+						
+						boolean brightnessDirection = 1;//If set to 1 the color brightness will increase 
 						  
 						void setup()
 						{
-						  pinMode(3,OUTPUT);
-						  pinMode(5,OUTPUT);
-						  pinMode(6,OUTPUT);
-						  analogWrite(3, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
-						  analogWrite(5,0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
-						  analogWrite(6,0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
+						  pinMode(pinBlue, OUTPUT);
+						  pinMode(pinGreen, OUTPUT);
+						  pinMode(pinRed, OUTPUT);
+							
+						  analogWrite(pinBlue, 0);//Write 0 to pwm pin 3 (blue control)   This makes sure the LED starts off
+						  analogWrite(pinGreen, 0);//Write 0 to pwm pin 5 (green control) This makes sure the LED starts off
+						  analogWrite(pinRed, 0);////Write 0 to pwm pin 6 (red control)  This makes sure the LED starts off
 						}
-						void changeColorBrightness(char color, boolean fadeIn, int fadeTime){
+						void changeColorBrightness(char color, boolean fadeIn, int fadeTime)
+						{
 							int brightness, incrementValue, limit;
+							
 							if(fadeIn)//Note: this if statement is shorthand for if(fadeIn == 1)
 							{
 							  //Setup variables so the the LED brightness will fade in from 0 to 255
 							  incrementValue = 1;//Set incrementValue to add 1 to the brightness
 							  brightness = 0;//Ensure the LED starts completely off (minimum brightness)
 							  limit = 255;//Set the brightness limit to 255 (maximum brightness)
-						 
 							}
 							else
 							{
@@ -509,65 +657,69 @@
 							 
 							while(brightness != limit)
 							{
+							
 							  //Loop until brightness has faded in or out completely 
 							  brightness += incrementValue;
+							  
 							  switch(color)
 							  {
 								case 'r':
-								  analogWrite(6, brightness);//Write to pwm pin 6  (red control) 
+								  analogWrite(pinRed, brightness);//Write to pwm pin 6  (red control) 
 								  break;
 								case 'g':     
-								  analogWrite(5, brightness);//Write to pwm pin 5  (green control)
+								  analogWrite(pinGreen, brightness);//Write to pwm pin 5  (green control)
 								  break;
 								case 'b':
-								  analogWrite(3, brightness);//Write to pwm pin 3  (blue control)
+								  analogWrite(pinBlue, brightness);//Write to pwm pin 3  (blue control)
 								  break;
 							  }
+							  
 							  //Wait for a specified number of miliseconds to control how fast the LED fades in or out
 							  delay(fadeTime);
-							  
-							  //Wait for a specified number of microseconds to control how fast the LED fades in or out
-							  //delayMicroseconds(fadeTime);
+
 							}
 							return;
 						}
+						
 						void randomColorSweep()
 						{
+						
 						  int randomNumber, fadeTime = 5;
 						  randomNumber = random(6);//Generate random number from 0 to 5
+						  
 						  switch(randomNumber)
 						  {
-							case 0: //Color pattern 0: RGB
+							case 0: //Color sequence 0: RGB
 							  changeColorBrightness('r', brightnessDirection, fadeTime);
 							  changeColorBrightness('g', brightnessDirection, fadeTime);
 							  changeColorBrightness('b', brightnessDirection, fadeTime);
 							  brightnessDirection = !brightnessDirection; //Invert fade direction
 							  break;
-							case 1: //Color pattern 1: RBG
+							case 1: //Color sequence 1: RBG
 							  changeColorBrightness('r', brightnessDirection, fadeTime);
 							  changeColorBrightness('b', brightnessDirection, fadeTime);
 							  changeColorBrightness('g', brightnessDirection, fadeTime);
 							  brightnessDirection = !brightnessDirection; //Invert fade direction
 							  break;
-							case 2: //Color pattern 2: GRB
+							case 2: //Color sequence 2: GRB
 							  changeColorBrightness('g', brightnessDirection, fadeTime);
 							  changeColorBrightness('r', brightnessDirection, fadeTime);
 							  changeColorBrightness('b', brightnessDirection, fadeTime);
 							  brightnessDirection = !brightnessDirection; //Invert fade direction 
 							  break;
-							case 3: //Color pattern 3: GBR
+							case 3: //Color sequence 3: GBR
 							  changeColorBrightness('g', brightnessDirection, fadeTime);
 							  changeColorBrightness('b', brightnessDirection, fadeTime);
 							  changeColorBrightness('r', brightnessDirection, fadeTime);
 							  brightnessDirection = !brightnessDirection; //Invert fade direction  
 							  break;
-							case 4: //Color pattern 4: BRG
+							case 4: //Color sequence 4: BRG
 							  changeColorBrightness('b', brightnessDirection, fadeTime);
 							  changeColorBrightness('r', brightnessDirection, fadeTime);
 							  changeColorBrightness('g', brightnessDirection, fadeTime);
 							  brightnessDirection = !brightnessDirection; //Invert fade direction
 							  break;
-							case 5: //Color pattern 5: BGR
+							case 5: //Color sequence 5: BGR
 							  changeColorBrightness('b', brightnessDirection, fadeTime);
 							  changeColorBrightness('g', brightnessDirection, fadeTime);
 							  changeColorBrightness('r', brightnessDirection, fadeTime);
@@ -576,18 +728,34 @@
 
 						  }
 						}
+						
 						void loop()
 						{
 						 randomColorSweep();
 						}
-</pre>
-</cf_box>
+		</pre>
+		</div>
+
+		</cf_box>
+
+
 </div>
 					</cf_box>
 					</div>
 					<br>
 					<span class="TB-BODY"> 
-					Once this code is uploaded the tricolor LED should randomly sweep through different color patterns. The pattern's fade time can be tweaked by changing a variable inside of the <span class="TB-BLACK">randomColorSweep</span><span class="TB-BLACK">()</span> function. By default it delays five milliseconds between each incrimination of a colors brightness. This is done using <span class="TB-KEYWORD2">delay</span><span class="TB-BLACK">()</span> called within <span class="TB-BLACK">changeColorBrightness</span><span class="TB-BLACK">()</span>. If you want to delay for periods less than a millisecond you can comment out the <span class="TB-KEYWORD2">delay</span><span class="TB-BLACK">()</span> and uncomment <span class="TB-KEYWORD2">delayMicroseconds</span><span class="TB-BLACK">()</span> for greater precision. Remember that 1 millisecond is equal to 1000 microseconds, so using delay times less than 300, with <span class="TB-KEYWORD2">delayMicroseconds</span><span class="TB-BLACK">()</span>, will make the LED flash rather than fade. 
+					Once this code is uploaded the tricolor LED should randomly sweep through different color sequences. The sequence's fade time can be
+					tweaked by changing a variable inside of the <span class="TB-BLACK">randomColorSweep</span><span class="TB-BLACK">()</span> function.
+					By default it delays five milliseconds between each incrimination of a colors brightness. This is done using
+					<span class="TB-KEYWORD2">delay</span><span class="TB-BLACK">()</span> called within <span class="TB-BLACK">changeColorBrightness</span>
+					<span class="TB-BLACK">()</span>. If you want to delay for periods less than a millisecond you can replace
+					the <span class="TB-KEYWORD2">delay</span><span class="TB-BLACK">()</span> line with <span class="TB-KEYWORD2">delayMicroseconds</span>
+					<span class="TB-BLACK">(fadeTime)</span> for greater precision. Remember that 1 millisecond is equal to 1000 microseconds, so using delay times
+					less than 300, with <span class="TB-KEYWORD2">delayMicroseconds</span><span class="TB-BLACK">()</span>, will make the LED flash rather than fade.
+					
+					
+					
+					
 					</span>
 			</td>
 		</tr>
@@ -635,4 +803,5 @@
 	</body>
 	
 </html>
+
 

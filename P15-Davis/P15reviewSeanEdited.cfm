@@ -22,6 +22,10 @@
 				<span class="TB-H1">Introduction</span><br><br>
 				<span class="TB-BODY">
 				
+				<!--DONE I don’t know if this is because of your editor, but blocking your text into paragraph form in html makes it really
+				easy to read during editing, as opposed to single monolithic line of text --->
+
+				
 				In the <a href="P14.cfm">previous project</a> the brightness of an LED was controlled via Pulse with modulation (PWM).
 				In this project we will use PWM to control the color of a Tricolor LED. If you are not familiar with PWM it
 				is recommended you review <a href="P14.cfm">Breathing LED with PWM</a>. Project 15 will be very similar to the
@@ -61,7 +65,10 @@
 		            <tr>
  		        <td class="qty">1</td>
  		        <td>Tricolor LED</td>
-							
+			
+				<!--DONE in the building the circuit section, your LED is slightly tinted,  maybe do the same thing with this LED. The white portion blends into the
+				background so it would make it stand out.  (just a minor suggestion) -->
+				
                 		<td align="center" class="image"><img style="width: 120px; height: 120px;" src="../Parts/LED_Tricolor_BlueTint.svg"></td>
 		            </tr>
 		            <tr>
@@ -93,7 +100,12 @@
 	</table>
 	<table class="TBLAYOUT">
 		<tr>
-			<td align="center">			
+			<td align="center">
+			
+			
+				<!--- DONE I think the green leg is slightly longer than blue and red, if I’m not mistaken, minor detail.
+				Also maybe think about showing a schematic style diagram, it may illustrate the common cathode concept a little better  --->
+			
 				<a name="Fig"></a>
 				<img src="P15files/Tricolor_LED.svg" width ="350" /><br/><br/>
 				<div class="TB-FIGURES">Fig. 1. Tricolor LED connection convention</div><br/>
@@ -128,10 +140,42 @@
 	<table class="TBLAYOUT">
 		<tr>
 			<td>
-										
+			
+			
+			
+				<!---DONE  at first when reading this you get the impression that each step is building on the previous step ,
+			
+				but when you get to step 3, you get lost,  the link between step 2, 3, 4, and 5, isn't readily apparent and feels disjointed. Almost like 4 independent sections of code and
+				it leaves the reader (or at least me), wondering "ok,  so how does step 2 fit into step 3  .... the function we wrote in this step never gets used again??? "
+				
+				the steps seem like they could be reorganized for clarity.  When you number the steps it implies that they are strictly consecutive tasks.
+				maybe instead of steps, you could label them as sequences and then at start of the project state that you will be going over four different LED color sequences.
+				The sequences can build of each other (which is what i think you are trying to convey), but just be clear that they are four independant things, instead 4 parts of
+				one thing.  
+				
+				I think the project could be organized really well kind of along the lines:
+				
+				Hardware setup:
+				Software Basics:
+				Color Sweep:
+					switch statements
+				Random colors:
+					random number generation
+				
+				Combined-- Random Color Sweeping:
+				
+				it may help with the flow of the entire document    --->
+
+				
+				
+				
 				<span class="TB-H1">Color Control Basics:</span><br><br>
 				<span class="TB-BODY">
-							
+				
+				
+				<!--DONE maybe think about naming your output pins,  just using const's like "pinRed", we do it in almost all of the other projects,
+				so it might keep things consistent .  also maybe introduce an “else” to catch bad input chars --->
+				
 					With the circuit built we will now write some simple code to control the color of the LED. Remember the
 					value range for a PWM pin is 0 to 255. In the code below the PWM pins that control red and blue are set to
 					200 using the <span class="TB-BLACK">setColorBrightness</span><span class="TB-BLACK">()</span> function.
@@ -273,7 +317,39 @@
 					dynamic variables and are restricted to specific data types. On the other hand <span class="TB-KEYWORD1">switch</span> statements
 					compare only one <span class="TB-KEYWORD1">case</span> making them very efficient. Figures 3 and 4 illustrate the differences in efficiency
 					between <span class="TB-KEYWORD1">if</span> <span class="TB-KEYWORD1">else</span> trees and <span class="TB-KEYWORD1">switch</span> statements.
-															
+					
+					
+					<!--DONE I'm pretty sure if/ if else statements break out on the first statement evaluated as true.
+					
+					
+					if you ran this code,  .............
+					
+					int test1 = 2;
+					
+					if( test1 == 1){
+					
+					    Serial.println('A');
+					
+					}
+					else if( test1 == 2){
+					    
+					    Serial.println('B');
+    
+						}
+					else if (test1 == 2){
+					
+					    Serial.println('C');
+    
+					}
+										
+					
+					it outputs 'B', if it was comparing all statements every time it would crash because the else if statements are ambiguous
+					
+					your diagram just shows the program comparing every statement in the if/else if tree
+					
+					also the arrows in the diagram, aren't readily apparent that they are the flow of the program,  maybe add a label  --->
+					
+					
 				</span>
 
 			</td>
@@ -320,10 +396,14 @@
 				<span class="TB-H1">Color Sweeps:</span><br><br>
 				<span class="TB-BODY"> 
 					With an understanding of how a <span class="TB-KEYWORD1">switch</span> statement works we can begin coding writing a sketch to sweep through a combination of colors. This is will be similar to the code used for creating a breathing LED except the principal will be used to fade in and out the individual colors of the tricolor LED.
-  
+					<!--DONE maybe replace "codeing the chipKIT" with "writing a sketch to" the Chipkit to
+					sweep through a combination of colors. This is will be similar to the code used for creating a breathing LED except the
+					principal will be used to fade in and out the RGB LEDs.    <!-- maybe expand just a little bit,  like "fade in and out the individual colors of the LEDs"  -->     
 				</span>
 					<br><br>
-										
+					
+					<!--Done maybe add some spaces in the code for readability  -->
+					
 					<div align="center">
 					<cf_box style="width:95%">
 					<div align="center">
@@ -403,7 +483,7 @@
 					</div>
 					<br>
 					<span class="TB-BODY">
-
+						<!--DONE splitting this paragraph up seems to make it much easier to read --->
 						Similar to our Basic Color Control code we will use a single function, <span class="TB-BLACK">changeColorBrightness</span><span class="TB-BLACK">()</span>,
 						to control which color is being modified. The main difference here is we have replaced the <span class="TB-KEYWORD1">if</span>
 						<span class="TB-KEYWORD1">else</span> tree with a <span class="TB-KEYWORD1">switch</span> statement and put it inside of a while loop.
@@ -435,7 +515,7 @@
 					of two ways. The first way is entering a max value as the only argument. This will return a random integer from 0 to the max minus one. The second way
 					is entering a max and min value as the arguments. This will return a random integer from min to max minus one.
 					<br><br>
-					For example: 
+					For example: <!--DONE I’m not sure if this is grammatically correct, but it seems to make the section flow better than just taking it on to the end of the paragraph --->
 				
 				</span>
 				<br><br>
@@ -567,7 +647,9 @@
 					</div>
 					<br>
 					<span class="TB-BODY">
-											
+					
+						<!--Done: you could add a line saying why you need all the cases , instead of just doing the random() for each color.  --->
+						
 						Uploading the sketch to your chipKIT should make the tricolor LED randomly jump to new colors. The time between each jump is
 						determined by the delay inside of the <span class="TB-KEYWORD3">loop</span><span class="TB-BLACK">()</span> function. You may
 						notice some of the colors appear very dim. This is because inside of each <span class="TB-KEYWORD1">case</span>, random(256) has
@@ -591,7 +673,7 @@
 					
 				</span>
 				<br><br>
-				<span class="TB-BODY"> List of color sequences </span>
+				<span class="TB-BODY"> List of color sequences <!----DONE: are these combinations or sequences  ?? --->  </span>
 				<ol align="left">
 				<br/>
 				  <span class="TB-BODY">
@@ -615,9 +697,13 @@
 					<br><br>
 					<div align="center">
 					
-
+					<!---Done: again maybe spaces to help readability --->
 					<cf_box style="width:95%"> 
-
+					
+					
+					
+					
+					
 					<div align="center">
         <div align="center">
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
@@ -733,10 +819,11 @@
 						{
 						 randomColorSweep();
 						}
-		</pre>
-		</div>
+</pre>
+</div>
 
-		</cf_box>
+</cf_box>
+
 
 
 </div>
@@ -755,6 +842,9 @@
 					
 					
 					
+					<!--Done: instead of having a commented out delayMicroseconds,  you could just state "replace the delay at line 47 with delayMicroseconds for....."
+					having commented out functions in final presented code seems a bit odd to me   -->
+
 					
 					</span>
 			</td>

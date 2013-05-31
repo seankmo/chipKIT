@@ -35,7 +35,7 @@
 	  <td>
 	  <br>
 	  <span class="TB-BODY">
-	      In the previous project “Servo Control with Servo Library”, we learned how to control
+	      In the previous project “Servo Control with Servo Library”, we learned how control
 	      a servo motor using our chipKIT board. In that project our method of control was
 	      rather rudimentary; two push buttons were used to tell the servo to rotate right or
 	      left.  For this project we will improve upon that design by replacing the two push
@@ -73,20 +73,20 @@
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Potentiometer dial (resistance range from 10&Omega; to 10k&Omega;)</td>
-		  <td align="center" class="image"><cf_imagebox align="center" path="P18files/potentiometer_trimmerbig.svg" width="100px"> </td>
+		  <td align="center" class="image"><img src="P18files/potentiometer_trimmerbig.svg">  </td>
 		</tr>
 		
 		
 		<tr>
 		  <td class="qty">2</td>
 		  <td>10k&Omega; resistors</td>
-		  <td align="center" class="image"><cf_imagebox align="center" path="P18files/resistor_10Ka.svg" width="100px"></td>
+		  <td align="center" class="image"><img src="P18files/resistor_10Ka.svg"></td>
 		</tr>
                
 		<tr>
 		  <td class="qty">1</td>
 		  <td>Tower Pro SG92R servo</td>
-		  <td align="center" class="image"><cf_imagebox align="center" path="P18files/servo.svg" width="100px"></td>
+		  <td align="center" class="image"><img src="P18files/servo.svg"></td>
 	  	</tr>
 	    </tbody>
 	    
@@ -110,9 +110,10 @@
 	<cf_imagebox align="right" path="P18files/newvoltdiv.svg" width="300px" caption="Fig. 1 Voltage Divider Circuit">
     
 
-	    The theory behind this project will be brief, as the goal is to utilize concepts 
-	    from previous projects to form a new application. In the “Potentiometer Controlled LED Brightness” project we learned that
-	    you could use a potentiometer to provide a range of
+		<!--Removed:The theory portion of this project will be quite brief, as the goal of this project is to combine concepts learned in
+	    previous projects to form a new application.--> The theory behind this project will be brief, as the goal is to utilize concepts 
+		from previous projects to form a new application. In the “Potentiometer Controlled LED Brightness” project we learned that
+	    you could use a <!--Removed:voltage divider circuit (utilizing a potentiometer) to create a device that would--> potentiometer to provide a range of
 	    input values, as opposed to simple on/off buttons.  That project focused on creating an input device that would
 	    output an analog signal ranging from 0V to 3.3V. The signal was read by the chipKIT board, which in turn would control
 	    the brightness of a LED according to strength of the signal.
@@ -120,8 +121,8 @@
 	    <br><br>
 	
 	    The task of controlling a variable degree of brightness and the angle of a servo, turn out to be very similar. In fact
-	    we can use the same method of input from the controlled LED brightness project, for this current project. This means we will re-use the same voltage 
-        divider circuit from the previous project. Figure 1 shows the
+	    we can use the same method of input from the controlled LED brightness project, for this current project. <!--Removed:(So basically
+	    we can--->This means we will re-use the same voltage divider circuit from the previous project. <!--Removed: for this project.  --> Figure 1 shows the
 	    voltage divider circuit we will be using.
 	
 	    <br><br>
@@ -141,13 +142,14 @@
 	
 	
 	</td>
-	<td valign="top">
-	<br><br>
-	    		<cf_TB-TabBox2>
-           			<cf_TB-Tab2 color="##006666" path="http://www.google.com" title="Potentiometer Controlled Brightness">
-				<cf_TB-Tab2 color="##008844" path="http://www.google.com" title="Servo Control with Servo Library">
-				
-        		</cf_TB-TabBox2>
+	<td align="right" valign="top" width="240">
+            <cf_TextbookTabs Mode="top"  NextColor="red">
+	    <cf_TextbookTabs Mode="middle" Color="red" 	NextColor="blue" Title="Potentiometer Controlled LED Brightness Project" TabURL="addlinkhere.cfm">
+	    <cf_TextbookTabs Mode="middle" Color="blue" NextColor="green" Title="Servo Control with Servo Library Project" TabURL="addlinkhere.cfm">
+	    
+	    
+         </td>
+	
 	
 	
 	
@@ -223,9 +225,10 @@
 	
 	    <br><br>
 	    
-	    <cf_imagebox align="center" path="P18files/servo_exp2.svg" width="200px" caption="Fig. 4 Servo pin out.">
+	    <cf_imagebox align="center" path="P18files/servo_exp.svg" width="200px" caption="Fig. 4 Servo pin out.">
 	
-	    <br><br> 
+	    <br><br> <!-- the wire colors in fig 4 are Yellow (control) and black (ground). In fig 5 the color code shows orange(control), and brown (ground).
+		Why is there a disconnect between the figures?-->
 	
 	    <cf_imagebox align="center" path="P18files/colorcode.svg" width="100px" caption="Fig. 5 Servo color code.">    
 	    
@@ -242,7 +245,7 @@
       <table class="TBLAYOUT">
 	<tr>
 	<td>
-	<span class="TB-H2">Software</span><br><br> 
+	<span class="TB-H2">Software</span><br><br> <!--Mabey specifiy this section is a review of software concepts -->
 	</td>
 	</tr>
 	<tr>
@@ -252,19 +255,20 @@
 		    The software sketch will mainly utilize the <code>analogRead()</code>, <code>analogReference()</code>, and <code>servo</code> class methods similar to previous projects. 
 		    Below is a quick review if you are unfamiliar.
 		   	    
-		   
+		   <!-- Moved: A quick review if you are unfamiliar. -->
 		    
 		    <br><br>
 		    
 		    The <code>analogRead()</code> functions like its name implies, it is a way for the chipKIT board to read a variable voltage signal
-		    from one of it's analog inputs. The signal applied to one of these pins will range from 0V
-		    to a max value of 3.3V.  Exceeding 
+		    from one of it's analog inputs <!--Removed: pins on the chipKIT board-->. The signal applied to one of these pins will range from 0V
+		    to a max value of 3.3V. <!--Removed: (it is important to never exceed 3.3V, or it could damage to the chipKIT board). --> Exceeding 
 			3.3V will result in incorrect readings.
 		    
 		    <br><br>
 		    
 		    ChipKIT boards use 10 bit analog to digital converters (ADC), so it will quantize the analog input to one of 1024
-		    levels (2<sup>10</sup> = 1024). I.e. when you call analogRead() it will map the input to a number from 0 to 1023,  where zero is the lowest voltage and 1023 is the largest reference voltage. 
+		    levels (2<sup>10</sup> = 1024). I.e. when you call analogRead() it will map the input to a number from 0 to 1023,   <!--Removed:, where 0
+		    relates to 0 voltage, and 1023 relates to the max reference voltage.--> where zero is the lowest voltage and 1023 is the largest reference voltage. 
 		    
 		    <br><br>
 		    
@@ -299,8 +303,8 @@
 		<span class="TB-BODY">
 		The actual sketch will simply read the analog voltage value from the potentiometer,
 		scale the value to a degree between 0 and 180, and then tell the servo to move accordingly.
-		There is a delay in the code to allow time for the servo to physically move.
-		
+		(There is a delay in the colde to allow time for the servo to physically move).
+		<!--using the parenthesies like above seems odd to me. I think the sentence can stand alone without them. -->
 		</span>
 		<br><br>
 		
@@ -328,7 +332,7 @@ const float scaleFactorGlb = .18;
 void setup() 
 { 
 
-// Setup the Servo class object to output on pin 9.
+// Setup the Servo object to output on pin 9. <!-- have objects and object orinted programing been introduced already? This comment could be confusing if it hasent.-->
 myServo.attach(9); 
 
 // Tell the chipKIT AD converter the max analog voltage will be the default value 3.3V.
@@ -392,12 +396,22 @@ void loop()
         <td>Core Concepts:</td>
           <td>
             <ul>
-            <li>Potentiometers</li> 
-            <li>Variable resistance voltage dividers</li>
-            <li>Servos</li>
+            <li>Potentiometers.</li> <!-- are we supposed to have periods here? -->
+            <li>Variable resistance voltage dividers.</li>
+            <li>Servos.</li>
             </ul>
           </td>
           </tr>
+	  <tr>
+            <td width="20%">Functions Introduced:</td>
+            <td width="80%">
+              <ul>
+	      <li> <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span></li> <!-- wasnt analogRead() already introduced in a previous project? -->
+	      <li> <span class="TB-KEYWORD2">analogReference</span><span class="TB-BLACK">()</span></li>
+	      
+	      </ul>
+            </td>
+            </tr>
         </tbody>
         </table>
       
