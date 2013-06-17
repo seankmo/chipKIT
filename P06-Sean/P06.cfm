@@ -5,10 +5,10 @@
     <title>Trainable Delay </title>
 
     <meta name="author" content="Sean Moss">
-    <script type="text/javascript" src="/templates/SH/scripts/shCore.js"></script>
-    <script type="text/javascript" src="/templates/SH/scripts/shBrushmpide.js"></script>
-    <link type="text/css" rel="stylesheet" href="/templates/SH/styles/shCoreDefault.css"/>
-    <script type="text/javascript">SyntaxHighlighter.all();</script>
+      <script type="text/javascript" src="/templates/SH/scripts/shCore.js"></script>
+      <script type="text/javascript" src="/templates/SH/scripts/shBrushmpide.js"></script>
+      <link type="text/css" rel="stylesheet" href="/templates/SH/styles/shCoreDefault.css"/>
+      <script type="text/javascript">SyntaxHighlighter.all();</script>
   
     <style>
     LITERAL1 {font-family:"Courier";color:#0066ff}
@@ -18,8 +18,19 @@
     BLACK {font-family:"Courier";color:#000000}
     </style>
     
+    <!--KEYWORDS
+    millis()
+    micros()
+    while()
+    bounce
+    button bounce
+    Timing Functions
+    Conditional Loops
+    -->
+    
 </head>
 
+<!-- updated 6-7-2013   Sean Moss--->
 
 <body>
   
@@ -29,7 +40,7 @@
     <table class="TBLAYOUT">
       <tr>      
       <td align="center">
-	  <span class="TB-PROJECTTITLE">Project 6:<br>Trainable Delay</span>
+	  <span class="TB-PROJECTTITLE"><br><br>Trainable Delay<br><br></span>
 	  <hr>
 	  
       </td>
@@ -52,10 +63,10 @@
     <tr>
       <td><span class="TB-BODY">
 	In this project, you will set up a single button and external LED 
-	much like the one in <a href="P04.cfm"> Project 4</a>.
+	much like the one in <a href="P04.cfm">&ldquo;Button-Controlled LEDs&rdquo;</a>.
 	However, the LED will now blink at an adjustable rate.  
 	Initially, the LED will blink at a rate of half a second.
-	By pressing and holding down the button, you will set or “train” 
+	By pressing and holding down the button, you will set or &ldquo;train&rdquo; 
 	the amount of delay between when the LED changes from
 	on to off (and vice versa) by pressing the button for a corresponding 
 	amount of time.  For example, holding down the button for
@@ -83,8 +94,9 @@
 	<thead>
 	  <tr>
           <th scope="col" width="10%">&nbsp;</th>
-          <th scope="col" width="60%">&nbsp;</th>
-          <th scope="col" width="30%">&nbsp;</th>
+          <th scope="col" width="40%">&nbsp;</th>
+          <th scope="col" width="25%">&nbsp;</th>
+	  <th scope="col" width="25%">&nbsp;</th>
         </tr>
 	
 	</thead>
@@ -93,33 +105,38 @@
 	  <tr>
           <td class="qty">1</td>
           <td>LED</td>
-          <td align="center" class="image"><img src="P06files/LED_red.svg"></td>
+		<td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/LED_red.svg" width="30px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/LED_No_Text.svg" width="70px"></td>
 	  </tr>
                
 	  <tr>
           <td class="qty">1</td>
           <td>Two Port Button</td>
-          <td align="center" class="image"><img src="P06files/PushButton.svg"></td>
+          <td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/PushButton.svg" width="50px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/Button_No_Text.svg" width="200px"></td>
 	  </tr>
 	
 	  <tr>
           <td class="qty">1</td>
-          <td>330 &Omega; Resistor</td>
-          <td align="center" class="image"><img src="P06files/resistor_330.svg"></td>
+          <td>220 &Omega; Resistor</td>
+         <td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/resistor_220.svg" width="90px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/Resistor_90deg.svg" width="120px"></td>
 	  </tr>
 
 	  <tr>
           <td class="qty">1</td>
           <td>10 k&Omega; Resistor</td>
-          <td align="center" class="image"><img src="P06files/resistor_10Ka.svg"></td>
+          <td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/resistor_10Ka.svg" width="90px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/Resistor_90deg.svg" width="120px"></td>
 	  </tr>	  
-	
-	  <tr>
-          <td class="qty">5</td>
-          <td>Connecting Wires</td>
-          <td align="center" class="image"><img src="P06files/FritzWire.svg"></td>
-	  </tr>	
-
 
 	  </tbody
 	</table>
@@ -143,11 +160,8 @@
     </tr>
       
     <tr>  
-    <td style="text-align: center;">
-      <img src="P06files/setup.svg">
-      <br><br>
-	  
-      <div class="TB-FIGURES">Fig.1: Trainable Delay Circuit</div>
+    <td align="center">
+      <cf_imagebox align="center" path="P06files/setupnew.svg" width="750px" caption="Fig.1: Trainable Delay Circuit">
       <br><br>
       
     </td>
@@ -160,24 +174,25 @@
       <tr>
       <td>
 	<span class="TB-BODY">The circuit set up in this project will be 
-	very similar to one in project 4,
+	very similar to one in the &ldquo;Button-Controlled LEDs&rdquo; project,
 	except now only one button will be set up instead of three. The setup 
 	instructions will be somewhat brief,
-	but for more in-depth instructions, review <i>project four</i>. 
+	but for more in-depth instructions, review the <i>Button-Controlled LEDs project</i>. 
 	Figure 1 illustrates the individual steps to set up the circuit.
       
+	<br><br>
 	<ol>
-	<li>Connect the 5V pin from the chipKIT board to a bus strip; this strip will now be designated as the <b>5V bus strip</b>.</li>
-	<li>Connect the GND pin from the chipkit board to a bus strip adjacent to the 5V bus strip. This strip will be designated as the <b>ground bus strip</b>.</li>
+	<li>Connect the 3.3V pin from the chipKIT board to a bus strip; this strip will now be designated as the <b>3.3V bus strip</b>.</li>
+	<li>Connect the GND pin from the chipkit board to a bus strip adjacent to the 3.3V bus strip. This strip will be designated as the <b>ground bus strip</b>.</li>
 	<li>Place the LED into the breadboard, keeping note of which side is the anode and which side is the cathode (the anode has the longer lead).</li>
 	<li>Using a wire, connect the anode of the LED to pin 12 of the chipKIT board.</li>
-	<li>Connect the cathode of the LED to a 330 &Omega; resistor.</li>
+	<li>Connect the cathode of the LED to a 220 &Omega; resistor.</li>
 	<li>Now, connect the other end of the resistor to the ground bus strip.</li>
 	<li>Place a push button into the breadboard so that it spans the gap between columns in the breadboard. Remember that buttons used for this project are four-terminal devices,
-	where the terminals are grouped into sets of two, and each terminal in a set is electrically connected. For simplicity, figure 1 designates these groups as “A” terminals and “B” terminals. </li>	
-	<li>Using a wire, connect one of the “A” terminals of the button to the 5V bus strip.</li>
-	<li>Connect one of the “B” terminals of the button to a 10k&Omega; resistor, and then connect the end of the resistor not connected to the button to the ground bus strip.</li>
-	<li>Using a wire, connect from one of the "B" terminals of the button to pin 7 on the chipKIT board.</li>
+	where the terminals are grouped into sets of two, and each terminal in a set is electrically connected. For simplicity, figure 1 designates these groups as &ldquo;A&rdquo; terminals and &ldquo;B&rdquo; terminals. </li>	
+	<li>Using a wire, connect one of the &ldquo;A&rdquo; terminals of the button to the 3.3V bus strip.</li>
+	<li>Connect one of the &ldquo;B” terminals of the button to a 10k&Omega; resistor, and then connect the end of the resistor not connected to the button to the ground bus strip.</li>
+	<li>Using a wire, connect from one of the &ldquo;B&rdquo; terminals of the button to pin 7 on the chipKIT board.</li>
 	
 	</ol>
 	<br><br></span>
@@ -262,9 +277,9 @@
 	<KEYWORD1>while</KEYWORD1><tt>()</tt>
 	<br><br>
 	  The <KEYWORD1>while</KEYWORD1> control statement is a commonly used loop in C/C++ programs (and MPIDE sketches) to repeat a block of code multiple times, as long as a pre specified conditional is met.
-	  The while loop differs from control statements like "for" loops, in that it will iterate indefinitely until it's conditional statement is evaluated as false,(as opposed to “for” loops that will only iterate for a set amount of times).
-	  Conditional expressions used by the “<KEYWORD1>while</KEYWORD1>” loop
-	  are the same expressions used by the “if” statement (to review these operators
+	  The while loop differs from control statements like &ldquo;for&rdquo; loops, in that it will iterate indefinitely until it's conditional statement is evaluated as false,(as opposed to &ldquo;for&rdquo; loops that will only iterate for a set amount of times).
+	  Conditional expressions used by the &ldquo;<KEYWORD1>while</KEYWORD1>&rdquo; loop
+	  are the same expressions used by the &ldquo;if&rdquo; statement (to review these operators
 	  reference project 4).
 	  
 	  <br><br>
@@ -459,10 +474,10 @@
 	starting to blink at the new delay rate.<br>
 	<br>
 	One pitfall/condition of this circuit that needs to be mentioned is that on occasion pressing the button will cause the LED
-	to glow very dimly and not blink as expected.  This happens because of the a physical characteristics of the button itself known as <i>“bounce”</i>.<br>  
+	to glow very dimly and not blink as expected.  This happens because of the a physical characteristics of the button itself known as <i>&ldquo;bounce&rdquo;</i>.<br>  
 	<br>
 	When mechanical buttons or switches are pressed (or thrown), the transition from on/off (and likewise off/on) is not clean or instantaneous.
-	This is because after being pressed the button vibrates and “bounces”, randomly making electrical contact. The random electrical variation (also referred to as electrical noise)
+	This is because after being pressed the button vibrates and &ldquo;bounces&rdquo;, randomly making electrical contact. The random electrical variation (also referred to as electrical noise)
 	caused by this bouncing action can sometimes be interpreted as a very fast button press.  
 
 	<br><br>
@@ -484,7 +499,7 @@
 	used in this project) being released. You can see that there is a period of about 400 microseconds where there is a slight amount of noise on
 	the transitioning signal. The chipKIT board's main loop runs so quickly that 
 	it can read the voltage fluctuations during this transition period and thus has a chance of misinterpreting them. In other words, a chipKIT board reading a digital input might read a sudden dip in the voltage on the input pin as a LOW signal,
-	and then a few microseconds later read the signal as HIGH  (and then LOW again once the fluctuations finally settle) .
+	and then a few microseconds later read the signal as HIGH  (and then LOW again once the fluctuations finally settle).
 	The chipKIT could interrupt this as random button presses with a duration of only a few microseconds. This would end up setting the blink delay to
 	an inordinately small amount.  When the LED is dim, it is actually trying to blink at an incredibly fast rate.  Between the LED not being able to keep up at this rate and human
 	vision not being able to distinguish such a fast rate of change (much a motion pictures where our brains merge a sequence of images because it changes so fast), we observe the
@@ -516,6 +531,10 @@
 	  
 	    
 	    
+	    <span class="TB-BODY">
+	    <cf_imagebox align="center" path="P06files/P06_schem/P06_schem.svg" width="900px">
+	    <a href="P06files/P06_schem/P06_schem.pdf">Trainable Delay Project Schematic (PDF)</a> 
+	    </span>
 	</td>
 	</tr>
       </table>

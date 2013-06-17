@@ -134,7 +134,7 @@
 				  pressed or released (or a switch thrown), there is a
 				  small amount of time (in the microsecond range) where
 				  the electrical signal can fluctuate anywhere from 0V to
-				  the <span class="TB-LITERAL1">HIGH</span> voltage level (typically 3.3V or
+				  the <code>HIGH</code> voltage level (typically 3.3V or
 				  5V).  This is caused by the physical material of the
 				  switch or button reverberating and finally winding down
 				  to a steady state.  While the physical material is
@@ -151,7 +151,7 @@
 				  Figure 1 shows the voltage over time of a button
 				  releasing (using the same circuit configuration as in
 				  project 4).  You can see that the button is at a steady
-				  voltage state of <span class="TB-LITERAL1">HIGH</span>. Then, as it is
+				  voltage state of <code>HIGH</code>. Then, as it is
 				  released, a brief period of turbulence occurs for about
 				  400 microseconds just before cutting off.  Because the
 				  Max32 and Uno32 (and most other microcontrollers) run at
@@ -171,20 +171,20 @@
 				  external LED output (in blue). (This graph uses a simple
 				  button circuit and sketch, like in project 4). The
 				  circuit/sketch basically reads the input from the
-				  button, and then, if <span class="TB-LITERAL1">HIGH</span>, will drive the
-				  corresponding LED <span class="TB-LITERAL1">HIGH</span>. Like Fig. 1, this
+				  button, and then, if <code>HIGH</code>, will drive the
+				  corresponding LED <code>HIGH</code>. Like Fig. 1, this
 				  shows a close up of when the button has been released,
 				  except now the output from the LED is also
 				  depicted. Throughout most of the duration of the
 				  button's input signal, the voltage level is sufficiently
 				  higher than the input threshold level for the
-				  <span class="TB-KEYWORD2">digitalRead</span> function to register it as a
-				  logic level <span class="TB-LITERAL1">HIGH</span> (in the Max32 and Uno32,
+				  <code>digitalRead</code> function to register it as a
+				  logic level <code>HIGH</code> (in the Max32 and Uno32,
 				  this is approximately 2.4V). However, as you may notice,
 				  there are points where the voltage drops below the
 				  threshold level long enough for the chipKIT board to
 				  register the button input as a logical
-				  level <span class="TB-LITERAL1">LOW</span>.
+				  level <code>LOW</code>.
 
 				  <br><br>
 		
@@ -204,15 +204,15 @@
 				  debouncing is accomplished by taking multiple samples of
 				  the input signal and determining whether to assert an
 				  output signal (the debounced version of the
-				  signal) <span class="TB-LITERAL1">HIGH</span> or <span class="TB-LITERAL1">LOW</span> based on
+				  signal) <code>HIGH</code> or <code>LOW</code> based on
 				  whether consecutive samples are received. For instance,
-				  if two samples are both <span class="TB-LITERAL1">HIGH</span>, and the time
+				  if two samples are both <code>HIGH</code>, and the time
 				  between them is much longer than the average duration of
 				  noise introduced by a bounce, then it is safe to say
-				  that the signal is in a <span class="TB-LITERAL1">HIGH</span> state.
+				  that the signal is in a <code>HIGH</code> state.
 				  (Similarly, the output signal is considered to
-				  be <span class="TB-LITERAL1">LOW</span> if the samples that are taken are
-				  both <span class="TB-LITERAL1">LOW</span>.)  Generally, only two samples are
+				  be <code>LOW</code> if the samples that are taken are
+				  both <code>LOW</code>.)  Generally, only two samples are
 				  ever needed to accurately debounce a signal, provided
 				  that the period between samples is long enough.
 
@@ -227,11 +227,11 @@
 				  corresponding output signal (the input signal is the one
 				  in gray; the output signal is the one in blue). Note
 				  that the debounced output signal
-				  remains <span class="TB-LITERAL1">LOW</span> until time T4.  In this
+				  remains <code>LOW</code> until time T4.  In this
 				  example, the point T4 and the previous point, T3, are
 				  compared <!--by what? a program? the user?-->. Since
-				  both points are <span class="TB-LITERAL1">HIGH</span>, the output signal is
-				  driven <span class="TB-LITERAL1">HIGH</span>. (The output signal only
+				  both points are <code>HIGH</code>, the output signal is
+				  driven <code>HIGH</code>. (The output signal only
 				  changes on consecutive samples, so if samples differ,
 				  the output signal remains in the same state as it was.)
 			  </span>
@@ -300,9 +300,7 @@
 				
 					<br><br>
 		
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide; toolbox: false">
+					<pre class="brush: mpide; toolbox: false">
 		
 		
 		const int btnPin = 7;      // number of the pushbutton pin
@@ -339,19 +337,17 @@
 		
 		
 		}
-</pre>
-</cf_box>
-</div>
+					</pre>
 			
 					The code is fairly straightforward and all functions we
 					use are from previous projects.  The sketch reads the
 					current state of the input button while keeping track
 					of the state of the button from the previous loop of
 					the main program.  If the previous button state
-					is <span class="TB-LITERAL1">LOW</span> and the current state
-					is <span class="TB-LITERAL1">HIGH</span>, then this indicates a rising edge
+					is <code>LOW</code> and the current state
+					is <code>HIGH</code>, then this indicates a rising edge
 					transition (i.e., the signal starting to
-					assert <span class="TB-LITERAL1">HIGH</span>).  The sketch then increments
+					assert <code>HIGH</code>).  The sketch then increments
 					a counter variable and outputs that value to the serial
 					port. You can view this count through the serial
 					monitor window (if you are unfamiliar with this,
@@ -403,8 +399,8 @@
 					the set time has elapsed, then it means that point A
 					and point (A -1) have the same value. (Remember, if
 					they were different, the algorithm would have reset.)
-					Thus, if two sample points are both <span class="TB-LITERAL1">HIGH</span>
-					(or <span class="TB-LITERAL1">LOW</span>), we drive the signal
+					Thus, if two sample points are both <code>HIGH</code>
+					(or <code>LOW</code>), we drive the signal
 					accordingly <!--Do you mean that the signal becomes
 					HIGH or LOW too? Not clear-->. The part of the code
 					dealing with verification will count the rising edges
@@ -421,9 +417,7 @@
 	      
 	      <br><br>
     
-	      <div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+	      <pre class="brush: mpide;">
 		
 		
 		const int btnPin = 7;                                     // Number of the pushbutton pin
@@ -507,9 +501,7 @@
 		previousBtnState = currentBtnState;
 		previousLedState = currentLedState;
 		}
-</pre>
-</cf_box>
-</div>
+	      </pre>
 				</span>
 			   </cf_box>
 		   </td>
@@ -578,4 +570,3 @@
 </cf_Box>
 </body>
 </html> 
-

@@ -6,25 +6,6 @@
     <script type="text/javascript" src="/templates/SH/scripts/shBrushmpide.js"></script>
     <link type="text/css" rel="stylesheet" href="/templates/SH/styles/shCoreDefault.css"/>
     <script type="text/javascript">SyntaxHighlighter.all();</script>
-  
-  
-  
-<!--KEYWORDS 
-Servo introduction
-Servo electrical operation
-Servo class object
-PWM 
-Libraries
-Importing libraries
-“#include” statements
--->
-  
-  <!-- updated 6-17-2013 Sean Moss -->
-  
-  
-  
-  
-  
   </head>
    
   <body>
@@ -99,7 +80,18 @@ Importing libraries
 		  		<td>Tower Pro SG92R servo</td>
           	  	<td align="center" class="image"><img src="P17files/servo.svg"></td>
 	  		  </tr>
-
+		
+			  <tr><!--Not sure this row is necessary. Check with John.-->
+		  		<td class="qty">9</td>
+		  		<td>Connecting wires</td>
+          	  	<td align="center" class="image"><img src="P17files/FritzWire.svg"></td>
+			  </tr>
+	    
+	    	  <tr>
+		  		<td class="qty">1</td>
+		  		<td>Six pin Header and Gender Changer (optional)</td>
+          	  	<td align="center" class="image"><img src="P17files/Tile_1x6header_110.png"></td>
+			  </tr>	
 	    	</table>
 
             </div>
@@ -137,9 +129,9 @@ Importing libraries
 
 	  			<br><br>
 
-				<cf_TB-TabBox>
-            		<cf_TB-Tab color="red" path="http://www.google.com" title="PWM Signaling">
-            	</cf_TB-TabBox>
+				<cf_TB-TabBox2>
+            		<cf_TB-Tab2 color="##005577" path="http://www.google.com" title="PWM Signaling">
+            	</cf_TB-TabBox2>
 
 	  			The &ldquo;power&rdquo; line is exactly what its name suggests. This line needs to be connected to the positive terminal of a voltage source in order to power the servo. The power line accepts a small range of voltages between 4.8V and 6V,where the applied voltage is directly proportional to how quickly the servo can rotate. It is important to never supply a negative voltage to the power line, as it could damage the servo. A negative voltage is simply a voltage source that has a lower potential energy than ground. For chipKIT boards, a negative voltage is produced when you swap &ldquo;power&rdquo; and &ldquo;ground&rdquo; lines, which should be avoided. In this project the power line will be connected to the 5V pin of the chipKIT board.
 
@@ -191,7 +183,7 @@ Importing libraries
 	  				<li>Using a wire, connect one of the left button’s &ldquo;A&rdquo; terminals to the 3.3V bus strip. Repeat this step for the right button.</li>
 	  				<li>Using a wire, connect one of the right button’s &ldquo;B&rdquo; terminals to the chipKIT's pin 6.</li>
 	  				<li>Using a wire, connect one of the left button’s &ldquo;B&rdquo; terminals to the chipKIT's pin 7. </li>
-	  				<li>Connect the servo’s control line to chipKIT pin 9.  The servo connector is a female connector, so just use a male to male wire to connect from the chipKIT board to the servo connector. (You can use a cable gender changer to plug straight into the breadboard if it's more convenient. A gender changer is just a male to male, or female to female adapter for connecting cables with that have incompatible connectors)</li>  
+	  				<li>Connect the servo’s control line to chipKIT pin 9.  The servo connector is a female connector, so just use a male to male wire to connect from the chipKIT board to the servo connector. (You can use a cable gender changer<!--maybe explain what this is-->, if it's more convenient.)</li>  
 	  				<li>Connect the servo's power line to the 5V bus strip, and then connect the ground line of the servo to the ground bus strip. As with the servo's control line, the power and ground connectors are female connectors, so use a male to male wire to connect from the chipKIT board to the servo connector.</li>
 	  			</ol>
 	    		</span>
@@ -239,9 +231,9 @@ Importing libraries
     	<tr>
 			<td> 
 				<span class="TB-H1">The Servo library</span><br><br>
-    			<cf_TB-TabBox>
-           			<cf_TB-Tab color="green" path="http://www.google.com" title="Classes and Methods">
-        		</cf_TB-TabBox>
+    			<cf_TB-TabBox2>
+           			<cf_TB-Tab2 color="red" path="http://www.google.com" title="Classes and Methods">
+        		</cf_TB-TabBox2>
 	    	    <span class="TB-BODY">  
 	
 	  			Now that we know what a library is, we can describe how the servo library will help us control our device. (You can follow the link at the right if you need to review classes and methods.) The first step in controlling a servo is instantiating a <span class="TB-BLACK">Servo</span> class object:
@@ -286,25 +278,21 @@ Importing libraries
 	  		<td> 
 	  			<cf_box color="putty">
 	  			<span class="TB-H2">Step 2: Software code</span><br><br>
-				<cf_imagebox align="right" path="P17files/screenshot1.png" width="279px" caption="Fig. 4. Importing the servo library.">
-	  			<br><br>
-				
-				
-				<span class="TB-BODY"> 
+        		<cf_imagebox align="right" path="P17files/screenshot1.png" width="279px" caption="Fig. 4. Importing the servo library.">
+	  			<span class="TB-BODY"> 
 				Import the servo library into MPIDE by selecting <a><span class="TB-BLACK">Sketch->Import Library->Servo</span></a>, as shown in Fig. 4. 
 
-	 			
+	 			<br><br>
 
 	  			You can verify that the library was imported by checking to whether <span class="TB-BLACK">#include &lt;Servo.h&gt;</span> is at the very top of your sketch (see the first line of the program code below).
 
 	 			<br><br>
 
-				Now, implement the following project code. The variable &ldquo;degreeGlb&rdquo; will represent the position of the servo at any given time. The sketch will check whether you have pressed the left button and decreases the degreeGlb variable by the value of the &ldquo;mySpeedGlb&rdquo; constant. (Likewise, if the right button is pressed the “degreeGlb” variable is incremented in the same fashion.) The &ldquo;mySpeedGlb&ldquo; constant is simply the rate of speed at which the servo rotates. You can try increasing or decreasing this value to change the rotation speed of your servo. After the sketch finishes checking for button input, it will move the servo according to the degree value.
+				Now, implement the following project code. The variable &ldquo;degreeGlb&rdquo; will represent the position of the servo at any given time. The sketch will check whether you have pressed the left button and decreases the degreeGlb variable by the value of the &ldquo;mySpeedGlb&rdquo; <!-- you should explain what this variable does.-->constant. (Likewise, if the right button is pressed the “degreeGlb” variable is incremented in the same fashion.) After the sketch finishes checking for button input, it will move the servo according to the degree value.
 
 	    		<br><br>
 	    
 	           	<div align="center">
-			<br><br>
         <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
         <pre class="brush: mpide;"> 
 
@@ -350,7 +338,7 @@ void loop()
  
  
  // If the position is outside the range of 0 or 180, then set it to the max/min bound.
- if(degreeGlb < 0){
+ if(degreeGlb &lt; 0){
  degreeGlb = 0;
  }
  if(degreeGlb > 180){
@@ -381,16 +369,6 @@ void loop()
       			<span class="TB-H1">Summary</span><br><br>
       		</td>
       	</tr>
-	<tr><td>
-			    <span class="TB-BODY">
-		    <cf_imagebox align="center" path="P17files/P17_schem/P17_schem.svg" width="900px">
-		    <a href="P17files/P17_schem/P17_schem.pdf">Servo Control with Servo Library (PDF)</a> 
-		    </span>
-	
-	
-	</td></tr>
-	
-	
     </table>
     
     <table id="CT3">
@@ -432,3 +410,4 @@ void loop()
   </cf_box>  
   </body>
 </html> 
+

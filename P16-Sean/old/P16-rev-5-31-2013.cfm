@@ -33,7 +33,7 @@
     <table class="TBLAYOUT"> 
    		<tr>
 	  		<td align="center">
-	  			<span class="TB-PROJECTTITLE"><br>Potentiometer-Controlled LED Brightness</span><br><br><hr>
+	  			<span class="TB-PROJECTTITLE">Project 16: <br>Potentiometer-Controlled LED Brightness</span><br><hr>
 	  		</td>
 		</tr>
     </table>
@@ -270,12 +270,6 @@ void loop()
       <tr>
       	<td valign="top">
          	<span class="TB-H2">Summary</span>
-		    <span class="TB-BODY">
-		    <cf_imagebox align="center" path="P16files/P16_schem/P16_schem.svg" width="900px">
-		    <a href="P16files/P16_schem/P16_schem.pdf">Trainable Delay Project Schematic (PDF)</a> 
-		    </span>
-		
-		
       		<br><br>
       		<div align="center">
     

@@ -1,48 +1,42 @@
-<html><head><title>Software Debouncing</title>
-<meta name="author" content="Sean Moss">
-  <script type="text/javascript" src="../SH/scripts/shCore.js"></script>
-  <script type="text/javascript" src="../SH/scripts/shBrushmpide.js"></script>
-  <link type="text/css" rel="stylesheet" href="../SH/styles/shCoreDefault.css"/>
-  <script type="text/javascript">SyntaxHighlighter.all();</script>
-  <style>
-    lit1 {font-family:"Courier";color:#0066ff}
-    kw1 {font-family:"Courier";color:#ff0000}
-    kw2 {font-family:"Courier";color:#ff8000}
-    kw3 {font-family:"Courier";color:#8b308b}
+<html>
+<head>
+
+<title>Software Debouncing</title>
+  <meta name="author" content="Sean Moss">
+    <script type="text/javascript" src="../SH/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../SH/scripts/shBrushmpide.js"></script>
+    <link type="text/css" rel="stylesheet" href="../SH/styles/shCoreDefault.css"/>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <style>
+      lit1 {font-family:"Courier";color:#0066ff}
+      kw1 {font-family:"Courier";color:#ff0000}
+      kw2 {font-family:"Courier";color:#ff8000}
+      kw3 {font-family:"Courier";color:#8b308b}
   </style>
 
   <style>
-  LITERAL1 {font-family:"Courier";color:#0066ff}
-  KEYWORD1 {font-family:"Courier";color:#ff0000}
-  KEYWORD2 {font-family:"Courier";color:#ff8000}
-  KEYWORD3 {font-family:"Courier";color:#8b308b}
-  BLACK {font-family:"Courier";color:#000000}
+    LITERAL1 {font-family:"Courier";color:#0066ff}
+    KEYWORD1 {font-family:"Courier";color:#ff0000}
+    KEYWORD2 {font-family:"Courier";color:#ff8000}
+    KEYWORD3 {font-family:"Courier";color:#8b308b}
+    BLACK {font-family:"Courier";color:#000000}
   </style>
 </head>
     
     
   <body>
-    <table class="TBLAYOUT" style="width: 85%;" cellpadding="0">
-      <tbody>
+  <cf_Box Color="White">
+    <table class="TBLAYOUT">      
 	<tr>
-	  <td align="center" width="35%"><a href="index.cfm"><br>
-	  </a></td>
-	  <td align="center" width="50%"> <span class="TB-PROJECTTITLE">
-	      Project 7: <br>Software Debouncing</span> </td>
-	  <td align="center" width="15%">&nbsp;</td>
-	</tr>
-	<tr>
-	  <td colspan="3" align="right">
-	    <hr><br>
-	    <br>
+	  <td align="center"> <span class="TB-PROJECTTITLE">
+	      Project 7: <br>Software Debouncing<hr></span>
+	      <br><br>
 	  </td>
 	</tr>
-      </tbody>
     </table>
     
     
-    <table class="TBLAYOUT" style="width: 85%;" cellpadding="0">
-      <tbody>
+    <table class="TBLAYOUT">
 	<tr>
 	  <td valign="top">
 	    <!--  Intro portion -----------------------------   --->
@@ -68,70 +62,84 @@
           </td>
 	  
         </tr>
-	
-      </tbody>
     </table>
     
       <!--  Parts List -----------------------------   --->
-      <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-	<tbody>
+      <table class="TBLAYOUT">
+    <tbody>
+    <tr><td>
+    
+    <span class="TB-H2">Inventory:</span>
+	
+    </td>
+    </tr>
+    <tr>
+    <td>
+	
+	<table id="CT3">
+	<thead>
 	  <tr>
-	    
-	    
-	    <td valign="top"><span class="TB-H1">Inventory</span>
-	      <br><br>
-	      <span class="TB-BODY">
-		
-		<table style="text-align: left; width: 100%;" border="1" cellpadding="0" cellspacing="0">
-		  <tbody>
-		    <tr>
-		      <td>1 two-port buttons</td>
-		      <td><img style="width: 111px; height: 69px;" alt="button" src="P07files/realbtnplaceholder.png"></td>
-		    </tr>
-		    <tr>
-		      <td>1 LEDs</td>
-		      <td><img style="width: 107px; height: 72px;" alt="LED" src="P07files/LEDreal.jpg"></td>
-		    </tr>
-		    <tr>
-		      <td>1 330-ohm resistors</td>
-		      <td><img style="width: 111px; height: 69px;" alt="button" src="P07files/realbtnplaceholder.png"></td>
-		    </tr>
-		    <tr>
-		      <td>1 10k-ohm resistors</td>
-		      <td><img style="width: 111px; height: 69px;" alt="button" src="P07files/realbtnplaceholder.png"></td>
-		    </tr>
-		    <tr>
-		      <td>Max 32, uC32, Uno32 or other chipKIT board</td>
-		      <td><img style="width: 111px; height: 69px;" alt="button" src="P07files/realbtnplaceholder.png"></td>
-		    </tr>
-		    <tr>
-		      <td>7 connecting wires</td>
-		      <td><img style="width: 111px; height: 69px;" alt="button" src="P07files/realbtnplaceholder.png"></td>
-		    </tr>
-		    <tr>
-		      <td>USB A to mini B cable</td>
-		      <td><img style="width: 111px; height: 69px;" alt="USB place holder" src="P07files/realbtnplaceholder.png"></td>
-		    </tr>
-		  </tbody>
-		</table>
-	      </span>       
-              
-	      <br><br>
-	      
-	    </td>
+          <th scope="col" width="10%">&nbsp;</th>
+          <th scope="col" width="60%">&nbsp;</th>
+          <th scope="col" width="30%">&nbsp;</th>
+        </tr>
+	
+	</thead>
+	<tbody>
+	
+	  <tr>
+          <td class="qty">1</td>
+          <td>LED</td>
+          <td align="center" class="image"><img src="P07files/LEDreal.png"></td>
 	  </tr>
-	  
-	  
-	</tbody>
-      </table>
+               
+	  <tr>
+          <td class="qty">1</td>
+          <td>Two Port Button</td>
+          <td align="center" class="image"><img src="P07files/btnph.svg"></td>
+	  </tr>
+	
+	  <tr>
+          <td class="qty">1</td>
+          <td>Breadboard</td>
+          <td align="center" class="image"><img src="P07files/btnph.svg"></td>
+	  </tr>
+	
+	  <tr>
+          <td class="qty">1</td>
+          <td>330 &Omega; Resistor</td>
+          <td align="center" class="image"><img src="P07files/btnph.svg"></td>
+	  </tr>
 
+	  <tr>
+          <td class="qty">1</td>
+          <td>10 k&Omega; Resistor</td>
+          <td align="center" class="image"><img src="P07files/btnph.svg"></td>
+	  </tr>	  
+	
+	  <tr>
+          <td class="qty">5</td>
+          <td>Connecting Wires</td>
+          <td align="center" class="image"><img src="P07files/btnph.svg"></td>
+	  </tr>	
+
+
+	  </tbody
+	</table>
+	
+	<br><br>
+      </td></tr>
+  </tbody>
+  </table>
+  
+
+  <br><br>
     
     
     <!--   Theory of Bounce   --->
-    <cf_box color="green"
-	    style="width:85%">
-      <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-	<tbody>
+    <cf_box color="putty">
+    
+      <table class="TBLAYOUT">
 	  <tr>
 	    <td valign="top"><span class="TB-H2">Bounce</span> 	      
 	    </td>
@@ -148,7 +156,7 @@
 		reality, when a button is pressed or released (or a
 		switch thrown), there is a small amount of time (in
 		the microsecond range) where the electrical signal can
-		fluctuate anywhere from 0V to the <code>HIGH</code>
+		fluctuate anywhere from 0V to the <span class="TB-LITERAL1">HIGH</span>
 		voltage level (typically 3.3V or 5V).  This is caused
 		by the physical material of the switch or button
 		reverberating and finally winding down to a steady
@@ -162,7 +170,7 @@
 	  <tr>
 	    <td align="center"><br>
 	      <!--  Figure 1 -->
-	      <img style="width: 50%; height: 50%;" alt="Example of Button Bounce 2" src="P07files/buttonbounce1.png">
+	      <img src="P07files/buttonbounce1.png">
 	      <div class="TB-FIGURES">Fig 1. Voltage over when a button is released.</div>
 	      
 	    </td>
@@ -172,9 +180,9 @@
               <span class="TB-BODY"><br> Figure 1 shows the voltage
 		over time of a button releasing (using the same
 		circuit configuration as in project
-		6).<!--What software did you use for this?-->  You can
+		4).  You can
 		see that the button is at a steady voltage state of
-		<code>HIGH</code>. Then, as it is released, a brief
+		<span class="TB-LITERAL1">HIGH</span>. Then, as it is released, a brief
 		period of turbulence occurs for about 400 microseconds
 		just before cutting off.  Because the Max32 and Uno32
 		(and most other microcontrollers) run at such a
@@ -189,7 +197,7 @@
 	  <tr>
 	    <td align="center"><br>
 	      <!-- Figure 2 -->
-	      <img style="width: 50%; height: 50%;" alt="Example of Button Bounce" src="P07files/buttonbounce3.png">
+	      <img src="P07files/buttonbounce3.png">
 	      <div class="TB-FIGURES">Fig 2. Voltage over time
 	      of a  button release, showing LED output.</div>
 	    </td>
@@ -199,29 +207,22 @@
 	    <td>
 	      <span class="TB-BODY">
 		<br>
-		In Fig. 2, there are two different signals
-		showing&mdash;the voltage over time signal of the
-		button input (in yellow) and the voltage over time
-		signal that is driving an external LED output (in
-		blue). (This graph also uses the same circuit and
-		software configuration as project 6).  The
-		circuit/sketch basically reads the input from the
-		button, and then, if <LITERAL1>HIGH</LITERAL1>, will
-		cause the LED to be
-		intermittently <LITERAL1>HIGH</LITERAL1>. Thus, the
-		LED appears to flicker on and off. Like Fig. 1, this
-		shows a close up of when the button has been released,
-		except now the output from the LED is also
-		depicted. Throughout most of the duration of the
-		button's input signal, the voltage level is
-		sufficiently higher than the input threshold level for
-		the <code>digitalRead</code> function to register it
-		as a logic level <LITERAL1>HIGH</LITERAL1> (in the
-		Max32 and Uno32, this is approximately 2.4V).
-		However, as you man note, there are are points where
-		the voltage drops below the threshold level long
-		enough for the chipKIT board to register the button
-		input as a logical level <LITERAL1>LOW</LITERAL1>.
+		In Fig. 2, there are two different signals showing—the
+		voltage over time signal of the button input (in yellow)
+		and the voltage over time signal that is driving an external
+		LED output (in blue). (This graph uses a simple button circuit
+		and sketch like project  4). The circuit/sketch basically reads
+		the input from the button, and then, if <LITERAL1>HIGH</LITERAL1>,
+		will drive an LED <LITERAL1>HIGH</LITERAL1>. Like Fig. 1, this shows
+		a close up of when the button has been released, except now the
+		output from the LED is also depicted. Throughout most of the duration
+		of the button's input signal, the
+		voltage level is sufficiently higher than the input threshold level
+		for the digitalRead function to register it as a logic level <LITERAL1>HIGH</LITERAL1>
+		(in the Max32 and Uno32, this is approximately 2.4V). However,
+		as you may note, there are points where the voltage drops below the
+		threshold level long enough for the chipKIT board to register the
+		button input as a logical level LOW.
 		<br><br>
 		
 		The LED output now fluctuates because of bounce.
@@ -247,7 +248,7 @@
 		duration of noise introduced by a bounce, then it is
 		safe to say that the signal is in
 		a <LITERAL1>HIGH</LITERAL1> state.  (Similarly, the
-		output signal is considered to be <code>LOW</code> if
+		output signal is considered to be <span class="TB-LITERAL1">LOW</span> if
 		the samples that are taken are
 		both <LITERAL1>LOW</LITERAL1>.)  Generally, only two
 		samples are ever needed to accurately debounce a
@@ -262,8 +263,8 @@
 	  
 	  <tr>
 	    <td align="center"><br>
-	      <!-- Figure 2 -->
-	      <img style="width: 50%; height: 50%;" alt="Example of Button Bounce 3" src="P07files/DEBOUNCEdiagram.png">
+	      
+	      <img src="P07files/DEBOUNCEdiagram.svg">
 	      <div class="TB-FIGURES">Fig. 3 Voltage over time of
 	      input signal, and output signal of a button press
 	      example.<!--Rephrase for clarity--></div>
@@ -279,11 +280,11 @@
 		corresponding output signal (the input signal is the
 		one in gray; the output signal is the one in
 		blue). Note that the debounced output signal
-		remains <code>LOW</code> until time T4.  In this
+		remains <span class="TB-LITERAL1">LOW</span> until time T4.  In this
 		example, the point T4 and its previous point T3 are
 		compared <!--by what? a program? the user?-->, and
-		since both points are <code>HIGH</code>, the output
-		signal is driven <code>HIGH</code>. (The output signal
+		since both points are <span class="TB-LITERAL1">HIGH</span>, the output
+		signal is driven <span class="TB-LITERAL1">HIGH</span>. (The output signal
 		only changes on consecutive samples, so if samples
 		differ, the output signal remains in the same state as
 		it was.)
@@ -295,23 +296,22 @@
       </table>
     </cf_box>
 
- 
+ <br><br>
 
 <!-- Step 1 setting up the Circuit -->
-  <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-    <tbody>
+  <table class="TBLAYOUT">
       <tr>
 	<td valign="top">
 	  <span class="TB-H1">Step 1: Setting up the Circuit</span> 
 	</td>
-    </tr>
+      </tr>
     
       <tr>
         <td align="center">
 	  <br>
           
 	  <!-- Figure 3 -->
-          <img style="width: 800px; height: 700px;" alt="Fig 3. Circuit setup" src="P07files/configdiagram.png">
+          <img src="P07files/setup.svg">
           <div class="TB-FIGURES">Fig 4. Circuit with a button and an LED.</div>
 	</td>	  
       </tr>
@@ -361,14 +361,12 @@
 	  </span>
 	</td>
       </tr>
-    </tbody>
   </table>
   
 
         
         <!-- Step 2 setting up the Circuit -->
-	<table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-	  <tbody>
+	<table class="TBLAYOUT">
 	    <tr>
 	      <td valign="top">
 		<span class="TB-H1">Step 2: Non-debounced Software</span> 
@@ -377,12 +375,10 @@
 		
 	      </td>
 	    </tr>
-   	  </tbody>
 	</table>
 	
 	<!--   non-debounced   --->
-	<table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-	  <tbody>
+	<table class="TBLAYOUT">
 	    <tr>
 	      <td><span class="TB-BODY">
 		  
@@ -399,17 +395,17 @@
 		
 	      </td>
 	    </tr>
-	  </tbody>
 	</table>
 	
         
     <!--   non-debounced   --->
-    <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-      <tbody>
+    <table class="TBLAYOUT">
 	<tr>
 	  <td>
 	    <div align="center">
-              <pre class="brush: mpide; toolbox: false">
+              <div align="center">
+        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
+        <pre class="brush: mpide; toolbox: false">
 		
 		
 		const int btnPin = 7;      // number of the pushbutton pin
@@ -446,18 +442,18 @@
 		
 		
 		}
-	      </pre>
+</pre>
+</cf_box>
+</div>
 	    </div>
 	  </td>
 	</tr>
-      </tbody>
     </table>
    
     
     
     
-    <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-      <tbody>
+    <table class="TBLAYOUT">
 	<tr>
 	  <td>
 	    <span class="TB-BODY">   
@@ -493,15 +489,14 @@
 	    </span>
 	  </td>
 	</tr>
-      </tbody>
     </table>
     
     
     <br><br>
 
     <!--  step 3  debouncing software  -->
-    <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-      <tbody>
+    <table class="TBLAYOUT">
+      
 	<tr>
 	  <td valign="top"><span class="TB-H1">Step 3: Debounced Software </span> 
 	    
@@ -509,13 +504,12 @@
       
 	  </td>
 	</tr>
-      </tbody>
+      
     </table>
     
     
     
-    <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-      <tbody>
+    <table class="TBLAYOUT">
 	<tr>
 	  <td><span class="TB-BODY">
 	      
@@ -543,8 +537,8 @@
 	      time has elapsed, then it means that point A and point
 	      (A -1) have the same value. (Remember, if they were
 	      different, the algorithm would have reset.) Thus, if two
-	      sample points are both <code>HIGH</code>
-	      (or <code>LOW</code>), we drive the signal
+	      sample points are both <span class="TB-LITERAL1">HIGH</span>
+	      (or <span class="TB-LITERAL1">LOW</span>), we drive the signal
 	      accordingly <!--Do you mean that the signal becomes HIGH
 	      or LOW too? Not clear-->. The part of the code dealing
 	      with verification will count the rising edges of the
@@ -565,20 +559,20 @@
 	    
 	  </td>
 	</tr>
-      </tbody>
     </table>
     
     <br><br>
                
 		  
 		  
-    <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-      <tbody>
+    <table class="TBLAYOUT">
 	<tr>
 	  <td>
 	    
 	    <div align="center">
-              <pre class="brush: mpide;">
+              <div align="center">
+        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
+        <pre class="brush: mpide;">
 		
 		
 		const int btnPin = 7;                                     // Number of the pushbutton pin
@@ -618,13 +612,18 @@
 		
 		if (currentBtnState != previousBtnState) {            
 		
-		lastDebounceTime = millis();                           // every time the button state changes, get the time of that change
+		lastDebounceTime = millis();
+		// every time the button state changes, get the time of that change
 		} 
 		
-		if ((millis() - lastDebounceTime) > debounceDelay) {     // if the difference between the last time the button changed is greater
-                // than the delay period, it is safe to say
-                // the button is in the final steady state, so set the LED state to
-                // button state.
+		if ((millis() - lastDebounceTime) > debounceDelay) {
+		
+		/*
+		*if the difference between the last time the button changed is greater
+                *than the delay period, it is safe to say
+                *the button is in the final steady state, so set the LED state to
+                *button state.
+		*/
 		currentLedState = currentBtnState;
 		
 		}
@@ -657,11 +656,12 @@
 		previousBtnState = currentBtnState;
 		previousLedState = currentLedState;
 		}
-	      </pre>
+</pre>
+</cf_box>
+</div>
 	    </div>
 	  </td>
 	</tr>
-      </tbody>
     </table>
     
     
@@ -669,8 +669,7 @@
     
     
         <!--  Summary -->
-        <table class="TBLAYOUT" style="width: 85%; cellpadding=0">
-	  <tbody>
+        <table class="TBLAYOUT">
 	    <tr>
 	      <td valign="top">
 		<span class="TB-H1">Summary </span> 
@@ -700,30 +699,33 @@
 	    
 	    <tr>
 	      <td>
-		<!--This table needs some reformatting. Also, is a table even necessary for this small amount of info? A list might be better.-->
-		<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-		  <tbody>
-		    <tr>
-		      <td>Core Concepts</td>
-		    </tr>
-		 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-		   <tbody>
-		     <tr>
-		       <td style="text-align: left; vertical-align: top;">Theory of button/switch bounce</td>
-		     </tr>
-	
-		     <tr>
-		       <td>Effects of bounce on a digital system</td>
-		     </tr>
-		     <tr>
-		       <td>Software method for correcting bounce </td>
-		     </tr>
-	
-		   </tbody>
-		 </table>
+	      
     
+		<table id="CT3">
+            <thead>
+            	<tr>
+               	<th scope="col" width="20%">&nbsp;</th>
+                  <th scope="col" width="80%">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Core Concepts:</td>
+                  <td>
+                     <ul>
+                     <li>Theory of button/switch bounce</li>
+                     <li>Effects of bounce on a digital system</li>
+                     <li>Software method for correcting bounce </li>
+            
+                     </ul>
+                  </td>
+               </tr>
+            </tbody>
+            </table>
 		
+	  </td></tr>
+	  </table>
 		
-		
-  </body>
-</html>  
+</cf_Box>
+</body>
+</html> 

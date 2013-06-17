@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="60"
+   height="75"
+   id="svg4002"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Resistor_Text.svg">
+  <defs
+     id="defs4004" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="44.560114"
+     inkscape:cy="31.746906"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4061"
+     showgrid="false"
+     inkscape:window-width="1004"
+     inkscape:window-height="665"
+     inkscape:window-x="150"
+     inkscape:window-y="150"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata4007">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-977.3622)">
+    <g
+       id="g4044">
+      <g
+         id="g4061">
+        <path
+           d="m 12.5,980.86221 0,10 5,4 -9.9999999,7.99999 9.9999999,8 -9.9999999,8 9.9999999,8 -9.9999999,8 4.9999999,4 0,10"
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linejoin:round"
+           id="path3085"
+           inkscape:connector-curvature="0" />
+        <g
+           transform="translate(0,-3.0144572)"
+           id="g4053">
+          <text
+             sodipodi:linespacing="125%"
+             id="text4017"
+             y="1015.4916"
+             x="23.991125"
+             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+             xml:space="preserve"><tspan
+               y="1015.4916"
+               x="23.991125"
+               id="tspan4019"
+               sodipodi:role="line">R<tspan
+   id="tspan4042"
+   style="font-size:8px;baseline-shift:sub;fill:#1a1a1a">1</tspan></tspan></text>
+          <g
+             transform="translate(23.762024,1015.6658)"
+             id="g4029"
+             style="fill:#1a1a1a">
+            <text
+               xml:space="preserve"
+               x="0"
+               y="13.057754"
+               style="font-size:13.80000019px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#1a1a1a;font-family:Calibri"
+               id="text4031"><tspan
+                 style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px"
+                 id="tspan6097">10 kΩ</tspan></text>
+            <text
+               xml:space="preserve"
+               x="9.1499996"
+               y="13.057754"
+               style="font-size:13.80000019px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#1a1a1a;font-family:Calibri"
+               id="text4033"> </text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -7,6 +7,16 @@
     <script type="text/javascript" src="../SH/scripts/shBrushmpide.js"></script>
     <link type="text/css" rel="stylesheet" href="../SH/styles/shCoreDefault.css"/>
     <script type="text/javascript">SyntaxHighlighter.all();</script>
+    
+    <!--KEYWORDS
+  bounce
+  button bounce
+  debouncing algorithm
+  software debouncing
+  theory of button/switch bounce
+  effects of bounce on a digital system
+    -->
+    
 </head>
     
     
@@ -16,7 +26,7 @@
   <table class="TBLAYOUT">      
 	  <tr>
 		  <td align="center"> <span class="TB-PROJECTTITLE">
-				  Project 7: <br>Software Debouncing</span><br><hr>
+				  <br><br>Software Debouncing</span><br><br>
 
 		  </td>
 	  </tr>
@@ -38,7 +48,7 @@
 		       This noise associated with transitions is non-ideal and sometimes causes input signals to be read incorrectly. This type of error occurs in all microcontrollers
 		       and digital devices, not just in chipKIT boards.
 		       <br><br>
-		       As in <a href="linkhere.cfm">Project 6: Trainable Delay</a>, this circuit includes a single button and external LED. However, in this project, the software will show a
+		       As in the <a href="linkhere.cfm">Trainable Delay</a> project, this circuit includes a single button and external LED. However, in this project, the software will show a
 		       running count of how many times the button has been pressed. It accomplishes this by counting rising edges. It is visible on your computer screen using MPIDE's serial monitor.
 		       We will run the circuit with and without debouncing so that you can observe how button bounce can affect a circuit.
 		       <br><br>
@@ -55,62 +65,72 @@
 
       <!--  Parts List -----------------------------   --->
   <table class="TBLAYOUT">
+    <tbody>
+    <tr><td>
+    
+    <span class="TB-H2">Inventory:</span>
+	
+    </td>
+    </tr>
+    <tr>
+    <td>
+	
+	<table id="CT3">
+	<thead>
 	  <tr>
-		  <td valign="top">
-			  <span class="TB-H2">Inventory:</span>
-			  <br><br>
-			  <div align="center">
- 
-		     <table id="CT3">
-			  <thead>
-				  <tr>
-					  <th width="10%">Qty.</th>
-					  <th width="60%">Description</th>
-					  <th width="30%">&nbsp;</th>
-				  </tr>
-			  </thead>
-			  <tbody>
+          <th scope="col" width="10%">&nbsp;</th>
+          <th scope="col" width="40%">&nbsp;</th>
+          <th scope="col" width="25%">&nbsp;</th>
+	  <th scope="col" width="25%">&nbsp;</th>
+        </tr>
 	
-				  <tr>
-					  <td class="qty">1</td>
-					  <td>LED</td>
-					  <td align="center" class="image"><img src="P07files/LED_red.svg"></td>
-				  </tr>
-               
-				  <tr>
-					  <td class="qty">1</td>
-					  <td>Two-port button</td>
-					  <td align="center" class="image"><img src="P07files/Pushbutton.svg"></td>
-				  </tr>
+	</thead>
+	<tbody>
 	
-				  <tr>
-					  <td class="qty">1</td>
-					  <td>330 &Omega; resistor</td>
-					  <td align="center" class="image"><img src="P07files/resistor_330.svg"></td>
-				  </tr>
-				  
-				  <tr>
-					  <td class="qty">1</td>
-					  <td>10 k&Omega; resistor</td>
-					  <td align="center" class="image"><img src="P07files/resistor_10Ka.svg"></td>
-				  </tr>	  
-				  
-				  <tr>
-					  <td class="qty">5</td>
-					  <td>Connecting wires</td>
-					  <td align="center" class="image"><img src="P07files/FritzWire.svg"></td>
-				  </tr>	
-			  </tbody>
-		     </table>
-			  </div>
-
-			  <br><br>
-
-
-		  </td>
+	  <tr>
+          <td class="qty">1</td>
+          <td>LED</td>
+		<td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/LED_red.svg" width="30px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/LED_No_Text.svg" width="70px"></td>
 	  </tr>
+               
+	  <tr>
+          <td class="qty">1</td>
+          <td>Two Port Button</td>
+          <td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/PushButton.svg" width="50px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/Button_No_Text.svg" width="200px"></td>
+	  </tr>
+	
+	  <tr>
+          <td class="qty">1</td>
+          <td>220 &Omega; Resistor</td>
+         <td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/resistor_220.svg" width="90px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/Resistor_90deg.svg" width="120px"></td>
+	  </tr>
+
+	  <tr>
+          <td class="qty">1</td>
+          <td>10 k&Omega; Resistor</td>
+          <td align="left" class="image">
+		<cf_imagebox align="center" path="../Parts/resistor_10Ka.svg" width="90px"></td>
+		<td align="left" bgcolor="white">
+		<cf_imagebox align="center" path="../Parts_Schematic/Resistor_90deg.svg" width="120px"></td>
+	  </tr>	  
+
+	  </tbody
+	</table>
+	
+	<br><br>
+      </td></tr>
   </tbody>
   </table>
+      
   
 
   <br><br>
@@ -127,7 +147,7 @@
 				  is a mechanical property of switches and buttons that
 				  can potentially introduce problems into digital
 				  circuits. In a simple button circuit like those
-				  introduced in projects 4 or 6, we like to think of the
+				  introduced in previous projects, we like to think of the
 				  rising and falling edges of the signal produced when one
 				  presses a button as being perfectly crisp and
 				  instantaneous transitions.  In reality, when a button is
@@ -165,16 +185,16 @@
 					  <cf_imagebox align="center" path="P07files/buttonbounce3.png" width="500px"caption="Fig 2. Voltage over time of a button release, showing LED output.">
 				  </div>
 
-				  In Fig. 2, there are two different signals, showing the
-				  voltage over time signal of the button input (in yellow)
-				  and the voltage over time signal that is driving an
-				  external LED output (in blue). (This graph uses a simple
-				  button circuit and sketch, like in project 4). The
-				  circuit/sketch basically reads the input from the
-				  button, and then, if <span class="TB-LITERAL1">HIGH</span>, will drive the
-				  corresponding LED <span class="TB-LITERAL1">HIGH</span>. Like Fig. 1, this
-				  shows a close up of when the button has been released,
-				  except now the output from the LED is also
+				  In Fig. 2, there are two different signals, the yellow
+				  showing the voltage over time signal of the button input
+				  and the blue showing the voltage over time signal that is
+				  driving an external LED output. (This graph uses a
+				  simple button circuit and sketch, like in project
+				  4). The circuit/sketch basically reads the input from
+				  the button, and then, if <span class="TB-LITERAL1">HIGH</span>, will drive
+				  the corresponding LED <span class="TB-LITERAL1">HIGH</span>. Like Fig. 1,
+				  this shows a close up of when the button has been
+				  released, except now the output from the LED is also
 				  depicted. Throughout most of the duration of the
 				  button's input signal, the voltage level is sufficiently
 				  higher than the input threshold level for the
@@ -199,6 +219,12 @@
 				  for humans).
 
 				  <br><br>
+
+				  
+				  
+				  <div align="center">
+				  <cf_imagebox align="right" path="P07files/DEBOUNCEdiagram1.svg" width="513" caption="Fig. 3 Voltage over time of input signal and output signal of a button press.">
+				  </div>
 				  
 				  This is where debouncing becomes useful.  Software
 				  debouncing is accomplished by taking multiple samples of
@@ -218,22 +244,14 @@
 
 				  <br><br>
 				  
-				  <div align="center">
-					  <cf_imagebox align="center" path="P07files/DEBOUNCEdiagram.svg" width="513" caption="Fig. 3 Voltage over time of input signal and output signal of a button press.">
-				  </div>
-	 	
-				  <!--Image cuts off time at the bottom. Please redo.-->
-				  Figure 3 shows a theoretical input signal and
+				  Figure 3 illustrates this algorithmic method of
+				  debouncing by showing a theoretical input signal and
 				  corresponding output signal (the input signal is the one
-				  in gray; the output signal is the one in blue). Note
-				  that the debounced output signal
-				  remains <span class="TB-LITERAL1">LOW</span> until time T4.  In this
-				  example, the point T4 and the previous point, T3, are
-				  compared <!--by what? a program? the user?-->. Since
-				  both points are <span class="TB-LITERAL1">HIGH</span>, the output signal is
-				  driven <span class="TB-LITERAL1">HIGH</span>. (The output signal only
-				  changes on consecutive samples, so if samples differ,
-				  the output signal remains in the same state as it was.)
+				  in gray; the output signal is the one in blue).  In this
+				  example, the debounced output signal
+				  remains <span class="TB-LITERAL1">LOW</span> until time T4.  At this point
+				  the output signal is driven <span class="TB-LITERAL1">HIGH</span> because T4
+				  and the previous point T3 were both <span class="TB-LITERAL1">HIGH</span> .
 			  </span>
 		  </td>
 	  </tr>
@@ -249,25 +267,28 @@
 				<span class="TB-H2">Step 1: Setting up the Circuit</span><br><br> 
 
 				<div align="center">
-					<cf_imagebox align="center" path="P07files/setup.svg" caption="Fig 4. Circuit with a button and an LED.">
+					<cf_imagebox align="center" path="P07files/setupnew.svg" caption="Fig 4. Circuit with a button and an LED." width="800px">
 				</div>
 
-				<span class="TB-BODY">The circuit set up for this project is identical to that of project 6 and the steps for setup will be simply reiterated.
-					For a refresher on button and LED setup and theory, refer to <a href="P04.cfm">Project 4: Button-Controlled LEDs</a>.
+				<span class="TB-BODY">The circuit set up for this project
+					is identical to that of <a href="P06.cfm">Blink LED
+					with Trainable Delay</a>, and the steps for setup will
+					be simply reiterated.  For a refresher on button and
+					LED setup and theory, refer to <a href="P04.cfm">Button-Controlled LEDs</a>.
 					
-					
+					<!--Replace this list with the one found in the P04 that's on the server.-->
 					<ol>
-						<li>Connect the 5V pin from the chipKIT board to a bus
-							strip; we will now refer to this bus strip as the <i>5V
+						<li>Connect the 3.3V pin from the chipKIT board to a bus
+							strip; we will now refer to this bus strip as the <i>3.3V
 								bus strip</i>.</li>
 						<li>Connect the ground pin on the chipKIT board to a bus
-							strip adjacent to the 5V bus strip. This strip will be
+							strip adjacent to the 3.3V bus strip. This strip will be
 							designated as the <i>ground bus strip</i>.</li>
 						<li>Place the LED into the breadboard, noting the anode
 							and cathode.</li>
 						<li>Use a wire to connect the anode of the LED to pin 12
 							of the chipKIT board.</li>
-						<li>Connect the cathode of the LED to a 330&Omega;
+						<li>Connect the cathode of the LED to a 220&Omega;
 							resistor.</li>
 						<li>Now, connect the other end of the resistor to the
 							ground bus strip.</li>
@@ -290,7 +311,7 @@
 				<span class="TB-BODY">
 					
 					This step's purpose is to show the effects of button
-					bounce and allows the you to visualize when bounce
+					bounce and allows you to visualize when bounces
 					occur in the circuit.  If you feel you already have
 					a firm understanding of bounce, this step can be
 					skipped and you can proceed to step 3.  In other
@@ -342,7 +363,7 @@
 </pre>
 </cf_box>
 </div>
-			
+					<br><br>
 					The code is fairly straightforward and all functions we
 					use are from previous projects.  The sketch reads the
 					current state of the input button while keeping track
@@ -355,19 +376,20 @@
 					a counter variable and outputs that value to the serial
 					port. You can view this count through the serial
 					monitor window (if you are unfamiliar with this,
-					reference project 5).<!--Make sure you're
-					capitalizing/using lower case consistently-->
+					reference project 5).
 	     
 					<br><br>
 					
-					Ideally, the sketch would increment the counter every
-					time you press the button. However, after a few button
-					presses, it sometimes skips.  Thus, you will press the
-					button once, but it <!--what is the 'it' you're talking
-					about?--> will count multiple times (usually two).
-					This happens because multiple rising edges have been
-					detected in very close succession (i.e. a button bounce
-					has occurred) <!--detected by what?-->.
+					Ideally, the sketch would increment the counter variable every
+					time you press the button. However, after a few button presses,
+					you will start to notice that sometimes the counter variable will
+					increment multiple times.
+					<br><br>
+					I.e., you will press the button once, but
+					you will see more than one counter value printed to the serial monitor.
+					This happens because the program sketch has detected multiple rising edges
+					in very close succession (this occurs because of a button bounce).
+
 	      
 				</span>
 
@@ -378,46 +400,53 @@
 				<br><br>
 
 				<span class="TB-BODY">
-	      
-					The following code corrects button bounce and is very
-					similar to the code example listed in MPIDE
-					examples <!--Do you mean from the examples provided
-					within MPIDE? If so, indicate that.-->. The main
-					differenc is that this code shows the verification
-					button press counter.
-
-					<br><br>
-
-					This algorithm is only slightly different than our
-					explanation of the theory of debouncing.  In
-					implementation<!--it isn't clear what you're talking
-					about-->, we only look at the point when the input
-					signal changes. Within this explanation, we will call
-					the point when the signal changes &ldquo;point
-					A,&rdquo; and a predefined period of time after point A
-					will be &ldquo;point (A - 1).&rdquo; The first time the
-					signal changes, point A will be set. If the signal
-					changes again before the set period of time has
-					elapsed, then point A becomes this new point (i.e., the
-					process restarts).  If the signal doesn't change and
-					the set time has elapsed, then it means that point A
-					and point (A -1) have the same value. (Remember, if
-					they were different, the algorithm would have reset.)
-					Thus, if two sample points are both <span class="TB-LITERAL1">HIGH</span>
-					(or <span class="TB-LITERAL1">LOW</span>), we drive the signal
-					accordingly <!--Do you mean that the signal becomes
-					HIGH or LOW too? Not clear-->. The part of the code
-					dealing with verification will count the rising edges
-					of the output variable instead of the rising edge of
-					the signal on the input pin.
+					
+					The following code corrects button bounce and is very similar
+					to the code example that is provided within MPIDE examples
+					(File->Example->Digital->Debounce). This code is extended
+					to provide a button press counter capability (by counting
+					rising edges) to verify the code is operating correctly.
 					
 					<br><br>
+					
+					The debouncing algorithm used for this sketch at first may appear
+					slightly different than our theoretical explanation, but once
+					examined you can see the differences are only marginal.
+					
+					<br><br>
+					
+					When analyzing the debouncing algorithm used for our sketch, we
+					only look at the point when the input signal changes (as opposed
+					to taking a periodic time sample like our theory explanation
+					suggested). 
+					
+					<br><br>
+					
+					For this algorithm, we will call the point when the signal changes
+					“point A,” and a predefined period of time after point A will be
+					“point (A - 1).” Point A is set the first time the input signal changes,
+					but If the input signal happens to change again before a set period of
+					time has elapsed, then point A will become this new point (i.e., the
+					process restarts). Now if the input signal doesn't change and the set
+					time has elapsed, then it means that point A and point (A -1) have
+					the same value. (If they were different, the algorithm would have
+					already reset itself.) Thus,if A and (A-1) are both <span class="TB-LITERAL1">HIGH</span> ,
+					the output variable is set HIGH accordingly . (Likewise if both points
+					were <span class="TB-LITERAL1">LOW</span>, the output signal would be driven <span class="TB-LITERAL1">LOW</span>).
+					
+					<br><br>
+					
+					The portion of the code counting button presses will now look at the
+					output variable instead of looking at the value of the input pin
+					(as in step 2).
+					
+					<br><br>
+					
+					The code is executed identically to the code in step 2.  We will use
+					the serial monitor to observe a running count of every time we press
+					the button. Now, every button press increments the count
+					exactly once and multiple counting no longer occurs.
 
-					The code is executed similary to the code in Step 2.
-					We will use the serial monitor to observe the rising
-					edge count as we press the button.  Now, every button
-					press increments the count exactly once, and skipping
-					no longer occurs.
 	      
 	      <br><br>
     
@@ -540,6 +569,16 @@
 				   It is important to note that this is only one way to
 				   correct button bounce. We will discuss some of the
 				   other ways this can be done in subsequent projects.
+				   
+				   
+				   
+	    <cf_imagebox align="center" path="P07files/P07_schem.svg" width="900px">
+	    <a href="P07files/P07_schem.pdf">Trainable Delay Project Schematic (PDF)</a> 
+	    </span>
+				   
+				   
+				   
+				   
 			   </span>
 		   </td>
 	   </tr>
@@ -578,4 +617,3 @@
 </cf_Box>
 </body>
 </html> 
-

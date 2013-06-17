@@ -6,32 +6,6 @@
     <script type="text/javascript" src="/templates/SH/scripts/shBrushmpide.js"></script>
     <link type="text/css" rel="stylesheet" href="/templates/SH/styles/shCoreDefault.css"/>
     <script type="text/javascript">SyntaxHighlighter.all();</script>
-    
-          <!--KEYWORDS
-      Potentiometer
-      voltage divider
-      PWM
-      analogRead()
-      analog-to-digital converters
-      ADCs
-      analogReference() 
-    -->
-  
-  <!-- updated 6-17-2013 Sean Moss -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
   </head>
      
   <body>
@@ -52,7 +26,7 @@
 	  		<td>
 	 			<span class="TB-H1">Introduction</span><br><br>	  
 	  			<span class="TB-BODY">
-	      		In the previous project, &ldquo;Servo Control with Servo Library,&rdquo; we learned how to control a servo motor using our chipKIT board. In that project, our method of control was rather rudimentary; two pushbuttons were used to tell the servo to rotate either right or left.  For this project, we will improve upon that design by replacing the two pushbuttons with a single potentiometer.  Like our other project, &ldquo;Potentiometer-Controlled LED Brightness,&rdquo; we will use a potentiometer to build a voltage divider circuit that will output an analog signal to our chipKIT board. That signal will then in turn tell the chipKIT board what angle to rotate the servo.  Essentially, the angle of servo will match the position of the potentiometer dial.
+	      		In the previous project “Servo Control with Servo Library”, we learned how to control a servo motor using our chipKIT board. In that project our method of control was rather rudimentary; two push buttons were used to tell the servo to rotate right or left.  For this project we will improve upon that design by replacing the two pushbuttons with a single potentiometer.  Like project “Potentiometer Controlled LED Brightness”, we will use a potentiometer to build a voltage divider circuit that will output an analog signal to our chipKIT board. That signal will then in turn tell the chipKIT board what angle to rotate the servo.  Essentialy the angle of servo will match the position of the potentiometer dial.
 	  			</span>	  
 	  		</td>
 		</tr>
@@ -113,22 +87,22 @@
 
 	    			<cf_TB-TabBox>
             			<cf_TB-Tab color="red" path="http://www.google.com" title="Potentiometer-Controlled Brightness">
-            			<cf_TB-Tab color="green" path="http://www.google.com" title="Servo Control with Servo Library">
+            			<cf_TB-Tab color="orange" path="http://www.google.com" title="Servo Control with Servo Library">
             		</cf_TB-TabBox>
 
-	    		The theory behind this project will be brief, as the goal is to utilize concepts from previous projects to encounter a new application. In the &ldquo;Potentiometer-Controlled LED Brightness&rdquo; project, we learned that you could use a potentiometer to provide a range of input values, as opposed to simple on/off buttons. That project focused on creating an input device that would output an analog signal ranging from 0V to 3.3V. The signal was read by the chipKIT board, which in turn controlled the brightness of an LED according to strength of the signal.
+	    		The theory behind this project will be brief, as the goal is to utilize concepts from previous projects to form a new application. In the “Potentiometer Controlled LED Brightness” project we learned that you could use a potentiometer to provide a range of input values, as opposed to simple on/off buttons.  That project focused on creating an input device that would output an analog signal ranging from 0V to 3.3V. The signal was read by the chipKIT board, which in turn would control the brightness of a LED according to strength of the signal.
 	
 	    		<br><br>
-	        	<cf_imagebox align="right" path="P18files/circuit_diagramnew.svg" width="300px" caption="Fig. 1. Voltage divider circuit.">
-	    		The task of changing the degree of brightness and the angle of a servo is actually quite similar. In fact, we can use the same method of input from the controlled LED brightness project for this project. This means we will re-use the same voltage divider circuit from the previous project. Figure 1 shows the voltage divider circuit we will be using.
+	        	<cf_imagebox align="right" path="P18files/newvoltdiv.svg" width="300px" caption="Fig. 1. Voltage divider circuit.">
+	    		The task of controlling a variable degree of brightness and the angle of a servo, turn out to be very similar. In fact we can use the same method of input from the controlled LED brightness project, for this current project. This means we will re-use the same voltage divider circuit from the previous project. Figure 1 shows the voltage divider circuit we will be using.
 	
 	    		<br><br>
 
-	    		The servo used for this project will be the same SG92R used in &ldquo;Servo Control with Servo Library,&rdquo; and the configuration for this project will be almost identical. We will use the servo library to control our device, just as we have in previous projects.
+	    		The servo used for this project will be the same SG92R used in “Servo Control with Servo Library” and the configuration for this project will be almost identical. We will use the Servo library to control our device just like in previous projects.
 	
 	    		<br><br>
 	    
-	    		If you are unfamiliar with any of the concepts, there are links to previous projects on the right. It may be useful to glance over them before proceeding.
+	    		If you are unfamiliar with any of the concepts, previous projects are linked to the right. It may be useful to glance over them before proceeding.
 	    		</span>    		
 			</td>
       	</tr>
@@ -145,14 +119,14 @@
 	    		<span class="TB-BODY">		
 					<ol>
 						<cf_imagebox align="right" path="P18files/potentiometer_alt_examp.svg" width="200px" caption="Fig. 3 Alternate potentiometer pin configuration.">
-						<li> Place the potentiometer dial so that it spans the gap between rows in the breadboard (as done in Fig. 2).  Note that potentiometers can come in various configurations, and some have all their pins located on the same side (Figure 3 shows both configurations).  It is only important to make sure that each pin occupies its own row.</li>   		
-						<li> With a wire, connect pin &ldquo;A&rdquo; of the potentiometer to the 3.3V pin of the chipKIT board.</li>		
-						<li> Connect the 5V pin of the chipKIT board to the &ldquo;power&rdquo; line of the servo.  Note that the servo has a female connector, so you can plug straight into the connector, or you can use a gender changer to plug the connector into the breadboard. The servo cable color code is presented in Fig. 4.</li> 	    
-						<li> Connect pin &ldquo;C&rdquo; of the potentiometer to the ground (GND) pin of the chipKIT board.  The row that pin &ldquo;C&rdquo; occupies will be designated <i>ground row</i>. </li>
+						<li> Place the potentiometer dial so that it spans the gap between rows in the breadboard (as per Figure 2).  Note that potentiometers can come in various configurations, and some have all pins located on the same side (Figure 3 shows the alternate configurations).  It is only important to make sure that each pin occupies its own row.</li>   		
+						<li> With a wire connect pin “A” of the potentiometer to the 3.3V pin of the chipKIT board.</li>		
+						<li> Now connect the 5V pin of the chipKIT board to the “power” line of the servo.  Note that the servo has a female connector, so you may plug straight into the connector or use a gender changer to plug the connector into the breadboard. The servo cable color code is presented in Figure 4.</li> 	    
+						<li> Connect pin “C” of the potentiometer to the GND pin of the chipKIT board.  The row that pin “C” occupies will be designated <b>Ground row</b>. </li>
 						<cf_imagebox align="right" path="P18files/servo_exp2.svg" width="200px" caption="Fig. 4. Servo pin out and color code.">
-						<li> Next connect the &ldquo;ground&rdquo; line of the servo to the ground row </li>
-						<li> Using a long wire, connect pin &ldquo;B&rdquo; of the potentiometer to pin &ldquo;A0&rdquo; on the chipKIT board.</li>	    
-						<li> Finally, connect the &ldquo;control&rdquo; line of the servo to pin 9 on the chipKIT board.  </li>
+						<li> Next connect the “ground” line of the servo to the ground row </li>
+						<li> Using a long wire, connect pin “B” of the potentiometer to pin “A0” of the chipKIT board.</li>	    
+						<li> Finally connect the “control” line of the servo to pin 9 of the chipKIT board.  </li>
 					</ol>							
 	    		</span>	
 			</cf_box>
@@ -161,6 +135,7 @@
 	</table>
 	
 
+	<!--I removed Fig. 5, as it didn't really seem necessary. You needed to reference Fig. 4 anyway, and it provides the necessary information about the color codes. It also provided a cleaner look for the project.
 	<td width="10px">
 	</td>
 	
@@ -185,19 +160,19 @@
 				<span class="TB-H2">Software</span><br><br> 	
 				<span class="TB-BODY">
 	
-		    	The software sketch will mainly utilize the <code>analogRead()</code>, <code>analogReference()</code>, and <code>servo</code> class methods, much like we did in previous projects. There is a quick review below in the subsequent paragraphs, if you are unfamiliar with these methods.		   
+		    	The software sketch will mainly utilize the <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span>, <span class="TB-KEYWORD2">analogReference</span><span class="TB-BLACK">()</span>, and <span class="TB-BLACK">servo</span> class methods similar to previous projects. Below is a quick review if you are unfamiliar.		   
 		    
 		    	<br><br>
 		    
-		    	The <code>analogRead()</code> function does what its name implies; it is a way for the chipKIT board to read a variable voltage signal from one of its analog inputs. The signal applied to one of these pins ranges from 0V to a max value of 3.3V. Exceeding 3.3V will result in incorrect readings.
+		    	The <span class="TB-KEYWORD2">analogRead</span><span class="TB-BLACK">()</span> functions like its name implies, it is a way for the chipKIT board to read a variable voltage signal from one of it's analog inputs. The signal applied to one of these pins will range from 0V to a max value of 3.3V. Exceeding 3.3V will result in incorrect readings.
 		    
 		    	<br><br>
 		    
-		    	ChipKIT boards use 10 bit analog-to-digital converters (ADC), so it will quantize the analog input to one of 1024 levels (2<sup>10</sup> = 1024). (I.e., when you call <code>analogRead()</code> it will map the input to a number from 0 to 1023,  where zero is the lowest voltage and 1023 is the largest reference voltage. 
+		    	ChipKIT boards use 10 bit analog to digital converters (ADC), so it will quantize the analog input to one of 1024 levels (2<sup>10</sup> = 1024). I.e. when you call analogRead() it will map the input to a number from 0 to 1023,  where zero is the lowest voltage and 1023 is the largest reference voltage. 
 		    
 		    	<br><br>
 		    
-		    	The <code>analogReference()</code> function sets the voltage level that the ADC associates with 1023. Within our project, we will use the <code>DEFAULT</code> value, which is 3.3V for chipKIT boards. For the servo class, we will only be using the &ldquo;attach&rdquo; and &ldquo;write&rdquo; methods. The &ldquo;attach&rdquo; method simply tells the servo object to which pin it will output the control signal. The &ldquo;write&rdquo; function simply sets the duty cycle of the PWM signal controlling the servo (essentially telling it which angle to rotate the motor shaft to).</span>		    	
+		    	analogReference() sets that voltage level that the ADC associates with 1023. For our project we will be using <span class="TB-LITERAL1">DEFAULT</span> value which for chipKIT boards is 3.3V. For the servo class, we will only be using the “attach” and “write” methods. The “attach” method simply tells the servo object what pin it will output the control signal to. The “write” function just sets the duty cycle of the PWM signal controlling the servo (essentially telling it what angle to rotate the motor shaft to).</span>		    	
 			</td>
        	</tr>
     </table>      
@@ -210,12 +185,14 @@
 	    	<cf_box color="putty">	    
 	    		<span class="TB-H1">Step 2: Setting up the Sketch</span><br><br>	
 				<span class="TB-BODY">
-				Our final sketch simply reads the analog voltage value from the potentiometer, scales the value to a degree between 0 and 180, and then tells the servo to move accordingly. There is a delay in the code to allow time for the servo to physically move.		
+				The actual sketch will simply read the analog voltage value from the potentiometer, scale the value to a degree between 0 and 180, and then tell the servo to move accordingly. There is a delay in the code to allow time for the servo to physically move.		
 				</span>
 				
 				<br><br>
 
-        		<pre class="brush: mpide;">
+        		<div align="center">
+        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
+        <pre class="brush: mpide;">
       
 #include &lt;Servo.h&gt; 
 
@@ -254,7 +231,9 @@ void loop()
       // wait for the servo to move
       delay(10);                            
 } 
-				</pre>      
+</pre>
+</cf_box>
+</div>      
       		</cf_box>
       		</td>
       	</tr>
@@ -268,15 +247,6 @@ void loop()
       			<span class="TB-H1">Summary</span><br><br>      
       		</td>
       	</tr>
-	<tr><td>
-	
-			    <span class="TB-BODY">
-		    <cf_imagebox align="center" path="P18files/P18_schem/P18_schem.svg" width="900px">
-		    <a href="P18files/P18_schem/P18_schem.pdf">Servo Control Incorporating Potentiometer Input (PDF)</a> 
-		    </span>
-	
-	
-	</td></tr>
     </table>    
     
     <table class="TBLAYOUT">

@@ -134,7 +134,7 @@
 				  pressed or released (or a switch thrown), there is a
 				  small amount of time (in the microsecond range) where
 				  the electrical signal can fluctuate anywhere from 0V to
-				  the <span class="TB-LITERAL1">HIGH</span> voltage level (typically 3.3V or
+				  the <code>HIGH</code> voltage level (typically 3.3V or
 				  5V).  This is caused by the physical material of the
 				  switch or button reverberating and finally winding down
 				  to a steady state.  While the physical material is
@@ -151,7 +151,7 @@
 				  Figure 1 shows the voltage over time of a button
 				  releasing (using the same circuit configuration as in
 				  project 4).  You can see that the button is at a steady
-				  voltage state of <span class="TB-LITERAL1">HIGH</span>. Then, as it is
+				  voltage state of <code>HIGH</code>. Then, as it is
 				  released, a brief period of turbulence occurs for about
 				  400 microseconds just before cutting off.  Because the
 				  Max32 and Uno32 (and most other microcontrollers) run at
@@ -171,20 +171,20 @@
 				  external LED output (in blue). (This graph uses a simple
 				  button circuit and sketch, like in project 4). The
 				  circuit/sketch basically reads the input from the
-				  button, and then, if <span class="TB-LITERAL1">HIGH</span>, will drive the
-				  corresponding LED <span class="TB-LITERAL1">HIGH</span>. Like Fig. 1, this
+				  button, and then, if <code>HIGH</code>, will drive the
+				  corresponding LED <code>HIGH</code>. Like Fig. 1, this
 				  shows a close up of when the button has been released,
 				  except now the output from the LED is also
 				  depicted. Throughout most of the duration of the
 				  button's input signal, the voltage level is sufficiently
 				  higher than the input threshold level for the
-				  <span class="TB-KEYWORD2">digitalRead</span> function to register it as a
-				  logic level <span class="TB-LITERAL1">HIGH</span> (in the Max32 and Uno32,
+				  <code>digitalRead</code> function to register it as a
+				  logic level <code>HIGH</code> (in the Max32 and Uno32,
 				  this is approximately 2.4V). However, as you may notice,
 				  there are points where the voltage drops below the
 				  threshold level long enough for the chipKIT board to
 				  register the button input as a logical
-				  level <span class="TB-LITERAL1">LOW</span>.
+				  level <code>LOW</code>.
 
 				  <br><br>
 		
@@ -199,41 +199,37 @@
 				  for humans).
 
 				  <br><br>
+				  <br><br>
+				  
+				  
+				  <div align="center">
+				  <cf_imagebox align="right" path="P07files/DEBOUNCEdiagram1.svg" width="513" caption="Fig. 3 Voltage over time of input signal and output signal of a button press.">
+				  </div>
 				  
 				  This is where debouncing becomes useful.  Software
 				  debouncing is accomplished by taking multiple samples of
 				  the input signal and determining whether to assert an
 				  output signal (the debounced version of the
-				  signal) <span class="TB-LITERAL1">HIGH</span> or <span class="TB-LITERAL1">LOW</span> based on
+				  signal) <code>HIGH</code> or <code>LOW</code> based on
 				  whether consecutive samples are received. For instance,
-				  if two samples are both <span class="TB-LITERAL1">HIGH</span>, and the time
+				  if two samples are both <code>HIGH</code>, and the time
 				  between them is much longer than the average duration of
 				  noise introduced by a bounce, then it is safe to say
-				  that the signal is in a <span class="TB-LITERAL1">HIGH</span> state.
+				  that the signal is in a <code>HIGH</code> state.
 				  (Similarly, the output signal is considered to
-				  be <span class="TB-LITERAL1">LOW</span> if the samples that are taken are
-				  both <span class="TB-LITERAL1">LOW</span>.)  Generally, only two samples are
+				  be <code>LOW</code> if the samples that are taken are
+				  both <code>LOW</code>.)  Generally, only two samples are
 				  ever needed to accurately debounce a signal, provided
 				  that the period between samples is long enough.
 
 				  <br><br>
 				  
-				  <div align="center">
-					  <cf_imagebox align="center" path="P07files/DEBOUNCEdiagram.svg" width="513" caption="Fig. 3 Voltage over time of input signal and output signal of a button press.">
-				  </div>
-	 	
-				  <!--Image cuts off time at the bottom. Please redo.-->
-				  Figure 3 shows a theoretical input signal and
-				  corresponding output signal (the input signal is the one
-				  in gray; the output signal is the one in blue). Note
-				  that the debounced output signal
-				  remains <span class="TB-LITERAL1">LOW</span> until time T4.  In this
-				  example, the point T4 and the previous point, T3, are
-				  compared <!--by what? a program? the user?-->. Since
-				  both points are <span class="TB-LITERAL1">HIGH</span>, the output signal is
-				  driven <span class="TB-LITERAL1">HIGH</span>. (The output signal only
-				  changes on consecutive samples, so if samples differ,
-				  the output signal remains in the same state as it was.)
+				  Figure 3 illustrates this algorithmic method of debouncing by
+				  showing a theoretical input signal and corresponding output signal
+				 (the input signal is the one in gray; the output signal is the one in blue).
+				  In this example, the debounced output signal remains <code>LOW</code> until time T4.
+				  At this point the output signal is driven HIGH because T4 and the previous
+				  point T3 were both <code>HIGH</code> .  
 			  </span>
 		  </td>
 	  </tr>
@@ -290,7 +286,7 @@
 				<span class="TB-BODY">
 					
 					This step's purpose is to show the effects of button
-					bounce and allows the you to visualize when bounce
+					bounce and allows you to visualize when bounces
 					occur in the circuit.  If you feel you already have
 					a firm understanding of bounce, this step can be
 					skipped and you can proceed to step 3.  In other
@@ -300,9 +296,7 @@
 				
 					<br><br>
 		
-					<div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide; toolbox: false">
+					<pre class="brush: mpide; toolbox: false">
 		
 		
 		const int btnPin = 7;      // number of the pushbutton pin
@@ -339,35 +333,34 @@
 		
 		
 		}
-</pre>
-</cf_box>
-</div>
-			
+					</pre>
+					<br><br>
 					The code is fairly straightforward and all functions we
 					use are from previous projects.  The sketch reads the
 					current state of the input button while keeping track
 					of the state of the button from the previous loop of
 					the main program.  If the previous button state
-					is <span class="TB-LITERAL1">LOW</span> and the current state
-					is <span class="TB-LITERAL1">HIGH</span>, then this indicates a rising edge
+					is <code>LOW</code> and the current state
+					is <code>HIGH</code>, then this indicates a rising edge
 					transition (i.e., the signal starting to
-					assert <span class="TB-LITERAL1">HIGH</span>).  The sketch then increments
+					assert <code>HIGH</code>).  The sketch then increments
 					a counter variable and outputs that value to the serial
 					port. You can view this count through the serial
 					monitor window (if you are unfamiliar with this,
-					reference project 5).<!--Make sure you're
-					capitalizing/using lower case consistently-->
+					reference project 5).
 	     
 					<br><br>
 					
-					Ideally, the sketch would increment the counter every
-					time you press the button. However, after a few button
-					presses, it sometimes skips.  Thus, you will press the
-					button once, but it <!--what is the 'it' you're talking
-					about?--> will count multiple times (usually two).
-					This happens because multiple rising edges have been
-					detected in very close succession (i.e. a button bounce
-					has occurred) <!--detected by what?-->.
+					Ideally, the sketch would increment the counter variable every
+					time you press the button. However, after a few button presses,
+					you will start to notice that sometimes the counter variable will
+					increment multiple times.
+					<br><br>
+					I.e., you will press the button once, but
+					you will see more than one counter value printed to the serial monitor.
+					This happens because the program sketch has detected multiple rising edges
+					in very close succession (this occurs because of a button bounce).
+
 	      
 				</span>
 
@@ -378,52 +371,57 @@
 				<br><br>
 
 				<span class="TB-BODY">
-	      
-					The following code corrects button bounce and is very
-					similar to the code example listed in MPIDE
-					examples <!--Do you mean from the examples provided
-					within MPIDE? If so, indicate that.-->. The main
-					differenc is that this code shows the verification
-					button press counter.
-
-					<br><br>
-
-					This algorithm is only slightly different than our
-					explanation of the theory of debouncing.  In
-					implementation<!--it isn't clear what you're talking
-					about-->, we only look at the point when the input
-					signal changes. Within this explanation, we will call
-					the point when the signal changes &ldquo;point
-					A,&rdquo; and a predefined period of time after point A
-					will be &ldquo;point (A - 1).&rdquo; The first time the
-					signal changes, point A will be set. If the signal
-					changes again before the set period of time has
-					elapsed, then point A becomes this new point (i.e., the
-					process restarts).  If the signal doesn't change and
-					the set time has elapsed, then it means that point A
-					and point (A -1) have the same value. (Remember, if
-					they were different, the algorithm would have reset.)
-					Thus, if two sample points are both <span class="TB-LITERAL1">HIGH</span>
-					(or <span class="TB-LITERAL1">LOW</span>), we drive the signal
-					accordingly <!--Do you mean that the signal becomes
-					HIGH or LOW too? Not clear-->. The part of the code
-					dealing with verification will count the rising edges
-					of the output variable instead of the rising edge of
-					the signal on the input pin.
+					
+					The following code corrects button bounce and is very similar
+					to the code example that is provided within MPIDE examples
+					(File->Example->Digital->Debounce). This code is extended
+					to provide a button press counter capability (by counting
+					rising edges) to verify the code is operating correctly.
 					
 					<br><br>
+					
+					The debouncing algorithm used for this sketch at first may appear
+					slightly different than our theoretical explanation, but once
+					examined you can see the differences are only marginal.
+					
+					<br><br>
+					
+					When analyzing the debouncing algorithm used for our sketch, we
+					only look at the point when the input signal changes (as opposed
+					to taking a periodic time sample like our theory explanation
+					suggested). 
+					
+					<br><br>
+					
+					For this algorithm, we will call the point when the signal changes
+					“point A,” and a predefined period of time after point A will be
+					“point (A - 1).” Point A is set the first time the input signal changes,
+					but If the input signal happens to change again before a set period of
+					time has elapsed, then point A will become this new point (i.e., the
+					process restarts). Now if the input signal doesn't change and the set
+					time has elapsed, then it means that point A and point (A -1) have
+					the same value. (If they were different, the algorithm would have
+					already reset itself.) Thus,if A and (A-1) are both <code>HIGH</code> ,
+					the output variable is set HIGH accordingly . (Likewise if both points
+					were <code>LOW</code>, the output signal would be driven <code>LOW</code>).
+					
+					<br><br>
+					
+					The portion of the code counting button presses will now look at the
+					output variable instead of looking at the value of the input pin
+					(as in step 2).
+					
+					<br><br>
+					
+					The code is executed identically to the code in step 2.  We will use
+					the serial monitor to observe a running count of every time we press
+					the button. Now, every button press increments the count
+					exactly once and multiple counting no longer occurs.
 
-					The code is executed similary to the code in Step 2.
-					We will use the serial monitor to observe the rising
-					edge count as we press the button.  Now, every button
-					press increments the count exactly once, and skipping
-					no longer occurs.
 	      
 	      <br><br>
     
-	      <div align="center">
-        <cf_box color="white" style="width:95%; margin:8em 0 8em 0 ">
-        <pre class="brush: mpide;">
+	      <pre class="brush: mpide;">
 		
 		
 		const int btnPin = 7;                                     // Number of the pushbutton pin
@@ -507,9 +505,7 @@
 		previousBtnState = currentBtnState;
 		previousLedState = currentLedState;
 		}
-</pre>
-</cf_box>
-</div>
+	      </pre>
 				</span>
 			   </cf_box>
 		   </td>
@@ -578,4 +574,3 @@
 </cf_Box>
 </body>
 </html> 
-
